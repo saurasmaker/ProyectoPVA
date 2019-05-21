@@ -1,0 +1,36 @@
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csprojAssemblyReference.cache
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csproj.GenerateResource.cache
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csproj.CoreCompileInputs.cache
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\Database.mdf
+C:\Users\Iván Saura Cuadrado\source\repos\Proyecto PVA 2\Proyecto PVA 2\bin\Debug\Database_log.ldf
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Database.mdf
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Database_log.ldf
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csprojAssemblyReference.cache
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csproj.GenerateResource.cache
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.csproj.CoreCompileInputs.cache
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+C:\Users\Iván Saura Cuadrado\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
