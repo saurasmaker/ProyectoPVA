@@ -209,7 +209,7 @@ namespace Proyecto_PVA_2
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            //Subida del repositorio
+
         }
     }
 }
