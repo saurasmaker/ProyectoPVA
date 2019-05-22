@@ -13,3 +13,18 @@ C:\Users\saura\Source\Repos\saurasmaker\ProyectoPVA\Proyecto PVA 2\obj\Debug\Pro
 C:\Users\saura\Source\Repos\saurasmaker\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
 C:\Users\saura\Source\Repos\saurasmaker\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
 C:\Users\saura\Source\Repos\saurasmaker\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csprojAssemblyReference.cache
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.GenerateResource.cache
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.CoreCompileInputs.cache
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb

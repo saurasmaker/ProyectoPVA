@@ -74,6 +74,7 @@
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(201, 20);
             this.textBoxContraseña.TabIndex = 3;
+            this.textBoxContraseña.UseSystemPasswordChar = true;
             // 
             // checkBoxMostrarContraseña
             // 
@@ -102,6 +103,7 @@
             this.buttonAceptar.TabIndex = 7;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonCancelar
             // 

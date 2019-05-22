@@ -394,7 +394,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPeliculas;
         private System.Windows.Forms.ToolStripButton toolStripButtonSeries;
         private System.Windows.Forms.Button buttonDesplegar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Panel panel2;
@@ -421,10 +420,11 @@
         private System.Windows.Forms.Button buttonAdminUsuarios;
         private System.Windows.Forms.Button buttonAdministrarPeliculas;
         private System.Windows.Forms.ToolStripButton toolStripButtonCarroCompra;
-        private System.Windows.Forms.Panel panelAdmin;
         private System.Windows.Forms.Button buttonAdministrarAdmins;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripButton toolStripButtonPerfil;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Panel panelAdmin;
     }
 }
 

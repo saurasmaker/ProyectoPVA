@@ -17,6 +17,16 @@ namespace Proyecto_PVA_2.Clases
 
         }
 
+        public Administrador(string correoElectronico, string contraseña)
+        {
+            CorreoElectronico = correoElectronico;
+            Contraseña = contraseña;
+        }
+
+        //Getters & Setters
+        public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
+
         //Métodos
     }
 }

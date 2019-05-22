@@ -9,14 +9,28 @@ namespace Proyecto_PVA_2.Clases
     class Usuario:Persona
     {
         //Atriutos
-        string correoElectronico, contraseña;
+        string correoElectronico, contraseña, alias;
         DateTime fecAlta;
+        int id;
 
         //Constructores
         public Usuario()
         {
 
         }
+
+        public Usuario(string correoElectronico, string contraseña)
+        {
+            CorreoElectronico = correoElectronico;
+            Contraseña = contraseña;
+        }
+
+        //Getters & Setters
+        public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
+        public DateTime FecAlta { get => fecAlta; set => fecAlta = value; }
+        public int Id { get => id; set => id = value; }
+        public string Alias { get => alias; set => alias = value; }
 
         //Métodos
     }

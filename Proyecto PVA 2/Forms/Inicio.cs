@@ -1,4 +1,5 @@
-﻿using Proyecto_PVA_2.Forms;
+﻿using Proyecto_PVA_2.Clases;
+using Proyecto_PVA_2.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,13 @@ namespace Proyecto_PVA_2
     public partial class Inicio : Form
     {
         //Atributos
+        Usuario user;
+        Administrador admin;
         List<Panel> peliculas;
         List<PictureBox> portadas;
         List<Label> titulos;
         bool inicioSesion = false;
+        bool inicioSesionAdmin = false;
         bool panel1Encogido = false;
 
         //Constructores
@@ -35,16 +39,32 @@ namespace Proyecto_PVA_2
         public List<Panel> Peliculas { get => peliculas; set => peliculas = value; }
         public List<PictureBox> Portadas { get => portadas; set => portadas = value; }
         public List<Label> Titulos { get => titulos; set => titulos = value; }
+        public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
+        internal Usuario User { get => user; set => user = value; }
+        internal Administrador Admin { get => admin; set => admin = value; }
 
+
+        //------------------------------------------------------------------------------
         //Eventos
 
         //--Barra Herramientas Inicio
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            IniciarSesion inicioSesion = new IniciarSesion();
-            AddOwnedForm(inicioSesion);
+            if (InicioSesionAdmin)
+            {
+                
+            }
+            else if (InicioSesion)
+            {
 
-            inicioSesion.ShowDialog();
+            }
+            else
+            {
+                IniciarSesion inicioSesion = new IniciarSesion();
+                AddOwnedForm(inicioSesion);
+
+                inicioSesion.ShowDialog();
+            }
         }
 
         //--Panel Izquierdo
@@ -68,7 +88,6 @@ namespace Proyecto_PVA_2
         }
 
 
-
         //--Panel Central
         private void Inicio_Resize(object sender, EventArgs e)
         {
@@ -82,31 +101,14 @@ namespace Proyecto_PVA_2
         }
 
         //--Panel Derecho
-
-
-        //Eventos inútiles
-        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void ButtonAdministrarPeliculas_Click(object sender, EventArgs e)
         {
-
-        }
-        private void Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            AdministrarPeliculas adminPelis = new AdministrarPeliculas();
+            adminPelis.ShowDialog();
         }
 
 
+        //-------------------------------------------------------------------------
         //Métodos
         void OcultarGeneros()
         {
@@ -139,6 +141,26 @@ namespace Proyecto_PVA_2
             buttonGeneroDrama.Visible = true;
             buttonGeneroFamiliar.Visible = true;
             return;
+        }
+
+        public void MostrarOpcionesAdmin()
+        {
+            panelAdmin.Visible = true;
+            toolStripButtonPerfil.Text = "Admin";
+            return;
+        }
+
+        public void OcultarOpcionesAdmin()
+        {
+            panelAdmin.Visible = false;
+
+            return;
+        }
+
+        public void OpcionesUsuario()
+        {
+            panelAdmin.Visible = false;
+            toolStripButtonPerfil.Text = "Perfil";
         }
 
         void ReajustarPanelCentral(int elementos)
@@ -194,22 +216,36 @@ namespace Proyecto_PVA_2
             return cartel;
         }
 
-        
 
+        //Eventos inútiles
+        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         private void TableLayoutPanelCentro_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void ButtonAdministrarPeliculas_Click(object sender, EventArgs e)
-        {
-            AdministrarPeliculas adminPelis = new AdministrarPeliculas();
-            adminPelis.ShowDialog();
-        }
-
         private void Inicio_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,14 +24,81 @@ namespace Proyecto_PVA_2.Forms
 
 
         //Eventos
-        
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            if (textBoxCorreo.Text == "")
+                MessageBox.Show("Rellene el campo de correo electrónico para continuar.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else if (textBoxContraseña.Text == "")
+                MessageBox.Show("Rellene el campo de contraseña para continuar.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            if (EsAdmin())
+            {
+                MessageBox.Show("Inicio de sesión como administrador.", "Inicio Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Login(1);
+                Close();
+            }
+            else if (ValidarEmail()) {
+                Login(0);
+                Close();
+            }
+            else
+                MessageBox.Show("Formato de correo electrónico no válido.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
 
         //Métodos
+        public bool EsAdmin()
+        {
+            string email = textBoxCorreo.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@(vc\.admin)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+                return true;
+            else
+                return false;
+        }
 
+        public bool ValidarEmail()
+        {
+            string email = textBoxCorreo.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
 
+            if (match.Success)
+                return true;
+            else
+                return false;
+        }
+
+        public void Login(int caso)
+        {
+            Inicio papa = Owner as Inicio;
+
+            switch (caso)
+            {
+                case 0:
+                    papa.InicioSesion = true;
+                    papa.InicioSesionAdmin = false;
+                    papa.OpcionesUsuario();
+
+                    break;
+                case 1:
+
+                    papa.InicioSesion = true;
+                    papa.InicioSesionAdmin = true;
+                    papa.Admin = new Clases.Administrador(textBoxCorreo.Text, textBoxContraseña.Text);
+                    papa.MostrarOpcionesAdmin();
+                    
+                    break;
+                default:
+                    MessageBox.Show("Opción no válida. Error en el código. Si le aparece este error como usuario contecte con el servicio técnico de la web.", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+
+            }
+            return;
+        }
 
         //Events inútiles
-
 
     }
 }
