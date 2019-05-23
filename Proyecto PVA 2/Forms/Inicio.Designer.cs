@@ -75,15 +75,15 @@
             // toolStripInicio
             // 
             resources.ApplyResources(this.toolStripInicio, "toolStripInicio");
-            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
             this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
             this.toolStripButtonPerfil,
-            this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
             this.toolStripButtonIniciarSesion,
-            this.toolStripButtonCarroCompra});
+            this.toolStripButtonCarroCompra,
+            this.toolStripButtonPeliculas});
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
@@ -136,7 +136,7 @@
             // 
             // panelIzquierda
             // 
-            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
             this.panelIzquierda.Controls.Add(this.buttonGeneroFamiliar);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDrama);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDocumentales);
@@ -251,17 +251,17 @@
             // tableLayoutPanelCentro
             // 
             resources.ApplyResources(this.tableLayoutPanelCentro, "tableLayoutPanelCentro");
-            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
             this.tableLayoutPanelCentro.Controls.Add(this.panelDerecha, 0, 0);
             this.tableLayoutPanelCentro.Name = "tableLayoutPanelCentro";
             this.tableLayoutPanelCentro.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelCentro_Paint);
             // 
             // panelDerecha
             // 
+            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.panelDerecha.Controls.Add(this.panelAdmin);
             this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
-            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.Name = "panelDerecha";
             // 
             // panelAdmin
