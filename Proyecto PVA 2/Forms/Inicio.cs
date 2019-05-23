@@ -101,7 +101,7 @@ namespace Proyecto_PVA_2
         }
 
         //--Panel Derecho
-        private void ButtonAdministrarPeliculas_Click(object sender, EventArgs e)
+        private void buttonAdministrarPeliculas_Click_1(object sender, EventArgs e)
         {
             AdministrarPeliculas adminPelis = new AdministrarPeliculas();
             adminPelis.ShowDialog();
@@ -283,6 +283,8 @@ namespace Proyecto_PVA_2
         {
 
         }
+
+        
     }
 
 }

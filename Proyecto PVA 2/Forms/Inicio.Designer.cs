@@ -61,7 +61,6 @@
             this.buttonAdministrarPeliculas = new System.Windows.Forms.Button();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
-            this.tableLayoutPanelCentro.SuspendLayout();
             this.panelDerecha.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -252,7 +251,6 @@
             // 
             resources.ApplyResources(this.tableLayoutPanelCentro, "tableLayoutPanelCentro");
             this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
-            this.tableLayoutPanelCentro.Controls.Add(this.panelDerecha, 0, 0);
             this.tableLayoutPanelCentro.Name = "tableLayoutPanelCentro";
             this.tableLayoutPanelCentro.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelCentro_Paint);
             // 
@@ -260,8 +258,8 @@
             // 
             this.panelDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.panelDerecha.Controls.Add(this.panelAdmin);
-            this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             resources.ApplyResources(this.panelDerecha, "panelDerecha");
+            this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             this.panelDerecha.Name = "panelDerecha";
             // 
             // panelAdmin
@@ -304,6 +302,7 @@
             this.buttonAdministrarPeliculas.ForeColor = System.Drawing.Color.White;
             this.buttonAdministrarPeliculas.Name = "buttonAdministrarPeliculas";
             this.buttonAdministrarPeliculas.UseVisualStyleBackColor = true;
+            this.buttonAdministrarPeliculas.Click += new System.EventHandler(this.buttonAdministrarPeliculas_Click_1);
             // 
             // Inicio
             // 
@@ -312,6 +311,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.tableLayoutPanelCentro);
             this.Controls.Add(this.panelIzquierda);
+            this.Controls.Add(this.panelDerecha);
             this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.statusStripInicio);
             this.Name = "Inicio";
@@ -321,7 +321,6 @@
             this.toolStripInicio.PerformLayout();
             this.panelIzquierda.ResumeLayout(false);
             this.panelIzquierda.PerformLayout();
-            this.tableLayoutPanelCentro.ResumeLayout(false);
             this.panelDerecha.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
