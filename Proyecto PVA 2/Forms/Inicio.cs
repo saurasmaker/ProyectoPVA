@@ -284,7 +284,10 @@ namespace Proyecto_PVA_2
 
         }
 
-        
+        private void panelDerecha_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

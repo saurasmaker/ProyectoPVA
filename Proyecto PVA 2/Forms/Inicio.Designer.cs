@@ -256,11 +256,12 @@
             // 
             // panelDerecha
             // 
-            this.panelDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.panelDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(23)))), ((int)(((byte)(47)))));
             this.panelDerecha.Controls.Add(this.panelAdmin);
-            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.Name = "panelDerecha";
+            this.panelDerecha.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecha_Paint);
             // 
             // panelAdmin
             // 
@@ -309,9 +310,9 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.Controls.Add(this.panelDerecha);
             this.Controls.Add(this.tableLayoutPanelCentro);
             this.Controls.Add(this.panelIzquierda);
-            this.Controls.Add(this.panelDerecha);
             this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.statusStripInicio);
             this.Name = "Inicio";
