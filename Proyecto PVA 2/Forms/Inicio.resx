@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStripInicio.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="toolStripInicio.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
@@ -4574,7 +4574,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStripInicio.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="buttonGeneroFamiliar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -6668,7 +6668,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        BgAAAk1TRnQBSQFMAgEBAwEAAagBAAGoAQABEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        BgAAAk1TRnQBSQFMAgEBAwEAAbABAAGwAQABEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABEAMAAQEBAAEQBgABCCQAAb0BdwGlARQBCAEhAd4BewgAAf8BfwExAUYBjAExAYwBMQGMATEBjAEx
         AYwBMQGMATEBjAExAYwBMQGMATEBjAExAZQBUgH/AX8CAAFzAU4BQgEIAdYBWkoAAb0BdwFCAQgEAAEI
         ASEIAAEQAUIIAAGUAVIB9wFeAfcBXgHvAT0IAAEYAWMCAAFCAQgEAAG1AVZGAAG9AXcBQgEIBgAB5wEc
@@ -6746,7 +6746,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelIzquierda.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="tableLayoutPanelCentro.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6759,36 +6759,6 @@
   </data>
   <data name="tableLayoutPanelCentro.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="tableLayoutPanelCentro.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanelCentro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 75</value>
-  </data>
-  <data name="tableLayoutPanelCentro.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanelCentro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>601, 493</value>
-  </data>
-  <data name="tableLayoutPanelCentro.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelCentro.Name" xml:space="preserve">
-    <value>tableLayoutPanelCentro</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelCentro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelCentro.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelCentro.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanelCentro.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Absolute,388,Absolute,388" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="buttonAdministrarAdmins.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -6967,14 +6937,11 @@
   <data name="&gt;&gt;panelAdmin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panelDerecha.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
   <data name="panelDerecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 75</value>
+    <value>3, 3</value>
   </data>
   <data name="panelDerecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 493</value>
+    <value>180, 487</value>
   </data>
   <data name="panelDerecha.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6986,10 +6953,40 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelDerecha.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanelCentro</value>
   </data>
   <data name="&gt;&gt;panelDerecha.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelCentro.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelCentro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 75</value>
+  </data>
+  <data name="tableLayoutPanelCentro.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="tableLayoutPanelCentro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>781, 493</value>
+  </data>
+  <data name="tableLayoutPanelCentro.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelCentro.Name" xml:space="preserve">
+    <value>tableLayoutPanelCentro</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelCentro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelCentro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelCentro.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelCentro.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panelDerecha" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Absolute,493,Absolute,493" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

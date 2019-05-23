@@ -28,3 +28,18 @@ C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.cs
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csprojAssemblyReference.cache
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.GenerateResource.cache
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.CoreCompileInputs.cache
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb

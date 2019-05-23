@@ -116,7 +116,12 @@ namespace Proyecto_PVA_2.Forms
             return;
         }
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+        }
+
+
 
 
         //Events inútiles
