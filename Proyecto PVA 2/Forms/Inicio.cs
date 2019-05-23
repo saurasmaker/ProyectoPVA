@@ -95,8 +95,6 @@ namespace Proyecto_PVA_2
             for(int i = 0; i<20; i++)
                 Peliculas.Add(crearCartelPelicula());
 
-            MessageBox.Show("" + Peliculas.Count, "Cantidad");
-
             ReajustarPanelCentral(Peliculas.Count);
         }
 

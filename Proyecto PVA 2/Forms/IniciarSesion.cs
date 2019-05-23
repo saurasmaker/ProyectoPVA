@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -22,11 +21,25 @@ namespace Proyecto_PVA_2.Forms
             InitializeComponent();
         }
 
-
         //Eventos
-        private void buttonAceptar_Click(object sender, EventArgs e)
+        private void textBoxCorreo_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxCorreo.Text == "")
+
+        }
+
+        private void IniciarSesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxMostrarContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAceptar_Click_1(object sender, EventArgs e)
+        {
+            if (textBoxCorreoElectronico.Text == "")
                 MessageBox.Show("Rellene el campo de correo electrónico para continuar.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else if (textBoxContraseña.Text == "")
                 MessageBox.Show("Rellene el campo de contraseña para continuar.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -37,19 +50,24 @@ namespace Proyecto_PVA_2.Forms
                 Login(1);
                 Close();
             }
-            else if (ValidarEmail()) {
+            else if (ValidarEmail())
+            {
                 Login(0);
                 Close();
             }
             else
                 MessageBox.Show("Formato de correo electrónico no válido.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         //Métodos
         public bool EsAdmin()
         {
-            string email = textBoxCorreo.Text;
+            string email = textBoxCorreoElectronico.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@(vc\.admin)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
             if (match.Success)
@@ -60,7 +78,7 @@ namespace Proyecto_PVA_2.Forms
 
         public bool ValidarEmail()
         {
-            string email = textBoxCorreo.Text;
+            string email = textBoxCorreoElectronico.Text;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
 
@@ -86,9 +104,9 @@ namespace Proyecto_PVA_2.Forms
 
                     papa.InicioSesion = true;
                     papa.InicioSesionAdmin = true;
-                    papa.Admin = new Clases.Administrador(textBoxCorreo.Text, textBoxContraseña.Text);
+                    papa.Admin = new Clases.Administrador(textBoxCorreoElectronico.Text, textBoxContraseña.Text);
                     papa.MostrarOpcionesAdmin();
-                    
+
                     break;
                 default:
                     MessageBox.Show("Opción no válida. Error en el código. Si le aparece este error como usuario contecte con el servicio técnico de la web.", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -97,6 +115,9 @@ namespace Proyecto_PVA_2.Forms
             }
             return;
         }
+
+        
+
 
         //Events inútiles
 
