@@ -121,6 +121,27 @@ namespace Proyecto_PVA_2.Forms
             Close();
         }
 
+        private void textBoxCorreoElectronico_Click(object sender, EventArgs e)
+        {
+            textBoxCorreoElectronico.Clear();
+            textBoxCorreoElectronico.ForeColor = Color.FromArgb(241, 239, 241);
+        }
+
+        private void textBoxContraseña_Click(object sender, EventArgs e)
+        {
+            textBoxContraseña.Clear();
+            textBoxContraseña.ForeColor = Color.FromArgb(241, 239, 241);
+        }
+
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            //buttonMostrar.BackgroundImage = 
+        }
+
+        private void linkLabelRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
 
 
 
