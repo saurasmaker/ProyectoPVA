@@ -310,10 +310,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.tableLayoutPanelCentro);
-            this.Controls.Add(this.panelIzquierda);
             this.Controls.Add(this.panelDerecha);
-            this.Controls.Add(this.toolStripInicio);
+            this.Controls.Add(this.panelIzquierda);
             this.Controls.Add(this.statusStripInicio);
+            this.Controls.Add(this.toolStripInicio);
             this.Name = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.Resize += new System.EventHandler(this.Inicio_Resize);
