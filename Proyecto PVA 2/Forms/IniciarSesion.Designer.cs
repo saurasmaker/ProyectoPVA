@@ -39,7 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonMostrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -118,12 +118,13 @@
             this.textBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
             this.textBoxContraseña.Location = new System.Drawing.Point(47, 256);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
             this.textBoxContraseña.TabIndex = 15;
             this.textBoxContraseña.Text = "Contraseña";
+            this.textBoxContraseña.Click += new System.EventHandler(this.textBoxContraseña_Click);
             // 
             // textBoxCorreoElectronico
             // 
@@ -133,12 +134,13 @@
             this.textBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCorreoElectronico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(47, 209);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(171, 19);
             this.textBoxCorreoElectronico.TabIndex = 16;
             this.textBoxCorreoElectronico.Text = "Correo Electrónico";
+            this.textBoxCorreoElectronico.Click += new System.EventHandler(this.textBoxCorreoElectronico_Click);
             // 
             // panel2
             // 
@@ -166,17 +168,18 @@
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 16;
             // 
-            // button1
+            // buttonMostrar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(249, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonMostrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMostrar.BackgroundImage")));
+            this.buttonMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMostrar.FlatAppearance.BorderSize = 0;
+            this.buttonMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMostrar.Location = new System.Drawing.Point(249, 255);
+            this.buttonMostrar.Name = "buttonMostrar";
+            this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
+            this.buttonMostrar.TabIndex = 18;
+            this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
             // 
             // linkLabel1
             // 
@@ -199,7 +202,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(288, 479);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMostrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel2);
@@ -234,7 +237,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
