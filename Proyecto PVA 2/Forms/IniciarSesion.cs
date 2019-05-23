@@ -135,7 +135,7 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
-            buttonMostrar.BackgroundImage = ;
+            //buttonMostrar.BackgroundImage = 
         }
 
 
