@@ -69,12 +69,13 @@
             this.linkLabelRegistrarse.AutoSize = true;
             this.linkLabelRegistrarse.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRegistrarse.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.linkLabelRegistrarse.Location = new System.Drawing.Point(73, 402);
+            this.linkLabelRegistrarse.Location = new System.Drawing.Point(65, 403);
             this.linkLabelRegistrarse.Name = "linkLabelRegistrarse";
             this.linkLabelRegistrarse.Size = new System.Drawing.Size(143, 19);
             this.linkLabelRegistrarse.TabIndex = 10;
             this.linkLabelRegistrarse.TabStop = true;
             this.linkLabelRegistrarse.Text = "¿Sin cuenta? Únete";
+            this.linkLabelRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegistrarse_LinkClicked);
             // 
             // linkLabelContraseñaOlvidada
             // 
@@ -187,7 +188,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.Location = new System.Drawing.Point(117, 432);
+            this.linkLabel1.Location = new System.Drawing.Point(110, 431);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 16);
             this.linkLabel1.TabIndex = 19;

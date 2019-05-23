@@ -138,6 +138,11 @@ namespace Proyecto_PVA_2.Forms
             //buttonMostrar.BackgroundImage = 
         }
 
+        private void linkLabelRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
 
 
         //Events inútiles

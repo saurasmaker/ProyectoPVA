@@ -16,5 +16,15 @@ namespace Proyecto_PVA_2.Forms
         {
             InitializeComponent();
         }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCorreoElectronico_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
