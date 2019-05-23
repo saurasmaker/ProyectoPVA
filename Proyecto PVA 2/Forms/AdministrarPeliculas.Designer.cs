@@ -459,6 +459,7 @@
             this.buttonAñadirImagen.TabIndex = 20;
             this.buttonAñadirImagen.Text = "Añadir Imagen";
             this.buttonAñadirImagen.UseVisualStyleBackColor = true;
+            this.buttonAñadirImagen.Click += new System.EventHandler(this.buttonAñadirImagen_Click);
             // 
             // AdministrarPeliculas
             // 
