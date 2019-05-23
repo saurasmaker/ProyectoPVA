@@ -137,6 +137,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Iconos\gfghj.psd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +162,31 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\3.png" />
+    <Content Include="Iconos\4.png" />
+    <Content Include="Iconos\accion.png" />
+    <Content Include="Iconos\accionn.png" />
+    <Content Include="Iconos\Aventura.png" />
+    <Content Include="Iconos\carro de la compra.png" />
+    <Content Include="Iconos\Deporte.png" />
+    <Content Include="Iconos\Dibujo.png" />
+    <Content Include="Iconos\flecha izquierda.png" />
+    <Content Include="Iconos\home.png" />
+    <Content Include="Iconos\logo.png" />
+    <Content Include="Iconos\lupa.png" />
+    <Content Include="Iconos\mas.png" />
+    <Content Include="Iconos\menu.png" />
+    <Content Include="Iconos\nAccion.png" />
+    <Content Include="Iconos\nAventura.png" />
+    <Content Include="Iconos\nCiencia.png" />
+    <Content Include="Iconos\nDeporte.png" />
+    <Content Include="Iconos\nDibujos.png" />
+    <Content Include="Iconos\opciones.png" />
+    <Content Include="Iconos\password.png" />
+    <Content Include="Iconos\perfil.png" />
+    <Content Include="Iconos\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
