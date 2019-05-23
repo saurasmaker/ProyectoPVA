@@ -75,6 +75,7 @@
     <Compile Include="Forms\AdministrarPeliculas.Designer.cs">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\border.cs" />
     <Compile Include="Forms\IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,8 +43,6 @@ namespace Proyecto_PVA_2
         internal Usuario User { get => user; set => user = value; }
         internal Administrador Admin { get => admin; set => admin = value; }
 
-
-        //------------------------------------------------------------------------------
         //Eventos
 
         //--Barra Herramientas Inicio
@@ -72,14 +70,14 @@ namespace Proyecto_PVA_2
         {
             if (!Panel1Encogido)
             {
-                panel1.Size = new Size(buttonDesplegar.Width, panel1.Height);
+                panelIzquierda.Size = new Size(buttonDesplegar.Width, panelIzquierda.Height);
                 Panel1Encogido = true;
                 buttonDesplegar.Dock = DockStyle.Left;
                 OcultarGeneros();
             }
             else
             {
-                panel1.Size = new Size(164, panel1.Height);
+                panelIzquierda.Size = new Size(164, panelIzquierda.Height);
                 Panel1Encogido = false;
                 buttonDesplegar.Dock = DockStyle.None;
                 MostrarGeneros();
@@ -87,12 +85,11 @@ namespace Proyecto_PVA_2
 
         }
 
-
         //--Panel Central
         private void Inicio_Resize(object sender, EventArgs e)
         {
             Peliculas.Clear();
-            for(int i = 0; i<20; i++)
+            for (int i = 0; i < 20; i++)
                 Peliculas.Add(crearCartelPelicula());
 
             ReajustarPanelCentral(Peliculas.Count);
@@ -105,8 +102,29 @@ namespace Proyecto_PVA_2
             adminPelis.ShowDialog();
         }
 
+        //Eventos inútiles
+        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-        //-------------------------------------------------------------------------
+        }
+        private void Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
         //Métodos
         void OcultarGeneros()
         {
@@ -176,7 +194,7 @@ namespace Proyecto_PVA_2
                 style.SizeType = 0;
 
             //Añadimos carteles de peliculas en el LayOut
-            foreach(Panel p in Peliculas)
+            foreach (Panel p in Peliculas)
                 tableLayoutPanelCentro.Controls.Add(p);
 
             //Establecemos estilo de tamaño de las filas
@@ -191,13 +209,13 @@ namespace Proyecto_PVA_2
         Panel crearCartelPelicula()
         {
             PictureBox portada = new PictureBox();
-            portada.Size = new Size(100,140);
-            portada.Location = new Point(7,7);
+            portada.Size = new Size(100, 140);
+            portada.Location = new Point(7, 7);
             portada.Visible = true;
 
             Label titulo = new Label();
             titulo.Text = "Ejemplo titulo";
-            titulo.Location = new Point(4,157);
+            titulo.Location = new Point(4, 157);
             titulo.Visible = true;
 
             Panel cartel = new Panel();
@@ -215,35 +233,42 @@ namespace Proyecto_PVA_2
         }
 
 
-        //Eventos inútiles
-        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        //Eventos Inútiles
         private void TableLayoutPanelCentro_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+
         private void Inicio_Load(object sender, EventArgs e)
         {
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonPeliculas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonSeries_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
