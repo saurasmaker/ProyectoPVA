@@ -44,17 +44,25 @@ namespace Proyecto_PVA_2
         internal Administrador Admin { get => admin; set => admin = value; }
 
         //Eventos
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            ReajustarPanelCentral(Peliculas.Count);
+            ReajustarToolStripInicio();
+        }
 
         //--Barra Herramientas Inicio
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             if (InicioSesionAdmin)
             {
-                
+                PanelDeControlAdmin panelAdmin = new PanelDeControlAdmin();
+                panelAdmin.Show();
+
             }
             else if (InicioSesion)
             {
-
+                PerfilUsuario perfil = new PerfilUsuario();
+                perfil.Show();
             }
             else
             {
@@ -77,7 +85,7 @@ namespace Proyecto_PVA_2
             }
             else
             {
-                panelIzquierda.Size = new Size(164, panelIzquierda.Height);
+                panelIzquierda.Size = new Size(174, panelIzquierda.Height);
                 Panel1Encogido = false;
                 buttonDesplegar.Dock = DockStyle.None;
                 MostrarGeneros();
@@ -88,11 +96,8 @@ namespace Proyecto_PVA_2
         //--Panel Central
         private void Inicio_Resize(object sender, EventArgs e)
         {
-            Peliculas.Clear();
-            for (int i = 0; i < 20; i++)
-                Peliculas.Add(crearCartelPelicula());
-
             ReajustarPanelCentral(Peliculas.Count);
+            ReajustarToolStripInicio();
         }
 
         //--Panel Derecho
@@ -181,7 +186,11 @@ namespace Proyecto_PVA_2
 
         void ReajustarPanelCentral(int elementos)
         {
-            int espacio = tableLayoutPanelCentro.Width / 160;
+            int espacio = tableLayoutPanelCentro.Width / 210;
+
+            Peliculas.Clear();
+            for (int i = 0; i < 20; i++)
+                Peliculas.Add(crearCartelPelicula());
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -206,22 +215,30 @@ namespace Proyecto_PVA_2
             tableLayoutPanelCentro.Update();
         }
 
+        void ReajustarToolStripInicio()
+        {
+            toolStripButtonPeliculas.Margin = new Padding(tableLayoutPanelCentro.Size.Width/2 - 123, 1, 0, 2);
+            return;
+        }
+
         Panel crearCartelPelicula()
         {
             PictureBox portada = new PictureBox();
-            portada.Size = new Size(100, 140);
+            portada.Size = new Size(150, 210);
             portada.Location = new Point(7, 7);
             portada.Visible = true;
 
             Label titulo = new Label();
+            titulo.Font = new Font("Bahnschrift", 10);
+            titulo.ForeColor = Color.White;
             titulo.Text = "Ejemplo titulo";
-            titulo.Location = new Point(4, 157);
+            titulo.Location = new Point(4, 235);
             titulo.Visible = true;
 
             Panel cartel = new Panel();
-            cartel.Size = new Size(113, 176);
+            cartel.Size = new Size(170, 264);
             cartel.Margin = new Padding(20, 20, 20, 20);
-            cartel.BackColor = Color.FromName("Info");
+            cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
 
             cartel.Controls.Add(portada);
@@ -240,10 +257,7 @@ namespace Proyecto_PVA_2
         }
 
 
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

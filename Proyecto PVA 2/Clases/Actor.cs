@@ -9,6 +9,7 @@ namespace Proyecto_PVA_2.Clases
     class Actor:Persona
     {
         //Atributos
+        string nombre;
 
         //Constructor
         public Actor()

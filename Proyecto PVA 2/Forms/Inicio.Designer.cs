@@ -36,7 +36,7 @@
             this.toolStripButtonPerfil = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPeliculas = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonSeries = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonIniciarSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCarroCompra = new System.Windows.Forms.ToolStripButton();
             this.panelIzquierda = new System.Windows.Forms.Panel();
             this.buttonGeneroFamiliar = new System.Windows.Forms.Button();
@@ -75,12 +75,13 @@
             // 
             resources.ApplyResources(this.toolStripInicio, "toolStripInicio");
             this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
             this.toolStripButtonPerfil,
             this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
-            this.toolStripButton1,
+            this.toolStripButtonIniciarSesion,
             this.toolStripButtonCarroCompra});
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -94,17 +95,17 @@
             // 
             // toolStripButtonPerfil
             // 
-            this.toolStripButtonPerfil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripButtonPerfil, "toolStripButtonPerfil");
-            this.toolStripButtonPerfil.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.toolStripButtonPerfil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPerfil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.toolStripButtonPerfil.Name = "toolStripButtonPerfil";
             // 
             // toolStripButtonPeliculas
             // 
             this.toolStripButtonPeliculas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.toolStripButtonPeliculas, "toolStripButtonPeliculas");
-            this.toolStripButtonPeliculas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripButtonPeliculas.Margin = new System.Windows.Forms.Padding(100, 1, 0, 2);
+            this.toolStripButtonPeliculas.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripButtonPeliculas.Margin = new System.Windows.Forms.Padding(188, 1, 0, 2);
             this.toolStripButtonPeliculas.Name = "toolStripButtonPeliculas";
             this.toolStripButtonPeliculas.Click += new System.EventHandler(this.toolStripButtonPeliculas_Click);
             // 
@@ -112,22 +113,24 @@
             // 
             this.toolStripButtonSeries.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.toolStripButtonSeries, "toolStripButtonSeries");
-            this.toolStripButtonSeries.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripButtonSeries.Margin = new System.Windows.Forms.Padding(0, 1, 100, 2);
+            this.toolStripButtonSeries.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.toolStripButtonSeries.Name = "toolStripButtonSeries";
             this.toolStripButtonSeries.Click += new System.EventHandler(this.toolStripButtonSeries_Click);
             // 
-            // toolStripButton1
+            // toolStripButtonIniciarSesion
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            this.toolStripButtonIniciarSesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonIniciarSesion, "toolStripButtonIniciarSesion");
+            this.toolStripButtonIniciarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripButtonIniciarSesion.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonIniciarSesion.Name = "toolStripButtonIniciarSesion";
+            this.toolStripButtonIniciarSesion.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // toolStripButtonCarroCompra
             // 
-            this.toolStripButtonCarroCompra.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonCarroCompra.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             resources.ApplyResources(this.toolStripButtonCarroCompra, "toolStripButtonCarroCompra");
+            this.toolStripButtonCarroCompra.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonCarroCompra.Name = "toolStripButtonCarroCompra";
             // 
             // panelIzquierda
@@ -247,7 +250,7 @@
             // tableLayoutPanelCentro
             // 
             resources.ApplyResources(this.tableLayoutPanelCentro, "tableLayoutPanelCentro");
-            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.tableLayoutPanelCentro.Name = "tableLayoutPanelCentro";
             this.tableLayoutPanelCentro.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelCentro_Paint);
             // 
@@ -304,6 +307,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.tableLayoutPanelCentro);
             this.Controls.Add(this.panelDerecha);
             this.Controls.Add(this.panelIzquierda);
@@ -332,7 +336,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPeliculas;
         private System.Windows.Forms.ToolStripButton toolStripButtonSeries;
         private System.Windows.Forms.Button buttonDesplegar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonIniciarSesion;
         private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Button buttonGeneroDeporte;
         private System.Windows.Forms.Button buttonGeneroCrimen;

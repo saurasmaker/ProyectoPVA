@@ -122,10 +122,10 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="statusStripInicio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 496</value>
+    <value>0, 568</value>
   </data>
   <data name="statusStripInicio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 22</value>
+    <value>955, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStripInicio.TabIndex" type="System.Int32, mscorlib">
@@ -4409,7 +4409,10 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonInicio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 114</value>
+    <value>174, 75</value>
+  </data>
+  <data name="toolStripButtonPerfil.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="toolStripButtonPerfil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4430,7 +4433,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonPerfil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 72</value>
+    <value>50, 73</value>
   </data>
   <data name="toolStripButtonPerfil.Text" xml:space="preserve">
     <value>Perfil</value>
@@ -4489,10 +4492,13 @@
   <data name="toolStripButtonSeries.Text" xml:space="preserve">
     <value>Series</value>
   </data>
-  <data name="toolStripButton1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="toolStripButtonIniciarSesion.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripButtonIniciarSesion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
-  <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolStripButtonIniciarSesion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
@@ -4507,14 +4513,20 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStripButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="toolStripButtonIniciarSesion.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 72</value>
+  <data name="toolStripButtonIniciarSesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 72</value>
   </data>
-  <data name="toolStripButton1.Text" xml:space="preserve">
+  <data name="toolStripButtonIniciarSesion.Text" xml:space="preserve">
     <value>Iniciar Sesión</value>
+  </data>
+  <data name="toolStripButtonIniciarSesion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="toolStripButtonCarroCompra.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="toolStripButtonCarroCompra.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4535,7 +4547,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonCarroCompra.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 72</value>
+    <value>50, 72</value>
   </data>
   <data name="toolStripButtonCarroCompra.Text" xml:space="preserve">
     <value>Carro de la compra</value>
@@ -4544,7 +4556,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStripInicio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 75</value>
+    <value>955, 75</value>
   </data>
   <data name="toolStripInicio.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6719,7 +6731,7 @@
     <value>0, 75</value>
   </data>
   <data name="panelIzquierda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 421</value>
+    <value>174, 493</value>
   </data>
   <data name="panelIzquierda.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6758,7 +6770,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanelCentro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 421</value>
+    <value>601, 493</value>
   </data>
   <data name="tableLayoutPanelCentro.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -6959,10 +6971,10 @@
     <value>Right</value>
   </data>
   <data name="panelDerecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>793, 75</value>
+    <value>775, 75</value>
   </data>
   <data name="panelDerecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 421</value>
+    <value>180, 493</value>
   </data>
   <data name="panelDerecha.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6989,7 +7001,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>976, 518</value>
+    <value>955, 590</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -7021,10 +7033,10 @@
   <data name="&gt;&gt;toolStripButtonSeries.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButton1.Name" xml:space="preserve">
-    <value>toolStripButton1</value>
+  <data name="&gt;&gt;toolStripButtonIniciarSesion.Name" xml:space="preserve">
+    <value>toolStripButtonIniciarSesion</value>
   </data>
-  <data name="&gt;&gt;toolStripButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripButtonIniciarSesion.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripButtonCarroCompra.Name" xml:space="preserve">
