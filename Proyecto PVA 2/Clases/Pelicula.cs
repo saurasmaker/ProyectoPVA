@@ -13,6 +13,7 @@ namespace Proyecto_PVA_2.Clases
         string titulo, sinopsis;
         float puntuacion,precio;
         DateTime estreno;
+        TimeSpan duracion;
 
         List<string> generos;
         List<Actor> reparto;

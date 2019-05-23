@@ -61,7 +61,6 @@
             this.buttonAdministrarPeliculas = new System.Windows.Forms.Button();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
-            this.tableLayoutPanelCentro.SuspendLayout();
             this.panelDerecha.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
@@ -75,15 +74,15 @@
             // toolStripInicio
             // 
             resources.ApplyResources(this.toolStripInicio, "toolStripInicio");
-            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(51)))), ((int)(((byte)(55)))));
+            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
             this.toolStripButtonPerfil,
+            this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
             this.toolStripButtonIniciarSesion,
-            this.toolStripButtonCarroCompra,
-            this.toolStripButtonPeliculas});
+            this.toolStripButtonCarroCompra});
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
@@ -136,7 +135,7 @@
             // 
             // panelIzquierda
             // 
-            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(41)))), ((int)(((byte)(44)))));
+            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.panelIzquierda.Controls.Add(this.buttonGeneroFamiliar);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDrama);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDocumentales);
@@ -251,16 +250,15 @@
             // tableLayoutPanelCentro
             // 
             resources.ApplyResources(this.tableLayoutPanelCentro, "tableLayoutPanelCentro");
-            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
-            this.tableLayoutPanelCentro.Controls.Add(this.panelDerecha, 0, 0);
+            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.tableLayoutPanelCentro.Name = "tableLayoutPanelCentro";
             this.tableLayoutPanelCentro.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelCentro_Paint);
             // 
             // panelDerecha
             // 
-            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.panelDerecha.Controls.Add(this.panelAdmin);
+            resources.ApplyResources(this.panelDerecha, "panelDerecha");
             this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             this.panelDerecha.Name = "panelDerecha";
             // 
@@ -304,6 +302,7 @@
             this.buttonAdministrarPeliculas.ForeColor = System.Drawing.Color.White;
             this.buttonAdministrarPeliculas.Name = "buttonAdministrarPeliculas";
             this.buttonAdministrarPeliculas.UseVisualStyleBackColor = true;
+            this.buttonAdministrarPeliculas.Click += new System.EventHandler(this.buttonAdministrarPeliculas_Click_1);
             // 
             // Inicio
             // 
@@ -312,6 +311,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.tableLayoutPanelCentro);
             this.Controls.Add(this.panelIzquierda);
+            this.Controls.Add(this.panelDerecha);
             this.Controls.Add(this.toolStripInicio);
             this.Controls.Add(this.statusStripInicio);
             this.Name = "Inicio";
@@ -321,7 +321,6 @@
             this.toolStripInicio.PerformLayout();
             this.panelIzquierda.ResumeLayout(false);
             this.panelIzquierda.PerformLayout();
-            this.tableLayoutPanelCentro.ResumeLayout(false);
             this.panelDerecha.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
