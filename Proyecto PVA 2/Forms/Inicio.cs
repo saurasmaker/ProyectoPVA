@@ -61,10 +61,12 @@ namespace Proyecto_PVA_2
         {
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
             this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
-            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
-            this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
+            //Ajustes de Carga
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
+
+            //Quitamos Scroll Horizontal del panel central
+            tableLayoutPanelCentro.HorizontalScroll.Visible = false;
         }
 
         //--Barra Herramientas Inicio
@@ -99,6 +101,7 @@ namespace Proyecto_PVA_2
                 Panel1Encogido = true;
                 buttonDesplegar.Dock = DockStyle.Left;
                 OcultarGeneros();
+                ReajustarPanelCentral();
             }
             else
             {
@@ -106,6 +109,7 @@ namespace Proyecto_PVA_2
                 Panel1Encogido = false;
                 buttonDesplegar.Dock = DockStyle.None;
                 MostrarGeneros();
+                ReajustarPanelCentral();
             }
 
         }
@@ -206,7 +210,7 @@ namespace Proyecto_PVA_2
             int espacio = tableLayoutPanelCentro.Width / 210;
 
             Pelis.Clear();
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
                 Pelis.Add(crearCartelPelicula(i));
 
             //Establecemos cantidad de columnas y filas
@@ -240,20 +244,24 @@ namespace Proyecto_PVA_2
 
         Panel crearCartelPelicula(int i)
         {
+            //Creamos Portada del Cartel
             PictureBox portada = new PictureBox();
             portada.Size = new Size(150, 210);
-            portada.Location = new Point(7, 7);
+            portada.Location = new Point(9, 7);
+            portada.SizeMode = PictureBoxSizeMode.StretchImage;
             try
             {
-                MemoryStream ms = new MemoryStream((byte[])masterDataSet.Peliculas[0].Portada);
+                MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[i].Portada.ToArray());
                 portada.Image = Image.FromStream(ms);
             }
             catch (Exception)
             {
 
             }
+            portada.BorderStyle = BorderStyle.FixedSingle;
             portada.Visible = true;
 
+            //Creamos Titulo del Cartel
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
@@ -268,6 +276,7 @@ namespace Proyecto_PVA_2
             cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
 
+                //Añadmos evento de click en los carteles
             void Cartel_Click(object sender, EventArgs e)
             {
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
@@ -275,11 +284,13 @@ namespace Proyecto_PVA_2
 
                 return;
             }
-
+            
             portada.Click += new EventHandler(Cartel_Click);
             cartel.Click += new EventHandler(Cartel_Click);
             titulo.Click += new EventHandler(Cartel_Click);
+            //--------------------------------------------------------------
 
+            //Añadimos elementos creados al cartel.
             cartel.Controls.Add(portada);
             Portadas.Add(portada);
             cartel.Controls.Add(titulo);
