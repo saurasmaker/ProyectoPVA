@@ -22,6 +22,7 @@ namespace Proyecto_PVA_2
         //Atributos
         Usuario user;
         Administrador admin;
+        List<TituloCinematografico> carroCompra;
         List<Panel> pelis;
         List<PictureBox> portadas;
         List<Label> titulos;
@@ -76,7 +77,6 @@ namespace Proyecto_PVA_2
             {
                 PanelDeControlAdmin panelAdmin = new PanelDeControlAdmin();
                 panelAdmin.Show();
-
             }
             else if (InicioSesion)
             {
@@ -232,13 +232,11 @@ namespace Proyecto_PVA_2
             foreach (ColumnStyle style in styles)
                 style.SizeType = 0;
 
-            //Actualizamos LayOut
-            tableLayoutPanelCentro.Update();
         }
 
         void ReajustarToolStripInicio()
         {
-            toolStripButtonPeliculas.Margin = new Padding(tableLayoutPanelCentro.Size.Width / 2 - 123, 1, 0, 2);
+            toolStripButtonPeliculas.Margin = new Padding((tableLayoutPanelCentro.Size.Width - 360) / 2 , 1, 0, 2);
             return;
         }
 
@@ -265,7 +263,7 @@ namespace Proyecto_PVA_2
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
-            titulo.Text = "Prueba";
+            titulo.Text = masterDataSet.Peliculas[i].Titulo;
             titulo.Padding = new Padding(5,0,2,0);
             titulo.Dock = DockStyle.Bottom;
             titulo.Visible = true;
@@ -276,18 +274,46 @@ namespace Proyecto_PVA_2
             cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
 
-                //Añadmos evento de click en los carteles
+            //Creamos eventos de los carteles-------------------------------
+            void CambioColorCartel(Object sender, EventArgs e)
+            {
+                cartel.BackColor = Color.FromArgb(100, 0, 200);
+                return;
+            }
             void Cartel_Click(object sender, EventArgs e)
             {
+                
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
+                cartel.BackColor = Color.FromArgb(195, 27, 57);
+                Cursor = Cursors.Default;
                 infoPeli.Show();
 
                 return;
             }
-            
+            void MouseAMano(Object sender, EventArgs e)
+            {
+                Cursor = Cursors.Hand;
+                cartel.BackColor = Color.FromArgb(170, 0, 0);
+
+                return;
+            }
+            void MouseAFlecha(Object sender, EventArgs e)
+            {
+                Cursor = Cursors.Default;
+                cartel.BackColor = Color.FromArgb(195, 27, 57);
+                return;
+            }
+                //Añadimos Eventos a portada
             portada.Click += new EventHandler(Cartel_Click);
-            cartel.Click += new EventHandler(Cartel_Click);
+            portada.MouseDown += new MouseEventHandler(CambioColorCartel);
+            portada.MouseHover += new EventHandler(MouseAMano);
+            portada.MouseLeave += new EventHandler(MouseAFlecha);
+
+            //Añadimos Eventos a Titulo
             titulo.Click += new EventHandler(Cartel_Click);
+            titulo.MouseDown += new MouseEventHandler(CambioColorCartel);
+            titulo.MouseHover += new EventHandler(MouseAMano);
+            titulo.MouseLeave += new EventHandler(MouseAFlecha);
             //--------------------------------------------------------------
 
             //Añadimos elementos creados al cartel.

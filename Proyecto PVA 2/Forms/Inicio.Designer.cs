@@ -38,6 +38,7 @@
             this.toolStripButtonSeries = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonIniciarSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCarroCompra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRecomendaciones = new System.Windows.Forms.ToolStripButton();
             this.panelIzquierda = new System.Windows.Forms.Panel();
             this.buttonGeneroFamiliar = new System.Windows.Forms.Button();
             this.buttonGeneroDrama = new System.Windows.Forms.Button();
@@ -88,7 +89,8 @@
             this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
             this.toolStripButtonIniciarSesion,
-            this.toolStripButtonCarroCompra});
+            this.toolStripButtonCarroCompra,
+            this.toolStripButtonRecomendaciones});
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
@@ -138,6 +140,13 @@
             resources.ApplyResources(this.toolStripButtonCarroCompra, "toolStripButtonCarroCompra");
             this.toolStripButtonCarroCompra.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonCarroCompra.Name = "toolStripButtonCarroCompra";
+            // 
+            // toolStripButtonRecomendaciones
+            // 
+            this.toolStripButtonRecomendaciones.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.toolStripButtonRecomendaciones, "toolStripButtonRecomendaciones");
+            this.toolStripButtonRecomendaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripButtonRecomendaciones.Name = "toolStripButtonRecomendaciones";
             // 
             // panelIzquierda
             // 
@@ -391,6 +400,7 @@
         private System.Windows.Forms.BindingSource peliculasBindingSource;
         private masterDataSetTableAdapters.PeliculasTableAdapter peliculasTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRecomendaciones;
     }
 }
 

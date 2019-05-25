@@ -69,6 +69,7 @@
     <Compile Include="Clases\Pelicula.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Serie.cs" />
+    <Compile Include="Clases\TituloCinematografico.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Forms\AdministrarPeliculas.cs">
       <SubType>Form</SubType>
