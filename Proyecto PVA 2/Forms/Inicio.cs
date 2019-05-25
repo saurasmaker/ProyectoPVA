@@ -48,6 +48,7 @@ namespace Proyecto_PVA_2
         public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
         internal Usuario User { get => user; set => user = value; }
         internal Administrador Admin { get => admin; set => admin = value; }
+        internal List<TituloCinematografico> CarroCompra { get => carroCompra; set => carroCompra = value; }
 
         //Eventos
         private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -259,17 +260,30 @@ namespace Proyecto_PVA_2
             portada.BorderStyle = BorderStyle.FixedSingle;
             portada.Visible = true;
 
-            //Creamos Titulo del Cartel
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
             titulo.Text = masterDataSet.Peliculas[i].Titulo;
-            titulo.Padding = new Padding(5,0,2,0);
+            titulo.Padding = new Padding(6, 0, 2, 0);
             titulo.Dock = DockStyle.Bottom;
             titulo.Visible = true;
 
+            Label precio = new Label();
+            precio.Font = new Font("Bahnschrift", 10);
+            precio.ForeColor = Color.Green;
+            precio.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Peliculas[i].Precio), 2))).ToString() + "€");
+            precio.Dock = DockStyle.Bottom;
+            precio.Padding = new Padding(6, 0, 2, 0);
+            precio.Visible = true;
+
+            Button añadirAlCarro = new Button();
+            añadirAlCarro.Size = new Size(20,20);
+            añadirAlCarro.Text = "Añadir al carro de la compra";
+            añadirAlCarro.Location = new Point(140,220);
+            añadirAlCarro.Visible = true;
+
             Panel cartel = new Panel();
-            cartel.Size = new Size(170, 264);
+            cartel.Size = new Size(170, 270);
             cartel.Margin = new Padding(20, 20, 20, 20);
             cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
@@ -282,10 +296,7 @@ namespace Proyecto_PVA_2
             }
             void Cartel_Click(object sender, EventArgs e)
             {
-                
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
-                cartel.BackColor = Color.FromArgb(195, 27, 57);
-                Cursor = Cursors.Default;
                 infoPeli.Show();
 
                 return;
@@ -309,7 +320,7 @@ namespace Proyecto_PVA_2
             portada.MouseHover += new EventHandler(MouseAMano);
             portada.MouseLeave += new EventHandler(MouseAFlecha);
 
-            //Añadimos Eventos a Titulo
+                //Añadimos Eventos a Titulo
             titulo.Click += new EventHandler(Cartel_Click);
             titulo.MouseDown += new MouseEventHandler(CambioColorCartel);
             titulo.MouseHover += new EventHandler(MouseAMano);
@@ -317,10 +328,13 @@ namespace Proyecto_PVA_2
             //--------------------------------------------------------------
 
             //Añadimos elementos creados al cartel.
+            cartel.Controls.Add(añadirAlCarro);
+            cartel.Controls.Add(precio);
             cartel.Controls.Add(portada);
             Portadas.Add(portada);
             cartel.Controls.Add(titulo);
             Titulos.Add(titulo);
+            
 
             return cartel;
         }

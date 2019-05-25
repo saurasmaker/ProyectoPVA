@@ -17,6 +17,9 @@ namespace Proyecto_PVA_2.Clases
 
         }
 
+        //Getters & Setters
+        public List<List<int>> Capitulos { get => capitulos; set => capitulos = value; }
+
         //Métodos
     }
 }
