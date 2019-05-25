@@ -39,8 +39,9 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonAñadirImagen_Click(object sender, EventArgs e)
         {
+            
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Imagen|*.BMP;*.DIB;*.RLE;*.JPG;*.JPEG;*.JPE;*.JFIF;*.GIF;*.TIF;*.TIFF;*.PNG|";
+            ofd.Filter = "Imagen|*.BMP;*.DIB;*.RLE;*.JPG;*.JPEG;*.JPE;*.JFIF;*.GIF;*.TIF;*.TIFF;*.PNG";
             if (ofd.ShowDialog() == DialogResult.OK)
                 portadaPictureBox.Image = Image.FromFile(ofd.FileName);
         }

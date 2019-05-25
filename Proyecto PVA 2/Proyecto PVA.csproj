@@ -77,6 +77,18 @@
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\border.cs" />
+    <Compile Include="Forms\InformacionSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InformacionSerie.Designer.cs">
+      <DependentUpon>InformacionSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InformaciónPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InformaciónPelicula.Designer.cs">
+      <DependentUpon>InformaciónPelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>

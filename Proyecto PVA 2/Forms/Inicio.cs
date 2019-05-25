@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +16,13 @@ namespace Proyecto_PVA_2
 {
     public partial class Inicio : Form
     {
+        //Conexion base de datos
+        SqlConnection conexionBaseDatos = new SqlConnection("Data Source = localhost\\SQLEXPRESS02; Initial Catalog = master; Integrated Security = True");
+
         //Atributos
         Usuario user;
         Administrador admin;
-        List<Panel> peliculas;
+        List<Panel> pelis;
         List<PictureBox> portadas;
         List<Label> titulos;
         bool inicioSesion = false;
@@ -28,7 +33,7 @@ namespace Proyecto_PVA_2
         public Inicio()
         {
             InitializeComponent();
-            Peliculas = new List<Panel>();
+            Pelis = new List<Panel>();
             Portadas = new List<PictureBox>();
             Titulos = new List<Label>();
         }
@@ -36,7 +41,7 @@ namespace Proyecto_PVA_2
         //Getters & Setters
         public bool InicioSesion { get => inicioSesion; set => inicioSesion = value; }
         public bool Panel1Encogido { get => panel1Encogido; set => panel1Encogido = value; }
-        public List<Panel> Peliculas { get => peliculas; set => peliculas = value; }
+        public List<Panel> Pelis { get => pelis; set => pelis = value; }
         public List<PictureBox> Portadas { get => portadas; set => portadas = value; }
         public List<Label> Titulos { get => titulos; set => titulos = value; }
         public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
@@ -44,9 +49,21 @@ namespace Proyecto_PVA_2
         internal Administrador Admin { get => admin; set => admin = value; }
 
         //Eventos
+        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.peliculasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
         private void Inicio_Load(object sender, EventArgs e)
         {
-            ReajustarPanelCentral(Peliculas.Count);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
+            this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
+            this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
+            ReajustarPanelCentral();
             ReajustarToolStripInicio();
         }
 
@@ -96,7 +113,7 @@ namespace Proyecto_PVA_2
         //--Panel Central
         private void Inicio_Resize(object sender, EventArgs e)
         {
-            ReajustarPanelCentral(Peliculas.Count);
+            ReajustarPanelCentral();
             ReajustarToolStripInicio();
         }
 
@@ -184,13 +201,13 @@ namespace Proyecto_PVA_2
             toolStripButtonPerfil.Text = "Perfil";
         }
 
-        void ReajustarPanelCentral(int elementos)
+        void ReajustarPanelCentral()
         {
             int espacio = tableLayoutPanelCentro.Width / 210;
 
-            Peliculas.Clear();
+            Pelis.Clear();
             for (int i = 0; i < 20; i++)
-                Peliculas.Add(crearCartelPelicula());
+                Pelis.Add(crearCartelPelicula(i));
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -203,7 +220,7 @@ namespace Proyecto_PVA_2
                 style.SizeType = 0;
 
             //Añadimos carteles de peliculas en el LayOut
-            foreach (Panel p in Peliculas)
+            foreach (Panel p in Pelis)
                 tableLayoutPanelCentro.Controls.Add(p);
 
             //Establecemos estilo de tamaño de las filas
@@ -217,22 +234,32 @@ namespace Proyecto_PVA_2
 
         void ReajustarToolStripInicio()
         {
-            toolStripButtonPeliculas.Margin = new Padding(tableLayoutPanelCentro.Size.Width/2 - 123, 1, 0, 2);
+            toolStripButtonPeliculas.Margin = new Padding(tableLayoutPanelCentro.Size.Width / 2 - 123, 1, 0, 2);
             return;
         }
 
-        Panel crearCartelPelicula()
+        Panel crearCartelPelicula(int i)
         {
             PictureBox portada = new PictureBox();
             portada.Size = new Size(150, 210);
             portada.Location = new Point(7, 7);
+            try
+            {
+                MemoryStream ms = new MemoryStream((byte[])masterDataSet.Peliculas[0].Portada);
+                portada.Image = Image.FromStream(ms);
+            }
+            catch (Exception)
+            {
+
+            }
             portada.Visible = true;
 
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
-            titulo.Text = "Ejemplo titulo";
-            titulo.Location = new Point(4, 235);
+            titulo.Text = "Prueba";
+            titulo.Padding = new Padding(5,0,2,0);
+            titulo.Dock = DockStyle.Bottom;
             titulo.Visible = true;
 
             Panel cartel = new Panel();
@@ -240,6 +267,18 @@ namespace Proyecto_PVA_2
             cartel.Margin = new Padding(20, 20, 20, 20);
             cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
+
+            void Cartel_Click(object sender, EventArgs e)
+            {
+                InformaciónPelicula infoPeli = new InformaciónPelicula();
+                infoPeli.Show();
+
+                return;
+            }
+
+            portada.Click += new EventHandler(Cartel_Click);
+            cartel.Click += new EventHandler(Cartel_Click);
+            titulo.Click += new EventHandler(Cartel_Click);
 
             cartel.Controls.Add(portada);
             Portadas.Add(portada);
@@ -255,9 +294,6 @@ namespace Proyecto_PVA_2
         {
 
         }
-
-
-        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -284,7 +320,6 @@ namespace Proyecto_PVA_2
 
         }
 
-        
+       
     }
-
 }
