@@ -444,10 +444,12 @@
             // 
             // portadaPictureBox
             // 
+            this.portadaPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.portadaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.peliculasBindingSource, "Portada", true));
             this.portadaPictureBox.Location = new System.Drawing.Point(319, 38);
             this.portadaPictureBox.Name = "portadaPictureBox";
             this.portadaPictureBox.Size = new System.Drawing.Size(116, 173);
+            this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.portadaPictureBox.TabIndex = 19;
             this.portadaPictureBox.TabStop = false;
             // 
@@ -459,6 +461,7 @@
             this.buttonAñadirImagen.TabIndex = 20;
             this.buttonAñadirImagen.Text = "Añadir Imagen";
             this.buttonAñadirImagen.UseVisualStyleBackColor = true;
+            this.buttonAñadirImagen.Click += new System.EventHandler(this.buttonAñadirImagen_Click);
             // 
             // AdministrarPeliculas
             // 

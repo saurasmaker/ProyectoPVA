@@ -38,6 +38,7 @@
             this.toolStripButtonSeries = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonIniciarSesion = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCarroCompra = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRecomendaciones = new System.Windows.Forms.ToolStripButton();
             this.panelIzquierda = new System.Windows.Forms.Panel();
             this.buttonGeneroFamiliar = new System.Windows.Forms.Button();
             this.buttonGeneroDrama = new System.Windows.Forms.Button();
@@ -59,10 +60,16 @@
             this.buttonAdminUsuarios = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonAdministrarPeliculas = new System.Windows.Forms.Button();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
             this.panelAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStripInicio
@@ -82,7 +89,8 @@
             this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
             this.toolStripButtonIniciarSesion,
-            this.toolStripButtonCarroCompra});
+            this.toolStripButtonCarroCompra,
+            this.toolStripButtonRecomendaciones});
             this.toolStripInicio.Name = "toolStripInicio";
             this.toolStripInicio.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
@@ -132,6 +140,13 @@
             resources.ApplyResources(this.toolStripButtonCarroCompra, "toolStripButtonCarroCompra");
             this.toolStripButtonCarroCompra.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonCarroCompra.Name = "toolStripButtonCarroCompra";
+            // 
+            // toolStripButtonRecomendaciones
+            // 
+            this.toolStripButtonRecomendaciones.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.toolStripButtonRecomendaciones, "toolStripButtonRecomendaciones");
+            this.toolStripButtonRecomendaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripButtonRecomendaciones.Name = "toolStripButtonRecomendaciones";
             // 
             // panelIzquierda
             // 
@@ -304,6 +319,26 @@
             this.buttonAdministrarPeliculas.UseVisualStyleBackColor = true;
             this.buttonAdministrarPeliculas.Click += new System.EventHandler(this.buttonAdministrarPeliculas_Click_1);
             // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peliculasBindingSource
+            // 
+            this.peliculasBindingSource.DataMember = "Peliculas";
+            this.peliculasBindingSource.DataSource = this.masterDataSet;
+            // 
+            // peliculasTableAdapter
+            // 
+            this.peliculasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Inicio
             // 
             resources.ApplyResources(this, "$this");
@@ -323,6 +358,8 @@
             this.panelIzquierda.PerformLayout();
             this.panelDerecha.ResumeLayout(false);
             this.panelAdmin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,6 +396,11 @@
         private System.Windows.Forms.Button buttonAdminUsuarios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAdministrarPeliculas;
+        private masterDataSet masterDataSet;
+        private System.Windows.Forms.BindingSource peliculasBindingSource;
+        private masterDataSetTableAdapters.PeliculasTableAdapter peliculasTableAdapter;
+        private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRecomendaciones;
     }
 }
 

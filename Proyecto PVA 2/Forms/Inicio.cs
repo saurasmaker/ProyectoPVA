@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +16,14 @@ namespace Proyecto_PVA_2
 {
     public partial class Inicio : Form
     {
+        //Conexion base de datos
+        SqlConnection conexionBaseDatos = new SqlConnection("Data Source = localhost\\SQLEXPRESS02; Initial Catalog = master; Integrated Security = True");
+
         //Atributos
         Usuario user;
         Administrador admin;
-        List<Panel> peliculas;
+        List<TituloCinematografico> carroCompra;
+        List<Panel> pelis;
         List<PictureBox> portadas;
         List<Label> titulos;
         bool inicioSesion = false;
@@ -28,7 +34,7 @@ namespace Proyecto_PVA_2
         public Inicio()
         {
             InitializeComponent();
-            Peliculas = new List<Panel>();
+            Pelis = new List<Panel>();
             Portadas = new List<PictureBox>();
             Titulos = new List<Label>();
         }
@@ -36,18 +42,33 @@ namespace Proyecto_PVA_2
         //Getters & Setters
         public bool InicioSesion { get => inicioSesion; set => inicioSesion = value; }
         public bool Panel1Encogido { get => panel1Encogido; set => panel1Encogido = value; }
-        public List<Panel> Peliculas { get => peliculas; set => peliculas = value; }
+        public List<Panel> Pelis { get => pelis; set => pelis = value; }
         public List<PictureBox> Portadas { get => portadas; set => portadas = value; }
         public List<Label> Titulos { get => titulos; set => titulos = value; }
         public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
         internal Usuario User { get => user; set => user = value; }
         internal Administrador Admin { get => admin; set => admin = value; }
+        internal List<TituloCinematografico> CarroCompra { get => carroCompra; set => carroCompra = value; }
 
         //Eventos
+        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.peliculasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
         private void Inicio_Load(object sender, EventArgs e)
         {
-            ReajustarPanelCentral(Peliculas.Count);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
+            this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
+            //Ajustes de Carga
+            ReajustarPanelCentral();
             ReajustarToolStripInicio();
+
+            //Quitamos Scroll Horizontal del panel central
+            tableLayoutPanelCentro.HorizontalScroll.Visible = false;
         }
 
         //--Barra Herramientas Inicio
@@ -57,7 +78,6 @@ namespace Proyecto_PVA_2
             {
                 PanelDeControlAdmin panelAdmin = new PanelDeControlAdmin();
                 panelAdmin.Show();
-
             }
             else if (InicioSesion)
             {
@@ -82,6 +102,7 @@ namespace Proyecto_PVA_2
                 Panel1Encogido = true;
                 buttonDesplegar.Dock = DockStyle.Left;
                 OcultarGeneros();
+                ReajustarPanelCentral();
             }
             else
             {
@@ -89,6 +110,7 @@ namespace Proyecto_PVA_2
                 Panel1Encogido = false;
                 buttonDesplegar.Dock = DockStyle.None;
                 MostrarGeneros();
+                ReajustarPanelCentral();
             }
 
         }
@@ -96,7 +118,7 @@ namespace Proyecto_PVA_2
         //--Panel Central
         private void Inicio_Resize(object sender, EventArgs e)
         {
-            ReajustarPanelCentral(Peliculas.Count);
+            ReajustarPanelCentral();
             ReajustarToolStripInicio();
         }
 
@@ -184,13 +206,13 @@ namespace Proyecto_PVA_2
             toolStripButtonPerfil.Text = "Perfil";
         }
 
-        void ReajustarPanelCentral(int elementos)
+        void ReajustarPanelCentral()
         {
             int espacio = tableLayoutPanelCentro.Width / 210;
 
-            Peliculas.Clear();
-            for (int i = 0; i < 20; i++)
-                Peliculas.Add(crearCartelPelicula());
+            Pelis.Clear();
+            for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
+                Pelis.Add(crearCartelPelicula(i));
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -203,7 +225,7 @@ namespace Proyecto_PVA_2
                 style.SizeType = 0;
 
             //Añadimos carteles de peliculas en el LayOut
-            foreach (Panel p in Peliculas)
+            foreach (Panel p in Pelis)
                 tableLayoutPanelCentro.Controls.Add(p);
 
             //Establecemos estilo de tamaño de las filas
@@ -211,40 +233,108 @@ namespace Proyecto_PVA_2
             foreach (ColumnStyle style in styles)
                 style.SizeType = 0;
 
-            //Actualizamos LayOut
-            tableLayoutPanelCentro.Update();
         }
 
         void ReajustarToolStripInicio()
         {
-            toolStripButtonPeliculas.Margin = new Padding(tableLayoutPanelCentro.Size.Width/2 - 123, 1, 0, 2);
+            toolStripButtonPeliculas.Margin = new Padding((tableLayoutPanelCentro.Size.Width - 360) / 2 , 1, 0, 2);
             return;
         }
 
-        Panel crearCartelPelicula()
+        Panel crearCartelPelicula(int i)
         {
+            //Creamos Portada del Cartel
             PictureBox portada = new PictureBox();
             portada.Size = new Size(150, 210);
-            portada.Location = new Point(7, 7);
+            portada.Location = new Point(9, 7);
+            portada.SizeMode = PictureBoxSizeMode.StretchImage;
+            try
+            {
+                MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[i].Portada.ToArray());
+                portada.Image = Image.FromStream(ms);
+            }
+            catch (Exception)
+            {
+
+            }
+            portada.BorderStyle = BorderStyle.FixedSingle;
             portada.Visible = true;
 
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
-            titulo.Text = "Ejemplo titulo";
-            titulo.Location = new Point(4, 235);
+            titulo.Text = masterDataSet.Peliculas[i].Titulo;
+            titulo.Padding = new Padding(6, 0, 2, 0);
+            titulo.Dock = DockStyle.Bottom;
             titulo.Visible = true;
 
+            Label precio = new Label();
+            precio.Font = new Font("Bahnschrift", 10);
+            precio.ForeColor = Color.Green;
+            precio.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Peliculas[i].Precio), 2))).ToString() + "€");
+            precio.Dock = DockStyle.Bottom;
+            precio.Padding = new Padding(6, 0, 2, 0);
+            precio.Visible = true;
+
+            Button añadirAlCarro = new Button();
+            añadirAlCarro.Size = new Size(20,20);
+            añadirAlCarro.Text = "Añadir al carro de la compra";
+            añadirAlCarro.Location = new Point(140,220);
+            añadirAlCarro.Visible = true;
+
             Panel cartel = new Panel();
-            cartel.Size = new Size(170, 264);
+            cartel.Size = new Size(170, 270);
             cartel.Margin = new Padding(20, 20, 20, 20);
             cartel.BackColor = Color.FromArgb(195, 27, 57);
             cartel.Visible = true;
 
+            //Creamos eventos de los carteles-------------------------------
+            void CambioColorCartel(Object sender, EventArgs e)
+            {
+                cartel.BackColor = Color.FromArgb(100, 0, 200);
+                return;
+            }
+            void Cartel_Click(object sender, EventArgs e)
+            {
+                InformaciónPelicula infoPeli = new InformaciónPelicula();
+                infoPeli.Show();
+
+                return;
+            }
+            void MouseAMano(Object sender, EventArgs e)
+            {
+                Cursor = Cursors.Hand;
+                cartel.BackColor = Color.FromArgb(170, 0, 0);
+
+                return;
+            }
+            void MouseAFlecha(Object sender, EventArgs e)
+            {
+                Cursor = Cursors.Default;
+                cartel.BackColor = Color.FromArgb(195, 27, 57);
+                return;
+            }
+                //Añadimos Eventos a portada
+            portada.Click += new EventHandler(Cartel_Click);
+            portada.MouseDown += new MouseEventHandler(CambioColorCartel);
+            portada.MouseHover += new EventHandler(MouseAMano);
+            portada.MouseLeave += new EventHandler(MouseAFlecha);
+
+                //Añadimos Eventos a Titulo
+            titulo.Click += new EventHandler(Cartel_Click);
+            titulo.MouseDown += new MouseEventHandler(CambioColorCartel);
+            titulo.MouseHover += new EventHandler(MouseAMano);
+            titulo.MouseLeave += new EventHandler(MouseAFlecha);
+            //--------------------------------------------------------------
+
+            //Añadimos elementos creados al cartel.
+            cartel.Controls.Add(añadirAlCarro);
+            cartel.Controls.Add(precio);
             cartel.Controls.Add(portada);
             Portadas.Add(portada);
             cartel.Controls.Add(titulo);
             Titulos.Add(titulo);
+            
 
             return cartel;
         }
@@ -255,9 +345,6 @@ namespace Proyecto_PVA_2
         {
 
         }
-
-
-        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -284,10 +371,7 @@ namespace Proyecto_PVA_2
 
         }
 
-        private void panelDerecha_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 
 }

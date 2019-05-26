@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Proyecto_PVA_2.Clases
 {
-    class Pelicula
+    class Pelicula:TituloCinematografico
     {
         //Atributos
-        int id;
-        string titulo, sinopsis;
-        float puntuacion,precio;
-        DateTime estreno;
-        TimeSpan duracion;
-
-        List<string> generos;
-        List<Actor> reparto;
+        TimeSpan duracion; 
         Director direct;
 
+        //Getters & Setters
+        public TimeSpan Duracion { get => duracion; set => duracion = value; }
+        internal Director Direct { get => direct; set => direct = value; }
+
         //Constructores
+        public Pelicula()
+        {
+
+        }
 
         //Métodos
     }
