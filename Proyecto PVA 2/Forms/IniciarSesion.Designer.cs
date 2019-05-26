@@ -55,7 +55,7 @@
             this.buttonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAceptar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAceptar.Location = new System.Drawing.Point(34, 341);
+            this.buttonAceptar.Location = new System.Drawing.Point(48, 384);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(218, 32);
             this.buttonAceptar.TabIndex = 7;
@@ -69,7 +69,7 @@
             this.linkLabelRegistrarse.AutoSize = true;
             this.linkLabelRegistrarse.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRegistrarse.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.linkLabelRegistrarse.Location = new System.Drawing.Point(65, 403);
+            this.linkLabelRegistrarse.Location = new System.Drawing.Point(79, 446);
             this.linkLabelRegistrarse.Name = "linkLabelRegistrarse";
             this.linkLabelRegistrarse.Size = new System.Drawing.Size(143, 19);
             this.linkLabelRegistrarse.TabIndex = 10;
@@ -84,7 +84,7 @@
             this.linkLabelContraseñaOlvidada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelContraseñaOlvidada.ForeColor = System.Drawing.SystemColors.ControlText;
             this.linkLabelContraseñaOlvidada.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabelContraseñaOlvidada.Location = new System.Drawing.Point(56, 294);
+            this.linkLabelContraseñaOlvidada.Location = new System.Drawing.Point(70, 337);
             this.linkLabelContraseñaOlvidada.Name = "linkLabelContraseñaOlvidada";
             this.linkLabelContraseñaOlvidada.Size = new System.Drawing.Size(187, 16);
             this.linkLabelContraseñaOlvidada.TabIndex = 11;
@@ -95,7 +95,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-28, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(-14, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(355, 193);
             this.pictureBox1.TabIndex = 12;
@@ -105,7 +105,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 253);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 296);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.TabIndex = 13;
@@ -120,7 +120,7 @@
             this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxContraseña.Location = new System.Drawing.Point(47, 256);
+            this.textBoxContraseña.Location = new System.Drawing.Point(61, 299);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
             this.textBoxContraseña.TabIndex = 15;
@@ -136,7 +136,7 @@
             this.textBoxCorreoElectronico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(47, 209);
+            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(61, 252);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(171, 19);
             this.textBoxCorreoElectronico.TabIndex = 16;
@@ -146,7 +146,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.panel2.Location = new System.Drawing.Point(19, 234);
+            this.panel2.Location = new System.Drawing.Point(33, 277);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 15;
@@ -155,7 +155,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(19, 206);
+            this.pictureBox3.Location = new System.Drawing.Point(33, 249);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 22);
             this.pictureBox3.TabIndex = 17;
@@ -164,7 +164,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.panel1.Location = new System.Drawing.Point(19, 281);
+            this.panel1.Location = new System.Drawing.Point(33, 324);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 16;
@@ -175,7 +175,7 @@
             this.buttonMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonMostrar.FlatAppearance.BorderSize = 0;
             this.buttonMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMostrar.Location = new System.Drawing.Point(249, 255);
+            this.buttonMostrar.Location = new System.Drawing.Point(263, 298);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
             this.buttonMostrar.TabIndex = 18;
@@ -188,7 +188,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.Location = new System.Drawing.Point(110, 431);
+            this.linkLabel1.Location = new System.Drawing.Point(124, 474);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 16);
             this.linkLabel1.TabIndex = 19;
@@ -201,7 +201,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(288, 479);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(309, 550);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonMostrar);
             this.Controls.Add(this.panel1);
@@ -214,6 +215,7 @@
             this.Controls.Add(this.linkLabelContraseñaOlvidada);
             this.Controls.Add(this.linkLabelRegistrarse);
             this.Controls.Add(this.buttonAceptar);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IniciarSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
