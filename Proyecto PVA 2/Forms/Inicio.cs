@@ -208,7 +208,8 @@ namespace Proyecto_PVA_2
         public void MostrarOpcionesAdmin()
         {
             panelAdmin.Visible = true;
-            toolStripButtonOpciones.Text = "Admin";
+            toolStripButtonIniciarSesion.Text = "Admin";
+            CarroCompra = new List<TituloCinematografico>();
             return;
         }
 
@@ -222,8 +223,7 @@ namespace Proyecto_PVA_2
         public void OpcionesUsuario()
         {
             panelAdmin.Visible = false;
-            toolStripButtonOpciones.Text = "Perfil";
-            Update();
+            toolStripButtonIniciarSesion.Text = "Perfil";
             CarroCompra = new List<TituloCinematografico>();
         }
 
@@ -237,8 +237,13 @@ namespace Proyecto_PVA_2
                     Carteles.Add(crearCartel(i));
 
             else if (Mode == modoSerie)
-                for (int i = 0; i < masterDataSet.Series.Count; i++)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Series", conexionBaseDatos);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                for (int i = 0; i < count; i++)
                     Carteles.Add(crearCartel(i));
+            }
             
             
                 

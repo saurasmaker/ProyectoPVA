@@ -75,6 +75,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAñadirPortada = new System.Windows.Forms.Button();
             this.buttonAñadirFondo = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             temopradasLabel = new System.Windows.Forms.Label();
@@ -377,7 +378,7 @@
             // puntuacionLabel
             // 
             puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(10, 189);
+            puntuacionLabel.Location = new System.Drawing.Point(10, 163);
             puntuacionLabel.Name = "puntuacionLabel";
             puntuacionLabel.Size = new System.Drawing.Size(64, 13);
             puntuacionLabel.TabIndex = 12;
@@ -386,7 +387,7 @@
             // puntuacionTextBox
             // 
             this.puntuacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Puntuacion", true));
-            this.puntuacionTextBox.Location = new System.Drawing.Point(85, 186);
+            this.puntuacionTextBox.Location = new System.Drawing.Point(85, 160);
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.Size = new System.Drawing.Size(200, 20);
             this.puntuacionTextBox.TabIndex = 13;
@@ -505,11 +506,21 @@
             this.buttonAñadirFondo.UseVisualStyleBackColor = true;
             this.buttonAñadirFondo.Click += new System.EventHandler(this.buttonAñadirFondo_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(801, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(462, 483);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // AdministrarSeries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 522);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.seriesBindingNavigator);
             this.Controls.Add(this.groupBoxSeries);
             this.Name = "AdministrarSeries";
@@ -568,5 +579,6 @@
         private System.Windows.Forms.PictureBox fondoPictureBox;
         private System.Windows.Forms.Button buttonAñadirFondo;
         private System.Windows.Forms.Button buttonAñadirPortada;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
