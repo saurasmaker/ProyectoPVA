@@ -24,8 +24,6 @@ namespace Proyecto_PVA_2
         Administrador admin;
         List<TituloCinematografico> carroCompra;
         List<Panel> pelis;
-        List<PictureBox> portadas;
-        List<Label> titulos;
         bool inicioSesion = false;
         bool inicioSesionAdmin = false;
         bool panel1Encogido = false;
@@ -35,20 +33,16 @@ namespace Proyecto_PVA_2
         {
             InitializeComponent();
             Pelis = new List<Panel>();
-            Portadas = new List<PictureBox>();
-            Titulos = new List<Label>();
         }
 
         //Getters & Setters
         public bool InicioSesion { get => inicioSesion; set => inicioSesion = value; }
         public bool Panel1Encogido { get => panel1Encogido; set => panel1Encogido = value; }
         public List<Panel> Pelis { get => pelis; set => pelis = value; }
-        public List<PictureBox> Portadas { get => portadas; set => portadas = value; }
-        public List<Label> Titulos { get => titulos; set => titulos = value; }
-        public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
         internal Usuario User { get => user; set => user = value; }
         internal Administrador Admin { get => admin; set => admin = value; }
         internal List<TituloCinematografico> CarroCompra { get => carroCompra; set => carroCompra = value; }
+        public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
 
         //Eventos
         private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -88,9 +82,30 @@ namespace Proyecto_PVA_2
             {
                 IniciarSesion inicioSesion = new IniciarSesion();
                 AddOwnedForm(inicioSesion);
-
                 inicioSesion.ShowDialog();
+
             }
+        }
+
+        private void toolStripButtonCarroCompra_Click(object sender, EventArgs e)
+        {
+            if (!InicioSesion)
+            {
+                MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            MiCarroDeLaCompra mcdlc = new MiCarroDeLaCompra();
+
+            foreach (TituloCinematografico t in CarroCompra)
+            {
+                ListViewItem milista;
+                milista = mcdlc.listView1.Items.Add(t.Titulo);
+                milista.SubItems.Add(t.Puntuacion.ToString());
+                milista.SubItems.Add(((float)(Math.Round(Convert.ToDouble(t.Precio)))).ToString() + "€");
+            }
+            mcdlc.ShowDialog();
+
         }
 
         //--Panel Izquierdo
@@ -204,6 +219,8 @@ namespace Proyecto_PVA_2
         {
             panelAdmin.Visible = false;
             toolStripButtonPerfil.Text = "Perfil";
+            Update();
+            CarroCompra = new List<TituloCinematografico>();
         }
 
         void ReajustarPanelCentral()
@@ -298,6 +315,7 @@ namespace Proyecto_PVA_2
             void Cartel_Click(object sender, EventArgs e)
             {
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
+                AddOwnedForm(infoPeli);
 
                 infoPeli.tituloTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Titulo;
 
@@ -383,6 +401,21 @@ namespace Proyecto_PVA_2
                 cartel.BackColor = Color.FromArgb(195, 27, 57);
                 return;
             }
+
+            void AñadirAlCarro(Object sender, EventArgs e)
+            {
+                TituloCinematografico tc = new TituloCinematografico();
+                tc.Titulo = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Titulo;
+                tc.Sinopsis = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Sinopsis;
+                tc.Estreno = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Estreno;
+                tc.Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Puntuacion);
+                tc.Precio = Convert.ToSingle(masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Precio);
+
+                CarroCompra.Add(tc);
+
+                return;
+            }
+
                 //Añadimos Eventos a portada
             portada.Click += new EventHandler(Cartel_Click);
             portada.MouseDown += new MouseEventHandler(CambioColorCartel);
@@ -394,15 +427,17 @@ namespace Proyecto_PVA_2
             titulo.MouseDown += new MouseEventHandler(CambioColorCartel);
             titulo.MouseHover += new EventHandler(MouseAMano);
             titulo.MouseLeave += new EventHandler(MouseAFlecha);
+
+            //Añadimo Eventos a botonAñadir
+            añadirAlCarro.Click += new EventHandler(AñadirAlCarro);
+
             //--------------------------------------------------------------
 
             //Añadimos elementos creados al cartel.
             cartel.Controls.Add(añadirAlCarro);
             cartel.Controls.Add(precio);
             cartel.Controls.Add(portada);
-            Portadas.Add(portada);
             cartel.Controls.Add(titulo);
-            Titulos.Add(titulo);
             
 
             return cartel;
