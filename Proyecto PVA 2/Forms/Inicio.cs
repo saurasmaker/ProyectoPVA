@@ -504,6 +504,11 @@ namespace Proyecto_PVA_2
 
             void AñadirAlCarro(Object sender, EventArgs e)
             {
+                if (!InicioSesion)
+                {
+                    MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 TituloCinematografico tc = new TituloCinematografico();
                 tc.Titulo = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Titulo;
                 tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
