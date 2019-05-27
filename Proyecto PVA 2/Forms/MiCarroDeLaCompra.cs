@@ -31,9 +31,14 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
-            listView1.Items.Remove(listView1.SelectedItems[0]);
-            CalcularPrecioFinal();
+            if (listView1.SelectedItems[0] != null)
+            {
+                padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+                CalcularPrecioFinal();
+            }
+            else
+                MessageBox.Show("Debe seleccionar un elemento de la lista para poder eliminarlo.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
