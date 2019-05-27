@@ -239,7 +239,8 @@ namespace Proyecto_PVA_2
             else if (Mode == modoSerie)
             {
                 SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Series", conexionBaseDatos);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.BeginExecuteReader();
+                int count = (int)cmd.ExecuteScalar();
 
                 for (int i = 0; i < count; i++)
                     Carteles.Add(crearCartel(i));
