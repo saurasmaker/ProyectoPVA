@@ -163,7 +163,12 @@ namespace Proyecto_PVA_2
             adminPelis.ShowDialog();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdministrarSeries adminSeries = new AdministrarSeries();
+            adminSeries.ShowDialog();
+        }
+
 
 
         //Métodos
@@ -227,13 +232,16 @@ namespace Proyecto_PVA_2
             int espacio = tableLayoutPanelCentro.Width / 210;
 
             Carteles.Clear();
-            if(Mode == modoPelicula)
+            if (Mode == modoPelicula)
                 for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
                     Carteles.Add(crearCartel(i));
 
-            else if(Mode == modoSerie)
+            else if (Mode == modoSerie)
                 for (int i = 0; i < masterDataSet.Series.Count; i++)
+                {
+                    MessageBox.Show("hay uno");
                     Carteles.Add(crearCartel(i));
+                }
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -589,6 +597,8 @@ namespace Proyecto_PVA_2
         {
 
         }
+
+        
     }
 
 }
