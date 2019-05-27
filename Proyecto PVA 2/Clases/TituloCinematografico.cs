@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Proyecto_PVA_2.Clases
         string titulo, sinopsis;
         float puntuacion, precio;
         DateTime estreno;
+        MemoryStream portada;
         List<string> generos;
         List<Actor> reparto;
 
@@ -32,6 +34,7 @@ namespace Proyecto_PVA_2.Clases
         public float Precio { get => precio; set => precio = value; }
         public DateTime Estreno { get => estreno; set => estreno = value; }
         public List<string> Generos { get => generos; set => generos = value; }
+        public MemoryStream Portada { get => portada; set => portada = value; }
         internal List<Actor> Reparto { get => reparto; set => reparto = value; }
 
         //Metodos

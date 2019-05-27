@@ -45,3 +45,5 @@ J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources

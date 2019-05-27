@@ -140,6 +140,7 @@
             resources.ApplyResources(this.toolStripButtonCarroCompra, "toolStripButtonCarroCompra");
             this.toolStripButtonCarroCompra.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonCarroCompra.Name = "toolStripButtonCarroCompra";
+            this.toolStripButtonCarroCompra.Click += new System.EventHandler(this.toolStripButtonCarroCompra_Click);
             // 
             // toolStripButtonRecomendaciones
             // 
