@@ -136,6 +136,9 @@
     <EmbeddedResource Include="Forms\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InformaciónPelicula.resx">
+      <DependentUpon>InformaciónPelicula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
     </EmbeddedResource>

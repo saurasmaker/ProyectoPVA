@@ -14,7 +14,17 @@ namespace Proyecto_PVA_2.Forms
     {
         public InformaciónPelicula()
         {
+
             InitializeComponent();
+        }
+
+        private void duracionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InformaciónPelicula_Load(object sender, EventArgs e)
+        {
         }
     }
 }

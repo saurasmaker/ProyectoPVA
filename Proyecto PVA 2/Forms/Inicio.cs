@@ -298,7 +298,7 @@ namespace Proyecto_PVA_2
             {
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
                 infoPeli.Show();
-
+                
                 return;
             }
             void MouseAMano(Object sender, EventArgs e)
