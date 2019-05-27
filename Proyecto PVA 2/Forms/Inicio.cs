@@ -405,7 +405,7 @@ namespace Proyecto_PVA_2
 
                 try//Añadir portada
                 {
-                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Portada.ToArray());
+                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Fondo.ToArray());
                     infoPeli.portadaPictureBox.Image = Image.FromStream(ms);
 
                 }

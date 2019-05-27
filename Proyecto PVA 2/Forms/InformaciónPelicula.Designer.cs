@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformaciónPelicula));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.buttonAñadirAlCarro = new System.Windows.Forms.Button();
             this.puntuacionTextBox = new System.Windows.Forms.TextBox();
@@ -41,8 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
@@ -109,7 +108,7 @@
             this.sinopsisTextBox.Multiline = true;
             this.sinopsisTextBox.Name = "sinopsisTextBox";
             this.sinopsisTextBox.ReadOnly = true;
-            this.sinopsisTextBox.Size = new System.Drawing.Size(264, 98);
+            this.sinopsisTextBox.Size = new System.Drawing.Size(264, 190);
             this.sinopsisTextBox.TabIndex = 26;
             this.sinopsisTextBox.Text = "El aventurero capitán Jack Sparrow piratea en aguas caribeñas, pero su andanzas t" +
     "erminan cuando su enemigo, el Capitán Barbossa, después de robarle su barco, el " +
@@ -193,17 +192,6 @@
             this.panel3.Size = new System.Drawing.Size(1, 25);
             this.panel3.TabIndex = 44;
             // 
-            // portadaPictureBox
-            // 
-            this.portadaPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("portadaPictureBox.BackgroundImage")));
-            this.portadaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.portadaPictureBox.Location = new System.Drawing.Point(133, 18);
-            this.portadaPictureBox.Name = "portadaPictureBox";
-            this.portadaPictureBox.Size = new System.Drawing.Size(540, 338);
-            this.portadaPictureBox.TabIndex = 45;
-            this.portadaPictureBox.TabStop = false;
-            this.portadaPictureBox.Click += new System.EventHandler(this.portadaPictureBox_Click_1);
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -213,6 +201,17 @@
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
+            // 
+            // portadaPictureBox
+            // 
+            this.portadaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.portadaPictureBox.Location = new System.Drawing.Point(165, 29);
+            this.portadaPictureBox.Name = "portadaPictureBox";
+            this.portadaPictureBox.Size = new System.Drawing.Size(509, 311);
+            this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.portadaPictureBox.TabIndex = 45;
+            this.portadaPictureBox.TabStop = false;
+            this.portadaPictureBox.Click += new System.EventHandler(this.portadaPictureBox_Click_1);
             // 
             // linkLabel2
             // 
@@ -225,6 +224,7 @@
             this.linkLabel2.TabIndex = 46;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Cerrar";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // InformaciónPelicula
             // 
