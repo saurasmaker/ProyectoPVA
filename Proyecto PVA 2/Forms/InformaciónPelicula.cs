@@ -37,12 +37,18 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonAñadirAlCarro_Click(object sender, EventArgs e)
         {
+            if (!padre.InicioSesion)
+            {
+                MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             TituloCinematografico tc = new TituloCinematografico();
             tc.Titulo = tituloTextBox.Text;
             tc.Sinopsis = sinopsisTextBox.Text;
             tc.Estreno = Convert.ToDateTime(textBoxEstreno.Text);
             tc.Puntuacion = Convert.ToSingle(puntuacionTextBox.Text);
-            tc.Precio = Convert.ToSingle(precioTextBox.Text);
+            tc.Precio = Convert.ToSingle(precioTextBox.Text.Replace("€",""));
 
             padre.CarroCompra.Add(tc);
         }
