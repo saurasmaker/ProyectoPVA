@@ -509,6 +509,7 @@ namespace Proyecto_PVA_2
                     MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
+
                 TituloCinematografico tc = new TituloCinematografico();
                 tc.Titulo = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Titulo;
                 tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
