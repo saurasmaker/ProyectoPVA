@@ -30,9 +30,8 @@
         {
             System.Windows.Forms.Label portadaLabel;
             System.Windows.Forms.Label tituloLabel;
-            System.Windows.Forms.Label numcapLabel;
+            System.Windows.Forms.Label numTempLabel;
             System.Windows.Forms.Label sinopsisLabel;
-            System.Windows.Forms.Label directorLabel;
             System.Windows.Forms.Label estrenoLabel;
             System.Windows.Forms.Label puntuacionLabel;
             System.Windows.Forms.Label precioLabel;
@@ -40,8 +39,7 @@
             this.tituloTextBox = new System.Windows.Forms.TextBox();
             this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.textBoxEstreno = new System.Windows.Forms.TextBox();
-            this.duracionTextBox = new System.Windows.Forms.TextBox();
-            this.directorTextBox = new System.Windows.Forms.TextBox();
+            this.temporadasTextBox = new System.Windows.Forms.TextBox();
             this.sinopsisTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.puntuacionTextBox = new System.Windows.Forms.TextBox();
@@ -58,9 +56,8 @@
             this.comboBoxTemporada = new System.Windows.Forms.ComboBox();
             portadaLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
-            numcapLabel = new System.Windows.Forms.Label();
+            numTempLabel = new System.Windows.Forms.Label();
             sinopsisLabel = new System.Windows.Forms.Label();
-            directorLabel = new System.Windows.Forms.Label();
             estrenoLabel = new System.Windows.Forms.Label();
             puntuacionLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
@@ -75,12 +72,10 @@
             this.groupBox1.Controls.Add(this.portadaPictureBox);
             this.groupBox1.Controls.Add(portadaLabel);
             this.groupBox1.Controls.Add(this.textBoxEstreno);
-            this.groupBox1.Controls.Add(this.duracionTextBox);
+            this.groupBox1.Controls.Add(this.temporadasTextBox);
             this.groupBox1.Controls.Add(tituloLabel);
-            this.groupBox1.Controls.Add(numcapLabel);
-            this.groupBox1.Controls.Add(this.directorTextBox);
+            this.groupBox1.Controls.Add(numTempLabel);
             this.groupBox1.Controls.Add(sinopsisLabel);
-            this.groupBox1.Controls.Add(directorLabel);
             this.groupBox1.Controls.Add(this.sinopsisTextBox);
             this.groupBox1.Controls.Add(estrenoLabel);
             this.groupBox1.Controls.Add(puntuacionLabel);
@@ -123,19 +118,19 @@
             // 
             // textBoxEstreno
             // 
-            this.textBoxEstreno.Location = new System.Drawing.Point(76, 171);
+            this.textBoxEstreno.Location = new System.Drawing.Point(76, 196);
             this.textBoxEstreno.Name = "textBoxEstreno";
             this.textBoxEstreno.ReadOnly = true;
             this.textBoxEstreno.Size = new System.Drawing.Size(143, 20);
             this.textBoxEstreno.TabIndex = 39;
             // 
-            // duracionTextBox
+            // temporadasTextBox
             // 
-            this.duracionTextBox.Location = new System.Drawing.Point(76, 145);
-            this.duracionTextBox.Name = "duracionTextBox";
-            this.duracionTextBox.ReadOnly = true;
-            this.duracionTextBox.Size = new System.Drawing.Size(40, 20);
-            this.duracionTextBox.TabIndex = 36;
+            this.temporadasTextBox.Location = new System.Drawing.Point(76, 170);
+            this.temporadasTextBox.Name = "temporadasTextBox";
+            this.temporadasTextBox.ReadOnly = true;
+            this.temporadasTextBox.Size = new System.Drawing.Size(40, 20);
+            this.temporadasTextBox.TabIndex = 36;
             // 
             // tituloLabel
             // 
@@ -146,22 +141,14 @@
             tituloLabel.TabIndex = 23;
             tituloLabel.Text = "Titulo:";
             // 
-            // numcapLabel
+            // numTempLabel
             // 
-            numcapLabel.AutoSize = true;
-            numcapLabel.Location = new System.Drawing.Point(9, 148);
-            numcapLabel.Name = "numcapLabel";
-            numcapLabel.Size = new System.Drawing.Size(53, 13);
-            numcapLabel.TabIndex = 35;
-            numcapLabel.Text = "Capitulos:";
-            // 
-            // directorTextBox
-            // 
-            this.directorTextBox.Location = new System.Drawing.Point(76, 197);
-            this.directorTextBox.Name = "directorTextBox";
-            this.directorTextBox.ReadOnly = true;
-            this.directorTextBox.Size = new System.Drawing.Size(143, 20);
-            this.directorTextBox.TabIndex = 34;
+            numTempLabel.AutoSize = true;
+            numTempLabel.Location = new System.Drawing.Point(9, 173);
+            numTempLabel.Name = "numTempLabel";
+            numTempLabel.Size = new System.Drawing.Size(69, 13);
+            numTempLabel.TabIndex = 35;
+            numTempLabel.Text = "Temporadas:";
             // 
             // sinopsisLabel
             // 
@@ -171,15 +158,6 @@
             sinopsisLabel.Size = new System.Drawing.Size(49, 13);
             sinopsisLabel.TabIndex = 25;
             sinopsisLabel.Text = "Sinopsis:";
-            // 
-            // directorLabel
-            // 
-            directorLabel.AutoSize = true;
-            directorLabel.Location = new System.Drawing.Point(9, 203);
-            directorLabel.Name = "directorLabel";
-            directorLabel.Size = new System.Drawing.Size(47, 13);
-            directorLabel.TabIndex = 33;
-            directorLabel.Text = "Director:";
             // 
             // sinopsisTextBox
             // 
@@ -193,7 +171,7 @@
             // estrenoLabel
             // 
             estrenoLabel.AutoSize = true;
-            estrenoLabel.Location = new System.Drawing.Point(9, 177);
+            estrenoLabel.Location = new System.Drawing.Point(9, 202);
             estrenoLabel.Name = "estrenoLabel";
             estrenoLabel.Size = new System.Drawing.Size(46, 13);
             estrenoLabel.TabIndex = 31;
@@ -202,7 +180,7 @@
             // puntuacionLabel
             // 
             puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(9, 96);
+            puntuacionLabel.Location = new System.Drawing.Point(9, 121);
             puntuacionLabel.Name = "puntuacionLabel";
             puntuacionLabel.Size = new System.Drawing.Size(64, 13);
             puntuacionLabel.TabIndex = 27;
@@ -210,7 +188,7 @@
             // 
             // precioTextBox
             // 
-            this.precioTextBox.Location = new System.Drawing.Point(76, 119);
+            this.precioTextBox.Location = new System.Drawing.Point(76, 144);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.ReadOnly = true;
             this.precioTextBox.Size = new System.Drawing.Size(40, 20);
@@ -218,7 +196,7 @@
             // 
             // puntuacionTextBox
             // 
-            this.puntuacionTextBox.Location = new System.Drawing.Point(76, 93);
+            this.puntuacionTextBox.Location = new System.Drawing.Point(76, 118);
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.ReadOnly = true;
             this.puntuacionTextBox.Size = new System.Drawing.Size(40, 20);
@@ -227,7 +205,7 @@
             // precioLabel
             // 
             precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(9, 122);
+            precioLabel.Location = new System.Drawing.Point(9, 147);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
             precioLabel.TabIndex = 29;
@@ -352,8 +330,7 @@
         public System.Windows.Forms.TextBox tituloTextBox;
         public System.Windows.Forms.PictureBox portadaPictureBox;
         public System.Windows.Forms.TextBox textBoxEstreno;
-        public System.Windows.Forms.TextBox duracionTextBox;
-        public System.Windows.Forms.TextBox directorTextBox;
+        public System.Windows.Forms.TextBox temporadasTextBox;
         public System.Windows.Forms.TextBox sinopsisTextBox;
         public System.Windows.Forms.TextBox precioTextBox;
         public System.Windows.Forms.TextBox puntuacionTextBox;
