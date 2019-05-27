@@ -66,6 +66,36 @@ namespace Proyecto_PVA_2.Forms
             return;
         }
 
-        
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (listView1.SelectedItems[0] != null)
+            {
+                padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+                CalcularPrecioFinal();
+            }
+            else
+                MessageBox.Show("Debe seleccionar un elemento de la lista para poder eliminarlo.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }

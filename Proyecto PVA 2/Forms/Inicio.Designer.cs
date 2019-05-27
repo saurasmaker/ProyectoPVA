@@ -81,7 +81,7 @@
             // toolStripInicio
             // 
             resources.ApplyResources(this.toolStripInicio, "toolStripInicio");
-            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.toolStripInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
@@ -151,7 +151,7 @@
             // 
             // panelIzquierda
             // 
-            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.panelIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(33)))));
             this.panelIzquierda.Controls.Add(this.buttonGeneroFamiliar);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDrama);
             this.panelIzquierda.Controls.Add(this.buttonGeneroDocumentales);
@@ -266,7 +266,7 @@
             // tableLayoutPanelCentro
             // 
             resources.ApplyResources(this.tableLayoutPanelCentro, "tableLayoutPanelCentro");
-            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.tableLayoutPanelCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
             this.tableLayoutPanelCentro.Name = "tableLayoutPanelCentro";
             this.tableLayoutPanelCentro.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelCentro_Paint);
             // 
@@ -337,7 +337,9 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
+            this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Inicio
