@@ -238,10 +238,10 @@ namespace Proyecto_PVA_2
 
             else if (Mode == modoSerie)
                 for (int i = 0; i < masterDataSet.Series.Count; i++)
-                {
-                    MessageBox.Show("hay uno");
                     Carteles.Add(crearCartel(i));
-                }
+            
+            
+                
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
