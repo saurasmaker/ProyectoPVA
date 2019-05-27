@@ -18,6 +18,11 @@ namespace Proyecto_PVA_2.Clases
 
         }
 
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido1 { get => apellido1; set => apellido1 = value; }
+        public string Apellido2 { get => apellido2; set => apellido2 = value; }
+        public DateTime Nacimiento { get => nacimiento; set => nacimiento = value; }
+
         //Métodos
     }
 }

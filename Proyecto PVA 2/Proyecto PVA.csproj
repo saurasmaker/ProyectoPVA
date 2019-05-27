@@ -65,10 +65,12 @@
   <ItemGroup>
     <Compile Include="Clases\Actor.cs" />
     <Compile Include="Clases\Administrador.cs" />
+    <Compile Include="Clases\Capitulo.cs" />
     <Compile Include="Clases\Director.cs" />
     <Compile Include="Clases\Pelicula.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Serie.cs" />
+    <Compile Include="Clases\Temporada.cs" />
     <Compile Include="Clases\TituloCinematografico.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Forms\AdministrarPeliculas.cs">
@@ -132,6 +134,9 @@
     <Compile Include="Forms\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="masterDataSet.cs">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +146,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InformacionSerie.resx">
+      <DependentUpon>InformacionSerie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InformaciónPelicula.resx">
       <DependentUpon>InformaciónPelicula.cs</DependentUpon>

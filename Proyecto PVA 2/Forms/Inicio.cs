@@ -19,7 +19,12 @@ namespace Proyecto_PVA_2
         //Conexion base de datos
         SqlConnection conexionBaseDatos = new SqlConnection("Data Source = localhost\\SQLEXPRESS02; Initial Catalog = master; Integrated Security = True");
 
+        //Constantes
+        static int modoPelicula = 0;
+        static int modoSerie = 1;
+
         //Atributos
+        int mode = 0;
         Usuario user;
         Administrador admin;
         List<TituloCinematografico> carroCompra;
@@ -43,6 +48,7 @@ namespace Proyecto_PVA_2
         internal Administrador Admin { get => admin; set => admin = value; }
         internal List<TituloCinematografico> CarroCompra { get => carroCompra; set => carroCompra = value; }
         public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
+        public int Mode { get => mode; set => mode = value; }
 
         //Eventos
         private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -109,6 +115,16 @@ namespace Proyecto_PVA_2
 
         }
 
+        private void toolStripButtonPeliculas_Click(object sender, EventArgs e)
+        {
+            Mode = modoPelicula;
+        }
+
+        private void toolStripButtonSeries_Click(object sender, EventArgs e)
+        {
+            Mode = modoSerie;
+        }
+
         //--Panel Izquierdo
         private void ButtonDesplegar_Click(object sender, EventArgs e)
         {
@@ -145,27 +161,7 @@ namespace Proyecto_PVA_2
             adminPelis.ShowDialog();
         }
 
-        //Eventos inútiles
-        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
 
         //Métodos
@@ -230,7 +226,7 @@ namespace Proyecto_PVA_2
 
             Pelis.Clear();
             for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
-                Pelis.Add(crearCartelPelicula(i));
+                Pelis.Add(crearCartel(i));
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -259,7 +255,7 @@ namespace Proyecto_PVA_2
             return;
         }
 
-        Panel crearCartelPelicula(int i)
+        Panel crearCartel(int i)
         {
             //Creamos Portada del Cartel
             PictureBox portada = new PictureBox();
@@ -429,7 +425,7 @@ namespace Proyecto_PVA_2
             titulo.MouseHover += new EventHandler(MouseAMano);
             titulo.MouseLeave += new EventHandler(MouseAFlecha);
 
-            //Añadimo Eventos a botonAñadir
+                //Añadimo Eventos a botonAñadir
             añadirAlCarro.Click += new EventHandler(AñadirAlCarro);
 
             //--------------------------------------------------------------
@@ -445,7 +441,27 @@ namespace Proyecto_PVA_2
         }
 
 
-        //Eventos Inútiles
+        //Eventos inútiles
+        private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         private void TableLayoutPanelCentro_Paint(object sender, PaintEventArgs e)
         {
 
@@ -465,17 +481,6 @@ namespace Proyecto_PVA_2
         {
 
         }
-
-        private void toolStripButtonPeliculas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButtonSeries_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 
