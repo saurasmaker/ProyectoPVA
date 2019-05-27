@@ -33,7 +33,7 @@
             this.statusStripInicio = new System.Windows.Forms.StatusStrip();
             this.toolStripInicio = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonInicio = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPerfil = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonOpciones = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPeliculas = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonSeries = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonIniciarSesion = new System.Windows.Forms.ToolStripButton();
@@ -85,7 +85,7 @@
             this.toolStripInicio.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripInicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonInicio,
-            this.toolStripButtonPerfil,
+            this.toolStripButtonOpciones,
             this.toolStripButtonPeliculas,
             this.toolStripButtonSeries,
             this.toolStripButtonIniciarSesion,
@@ -101,12 +101,13 @@
             this.toolStripButtonInicio.Name = "toolStripButtonInicio";
             this.toolStripButtonInicio.Click += new System.EventHandler(this.toolStripButtonInicio_Click);
             // 
-            // toolStripButtonPerfil
+            // toolStripButtonOpciones
             // 
-            resources.ApplyResources(this.toolStripButtonPerfil, "toolStripButtonPerfil");
-            this.toolStripButtonPerfil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPerfil.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.toolStripButtonPerfil.Name = "toolStripButtonPerfil";
+            resources.ApplyResources(this.toolStripButtonOpciones, "toolStripButtonOpciones");
+            this.toolStripButtonOpciones.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonOpciones.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.toolStripButtonOpciones.Name = "toolStripButtonOpciones";
+            this.toolStripButtonOpciones.Click += new System.EventHandler(this.toolStripButtonPerfil_Click);
             // 
             // toolStripButtonPeliculas
             // 
@@ -337,7 +338,9 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
+            this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Inicio
@@ -389,7 +392,7 @@
         private System.Windows.Forms.Button buttonGeneroDocumentales;
         private System.Windows.Forms.Button buttonGeneroDibujosAnimados;
         private System.Windows.Forms.ToolStripButton toolStripButtonCarroCompra;
-        private System.Windows.Forms.ToolStripButton toolStripButtonPerfil;
+        private System.Windows.Forms.ToolStripButton toolStripButtonOpciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCentro;
         private System.Windows.Forms.Panel panelDerecha;
         private System.Windows.Forms.Panel panelAdmin;
