@@ -96,13 +96,14 @@ namespace Proyecto_PVA_2
             }
 
             MiCarroDeLaCompra mcdlc = new MiCarroDeLaCompra();
+            AddOwnedForm(mcdlc);
 
             foreach (TituloCinematografico t in CarroCompra)
             {
                 ListViewItem milista;
                 milista = mcdlc.listView1.Items.Add(t.Titulo);
                 milista.SubItems.Add(t.Puntuacion.ToString());
-                milista.SubItems.Add(((float)(Math.Round(Convert.ToDouble(t.Precio)))).ToString() + "€");
+                milista.SubItems.Add(((float)(Math.Round(Convert.ToDouble(t.Precio),2))).ToString() + "€");
             }
             mcdlc.ShowDialog();
 

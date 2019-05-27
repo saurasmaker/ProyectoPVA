@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_PVA_2.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,54 @@ namespace Proyecto_PVA_2.Forms
 {
     public partial class MiCarroDeLaCompra : Form
     {
+        //Atributos
+        Inicio padre;
+
+        //Constructores
         public MiCarroDeLaCompra()
         {
             InitializeComponent();
         }
+
+        //Eventos
+        private void MiCarroDeLaCompra_Load(object sender, EventArgs e)
+        {
+            padre = Owner as Inicio;
+            CalcularPrecioFinal();
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
+            listView1.Items.Remove(listView1.SelectedItems[0]);
+            CalcularPrecioFinal();
+        }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonRealizarCompra_Click(object sender, EventArgs e)
+        {
+            //Agregar funcion de compra.
+        }
+
+        //Métodos
+        void CalcularPrecioFinal()
+        {
+            float total = 0; ;
+
+            foreach (TituloCinematografico t in padre.CarroCompra)
+            {
+                total += t.Precio;
+            }
+
+            textBox1.Text = ((float)(Math.Round(Convert.ToDouble(total),2))).ToString() + "€";
+
+            return;
+        }
+
+        
     }
 }
