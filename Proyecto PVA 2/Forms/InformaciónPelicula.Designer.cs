@@ -41,10 +41,10 @@
             this.sinopsisTextBox = new System.Windows.Forms.TextBox();
             this.puntuacionTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.estrenoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.directorTextBox = new System.Windows.Forms.TextBox();
             this.duracionTextBox = new System.Windows.Forms.TextBox();
             this.portadaPictureBox = new System.Windows.Forms.PictureBox();
+            this.textBoxEstreno = new System.Windows.Forms.TextBox();
             sinopsisLabel = new System.Windows.Forms.Label();
             puntuacionLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
@@ -169,14 +169,6 @@
             this.precioTextBox.Size = new System.Drawing.Size(40, 20);
             this.precioTextBox.TabIndex = 30;
             // 
-            // estrenoDateTimePicker
-            // 
-            this.estrenoDateTimePicker.Enabled = false;
-            this.estrenoDateTimePicker.Location = new System.Drawing.Point(82, 165);
-            this.estrenoDateTimePicker.Name = "estrenoDateTimePicker";
-            this.estrenoDateTimePicker.Size = new System.Drawing.Size(143, 20);
-            this.estrenoDateTimePicker.TabIndex = 32;
-            // 
             // directorTextBox
             // 
             this.directorTextBox.Location = new System.Drawing.Point(82, 191);
@@ -204,11 +196,20 @@
             this.portadaPictureBox.TabIndex = 38;
             this.portadaPictureBox.TabStop = false;
             // 
+            // textBoxEstreno
+            // 
+            this.textBoxEstreno.Location = new System.Drawing.Point(82, 165);
+            this.textBoxEstreno.Name = "textBoxEstreno";
+            this.textBoxEstreno.ReadOnly = true;
+            this.textBoxEstreno.Size = new System.Drawing.Size(143, 20);
+            this.textBoxEstreno.TabIndex = 39;
+            // 
             // InformaciónPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 249);
+            this.Controls.Add(this.textBoxEstreno);
             this.Controls.Add(tituloLabel);
             this.Controls.Add(this.tituloTextBox);
             this.Controls.Add(sinopsisLabel);
@@ -218,7 +219,6 @@
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
             this.Controls.Add(estrenoLabel);
-            this.Controls.Add(this.estrenoDateTimePicker);
             this.Controls.Add(directorLabel);
             this.Controls.Add(this.directorTextBox);
             this.Controls.Add(duracionLabel);
@@ -227,6 +227,7 @@
             this.Controls.Add(this.portadaPictureBox);
             this.Controls.Add(this.statusStrip1);
             this.Name = "InformaciónPelicula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformaciónPelicula";
             this.Load += new System.EventHandler(this.InformaciónPelicula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
@@ -242,9 +243,9 @@
         public System.Windows.Forms.TextBox sinopsisTextBox;
         public System.Windows.Forms.TextBox puntuacionTextBox;
         public System.Windows.Forms.TextBox precioTextBox;
-        public System.Windows.Forms.DateTimePicker estrenoDateTimePicker;
         public System.Windows.Forms.TextBox directorTextBox;
         public System.Windows.Forms.TextBox duracionTextBox;
         public System.Windows.Forms.PictureBox portadaPictureBox;
+        public System.Windows.Forms.TextBox textBoxEstreno;
     }
 }

@@ -294,11 +294,80 @@ namespace Proyecto_PVA_2
                 cartel.BackColor = Color.FromArgb(100, 0, 200);
                 return;
             }
+
             void Cartel_Click(object sender, EventArgs e)
             {
                 InformaciónPelicula infoPeli = new InformaciónPelicula();
+
+                infoPeli.tituloTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Titulo;
+
+                try//Añadimos la sinopsis
+                {
+                    infoPeli.sinopsisTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Sinopsis;
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadimos la puntuacion
+                {
+                    infoPeli.puntuacionTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Puntuacion.ToString();
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadimos la duracion
+                {
+                    infoPeli.duracionTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Duracion.ToString();
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadimos el estreno
+                {
+                    infoPeli.textBoxEstreno.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Estreno.ToString();
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadimos el director
+                {
+                    infoPeli.directorTextBox.Text = masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Director;
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadir precio
+                {
+                    infoPeli.precioTextBox.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Precio), 2))).ToString() + "€");
+                }
+                catch (Exception)
+                {
+
+                }
+
+                try//Añadir portada
+                {
+                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Pelis.IndexOf(cartel)].Portada.ToArray());
+                    infoPeli.portadaPictureBox.Image = Image.FromStream(ms);
+
+                }
+                catch (Exception)
+                {
+
+                }
+
                 infoPeli.Show();
-                
+
                 return;
             }
             void MouseAMano(Object sender, EventArgs e)
@@ -308,7 +377,7 @@ namespace Proyecto_PVA_2
 
                 return;
             }
-            void MouseAFlecha(Object sender, EventArgs e)
+            void MouseAFlecha(Object sender, EventArgs el)
             {
                 Cursor = Cursors.Default;
                 cartel.BackColor = Color.FromArgb(195, 27, 57);
