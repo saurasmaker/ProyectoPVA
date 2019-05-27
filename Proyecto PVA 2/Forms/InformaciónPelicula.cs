@@ -52,5 +52,20 @@ namespace Proyecto_PVA_2.Forms
 
             padre.CarroCompra.Add(tc);
         }
+
+        private void portadaPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void portadaPictureBox_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precioTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

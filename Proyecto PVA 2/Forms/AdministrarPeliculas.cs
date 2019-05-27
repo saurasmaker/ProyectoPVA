@@ -45,5 +45,10 @@ namespace Proyecto_PVA_2.Forms
             if (ofd.ShowDialog() == DialogResult.OK)
                 portadaPictureBox.Image = Image.FromFile(ofd.FileName);
         }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

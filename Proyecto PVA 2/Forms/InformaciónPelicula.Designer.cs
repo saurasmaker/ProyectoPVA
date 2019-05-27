@@ -28,247 +28,232 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label sinopsisLabel;
-            System.Windows.Forms.Label puntuacionLabel;
-            System.Windows.Forms.Label precioLabel;
-            System.Windows.Forms.Label estrenoLabel;
-            System.Windows.Forms.Label directorLabel;
-            System.Windows.Forms.Label duracionLabel;
-            System.Windows.Forms.Label tituloLabel;
-            System.Windows.Forms.Label portadaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformaciónPelicula));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tituloTextBox = new System.Windows.Forms.TextBox();
-            this.sinopsisTextBox = new System.Windows.Forms.TextBox();
+            this.buttonAñadirAlCarro = new System.Windows.Forms.Button();
             this.puntuacionTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.sinopsisTextBox = new System.Windows.Forms.TextBox();
             this.directorTextBox = new System.Windows.Forms.TextBox();
             this.duracionTextBox = new System.Windows.Forms.TextBox();
-            this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.textBoxEstreno = new System.Windows.Forms.TextBox();
-            this.buttonAñadirAlCarro = new System.Windows.Forms.Button();
-            this.buttonSalir = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            sinopsisLabel = new System.Windows.Forms.Label();
-            puntuacionLabel = new System.Windows.Forms.Label();
-            precioLabel = new System.Windows.Forms.Label();
-            estrenoLabel = new System.Windows.Forms.Label();
-            directorLabel = new System.Windows.Forms.Label();
-            duracionLabel = new System.Windows.Forms.Label();
-            tituloLabel = new System.Windows.Forms.Label();
-            portadaLabel = new System.Windows.Forms.Label();
+            this.tituloTextBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.portadaPictureBox = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // sinopsisLabel
-            // 
-            sinopsisLabel.AutoSize = true;
-            sinopsisLabel.Location = new System.Drawing.Point(414, 31);
-            sinopsisLabel.Name = "sinopsisLabel";
-            sinopsisLabel.Size = new System.Drawing.Size(49, 13);
-            sinopsisLabel.TabIndex = 25;
-            sinopsisLabel.Text = "Sinopsis:";
-            // 
-            // puntuacionLabel
-            // 
-            puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(20, 101);
-            puntuacionLabel.Name = "puntuacionLabel";
-            puntuacionLabel.Size = new System.Drawing.Size(64, 13);
-            puntuacionLabel.TabIndex = 27;
-            puntuacionLabel.Text = "Puntuacion:";
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(20, 127);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 29;
-            precioLabel.Text = "Precio:";
-            // 
-            // estrenoLabel
-            // 
-            estrenoLabel.AutoSize = true;
-            estrenoLabel.Location = new System.Drawing.Point(20, 182);
-            estrenoLabel.Name = "estrenoLabel";
-            estrenoLabel.Size = new System.Drawing.Size(46, 13);
-            estrenoLabel.TabIndex = 31;
-            estrenoLabel.Text = "Estreno:";
-            // 
-            // directorLabel
-            // 
-            directorLabel.AutoSize = true;
-            directorLabel.Location = new System.Drawing.Point(20, 208);
-            directorLabel.Name = "directorLabel";
-            directorLabel.Size = new System.Drawing.Size(47, 13);
-            directorLabel.TabIndex = 33;
-            directorLabel.Text = "Director:";
-            // 
-            // duracionLabel
-            // 
-            duracionLabel.AutoSize = true;
-            duracionLabel.Location = new System.Drawing.Point(20, 153);
-            duracionLabel.Name = "duracionLabel";
-            duracionLabel.Size = new System.Drawing.Size(53, 13);
-            duracionLabel.TabIndex = 35;
-            duracionLabel.Text = "Duracion:";
-            // 
-            // tituloLabel
-            // 
-            tituloLabel.AutoSize = true;
-            tituloLabel.Location = new System.Drawing.Point(17, 30);
-            tituloLabel.Name = "tituloLabel";
-            tituloLabel.Size = new System.Drawing.Size(36, 13);
-            tituloLabel.TabIndex = 23;
-            tituloLabel.Text = "Titulo:";
-            // 
-            // portadaLabel
-            // 
-            portadaLabel.AutoSize = true;
-            portadaLabel.Location = new System.Drawing.Point(259, 31);
-            portadaLabel.Name = "portadaLabel";
-            portadaLabel.Size = new System.Drawing.Size(47, 13);
-            portadaLabel.TabIndex = 37;
-            portadaLabel.Text = "Portada:";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 286);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 341);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(685, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(674, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tituloTextBox
+            // buttonAñadirAlCarro
             // 
-            this.tituloTextBox.Location = new System.Drawing.Point(20, 47);
-            this.tituloTextBox.Name = "tituloTextBox";
-            this.tituloTextBox.ReadOnly = true;
-            this.tituloTextBox.Size = new System.Drawing.Size(210, 20);
-            this.tituloTextBox.TabIndex = 24;
-            // 
-            // sinopsisTextBox
-            // 
-            this.sinopsisTextBox.Location = new System.Drawing.Point(417, 47);
-            this.sinopsisTextBox.Multiline = true;
-            this.sinopsisTextBox.Name = "sinopsisTextBox";
-            this.sinopsisTextBox.ReadOnly = true;
-            this.sinopsisTextBox.Size = new System.Drawing.Size(224, 174);
-            this.sinopsisTextBox.TabIndex = 26;
+            this.buttonAñadirAlCarro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.buttonAñadirAlCarro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonAñadirAlCarro.FlatAppearance.BorderSize = 0;
+            this.buttonAñadirAlCarro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAñadirAlCarro.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAñadirAlCarro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.buttonAñadirAlCarro.Location = new System.Drawing.Point(540, 29);
+            this.buttonAñadirAlCarro.Name = "buttonAñadirAlCarro";
+            this.buttonAñadirAlCarro.Size = new System.Drawing.Size(122, 23);
+            this.buttonAñadirAlCarro.TabIndex = 40;
+            this.buttonAñadirAlCarro.Text = "Añadir al carro";
+            this.buttonAñadirAlCarro.UseVisualStyleBackColor = false;
+            this.buttonAñadirAlCarro.Click += new System.EventHandler(this.buttonAñadirAlCarro_Click);
             // 
             // puntuacionTextBox
             // 
-            this.puntuacionTextBox.Location = new System.Drawing.Point(87, 98);
+            this.puntuacionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.puntuacionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.puntuacionTextBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.puntuacionTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.puntuacionTextBox.Location = new System.Drawing.Point(23, 61);
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.ReadOnly = true;
             this.puntuacionTextBox.Size = new System.Drawing.Size(40, 20);
             this.puntuacionTextBox.TabIndex = 28;
+            this.puntuacionTextBox.Text = "8/10";
             // 
             // precioTextBox
             // 
-            this.precioTextBox.Location = new System.Drawing.Point(87, 124);
+            this.precioTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.precioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.precioTextBox.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.precioTextBox.Location = new System.Drawing.Point(344, 29);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.ReadOnly = true;
-            this.precioTextBox.Size = new System.Drawing.Size(40, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(59, 26);
             this.precioTextBox.TabIndex = 30;
+            this.precioTextBox.Text = "2,24€";
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
+            // 
+            // sinopsisTextBox
+            // 
+            this.sinopsisTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.sinopsisTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sinopsisTextBox.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sinopsisTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.sinopsisTextBox.Location = new System.Drawing.Point(23, 99);
+            this.sinopsisTextBox.Multiline = true;
+            this.sinopsisTextBox.Name = "sinopsisTextBox";
+            this.sinopsisTextBox.ReadOnly = true;
+            this.sinopsisTextBox.Size = new System.Drawing.Size(264, 98);
+            this.sinopsisTextBox.TabIndex = 26;
+            this.sinopsisTextBox.Text = "El aventurero capitán Jack Sparrow piratea en aguas caribeñas, pero su andanzas t" +
+    "erminan cuando su enemigo, el Capitán Barbossa, después de robarle su barco, el " +
+    "Perla Negra.";
             // 
             // directorTextBox
             // 
-            this.directorTextBox.Location = new System.Drawing.Point(87, 202);
+            this.directorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.directorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.directorTextBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.directorTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.directorTextBox.Location = new System.Drawing.Point(293, 61);
             this.directorTextBox.Name = "directorTextBox";
             this.directorTextBox.ReadOnly = true;
             this.directorTextBox.Size = new System.Drawing.Size(143, 20);
             this.directorTextBox.TabIndex = 34;
+            this.directorTextBox.Text = "Gore Verbinski";
             // 
             // duracionTextBox
             // 
-            this.duracionTextBox.Location = new System.Drawing.Point(87, 150);
+            this.duracionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.duracionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.duracionTextBox.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duracionTextBox.ForeColor = System.Drawing.Color.Silver;
+            this.duracionTextBox.Location = new System.Drawing.Point(69, 61);
             this.duracionTextBox.Name = "duracionTextBox";
             this.duracionTextBox.ReadOnly = true;
-            this.duracionTextBox.Size = new System.Drawing.Size(93, 20);
+            this.duracionTextBox.Size = new System.Drawing.Size(109, 20);
             this.duracionTextBox.TabIndex = 36;
+            this.duracionTextBox.Text = "143 minutos";
             this.duracionTextBox.TextChanged += new System.EventHandler(this.duracionTextBox_TextChanged);
-            // 
-            // portadaPictureBox
-            // 
-            this.portadaPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.portadaPictureBox.Location = new System.Drawing.Point(262, 48);
-            this.portadaPictureBox.Name = "portadaPictureBox";
-            this.portadaPictureBox.Size = new System.Drawing.Size(116, 173);
-            this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.portadaPictureBox.TabIndex = 38;
-            this.portadaPictureBox.TabStop = false;
             // 
             // textBoxEstreno
             // 
-            this.textBoxEstreno.Location = new System.Drawing.Point(87, 176);
+            this.textBoxEstreno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxEstreno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEstreno.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEstreno.ForeColor = System.Drawing.Color.Silver;
+            this.textBoxEstreno.Location = new System.Drawing.Point(171, 61);
             this.textBoxEstreno.Name = "textBoxEstreno";
             this.textBoxEstreno.ReadOnly = true;
-            this.textBoxEstreno.Size = new System.Drawing.Size(143, 20);
+            this.textBoxEstreno.Size = new System.Drawing.Size(116, 20);
             this.textBoxEstreno.TabIndex = 39;
+            this.textBoxEstreno.Text = "9 de julio, 2003";
             // 
-            // buttonAñadirAlCarro
+            // tituloTextBox
             // 
-            this.buttonAñadirAlCarro.Location = new System.Drawing.Point(587, 258);
-            this.buttonAñadirAlCarro.Name = "buttonAñadirAlCarro";
-            this.buttonAñadirAlCarro.Size = new System.Drawing.Size(86, 23);
-            this.buttonAñadirAlCarro.TabIndex = 40;
-            this.buttonAñadirAlCarro.Text = "Añadir al carro";
-            this.buttonAñadirAlCarro.UseVisualStyleBackColor = true;
-            this.buttonAñadirAlCarro.Click += new System.EventHandler(this.buttonAñadirAlCarro_Click);
+            this.tituloTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.tituloTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tituloTextBox.Font = new System.Drawing.Font("Bahnschrift", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.tituloTextBox.Location = new System.Drawing.Point(23, 20);
+            this.tituloTextBox.Name = "tituloTextBox";
+            this.tituloTextBox.ReadOnly = true;
+            this.tituloTextBox.Size = new System.Drawing.Size(315, 39);
+            this.tituloTextBox.TabIndex = 24;
+            this.tituloTextBox.Text = "PIRATAS DEL CARIBE";
             // 
-            // buttonSalir
+            // panel1
             // 
-            this.buttonSalir.Location = new System.Drawing.Point(12, 258);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalir.TabIndex = 41;
-            this.buttonSalir.Text = "Salir";
-            this.buttonSalir.UseVisualStyleBackColor = true;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(62, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 25);
+            this.panel1.TabIndex = 42;
             // 
-            // groupBox1
+            // panel2
             // 
-            this.groupBox1.Controls.Add(this.tituloTextBox);
-            this.groupBox1.Controls.Add(this.portadaPictureBox);
-            this.groupBox1.Controls.Add(portadaLabel);
-            this.groupBox1.Controls.Add(this.textBoxEstreno);
-            this.groupBox1.Controls.Add(this.duracionTextBox);
-            this.groupBox1.Controls.Add(tituloLabel);
-            this.groupBox1.Controls.Add(duracionLabel);
-            this.groupBox1.Controls.Add(this.directorTextBox);
-            this.groupBox1.Controls.Add(sinopsisLabel);
-            this.groupBox1.Controls.Add(directorLabel);
-            this.groupBox1.Controls.Add(this.sinopsisTextBox);
-            this.groupBox1.Controls.Add(estrenoLabel);
-            this.groupBox1.Controls.Add(puntuacionLabel);
-            this.groupBox1.Controls.Add(this.precioTextBox);
-            this.groupBox1.Controls.Add(this.puntuacionTextBox);
-            this.groupBox1.Controls.Add(precioLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(661, 240);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Location = new System.Drawing.Point(162, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 25);
+            this.panel2.TabIndex = 43;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Location = new System.Drawing.Point(286, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 25);
+            this.panel3.TabIndex = 44;
+            // 
+            // portadaPictureBox
+            // 
+            this.portadaPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("portadaPictureBox.BackgroundImage")));
+            this.portadaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.portadaPictureBox.Location = new System.Drawing.Point(133, 18);
+            this.portadaPictureBox.Name = "portadaPictureBox";
+            this.portadaPictureBox.Size = new System.Drawing.Size(540, 338);
+            this.portadaPictureBox.TabIndex = 45;
+            this.portadaPictureBox.TabStop = false;
+            this.portadaPictureBox.Click += new System.EventHandler(this.portadaPictureBox_Click_1);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(0, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.Gray;
+            this.linkLabel2.Location = new System.Drawing.Point(20, 303);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(48, 16);
+            this.linkLabel2.TabIndex = 46;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Cerrar";
             // 
             // InformaciónPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 308);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonSalir);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.ClientSize = new System.Drawing.Size(674, 363);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tituloTextBox);
             this.Controls.Add(this.buttonAñadirAlCarro);
+            this.Controls.Add(this.textBoxEstreno);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.duracionTextBox);
+            this.Controls.Add(this.puntuacionTextBox);
+            this.Controls.Add(this.directorTextBox);
+            this.Controls.Add(this.precioTextBox);
+            this.Controls.Add(this.sinopsisTextBox);
+            this.Controls.Add(this.portadaPictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformaciónPelicula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformaciónPelicula";
             this.Load += new System.EventHandler(this.InformaciónPelicula_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,16 +262,19 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
-        public System.Windows.Forms.TextBox tituloTextBox;
-        public System.Windows.Forms.TextBox sinopsisTextBox;
+        private System.Windows.Forms.Button buttonAñadirAlCarro;
         public System.Windows.Forms.TextBox puntuacionTextBox;
         public System.Windows.Forms.TextBox precioTextBox;
+        public System.Windows.Forms.TextBox sinopsisTextBox;
         public System.Windows.Forms.TextBox directorTextBox;
         public System.Windows.Forms.TextBox duracionTextBox;
-        public System.Windows.Forms.PictureBox portadaPictureBox;
         public System.Windows.Forms.TextBox textBoxEstreno;
-        private System.Windows.Forms.Button buttonAñadirAlCarro;
-        private System.Windows.Forms.Button buttonSalir;
-        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox tituloTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        public System.Windows.Forms.PictureBox portadaPictureBox;
     }
 }
