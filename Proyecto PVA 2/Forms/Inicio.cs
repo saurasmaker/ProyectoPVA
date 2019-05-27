@@ -118,11 +118,13 @@ namespace Proyecto_PVA_2
         private void toolStripButtonPeliculas_Click(object sender, EventArgs e)
         {
             Mode = modoPelicula;
+            ReajustarPanelCentral();
         }
 
         private void toolStripButtonSeries_Click(object sender, EventArgs e)
         {
             Mode = modoSerie;
+            ReajustarPanelCentral();
         }
 
         //--Panel Izquierdo
@@ -225,8 +227,13 @@ namespace Proyecto_PVA_2
             int espacio = tableLayoutPanelCentro.Width / 210;
 
             Carteles.Clear();
-            for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
-                Carteles.Add(crearCartel(i));
+            if(Mode == modoPelicula)
+                for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
+                    Carteles.Add(crearCartel(i));
+
+            else if(Mode == modoSerie)
+                for (int i = 0; i < masterDataSet.Series.Count; i++)
+                    Carteles.Add(crearCartel(i));
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -262,22 +269,36 @@ namespace Proyecto_PVA_2
             portada.Size = new Size(150, 210);
             portada.Location = new Point(9, 7);
             portada.SizeMode = PictureBoxSizeMode.StretchImage;
-            try
-            {
+            if (Mode == modoPelicula)
+                try
+                {
                 MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[i].Portada.ToArray());
-                portada.Image = Image.FromStream(ms);
-            }
-            catch (Exception)
-            {
+                    portada.Image = Image.FromStream(ms);
+                }
+                catch (Exception)
+                {
 
-            }
+                }
+            else if(Mode == modoSerie)
+                try
+                {
+                    MemoryStream ms = new MemoryStream(masterDataSet.Series[i].Portada.ToArray());
+                    portada.Image = Image.FromStream(ms);
+                }
+                catch (Exception)
+                {
+
+                }
             portada.BorderStyle = BorderStyle.FixedSingle;
             portada.Visible = true;
 
             Label titulo = new Label();
             titulo.Font = new Font("Bahnschrift", 10);
             titulo.ForeColor = Color.White;
-            titulo.Text = masterDataSet.Peliculas[i].Titulo;
+            if(Mode == modoPelicula)
+                titulo.Text = masterDataSet.Peliculas[i].Titulo;
+            else if(Mode == modoSerie)
+                titulo.Text = masterDataSet.Series[i].Titulo;
             titulo.Padding = new Padding(6, 0, 2, 0);
             titulo.Dock = DockStyle.Bottom;
             titulo.Visible = true;
@@ -285,7 +306,10 @@ namespace Proyecto_PVA_2
             Label precio = new Label();
             precio.Font = new Font("Bahnschrift", 10);
             precio.ForeColor = Color.Green;
-            precio.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Peliculas[i].Precio), 2))).ToString() + "€");
+            if (Mode == modoPelicula)
+                precio.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Peliculas[i].Precio), 2))).ToString() + "€");
+            else if (Mode == modoSerie)
+                precio.Text = (((float)(Math.Round(Convert.ToDouble(masterDataSet.Series[i].Precio), 2))).ToString() + "€");
             precio.Dock = DockStyle.Bottom;
             precio.Padding = new Padding(6, 0, 2, 0);
             precio.Visible = true;
