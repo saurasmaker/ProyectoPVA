@@ -79,6 +79,12 @@
     <Compile Include="Forms\AdministrarPeliculas.Designer.cs">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdministrarSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministrarSeries.Designer.cs">
+      <DependentUpon>AdministrarSeries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\border.cs" />
     <Compile Include="Forms\InformacionSerie.cs">
       <SubType>Form</SubType>
@@ -146,6 +152,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdministrarSeries.resx">
+      <DependentUpon>AdministrarSeries.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InformacionSerie.resx">
       <DependentUpon>InformacionSerie.cs</DependentUpon>

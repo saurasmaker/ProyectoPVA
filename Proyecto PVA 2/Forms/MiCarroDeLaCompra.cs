@@ -88,6 +88,7 @@ namespace Proyecto_PVA_2.Forms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+          
             if (listView1.SelectedItems[0] != null)
             {
                 padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
