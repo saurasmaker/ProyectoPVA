@@ -64,12 +64,15 @@
             this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
             this.panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStripInicio
@@ -341,8 +344,18 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
-            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // seriesBindingSource
+            // 
+            this.seriesBindingSource.DataMember = "Series";
+            this.seriesBindingSource.DataSource = this.masterDataSet;
+            // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
             // 
             // Inicio
             // 
@@ -365,6 +378,7 @@
             this.panelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,11 +415,13 @@
         private System.Windows.Forms.Button buttonAdminUsuarios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAdministrarPeliculas;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRecomendaciones;
         private masterDataSet masterDataSet;
         private System.Windows.Forms.BindingSource peliculasBindingSource;
         private masterDataSetTableAdapters.PeliculasTableAdapter peliculasTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ToolStripButton toolStripButtonRecomendaciones;
+        private masterDataSetTableAdapters.SeriesTableAdapter seriesTableAdapter;
+        private System.Windows.Forms.BindingSource seriesBindingSource;
     }
 }
 

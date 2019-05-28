@@ -51,19 +51,14 @@ namespace Proyecto_PVA_2
         public List<Panel> Carteles { get => carteles; set => carteles = value; }
 
         //Eventos
-        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.peliculasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
-
-        }
-
         private void Inicio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
+            this.seriesTableAdapter.Fill(this.masterDataSet.Series);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
             this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
-            //Ajustes de Carga
+            
+            //Ajustes de Carga;
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
 
@@ -208,7 +203,8 @@ namespace Proyecto_PVA_2
         public void MostrarOpcionesAdmin()
         {
             panelAdmin.Visible = true;
-            toolStripButtonOpciones.Text = "Admin";
+            toolStripButtonIniciarSesion.Text = "Admin";
+            CarroCompra = new List<TituloCinematografico>();
             return;
         }
 
@@ -222,8 +218,7 @@ namespace Proyecto_PVA_2
         public void OpcionesUsuario()
         {
             panelAdmin.Visible = false;
-            toolStripButtonOpciones.Text = "Perfil";
-            Update();
+            toolStripButtonIniciarSesion.Text = "Perfil";
             CarroCompra = new List<TituloCinematografico>();
         }
 
@@ -237,11 +232,9 @@ namespace Proyecto_PVA_2
                     Carteles.Add(crearCartel(i));
 
             else if (Mode == modoSerie)
+            
                 for (int i = 0; i < masterDataSet.Series.Count; i++)
-                    Carteles.Add(crearCartel(i));
-            
-            
-                
+                    Carteles.Add(crearCartel(i));            
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -405,7 +398,7 @@ namespace Proyecto_PVA_2
 
                 try//Añadir portada
                 {
-                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Portada.ToArray());
+                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Fondo.ToArray());
                     infoPeli.portadaPictureBox.Image = Image.FromStream(ms);
 
                 }
@@ -504,6 +497,12 @@ namespace Proyecto_PVA_2
 
             void AñadirAlCarro(Object sender, EventArgs e)
             {
+                if (!InicioSesion)
+                {
+                    MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
                 TituloCinematografico tc = new TituloCinematografico();
                 tc.Titulo = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Titulo;
                 tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
@@ -598,7 +597,13 @@ namespace Proyecto_PVA_2
 
         }
 
-        
+        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.peliculasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
     }
 
 }

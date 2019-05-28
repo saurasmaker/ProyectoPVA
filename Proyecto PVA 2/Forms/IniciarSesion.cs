@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_PVA_2.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,7 +105,7 @@ namespace Proyecto_PVA_2.Forms
 
                     papa.InicioSesion = true;
                     papa.InicioSesionAdmin = true;
-                    papa.Admin = new Clases.Administrador(textBoxCorreoElectronico.Text, textBoxContraseña.Text);
+                    papa.Admin = new Administrador(textBoxCorreoElectronico.Text, textBoxContraseña.Text);
                     papa.MostrarOpcionesAdmin();
 
                     break;

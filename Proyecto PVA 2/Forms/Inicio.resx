@@ -125,7 +125,7 @@
     <value>0, 568</value>
   </data>
   <data name="statusStripInicio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1129, 22</value>
+    <value>1135, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStripInicio.TabIndex" type="System.Int32, mscorlib">
@@ -156,7 +156,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStripInicio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1129, 75</value>
+    <value>1135, 75</value>
   </data>
   <data name="toolStripInicio.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6863,7 +6863,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        BgAAAk1TRnQBSQFMAgEBAwEAAeABAAHgAQABEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        BgAAAk1TRnQBSQFMAgEBAwEAAfABAAHwAQABEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABEAMAAQEBAAEQBgABCCQAAb0BdwGlARQBCAEhAd4BewgAAf8BfwExAUYBjAExAYwBMQGMATEBjAEx
         AYwBMQGMATEBjAExAYwBMQGMATEBjAExAZQBUgH/AX8CAAFzAU4BQgEIAdYBWkoAAb0BdwFCAQgEAAEI
         ASEIAAEQAUIIAAGUAVIB9wFeAfcBXgHvAT0IAAEYAWMCAAFCAQgEAAG1AVZGAAG9AXcBQgEIBgAB5wEc
@@ -6935,7 +6935,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanelCentro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 493</value>
+    <value>781, 493</value>
   </data>
   <data name="tableLayoutPanelCentro.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -6954,6 +6954,111 @@
   </data>
   <data name="tableLayoutPanelCentro.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="AutoSize,0,Absolute,781,AutoSize,0,Absolute,20" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Absolute,493,Absolute,493" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Name" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Parent" xml:space="preserve">
+    <value>panelDerecha</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelDerecha.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panelDerecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>955, 75</value>
+  </data>
+  <data name="panelDerecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 493</value>
+  </data>
+  <data name="panelDerecha.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panelDerecha.Name" xml:space="preserve">
+    <value>panelDerecha</value>
+  </data>
+  <data name="&gt;&gt;panelDerecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelDerecha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelDerecha.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarAdmins.Name" xml:space="preserve">
+    <value>buttonAdministrarAdmins</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarAdmins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarAdmins.Parent" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarAdmins.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonAdminUsuarios.Name" xml:space="preserve">
+    <value>buttonAdminUsuarios</value>
+  </data>
+  <data name="&gt;&gt;buttonAdminUsuarios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAdminUsuarios.Parent" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;buttonAdminUsuarios.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarPeliculas.Name" xml:space="preserve">
+    <value>buttonAdministrarPeliculas</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarPeliculas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarPeliculas.Parent" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;buttonAdministrarPeliculas.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="panelAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 154</value>
+  </data>
+  <data name="panelAdmin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Name" xml:space="preserve">
+    <value>panelAdmin</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.Parent" xml:space="preserve">
+    <value>panelDerecha</value>
+  </data>
+  <data name="&gt;&gt;panelAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="buttonAdministrarAdmins.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -7111,51 +7216,6 @@
   <data name="&gt;&gt;buttonAdministrarPeliculas.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panelAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="panelAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 154</value>
-  </data>
-  <data name="panelAdmin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panelAdmin.Name" xml:space="preserve">
-    <value>panelAdmin</value>
-  </data>
-  <data name="&gt;&gt;panelAdmin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelAdmin.Parent" xml:space="preserve">
-    <value>panelDerecha</value>
-  </data>
-  <data name="&gt;&gt;panelAdmin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelDerecha.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="panelDerecha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>949, 75</value>
-  </data>
-  <data name="panelDerecha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 493</value>
-  </data>
-  <data name="panelDerecha.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panelDerecha.Name" xml:space="preserve">
-    <value>panelDerecha</value>
-  </data>
-  <data name="&gt;&gt;panelDerecha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDerecha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelDerecha.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="masterDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>377, 18</value>
   </metadata>
@@ -7168,17 +7228,23 @@
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>857, 18</value>
   </metadata>
+  <metadata name="seriesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1189, 18</value>
+  </metadata>
+  <metadata name="seriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1028, 18</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>53</value>
+    <value>68</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1129, 590</value>
+    <value>1135, 590</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -7257,6 +7323,18 @@
   </data>
   <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
     <value>Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager, masterDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;seriesBindingSource.Name" xml:space="preserve">
+    <value>seriesBindingSource</value>
+  </data>
+  <data name="&gt;&gt;seriesBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seriesTableAdapter.Name" xml:space="preserve">
+    <value>seriesTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;seriesTableAdapter.Type" xml:space="preserve">
+    <value>Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter, masterDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Inicio</value>
