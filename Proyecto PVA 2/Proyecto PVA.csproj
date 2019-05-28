@@ -85,7 +85,43 @@
     <Compile Include="Forms\AdministrarSeries.Designer.cs">
       <DependentUpon>AdministrarSeries.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Home.designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminCompras.designer.cs">
+      <DependentUpon>PanelAdminCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminPeliculas.designer.cs">
+      <DependentUpon>PanelAdminPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminSeries.designer.cs">
+      <DependentUpon>PanelAdminSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\PanelAdminUsuarios.designer.cs">
+      <DependentUpon>PanelAdminUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\border.cs" />
+    <Compile Include="Forms\PanelAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PanelAdmin.designer.cs">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InformacionSerie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +191,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdministrarSeries.resx">
       <DependentUpon>AdministrarSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\PanelAdminCompras.resx">
+      <DependentUpon>PanelAdminCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\PanelAdminPeliculas.resx">
+      <DependentUpon>PanelAdminPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\PanelAdminSeries.resx">
+      <DependentUpon>PanelAdminSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\PanelAdminUsuarios.resx">
+      <DependentUpon>PanelAdminUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PanelAdmin.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InformacionSerie.resx">
       <DependentUpon>InformacionSerie.cs</DependentUpon>
@@ -252,5 +306,6 @@
     <Content Include="Iconos\perfil.png" />
     <Content Include="Iconos\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
