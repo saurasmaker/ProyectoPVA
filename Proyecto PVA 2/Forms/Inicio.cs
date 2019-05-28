@@ -51,19 +51,14 @@ namespace Proyecto_PVA_2
         public List<Panel> Carteles { get => carteles; set => carteles = value; }
 
         //Eventos
-        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.peliculasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
-
-        }
-
         private void Inicio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
+            this.seriesTableAdapter.Fill(this.masterDataSet.Series);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
             this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
-            //Ajustes de Carga
+            
+            //Ajustes de Carga;
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
 
@@ -237,17 +232,9 @@ namespace Proyecto_PVA_2
                     Carteles.Add(crearCartel(i));
 
             else if (Mode == modoSerie)
-            {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Series", conexionBaseDatos);
-                cmd.BeginExecuteReader();
-                int count = (int)cmd.ExecuteScalar();
-
-                for (int i = 0; i < count; i++)
-                    Carteles.Add(crearCartel(i));
-            }
             
-            
-                
+                for (int i = 0; i < masterDataSet.Series.Count; i++)
+                    Carteles.Add(crearCartel(i));            
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -610,7 +597,13 @@ namespace Proyecto_PVA_2
 
         }
 
-        
+        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.peliculasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
     }
 
 }
