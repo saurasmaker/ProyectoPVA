@@ -183,8 +183,6 @@ namespace Proyecto_PVA_2.Forms
 
         }
 
-        
-
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
 
