@@ -1,5 +1,6 @@
 ﻿using Proyecto_PVA_2.Clases;
 using Proyecto_PVA_2.Forms;
+using Prueba;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,13 +72,13 @@ namespace Proyecto_PVA_2
         {
             if (InicioSesionAdmin)
             {
-                PanelDeControlAdmin panelAdmin = new PanelDeControlAdmin();
-                panelAdmin.Show();
+                Form1 pa = new Form1();
+                pa.ShowDialog();
             }
             else if (InicioSesion)
             {
                 PerfilUsuario perfil = new PerfilUsuario();
-                perfil.Show();
+                perfil.ShowDialog();
             }
             else
             {

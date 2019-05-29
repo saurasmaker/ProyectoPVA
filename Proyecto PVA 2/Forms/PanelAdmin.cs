@@ -8,30 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Proyecto_PVA_2.Forms;
 
 namespace Prueba
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
+        //Librería Capture
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
+        //Atributos
 
+
+        //Constructores
+        public Form1()
+        {
+            InitializeComponent();
         }
 
-        private void FlowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
+        
 
-        }
+
+        //Eventos
+
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
@@ -48,37 +50,15 @@ namespace Prueba
             Application.Exit();
         }
 
-        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button5_Click(object sender, EventArgs e)
         {
             AbrirFormPanel(new PanelAdminCompras());
-        }
-
-        private void AbrirFormPanel(object formhijo)
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -98,12 +78,59 @@ namespace Prueba
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new PanelAdminPeliculas());
+            AbrirFormPanel(new AdministrarPeliculas());
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new PanelAdminSeries());
+            AbrirFormPanel(new AdministrarSeries());
+        }
+
+        //Metodos
+        private void AbrirFormPanel(object formhijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Show();
+        }
+
+
+        //Eventos inútiles
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FlowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

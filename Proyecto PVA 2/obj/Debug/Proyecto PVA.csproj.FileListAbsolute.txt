@@ -49,3 +49,9 @@ C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarSeries.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminCompras.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminPeliculas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminSeries.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminUsuarios.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Form1.resources
