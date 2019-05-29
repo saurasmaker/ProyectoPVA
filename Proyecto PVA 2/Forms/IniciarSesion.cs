@@ -15,7 +15,7 @@ namespace Proyecto_PVA_2.Forms
     public partial class IniciarSesion : Form
     {
         //Atributos
-
+       
         //Constructores
         public IniciarSesion()
         {
@@ -141,7 +141,9 @@ namespace Proyecto_PVA_2.Forms
 
         private void linkLabelRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Registro registrar = new Registro();
+            AddOwnedForm(registrar);
+            registrar.ShowDialog();
         }
 
 

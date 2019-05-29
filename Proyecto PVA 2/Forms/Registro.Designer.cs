@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.buttonMostrar = new System.Windows.Forms.Button();
@@ -35,18 +36,24 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxRepetirContraseña = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBoxContraseña = new System.Windows.Forms.TextBox();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -61,6 +68,7 @@
             this.linkLabel1.TabIndex = 31;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Ahora no";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // buttonMostrar
             // 
@@ -116,21 +124,6 @@
             this.textBoxCorreoElectronico.Text = "Correo Electrónico";
             this.textBoxCorreoElectronico.TextChanged += new System.EventHandler(this.textBoxCorreoElectronico_TextChanged);
             // 
-            // textBoxContraseña
-            // 
-            this.textBoxContraseña.AcceptsReturn = true;
-            this.textBoxContraseña.AcceptsTab = true;
-            this.textBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
-            this.textBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxContraseña.Location = new System.Drawing.Point(51, 263);
-            this.textBoxContraseña.Name = "textBoxContraseña";
-            this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
-            this.textBoxContraseña.TabIndex = 26;
-            this.textBoxContraseña.Text = "Contraseña";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
@@ -166,6 +159,7 @@
             this.buttonAceptar.TabIndex = 20;
             this.buttonAceptar.Text = "Crear cuenta";
             this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click_1);
             // 
             // button1
             // 
@@ -187,20 +181,20 @@
             this.panel3.Size = new System.Drawing.Size(250, 1);
             this.panel3.TabIndex = 34;
             // 
-            // textBox1
+            // textBoxRepetirContraseña
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.AcceptsTab = true;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(51, 311);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 19);
-            this.textBox1.TabIndex = 33;
-            this.textBox1.Text = "Repetir Contraseña";
+            this.textBoxRepetirContraseña.AcceptsReturn = true;
+            this.textBoxRepetirContraseña.AcceptsTab = true;
+            this.textBoxRepetirContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxRepetirContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRepetirContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxRepetirContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRepetirContraseña.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxRepetirContraseña.Location = new System.Drawing.Point(51, 311);
+            this.textBoxRepetirContraseña.Name = "textBoxRepetirContraseña";
+            this.textBoxRepetirContraseña.Size = new System.Drawing.Size(171, 19);
+            this.textBoxRepetirContraseña.TabIndex = 33;
+            this.textBoxRepetirContraseña.Text = "Repetir Contraseña";
             // 
             // pictureBox4
             // 
@@ -212,15 +206,53 @@
             this.pictureBox4.TabIndex = 32;
             this.pictureBox4.TabStop = false;
             // 
+            // textBoxContraseña
+            // 
+            this.textBoxContraseña.AcceptsReturn = true;
+            this.textBoxContraseña.AcceptsTab = true;
+            this.textBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxContraseña.Location = new System.Drawing.Point(51, 263);
+            this.textBoxContraseña.Name = "textBoxContraseña";
+            this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
+            this.textBoxContraseña.TabIndex = 26;
+            this.textBoxContraseña.Text = "Contraseña";
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.PeliculasTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(288, 479);
+            this.ClientSize = new System.Drawing.Size(299, 480);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRepetirContraseña);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonMostrar);
@@ -234,11 +266,15 @@
             this.Controls.Add(this.buttonAceptar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,13 +288,17 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxCorreoElectronico;
-        private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxRepetirContraseña;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox textBoxContraseña;
+        private masterDataSet masterDataSet;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
