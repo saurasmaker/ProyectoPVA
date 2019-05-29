@@ -48,6 +48,7 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,6 +82,8 @@
             this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
             this.buttonMostrar.TabIndex = 30;
             this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMostrar_MouseDown);
+            this.buttonMostrar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMostrar_MouseUp);
             // 
             // panel1
             // 
@@ -112,9 +115,9 @@
             // 
             this.textBoxCorreoElectronico.AcceptsReturn = true;
             this.textBoxCorreoElectronico.AcceptsTab = true;
-            this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.textBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCorreoElectronico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxCorreoElectronico.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.Gray;
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(51, 216);
@@ -122,6 +125,7 @@
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(171, 19);
             this.textBoxCorreoElectronico.TabIndex = 28;
             this.textBoxCorreoElectronico.Text = "Correo Electrónico";
+            this.textBoxCorreoElectronico.Click += new System.EventHandler(this.textBoxCorreoElectronico_Click);
             this.textBoxCorreoElectronico.TextChanged += new System.EventHandler(this.textBoxCorreoElectronico_TextChanged);
             // 
             // pictureBox2
@@ -136,6 +140,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-24, 12);
@@ -172,6 +177,8 @@
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 35;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             // 
             // panel3
             // 
@@ -185,9 +192,9 @@
             // 
             this.textBoxRepetirContraseña.AcceptsReturn = true;
             this.textBoxRepetirContraseña.AcceptsTab = true;
-            this.textBoxRepetirContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxRepetirContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.textBoxRepetirContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRepetirContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxRepetirContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxRepetirContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRepetirContraseña.ForeColor = System.Drawing.Color.Gray;
             this.textBoxRepetirContraseña.Location = new System.Drawing.Point(51, 311);
@@ -195,6 +202,7 @@
             this.textBoxRepetirContraseña.Size = new System.Drawing.Size(171, 19);
             this.textBoxRepetirContraseña.TabIndex = 33;
             this.textBoxRepetirContraseña.Text = "Repetir Contraseña";
+            this.textBoxRepetirContraseña.Click += new System.EventHandler(this.textBoxRepetirContraseña_Click);
             // 
             // pictureBox4
             // 
@@ -210,9 +218,9 @@
             // 
             this.textBoxContraseña.AcceptsReturn = true;
             this.textBoxContraseña.AcceptsTab = true;
-            this.textBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.textBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.textBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
             this.textBoxContraseña.Location = new System.Drawing.Point(51, 263);
@@ -220,6 +228,7 @@
             this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
             this.textBoxContraseña.TabIndex = 26;
             this.textBoxContraseña.Text = "Contraseña";
+            this.textBoxContraseña.Click += new System.EventHandler(this.textBoxContraseña_Click);
             // 
             // masterDataSet
             // 
@@ -244,12 +253,24 @@
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(299, 24);
+            this.BarraTitulo.TabIndex = 36;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(299, 480);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.textBoxRepetirContraseña);
@@ -300,5 +321,6 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Panel BarraTitulo;
     }
 }
