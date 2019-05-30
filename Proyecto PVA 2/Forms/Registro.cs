@@ -82,8 +82,9 @@ namespace Proyecto_PVA_2.Forms
                 MessageBox.Show("Las contraseñas no coinciden", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                usuariosTableAdapter.InsertQuery(masterDataSet.Usuarios.Count + 10000001, textBoxCorreoElectronico.Text, null, textBoxContraseña.Text, null, null, null, null, null, null, null);
+                usuariosTableAdapter.InsertQuery(masterDataSet.Usuarios.Count + 10000001, textBoxCorreoElectronico.Text, null, textBoxContraseña.Text, null, null, null, null, null, null, DateTime.Now.ToString());
                 MessageBox.Show("Usuario Registrado con Exito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
         }
 
@@ -108,6 +109,7 @@ namespace Proyecto_PVA_2.Forms
                 textBoxCorreoElectronico.ForeColor = Color.FromArgb(241, 239, 241);
             }
 
+            textBoxContraseña.UseSystemPasswordChar = true;
             TbCorreoClicked = true;
 
         }
@@ -120,6 +122,7 @@ namespace Proyecto_PVA_2.Forms
                 textBoxContraseña.ForeColor = Color.FromArgb(241, 239, 241);
             }
 
+            textBoxContraseña.UseSystemPasswordChar = true;
             TbContraseñaClicked = true;
         }
 

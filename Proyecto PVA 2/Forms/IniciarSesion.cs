@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -154,13 +155,89 @@ namespace Proyecto_PVA_2.Forms
             switch (caso)
             {
                 case 0:
-                    papa.InicioSesion = true;
-                    papa.InicioSesionAdmin = false;
-                    papa.OpcionesUsuario();
+                    
+                    for (int i = 0; i < masterDataSet.Usuarios.Count; i++)
+                    {
+                        if (masterDataSet.Usuarios[i].CorreoElectronico == textBoxCorreoElectronico.Text)
+                        {
+                            if (masterDataSet.Usuarios[i].Contrasenya == textBoxContraseña.Text)
+                            {
+                                papa.User = new Usuario();
+                                papa.User.Id = masterDataSet.Usuarios[i].Id;
+                                papa.User.CorreoElectronico = masterDataSet.Usuarios[i].CorreoElectronico;
+                                try
+                                {
+                                    papa.User.Alias = masterDataSet.Usuarios[i].Alias;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                papa.User.Contraseña = masterDataSet.Usuarios[i].Contrasenya;
+                                try
+                                {
+                                    papa.User.Nombre = masterDataSet.Usuarios[i].Nombre;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                try { 
+                                papa.User.Apellido1 = masterDataSet.Usuarios[i].Apellido1;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                try { 
+                                papa.User.Apellido2 = masterDataSet.Usuarios[i].Apellido2;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                try { 
+                                papa.User.Direccion = masterDataSet.Usuarios[i].Direccion;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                try
+                                {
+                                    papa.User.FotoPerfil = new MemoryStream(masterDataSet.Usuarios[i].FotoPerfil.ToArray());
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                try { 
+                                papa.User.Nacimiento = masterDataSet.Usuarios[i].FechaNacimiento;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+                                papa.User.FecAlta = masterDataSet.Usuarios[i].FechaAlta;
+
+
+                                papa.OpcionesUsuario();
+                                if (papa.User.Alias != "") MessageBox.Show("Bienvenid@ " + papa.User.Alias);
+                                else MessageBox.Show("Bienvenid@ " + papa.User.CorreoElectronico);
+                                papa.InicioSesion = true;
+                                papa.InicioSesionAdmin = false;
+                            }
+                            else
+                                MessageBox.Show("La cuenta es existente. Sin embargo, la contraseña no coincide.", "Contraseña incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        }
+                        else
+                            MessageBox.Show("No existe un usuario con ese correo electrónico. Registrése para tener una cuenta y poder optar a todos los servicios.","Usuario no encontrado",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    }
+                    
 
                     break;
                 case 1:
-
                     papa.InicioSesion = true;
                     papa.InicioSesionAdmin = true;
                     papa.Admin = new Administrador(textBoxCorreoElectronico.Text, textBoxContraseña.Text);
@@ -184,6 +261,8 @@ namespace Proyecto_PVA_2.Forms
 
         private void IniciarSesion_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
 
         }
 
@@ -199,6 +278,19 @@ namespace Proyecto_PVA_2.Forms
 
         private void textBoxCorreoElectronico_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
         }
     }

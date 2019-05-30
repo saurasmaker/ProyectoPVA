@@ -55,3 +55,4 @@ C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdm
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminSeries.resources
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdminUsuarios.resources
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Form1.resources
+C:\Users\saura\source\repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources

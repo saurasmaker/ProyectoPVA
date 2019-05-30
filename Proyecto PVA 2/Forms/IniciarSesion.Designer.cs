@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IniciarSesion));
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.linkLabelRegistrarse = new System.Windows.Forms.LinkLabel();
@@ -42,9 +43,15 @@
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAceptar
@@ -208,9 +215,33 @@
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(309, 42);
+            this.BarraTitulo.Size = new System.Drawing.Size(320, 42);
             this.BarraTitulo.TabIndex = 37;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.PeliculasTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             // 
             // IniciarSesion
             // 
@@ -218,7 +249,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(309, 550);
+            this.ClientSize = new System.Drawing.Size(320, 550);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonMostrar);
@@ -241,6 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +293,9 @@
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel BarraTitulo;
+        private masterDataSet masterDataSet;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
