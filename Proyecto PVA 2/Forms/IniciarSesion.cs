@@ -163,8 +163,11 @@ namespace Proyecto_PVA_2.Forms
                             if (masterDataSet.Usuarios[i].Contrasenya == textBoxContraseña.Text)
                             {
                                 papa.User = new Usuario();
+
                                 papa.User.Id = masterDataSet.Usuarios[i].Id;
+
                                 papa.User.CorreoElectronico = masterDataSet.Usuarios[i].CorreoElectronico;
+
                                 try
                                 {
                                     papa.User.Alias = masterDataSet.Usuarios[i].Alias;
@@ -173,7 +176,9 @@ namespace Proyecto_PVA_2.Forms
                                 {
 
                                 }
+
                                 papa.User.Contraseña = masterDataSet.Usuarios[i].Contrasenya;
+
                                 try
                                 {
                                     papa.User.Nombre = masterDataSet.Usuarios[i].Nombre;
@@ -182,27 +187,32 @@ namespace Proyecto_PVA_2.Forms
                                 {
 
                                 }
-                                try { 
-                                papa.User.Apellido1 = masterDataSet.Usuarios[i].Apellido1;
+
+                                try
+                                { 
+                                    papa.User.Apellido1 = masterDataSet.Usuarios[i].Apellido1;
                                 }
                                 catch (Exception)
                                 {
 
                                 }
+
                                 try { 
-                                papa.User.Apellido2 = masterDataSet.Usuarios[i].Apellido2;
+                                    papa.User.Apellido2 = masterDataSet.Usuarios[i].Apellido2;
                                 }
                                 catch (Exception)
                                 {
 
                                 }
+
                                 try { 
-                                papa.User.Direccion = masterDataSet.Usuarios[i].Direccion;
+                                    papa.User.Direccion = masterDataSet.Usuarios[i].Direccion;
                                 }
                                 catch (Exception)
                                 {
 
                                 }
+
                                 try
                                 {
                                     papa.User.FotoPerfil = new MemoryStream(masterDataSet.Usuarios[i].FotoPerfil.ToArray());
@@ -211,8 +221,17 @@ namespace Proyecto_PVA_2.Forms
                                 {
 
                                 }
+
                                 try { 
-                                papa.User.Nacimiento = masterDataSet.Usuarios[i].FechaNacimiento;
+                                    papa.User.Nacimiento = masterDataSet.Usuarios[i].FechaNacimiento;
+                                }
+                                catch (Exception)
+                                {
+
+                                }
+
+                                try {
+                                    papa.User.Biografia = masterDataSet.Usuarios[i].Biografia;
                                 }
                                 catch (Exception)
                                 {

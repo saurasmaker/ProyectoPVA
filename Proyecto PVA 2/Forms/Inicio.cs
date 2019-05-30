@@ -78,6 +78,7 @@ namespace Proyecto_PVA_2
             else if (InicioSesion)
             {
                 PerfilUsuario perfil = new PerfilUsuario();
+                perfil.User = User;
                 perfil.ShowDialog();
             }
             else

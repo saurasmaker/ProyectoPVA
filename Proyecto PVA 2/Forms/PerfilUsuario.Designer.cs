@@ -35,27 +35,27 @@
             this.textBoxAlias = new System.Windows.Forms.TextBox();
             this.buttonCambiarImagenPerfil = new System.Windows.Forms.Button();
             this.groupBoxDatosPersonales = new System.Windows.Forms.GroupBox();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxApellido1 = new System.Windows.Forms.TextBox();
-            this.labelApellido1 = new System.Windows.Forms.Label();
-            this.textBoxApellido2 = new System.Windows.Forms.TextBox();
-            this.labelApellido2 = new System.Windows.Forms.Label();
-            this.labelFechaNac = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelDireccion = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.labelFechaNac = new System.Windows.Forms.Label();
+            this.textBoxApellido2 = new System.Windows.Forms.TextBox();
+            this.labelApellido2 = new System.Windows.Forms.Label();
+            this.textBoxApellido1 = new System.Windows.Forms.TextBox();
+            this.labelApellido1 = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxCorreoElectronico = new System.Windows.Forms.TextBox();
             this.labelCorreoElectronico = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBiografia = new System.Windows.Forms.TextBox();
             this.labelBiografia = new System.Windows.Forms.Label();
             this.buttonModificarDatosPersonales = new System.Windows.Forms.Button();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonRestablecerDatos = new System.Windows.Forms.Button();
             this.buttonSalir = new System.Windows.Forms.Button();
+            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.buttonCambiarContraseña = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
@@ -73,6 +73,7 @@
             this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(12, 30);
             this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
             this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(128, 120);
+            this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImagenPerfil.TabIndex = 0;
             this.pictureBoxImagenPerfil.TabStop = false;
             // 
@@ -122,62 +123,12 @@
             this.groupBoxDatosPersonales.Text = "Datos Personales";
             this.groupBoxDatosPersonales.Enter += new System.EventHandler(this.groupBoxDatosPersonales_Enter);
             // 
-            // textBoxNombre
+            // dateTimePickerFechaNacimiento
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(6, 42);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(125, 20);
-            this.textBoxNombre.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre";
-            // 
-            // textBoxApellido1
-            // 
-            this.textBoxApellido1.Location = new System.Drawing.Point(6, 87);
-            this.textBoxApellido1.Name = "textBoxApellido1";
-            this.textBoxApellido1.Size = new System.Drawing.Size(125, 20);
-            this.textBoxApellido1.TabIndex = 6;
-            // 
-            // labelApellido1
-            // 
-            this.labelApellido1.AutoSize = true;
-            this.labelApellido1.Location = new System.Drawing.Point(3, 71);
-            this.labelApellido1.Name = "labelApellido1";
-            this.labelApellido1.Size = new System.Drawing.Size(78, 13);
-            this.labelApellido1.TabIndex = 5;
-            this.labelApellido1.Text = "Primer apellido:";
-            // 
-            // textBoxApellido2
-            // 
-            this.textBoxApellido2.Location = new System.Drawing.Point(6, 140);
-            this.textBoxApellido2.Name = "textBoxApellido2";
-            this.textBoxApellido2.Size = new System.Drawing.Size(125, 20);
-            this.textBoxApellido2.TabIndex = 8;
-            // 
-            // labelApellido2
-            // 
-            this.labelApellido2.AutoSize = true;
-            this.labelApellido2.Location = new System.Drawing.Point(3, 124);
-            this.labelApellido2.Name = "labelApellido2";
-            this.labelApellido2.Size = new System.Drawing.Size(92, 13);
-            this.labelApellido2.TabIndex = 7;
-            this.labelApellido2.Text = "Segundo apellido:";
-            // 
-            // labelFechaNac
-            // 
-            this.labelFechaNac.AutoSize = true;
-            this.labelFechaNac.Location = new System.Drawing.Point(3, 173);
-            this.labelFechaNac.Name = "labelFechaNac";
-            this.labelFechaNac.Size = new System.Drawing.Size(112, 13);
-            this.labelFechaNac.TabIndex = 9;
-            this.labelFechaNac.Text = "Fecha de nacimiento: ";
+            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(6, 189);
+            this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
+            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerFechaNacimiento.TabIndex = 13;
             // 
             // textBoxDireccion
             // 
@@ -195,12 +146,62 @@
             this.labelDireccion.TabIndex = 11;
             this.labelDireccion.Text = "Dirección:";
             // 
-            // dateTimePickerFechaNacimiento
+            // labelFechaNac
             // 
-            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(6, 189);
-            this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
-            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerFechaNacimiento.TabIndex = 13;
+            this.labelFechaNac.AutoSize = true;
+            this.labelFechaNac.Location = new System.Drawing.Point(3, 173);
+            this.labelFechaNac.Name = "labelFechaNac";
+            this.labelFechaNac.Size = new System.Drawing.Size(112, 13);
+            this.labelFechaNac.TabIndex = 9;
+            this.labelFechaNac.Text = "Fecha de nacimiento: ";
+            // 
+            // textBoxApellido2
+            // 
+            this.textBoxApellido2.Location = new System.Drawing.Point(6, 140);
+            this.textBoxApellido2.Name = "textBoxApellido2";
+            this.textBoxApellido2.Size = new System.Drawing.Size(125, 20);
+            this.textBoxApellido2.TabIndex = 8;
+            // 
+            // labelApellido2
+            // 
+            this.labelApellido2.AutoSize = true;
+            this.labelApellido2.Location = new System.Drawing.Point(3, 124);
+            this.labelApellido2.Name = "labelApellido2";
+            this.labelApellido2.Size = new System.Drawing.Size(92, 13);
+            this.labelApellido2.TabIndex = 7;
+            this.labelApellido2.Text = "Segundo apellido:";
+            // 
+            // textBoxApellido1
+            // 
+            this.textBoxApellido1.Location = new System.Drawing.Point(6, 87);
+            this.textBoxApellido1.Name = "textBoxApellido1";
+            this.textBoxApellido1.Size = new System.Drawing.Size(125, 20);
+            this.textBoxApellido1.TabIndex = 6;
+            // 
+            // labelApellido1
+            // 
+            this.labelApellido1.AutoSize = true;
+            this.labelApellido1.Location = new System.Drawing.Point(3, 71);
+            this.labelApellido1.Name = "labelApellido1";
+            this.labelApellido1.Size = new System.Drawing.Size(78, 13);
+            this.labelApellido1.TabIndex = 5;
+            this.labelApellido1.Text = "Primer apellido:";
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(6, 42);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(125, 20);
+            this.textBoxNombre.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre";
             // 
             // textBoxCorreoElectronico
             // 
@@ -218,13 +219,13 @@
             this.labelCorreoElectronico.TabIndex = 5;
             this.labelCorreoElectronico.Text = "Correo electrónico: ";
             // 
-            // textBox1
+            // textBoxBiografia
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 298);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 95);
-            this.textBox1.TabIndex = 8;
+            this.textBoxBiografia.Location = new System.Drawing.Point(15, 298);
+            this.textBoxBiografia.Multiline = true;
+            this.textBoxBiografia.Name = "textBoxBiografia";
+            this.textBoxBiografia.Size = new System.Drawing.Size(219, 95);
+            this.textBoxBiografia.TabIndex = 8;
             // 
             // labelBiografia
             // 
@@ -276,6 +277,12 @@
             this.buttonSalir.UseVisualStyleBackColor = false;
             this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
+            // imageListIconos
+            // 
+            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
+            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListIconos.Images.SetKeyName(0, "cerrar.png");
+            // 
             // buttonCambiarContraseña
             // 
             this.buttonCambiarContraseña.Location = new System.Drawing.Point(422, 402);
@@ -297,12 +304,6 @@
             this.BarraTitulo.TabIndex = 38;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
-            // imageListIconos
-            // 
-            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
-            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListIconos.Images.SetKeyName(0, "cerrar.png");
-            // 
             // masterDataSet
             // 
             this.masterDataSet.DataSetName = "masterDataSet";
@@ -321,6 +322,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = null;
             this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -336,7 +338,7 @@
             this.Controls.Add(this.buttonRestablecerDatos);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.buttonModificarDatosPersonales);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBiografia);
             this.Controls.Add(this.labelBiografia);
             this.Controls.Add(this.textBoxCorreoElectronico);
             this.Controls.Add(this.labelCorreoElectronico);
@@ -379,7 +381,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
         private System.Windows.Forms.TextBox textBoxCorreoElectronico;
         private System.Windows.Forms.Label labelCorreoElectronico;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBiografia;
         private System.Windows.Forms.Label labelBiografia;
         private System.Windows.Forms.Button buttonModificarDatosPersonales;
         private System.Windows.Forms.Button buttonActualizar;
