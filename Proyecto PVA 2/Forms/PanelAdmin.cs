@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Proyecto_PVA_2.Forms;
+using Proyecto_PVA_2;
 
 namespace Prueba
 {
-    public partial class Form1 : Form
+    public partial class PanelAdmin : Form
     {
         //Librería Capture
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -24,12 +25,10 @@ namespace Prueba
 
 
         //Constructores
-        public Form1()
+        public PanelAdmin()
         {
             InitializeComponent();
         }
-
-        
 
 
         //Eventos
@@ -58,12 +57,12 @@ namespace Prueba
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new PanelAdminCompras());
+            //AbrirFormPanel(new PanelAdminCompras());
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            AbrirFormPanel(new PanelAdminUsuarios());
+            AbrirFormPanel(new AdministrarUsuarios());
         }
 
         private void Button4_Click(object sender, EventArgs e)

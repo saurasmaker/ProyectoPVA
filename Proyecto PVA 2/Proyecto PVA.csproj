@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Admin\AdministrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdministrarUsuarios.Designer.cs">
+      <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Actor.cs" />
     <Compile Include="Clases\Administrador.cs" />
     <Compile Include="Clases\Capitulo.cs" />
@@ -74,16 +80,16 @@
     <Compile Include="Clases\Temporada.cs" />
     <Compile Include="Clases\TituloCinematografico.cs" />
     <Compile Include="Clases\Usuario.cs" />
-    <Compile Include="Forms\AdministrarPeliculas.cs">
+    <Compile Include="Forms\Admin\AdministrarPeliculas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdministrarPeliculas.Designer.cs">
+    <Compile Include="Forms\Admin\AdministrarPeliculas.Designer.cs">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdministrarSeries.cs">
+    <Compile Include="Forms\Admin\AdministrarSeries.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdministrarSeries.Designer.cs">
+    <Compile Include="Forms\Admin\AdministrarSeries.Designer.cs">
       <DependentUpon>AdministrarSeries.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Home.cs">
@@ -91,30 +97,6 @@
     </Compile>
     <Compile Include="Forms\Admin\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminCompras.designer.cs">
-      <DependentUpon>PanelAdminCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminPeliculas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminPeliculas.designer.cs">
-      <DependentUpon>PanelAdminPeliculas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminSeries.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminSeries.designer.cs">
-      <DependentUpon>PanelAdminSeries.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Admin\PanelAdminUsuarios.designer.cs">
-      <DependentUpon>PanelAdminUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\border.cs" />
     <Compile Include="Forms\PanelAdmin.cs">
@@ -181,26 +163,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AdministrarPeliculas.resx">
+    <EmbeddedResource Include="Forms\Admin\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdministrarSeries.resx">
+    <EmbeddedResource Include="Forms\Admin\AdministrarSeries.resx">
       <DependentUpon>AdministrarSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\AdministrarUsuarios.resx">
+      <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\PanelAdminCompras.resx">
-      <DependentUpon>PanelAdminCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\PanelAdminPeliculas.resx">
-      <DependentUpon>PanelAdminPeliculas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\PanelAdminSeries.resx">
-      <DependentUpon>PanelAdminSeries.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\PanelAdminUsuarios.resx">
-      <DependentUpon>PanelAdminUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>

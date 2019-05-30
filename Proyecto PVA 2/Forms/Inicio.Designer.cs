@@ -52,7 +52,6 @@
             this.buttonGeneroAccion = new System.Windows.Forms.Button();
             this.labelGeneros = new System.Windows.Forms.Label();
             this.buttonDesplegar = new System.Windows.Forms.Button();
-            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanelCentro = new System.Windows.Forms.TableLayoutPanel();
             this.panelDerecha = new System.Windows.Forms.Panel();
             this.panelAdmin = new System.Windows.Forms.Panel();
@@ -64,8 +63,8 @@
             this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
-            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
@@ -254,18 +253,9 @@
             resources.ApplyResources(this.buttonDesplegar, "buttonDesplegar");
             this.buttonDesplegar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDesplegar.FlatAppearance.BorderSize = 0;
-            this.buttonDesplegar.ImageList = this.imageListIconos;
             this.buttonDesplegar.Name = "buttonDesplegar";
             this.buttonDesplegar.UseVisualStyleBackColor = false;
             this.buttonDesplegar.Click += new System.EventHandler(this.ButtonDesplegar_Click);
-            // 
-            // imageListIconos
-            // 
-            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
-            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListIconos.Images.SetKeyName(0, "flecha izquierda.png");
-            this.imageListIconos.Images.SetKeyName(1, "home.png");
-            this.imageListIconos.Images.SetKeyName(2, "lupa.png");
             // 
             // tableLayoutPanelCentro
             // 
@@ -343,19 +333,20 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
             this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
+            // 
             // seriesBindingSource
             // 
             this.seriesBindingSource.DataMember = "Series";
             this.seriesBindingSource.DataSource = this.masterDataSet;
-            // 
-            // seriesTableAdapter
-            // 
-            this.seriesTableAdapter.ClearBeforeFill = true;
             // 
             // Inicio
             // 
@@ -394,7 +385,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonSeries;
         private System.Windows.Forms.Button buttonDesplegar;
         private System.Windows.Forms.ToolStripButton toolStripButtonIniciarSesion;
-        private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Button buttonGeneroDeporte;
         private System.Windows.Forms.Button buttonGeneroCrimen;
         private System.Windows.Forms.Button buttonGeneroComedia;

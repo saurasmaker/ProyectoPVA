@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -62,6 +63,14 @@
             this.lnoticias = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
+            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,15 +90,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 24);
+            this.label1.Size = new System.Drawing.Size(309, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "INFORMACIÓN DEL NEGOCIO";
             // 
@@ -105,11 +118,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(13, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "USUARIOS";
             // 
@@ -126,11 +139,11 @@
             // contusuarios
             // 
             this.contusuarios.AutoSize = true;
-            this.contusuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contusuarios.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.contusuarios.Location = new System.Drawing.Point(28, 118);
             this.contusuarios.Name = "contusuarios";
-            this.contusuarios.Size = new System.Drawing.Size(41, 20);
+            this.contusuarios.Size = new System.Drawing.Size(40, 18);
             this.contusuarios.TabIndex = 1;
             this.contusuarios.Text = "1234";
             // 
@@ -156,11 +169,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.Size = new System.Drawing.Size(88, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "PELICULAS";
             // 
@@ -177,11 +190,11 @@
             // contpeliculas
             // 
             this.contpeliculas.AutoSize = true;
-            this.contpeliculas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contpeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contpeliculas.ForeColor = System.Drawing.Color.DarkViolet;
             this.contpeliculas.Location = new System.Drawing.Point(28, 118);
             this.contpeliculas.Name = "contpeliculas";
-            this.contpeliculas.Size = new System.Drawing.Size(41, 20);
+            this.contpeliculas.Size = new System.Drawing.Size(40, 18);
             this.contpeliculas.TabIndex = 2;
             this.contpeliculas.Text = "1234";
             // 
@@ -207,11 +220,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(28, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "SERIES";
             // 
@@ -228,11 +241,11 @@
             // contseries
             // 
             this.contseries.AutoSize = true;
-            this.contseries.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contseries.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contseries.ForeColor = System.Drawing.Color.Crimson;
             this.contseries.Location = new System.Drawing.Point(28, 118);
             this.contseries.Name = "contseries";
-            this.contseries.Size = new System.Drawing.Size(41, 20);
+            this.contseries.Size = new System.Drawing.Size(40, 18);
             this.contseries.TabIndex = 6;
             this.contseries.Text = "1234";
             // 
@@ -258,11 +271,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(24, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "VENTAS";
             // 
@@ -279,11 +292,11 @@
             // contventas
             // 
             this.contventas.AutoSize = true;
-            this.contventas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contventas.ForeColor = System.Drawing.Color.Chartreuse;
             this.contventas.Location = new System.Drawing.Point(28, 118);
             this.contventas.Name = "contventas";
-            this.contventas.Size = new System.Drawing.Size(41, 20);
+            this.contventas.Size = new System.Drawing.Size(40, 18);
             this.contventas.TabIndex = 6;
             this.contventas.Text = "1234";
             // 
@@ -309,11 +322,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(4, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.Size = new System.Drawing.Size(93, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "GANANCIAS";
             // 
@@ -330,11 +343,11 @@
             // contganancias
             // 
             this.contganancias.AutoSize = true;
-            this.contganancias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contganancias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contganancias.ForeColor = System.Drawing.Color.Chartreuse;
             this.contganancias.Location = new System.Drawing.Point(28, 118);
             this.contganancias.Name = "contganancias";
-            this.contganancias.Size = new System.Drawing.Size(41, 20);
+            this.contganancias.Size = new System.Drawing.Size(40, 18);
             this.contganancias.TabIndex = 6;
             this.contganancias.Text = "1234";
             // 
@@ -386,10 +399,10 @@
             // lnoticias
             // 
             this.lnoticias.AutoSize = true;
-            this.lnoticias.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnoticias.Location = new System.Drawing.Point(136, 10);
             this.lnoticias.Name = "lnoticias";
-            this.lnoticias.Size = new System.Drawing.Size(78, 20);
+            this.lnoticias.Size = new System.Drawing.Size(76, 18);
             this.lnoticias.TabIndex = 7;
             this.lnoticias.Text = "NOTICIAS";
             // 
@@ -404,18 +417,59 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(117, 10);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.Size = new System.Drawing.Size(88, 18);
             this.label7.TabIndex = 7;
             this.label7.Text = "FEEDBACK";
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.FacturasTableAdapter = null;
+            this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
+            this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
+            // 
+            // peliculasTableAdapter
+            // 
+            this.peliculasTableAdapter.ClearBeforeFill = true;
+            // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // peliculasBindingSource
+            // 
+            this.peliculasBindingSource.DataMember = "Peliculas";
+            this.peliculasBindingSource.DataSource = this.masterDataSet;
+            // 
+            // seriesBindingSource
+            // 
+            this.seriesBindingSource.DataMember = "Series";
+            this.seriesBindingSource.DataSource = this.masterDataSet;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.masterDataSet;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 762);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel13);
@@ -434,6 +488,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -465,6 +520,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +564,13 @@
         private System.Windows.Forms.Label lnoticias;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private Proyecto_PVA_2.masterDataSet masterDataSet;
+        private Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter peliculasTableAdapter;
+        private System.Windows.Forms.BindingSource peliculasBindingSource;
+        private Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter seriesTableAdapter;
+        private System.Windows.Forms.BindingSource seriesBindingSource;
+        private Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
     }
 }
