@@ -31,21 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarUsuarios));
             System.Windows.Forms.Label idLabel;
-            System.Windows.Forms.Label correoElectronicoLabel;
-            System.Windows.Forms.Label aliasLabel;
             System.Windows.Forms.Label contrasenyaLabel;
-            System.Windows.Forms.Label nombreLabel;
-            System.Windows.Forms.Label apellido1Label;
-            System.Windows.Forms.Label apellido2Label;
-            System.Windows.Forms.Label direccionLabel;
-            System.Windows.Forms.Label fotoPerfilLabel;
             System.Windows.Forms.Label fechaNacimientoLabel;
+            System.Windows.Forms.Label fotoPerfilLabel;
+            System.Windows.Forms.Label correoElectronicoLabel;
             System.Windows.Forms.Label fechaAltaLabel;
-            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            System.Windows.Forms.Label apellido1Label;
+            System.Windows.Forms.Label aliasLabel;
+            System.Windows.Forms.Label direccionLabel;
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label apellido2Label;
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
-            this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -58,100 +57,83 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.usuariosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.correoElectronicoTextBox = new System.Windows.Forms.TextBox();
-            this.aliasTextBox = new System.Windows.Forms.TextBox();
-            this.contrasenyaTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.apellido1TextBox = new System.Windows.Forms.TextBox();
-            this.apellido2TextBox = new System.Windows.Forms.TextBox();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.fotoPerfilPictureBox = new System.Windows.Forms.PictureBox();
+            this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.fechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.fechaAltaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.apellido2TextBox = new System.Windows.Forms.TextBox();
+            this.fotoPerfilPictureBox = new System.Windows.Forms.PictureBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.buttonAñadirFotoPerfil = new System.Windows.Forms.Button();
+            this.correoElectronicoTextBox = new System.Windows.Forms.TextBox();
+            this.apellido1TextBox = new System.Windows.Forms.TextBox();
+            this.contrasenyaTextBox = new System.Windows.Forms.TextBox();
+            this.aliasTextBox = new System.Windows.Forms.TextBox();
+            this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.FacturasTableAdapter();
+            this.facturasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonAñadirFotoPerfil = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
-            correoElectronicoLabel = new System.Windows.Forms.Label();
-            aliasLabel = new System.Windows.Forms.Label();
             contrasenyaLabel = new System.Windows.Forms.Label();
-            nombreLabel = new System.Windows.Forms.Label();
-            apellido1Label = new System.Windows.Forms.Label();
-            apellido2Label = new System.Windows.Forms.Label();
-            direccionLabel = new System.Windows.Forms.Label();
-            fotoPerfilLabel = new System.Windows.Forms.Label();
             fechaNacimientoLabel = new System.Windows.Forms.Label();
+            fotoPerfilLabel = new System.Windows.Forms.Label();
+            correoElectronicoLabel = new System.Windows.Forms.Label();
             fechaAltaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            apellido1Label = new System.Windows.Forms.Label();
+            aliasLabel = new System.Windows.Forms.Label();
+            direccionLabel = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
+            apellido2Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).BeginInit();
             this.usuariosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfilPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // masterDataSet
-            // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.masterDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = null;
             this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             // 
-            // usuariosBindingNavigator
+            // usuariosTableAdapter
             // 
-            this.usuariosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.usuariosBindingNavigator.BindingSource = this.usuariosBindingSource;
-            this.usuariosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.usuariosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.usuariosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.usuariosBindingNavigatorSaveItem});
-            this.usuariosBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.usuariosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.usuariosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.usuariosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.usuariosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.usuariosBindingNavigator.Name = "usuariosBindingNavigator";
-            this.usuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usuariosBindingNavigator.Size = new System.Drawing.Size(1078, 25);
-            this.usuariosBindingNavigator.TabIndex = 0;
-            this.usuariosBindingNavigator.Text = "bindingNavigator1";
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -194,7 +176,7 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -217,7 +199,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
@@ -247,6 +229,36 @@
             this.usuariosBindingNavigatorSaveItem.Text = "Guardar datos";
             this.usuariosBindingNavigatorSaveItem.Click += new System.EventHandler(this.usuariosBindingNavigatorSaveItem_Click);
             // 
+            // usuariosBindingNavigator
+            // 
+            this.usuariosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.usuariosBindingNavigator.BindingSource = this.usuariosBindingSource;
+            this.usuariosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.usuariosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.usuariosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.usuariosBindingNavigatorSaveItem});
+            this.usuariosBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.usuariosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.usuariosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.usuariosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.usuariosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.usuariosBindingNavigator.Name = "usuariosBindingNavigator";
+            this.usuariosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.usuariosBindingNavigator.Size = new System.Drawing.Size(1078, 25);
+            this.usuariosBindingNavigator.TabIndex = 0;
+            this.usuariosBindingNavigator.Text = "bindingNavigator1";
+            // 
             // idLabel
             // 
             idLabel.AutoSize = true;
@@ -256,13 +268,48 @@
             idLabel.TabIndex = 1;
             idLabel.Text = "Id:";
             // 
-            // idTextBox
+            // contrasenyaLabel
             // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(117, 39);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idTextBox.TabIndex = 2;
+            contrasenyaLabel.AutoSize = true;
+            contrasenyaLabel.Location = new System.Drawing.Point(14, 120);
+            contrasenyaLabel.Name = "contrasenyaLabel";
+            contrasenyaLabel.Size = new System.Drawing.Size(69, 13);
+            contrasenyaLabel.TabIndex = 7;
+            contrasenyaLabel.Text = "Contrasenya:";
+            // 
+            // fechaNacimientoDateTimePicker
+            // 
+            this.fechaNacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "FechaNacimiento", true));
+            this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(117, 273);
+            this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
+            this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaNacimientoDateTimePicker.TabIndex = 20;
+            // 
+            // fechaNacimientoLabel
+            // 
+            fechaNacimientoLabel.AutoSize = true;
+            fechaNacimientoLabel.Location = new System.Drawing.Point(14, 277);
+            fechaNacimientoLabel.Name = "fechaNacimientoLabel";
+            fechaNacimientoLabel.Size = new System.Drawing.Size(96, 13);
+            fechaNacimientoLabel.TabIndex = 19;
+            fechaNacimientoLabel.Text = "Fecha Nacimiento:";
+            // 
+            // fotoPerfilLabel
+            // 
+            fotoPerfilLabel.AutoSize = true;
+            fotoPerfilLabel.Location = new System.Drawing.Point(336, 41);
+            fotoPerfilLabel.Name = "fotoPerfilLabel";
+            fotoPerfilLabel.Size = new System.Drawing.Size(57, 13);
+            fotoPerfilLabel.TabIndex = 17;
+            fotoPerfilLabel.Text = "Foto Perfil:";
+            // 
+            // fechaAltaDateTimePicker
+            // 
+            this.fechaAltaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "FechaAlta", true));
+            this.fechaAltaDateTimePicker.Location = new System.Drawing.Point(117, 143);
+            this.fechaAltaDateTimePicker.Name = "fechaAltaDateTimePicker";
+            this.fechaAltaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaAltaDateTimePicker.TabIndex = 22;
             // 
             // correoElectronicoLabel
             // 
@@ -273,13 +320,47 @@
             correoElectronicoLabel.TabIndex = 3;
             correoElectronicoLabel.Text = "Correo Electronico:";
             // 
-            // correoElectronicoTextBox
+            // idTextBox
             // 
-            this.correoElectronicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "CorreoElectronico", true));
-            this.correoElectronicoTextBox.Location = new System.Drawing.Point(117, 65);
-            this.correoElectronicoTextBox.Name = "correoElectronicoTextBox";
-            this.correoElectronicoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.correoElectronicoTextBox.TabIndex = 4;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(117, 39);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(200, 20);
+            this.idTextBox.TabIndex = 2;
+            // 
+            // fechaAltaLabel
+            // 
+            fechaAltaLabel.AutoSize = true;
+            fechaAltaLabel.Location = new System.Drawing.Point(14, 147);
+            fechaAltaLabel.Name = "fechaAltaLabel";
+            fechaAltaLabel.Size = new System.Drawing.Size(61, 13);
+            fechaAltaLabel.TabIndex = 21;
+            fechaAltaLabel.Text = "Fecha Alta:";
+            // 
+            // apellido1Label
+            // 
+            apellido1Label.AutoSize = true;
+            apellido1Label.Location = new System.Drawing.Point(14, 198);
+            apellido1Label.Name = "apellido1Label";
+            apellido1Label.Size = new System.Drawing.Size(53, 13);
+            apellido1Label.TabIndex = 11;
+            apellido1Label.Text = "Apellido1:";
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(117, 247);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.direccionTextBox.TabIndex = 16;
+            // 
+            // apellido2TextBox
+            // 
+            this.apellido2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido2", true));
+            this.apellido2TextBox.Location = new System.Drawing.Point(117, 221);
+            this.apellido2TextBox.Name = "apellido2TextBox";
+            this.apellido2TextBox.Size = new System.Drawing.Size(200, 20);
+            this.apellido2TextBox.TabIndex = 14;
             // 
             // aliasLabel
             // 
@@ -290,22 +371,57 @@
             aliasLabel.TabIndex = 5;
             aliasLabel.Text = "Alias:";
             // 
-            // aliasTextBox
+            // fotoPerfilPictureBox
             // 
-            this.aliasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Alias", true));
-            this.aliasTextBox.Location = new System.Drawing.Point(117, 91);
-            this.aliasTextBox.Name = "aliasTextBox";
-            this.aliasTextBox.Size = new System.Drawing.Size(200, 20);
-            this.aliasTextBox.TabIndex = 6;
+            this.fotoPerfilPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.usuariosBindingSource, "FotoPerfil", true));
+            this.fotoPerfilPictureBox.Location = new System.Drawing.Point(339, 61);
+            this.fotoPerfilPictureBox.Name = "fotoPerfilPictureBox";
+            this.fotoPerfilPictureBox.Size = new System.Drawing.Size(141, 124);
+            this.fotoPerfilPictureBox.TabIndex = 18;
+            this.fotoPerfilPictureBox.TabStop = false;
             // 
-            // contrasenyaLabel
+            // nombreTextBox
             // 
-            contrasenyaLabel.AutoSize = true;
-            contrasenyaLabel.Location = new System.Drawing.Point(14, 120);
-            contrasenyaLabel.Name = "contrasenyaLabel";
-            contrasenyaLabel.Size = new System.Drawing.Size(69, 13);
-            contrasenyaLabel.TabIndex = 7;
-            contrasenyaLabel.Text = "Contrasenya:";
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(117, 169);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nombreTextBox.TabIndex = 10;
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(14, 250);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.TabIndex = 15;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // buttonAñadirFotoPerfil
+            // 
+            this.buttonAñadirFotoPerfil.Location = new System.Drawing.Point(452, 37);
+            this.buttonAñadirFotoPerfil.Name = "buttonAñadirFotoPerfil";
+            this.buttonAñadirFotoPerfil.Size = new System.Drawing.Size(28, 23);
+            this.buttonAñadirFotoPerfil.TabIndex = 24;
+            this.buttonAñadirFotoPerfil.Text = "Añadir foto de perfil";
+            this.buttonAñadirFotoPerfil.UseVisualStyleBackColor = true;
+            this.buttonAñadirFotoPerfil.Click += new System.EventHandler(this.buttonAñadirFotoPerfil_Click);
+            // 
+            // correoElectronicoTextBox
+            // 
+            this.correoElectronicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "CorreoElectronico", true));
+            this.correoElectronicoTextBox.Location = new System.Drawing.Point(117, 65);
+            this.correoElectronicoTextBox.Name = "correoElectronicoTextBox";
+            this.correoElectronicoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.correoElectronicoTextBox.TabIndex = 4;
+            // 
+            // apellido1TextBox
+            // 
+            this.apellido1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido1", true));
+            this.apellido1TextBox.Location = new System.Drawing.Point(117, 195);
+            this.apellido1TextBox.Name = "apellido1TextBox";
+            this.apellido1TextBox.Size = new System.Drawing.Size(200, 20);
+            this.apellido1TextBox.TabIndex = 12;
             // 
             // contrasenyaTextBox
             // 
@@ -318,143 +434,54 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(408, 38);
+            nombreLabel.Location = new System.Drawing.Point(14, 172);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 9;
             nombreLabel.Text = "Nombre:";
             // 
-            // nombreTextBox
+            // aliasTextBox
             // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(511, 35);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nombreTextBox.TabIndex = 10;
-            // 
-            // apellido1Label
-            // 
-            apellido1Label.AutoSize = true;
-            apellido1Label.Location = new System.Drawing.Point(408, 64);
-            apellido1Label.Name = "apellido1Label";
-            apellido1Label.Size = new System.Drawing.Size(53, 13);
-            apellido1Label.TabIndex = 11;
-            apellido1Label.Text = "Apellido1:";
-            // 
-            // apellido1TextBox
-            // 
-            this.apellido1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido1", true));
-            this.apellido1TextBox.Location = new System.Drawing.Point(511, 61);
-            this.apellido1TextBox.Name = "apellido1TextBox";
-            this.apellido1TextBox.Size = new System.Drawing.Size(200, 20);
-            this.apellido1TextBox.TabIndex = 12;
+            this.aliasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Alias", true));
+            this.aliasTextBox.Location = new System.Drawing.Point(117, 91);
+            this.aliasTextBox.Name = "aliasTextBox";
+            this.aliasTextBox.Size = new System.Drawing.Size(200, 20);
+            this.aliasTextBox.TabIndex = 6;
             // 
             // apellido2Label
             // 
             apellido2Label.AutoSize = true;
-            apellido2Label.Location = new System.Drawing.Point(408, 90);
+            apellido2Label.Location = new System.Drawing.Point(14, 224);
             apellido2Label.Name = "apellido2Label";
             apellido2Label.Size = new System.Drawing.Size(53, 13);
             apellido2Label.TabIndex = 13;
             apellido2Label.Text = "Apellido2:";
             // 
-            // apellido2TextBox
+            // facturasBindingSource
             // 
-            this.apellido2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Apellido2", true));
-            this.apellido2TextBox.Location = new System.Drawing.Point(511, 87);
-            this.apellido2TextBox.Name = "apellido2TextBox";
-            this.apellido2TextBox.Size = new System.Drawing.Size(200, 20);
-            this.apellido2TextBox.TabIndex = 14;
+            this.facturasBindingSource.DataMember = "Facturas";
+            this.facturasBindingSource.DataSource = this.masterDataSet;
             // 
-            // direccionLabel
+            // facturasTableAdapter
             // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(408, 116);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 15;
-            direccionLabel.Text = "Direccion:";
+            this.facturasTableAdapter.ClearBeforeFill = true;
             // 
-            // direccionTextBox
+            // facturasDataGridView
             // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(511, 113);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
-            this.direccionTextBox.TabIndex = 16;
-            // 
-            // fotoPerfilLabel
-            // 
-            fotoPerfilLabel.AutoSize = true;
-            fotoPerfilLabel.Location = new System.Drawing.Point(785, 38);
-            fotoPerfilLabel.Name = "fotoPerfilLabel";
-            fotoPerfilLabel.Size = new System.Drawing.Size(57, 13);
-            fotoPerfilLabel.TabIndex = 17;
-            fotoPerfilLabel.Text = "Foto Perfil:";
-            // 
-            // fotoPerfilPictureBox
-            // 
-            this.fotoPerfilPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.usuariosBindingSource, "FotoPerfil", true));
-            this.fotoPerfilPictureBox.Location = new System.Drawing.Point(848, 38);
-            this.fotoPerfilPictureBox.Name = "fotoPerfilPictureBox";
-            this.fotoPerfilPictureBox.Size = new System.Drawing.Size(141, 124);
-            this.fotoPerfilPictureBox.TabIndex = 18;
-            this.fotoPerfilPictureBox.TabStop = false;
-            // 
-            // fechaNacimientoLabel
-            // 
-            fechaNacimientoLabel.AutoSize = true;
-            fechaNacimientoLabel.Location = new System.Drawing.Point(408, 143);
-            fechaNacimientoLabel.Name = "fechaNacimientoLabel";
-            fechaNacimientoLabel.Size = new System.Drawing.Size(96, 13);
-            fechaNacimientoLabel.TabIndex = 19;
-            fechaNacimientoLabel.Text = "Fecha Nacimiento:";
-            // 
-            // fechaNacimientoDateTimePicker
-            // 
-            this.fechaNacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "FechaNacimiento", true));
-            this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(511, 139);
-            this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
-            this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaNacimientoDateTimePicker.TabIndex = 20;
-            // 
-            // fechaAltaLabel
-            // 
-            fechaAltaLabel.AutoSize = true;
-            fechaAltaLabel.Location = new System.Drawing.Point(14, 147);
-            fechaAltaLabel.Name = "fechaAltaLabel";
-            fechaAltaLabel.Size = new System.Drawing.Size(61, 13);
-            fechaAltaLabel.TabIndex = 21;
-            fechaAltaLabel.Text = "Fecha Alta:";
-            // 
-            // fechaAltaDateTimePicker
-            // 
-            this.fechaAltaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "FechaAlta", true));
-            this.fechaAltaDateTimePicker.Location = new System.Drawing.Point(117, 143);
-            this.fechaAltaDateTimePicker.Name = "fechaAltaDateTimePicker";
-            this.fechaAltaDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaAltaDateTimePicker.TabIndex = 22;
-            // 
-            // usuariosDataGridView
-            // 
-            this.usuariosDataGridView.AutoGenerateColumns = false;
-            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.facturasDataGridView.AutoGenerateColumns = false;
+            this.facturasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.facturasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(17, 192);
-            this.usuariosDataGridView.Name = "usuariosDataGridView";
-            this.usuariosDataGridView.Size = new System.Drawing.Size(1044, 265);
-            this.usuariosDataGridView.TabIndex = 23;
+            this.dataGridViewTextBoxColumn5});
+            this.facturasDataGridView.DataSource = this.facturasBindingSource;
+            this.facturasDataGridView.Location = new System.Drawing.Point(523, 39);
+            this.facturasDataGridView.Name = "facturasDataGridView";
+            this.facturasDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.facturasDataGridView.TabIndex = 24;
+            this.facturasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturasDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -464,75 +491,122 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CorreoElectronico";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CorreoElectronico";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Id_usuario";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Id_usuario";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Alias";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Alias";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Contrasenya";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Contrasenya";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Importe";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Importe";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Compra";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Compra";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // usuariosBindingSource1
+            // 
+            this.usuariosBindingSource1.DataMember = "Usuarios";
+            this.usuariosBindingSource1.DataSource = this.masterDataSet;
+            // 
+            // usuariosDataGridView
+            // 
+            this.usuariosDataGridView.AutoGenerateColumns = false;
+            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.usuariosDataGridView.DataSource = this.usuariosBindingSource1;
+            this.usuariosDataGridView.Location = new System.Drawing.Point(17, 317);
+            this.usuariosDataGridView.Name = "usuariosDataGridView";
+            this.usuariosDataGridView.Size = new System.Drawing.Size(1049, 248);
+            this.usuariosDataGridView.TabIndex = 25;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Apellido1";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Apellido1";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Apellido2";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Apellido2";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "CorreoElectronico";
+            this.dataGridViewTextBoxColumn7.HeaderText = "CorreoElectronico";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Alias";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Alias";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "FechaNacimiento";
-            this.dataGridViewTextBoxColumn9.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Contrasenya";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Contrasenya";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "FechaAlta";
-            this.dataGridViewTextBoxColumn10.HeaderText = "FechaAlta";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // buttonAñadirFotoPerfil
+            // dataGridViewTextBoxColumn11
             // 
-            this.buttonAñadirFotoPerfil.Location = new System.Drawing.Point(814, 139);
-            this.buttonAñadirFotoPerfil.Name = "buttonAñadirFotoPerfil";
-            this.buttonAñadirFotoPerfil.Size = new System.Drawing.Size(28, 23);
-            this.buttonAñadirFotoPerfil.TabIndex = 24;
-            this.buttonAñadirFotoPerfil.Text = "Añadir foto de perfil";
-            this.buttonAñadirFotoPerfil.UseVisualStyleBackColor = true;
-            this.buttonAñadirFotoPerfil.Click += new System.EventHandler(this.buttonAñadirFotoPerfil_Click);
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Apellido1";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Apellido1";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Apellido2";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Apellido2";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "FechaAlta";
+            this.dataGridViewTextBoxColumn15.HeaderText = "FechaAlta";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // AdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 475);
-            this.Controls.Add(this.buttonAñadirFotoPerfil);
+            this.ClientSize = new System.Drawing.Size(1078, 580);
             this.Controls.Add(this.usuariosDataGridView);
+            this.Controls.Add(this.facturasDataGridView);
+            this.Controls.Add(this.buttonAñadirFotoPerfil);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(correoElectronicoLabel);
@@ -559,12 +633,15 @@
             this.Name = "AdministrarUsuarios";
             this.Text = "AdministrarUsuarios";
             this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).EndInit();
             this.usuariosBindingNavigator.ResumeLayout(false);
             this.usuariosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfilPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -573,45 +650,54 @@
 
         #endregion
 
-        private masterDataSet masterDataSet;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator usuariosBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private masterDataSet masterDataSet;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton usuariosBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.TextBox correoElectronicoTextBox;
-        private System.Windows.Forms.TextBox aliasTextBox;
-        private System.Windows.Forms.TextBox contrasenyaTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
-        private System.Windows.Forms.TextBox apellido1TextBox;
-        private System.Windows.Forms.TextBox apellido2TextBox;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.PictureBox fotoPerfilPictureBox;
+        private System.Windows.Forms.BindingNavigator usuariosBindingNavigator;
         private System.Windows.Forms.DateTimePicker fechaNacimientoDateTimePicker;
         private System.Windows.Forms.DateTimePicker fechaAltaDateTimePicker;
-        private System.Windows.Forms.DataGridView usuariosDataGridView;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox direccionTextBox;
+        private System.Windows.Forms.TextBox apellido2TextBox;
+        private System.Windows.Forms.PictureBox fotoPerfilPictureBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.Button buttonAñadirFotoPerfil;
+        private System.Windows.Forms.TextBox correoElectronicoTextBox;
+        private System.Windows.Forms.TextBox apellido1TextBox;
+        private System.Windows.Forms.TextBox contrasenyaTextBox;
+        private System.Windows.Forms.TextBox aliasTextBox;
+        private System.Windows.Forms.BindingSource facturasBindingSource;
+        private masterDataSetTableAdapters.FacturasTableAdapter facturasTableAdapter;
+        private System.Windows.Forms.DataGridView facturasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.BindingSource usuariosBindingSource1;
+        private System.Windows.Forms.DataGridView usuariosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.Button buttonAñadirFotoPerfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }

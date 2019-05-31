@@ -1,5 +1,6 @@
 ﻿using Proyecto_PVA_2.Clases;
 using Proyecto_PVA_2.Forms;
+using Proyecto_PVA_2.Forms.Admin;
 using Prueba;
 using System;
 using System.Collections.Generic;
@@ -469,15 +470,20 @@ namespace Proyecto_PVA_2
 
                 try//Añadir portada
                 {
-                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Portada.ToArray());
+                    MemoryStream ms = new MemoryStream(masterDataSet.Series[Carteles.IndexOf(cartel)].Portada.ToArray());
                     infoSerie.portadaPictureBox.Image = Image.FromStream(ms);
-
                 }
                 catch (Exception)
                 {
 
                 }
 
+                infoSerie.IdSerie = masterDataSet.Series[Carteles.IndexOf(cartel)].Id;
+
+                for(int j = 1; j <  masterDataSet.Series[Carteles.IndexOf(cartel)].Temopradas; j++)
+                    infoSerie.comboBoxTemporada.Items.Add("Temporada " + j);
+
+                MessageBox.Show("jola");
                 infoSerie.Show();
 
                 return;

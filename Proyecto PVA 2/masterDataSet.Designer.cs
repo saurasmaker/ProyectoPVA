@@ -459,6 +459,8 @@ namespace Proyecto_PVA_2 {
             
             private global::System.Data.DataColumn columnId_Serie;
             
+            private global::System.Data.DataColumn columnTemporada;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CapitulosDataTable() {
@@ -566,6 +568,14 @@ namespace Proyecto_PVA_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TemporadaColumn {
+                get {
+                    return this.columnTemporada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -601,7 +611,7 @@ namespace Proyecto_PVA_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CapitulosRow AddCapitulosRow(int Id, string Titulo, string Sinopsis, System.TimeSpan Duracion, System.DateTime Estreno, string Director, double Puntuacion, decimal Precio, SeriesRow parentSeriesRowByFK_Series_Capitulos) {
+            public CapitulosRow AddCapitulosRow(int Id, string Titulo, string Sinopsis, System.TimeSpan Duracion, System.DateTime Estreno, string Director, double Puntuacion, decimal Precio, SeriesRow parentSeriesRowByFK_Series_Capitulos, int Temporada) {
                 CapitulosRow rowCapitulosRow = ((CapitulosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -612,7 +622,8 @@ namespace Proyecto_PVA_2 {
                         Director,
                         Puntuacion,
                         Precio,
-                        null};
+                        null,
+                        Temporada};
                 if ((parentSeriesRowByFK_Series_Capitulos != null)) {
                     columnValuesArray[8] = parentSeriesRowByFK_Series_Capitulos[0];
                 }
@@ -654,6 +665,7 @@ namespace Proyecto_PVA_2 {
                 this.columnPuntuacion = base.Columns["Puntuacion"];
                 this.columnPrecio = base.Columns["Precio"];
                 this.columnId_Serie = base.Columns["Id_Serie"];
+                this.columnTemporada = base.Columns["Temporada"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -677,6 +689,8 @@ namespace Proyecto_PVA_2 {
                 base.Columns.Add(this.columnPrecio);
                 this.columnId_Serie = new global::System.Data.DataColumn("Id_Serie", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId_Serie);
+                this.columnTemporada = new global::System.Data.DataColumn("Temporada", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTemporada);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
@@ -2490,6 +2504,22 @@ namespace Proyecto_PVA_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Temporada {
+                get {
+                    try {
+                        return ((int)(this[this.tableCapitulos.TemporadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Temporada\' de la tabla \'Capitulos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCapitulos.TemporadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SeriesRow SeriesRow {
                 get {
                     return ((SeriesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Series_Capitulos"])));
@@ -2593,6 +2623,18 @@ namespace Proyecto_PVA_2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetId_SerieNull() {
                 this[this.tableCapitulos.Id_SerieColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTemporadaNull() {
+                return this.IsNull(this.tableCapitulos.TemporadaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTemporadaNull() {
+                this[this.tableCapitulos.TemporadaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3989,10 +4031,11 @@ namespace Proyecto_PVA_2.masterDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Puntuacion", "Puntuacion");
             tableMapping.ColumnMappings.Add("Precio", "Precio");
             tableMapping.ColumnMappings.Add("Id_Serie", "Id_Serie");
+            tableMapping.ColumnMappings.Add("Temporada", "Temporada");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Capitulos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Duracion = 1 AND [Duracion] IS NULL) OR ([Duracion] = @Original_Duracion)) AND ((@IsNull_Estreno = 1 AND [Estreno] IS NULL) OR ([Estreno] = @Original_Estreno)) AND ((@IsNull_Director = 1 AND [Director] IS NULL) OR ([Director] = @Original_Director)) AND ((@IsNull_Puntuacion = 1 AND [Puntuacion] IS NULL) OR ([Puntuacion] = @Original_Puntuacion)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Id_Serie = 1 AND [Id_Serie] IS NULL) OR ([Id_Serie] = @Original_Id_Serie)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Capitulos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Duracion = 1 AND [Duracion] IS NULL) OR ([Duracion] = @Original_Duracion)) AND ((@IsNull_Estreno = 1 AND [Estreno] IS NULL) OR ([Estreno] = @Original_Estreno)) AND ((@IsNull_Director = 1 AND [Director] IS NULL) OR ([Director] = @Original_Director)) AND ((@IsNull_Puntuacion = 1 AND [Puntuacion] IS NULL) OR ([Puntuacion] = @Original_Puntuacion)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Id_Serie = 1 AND [Id_Serie] IS NULL) OR ([Id_Serie] = @Original_Id_Serie)) AND ((@IsNull_Temporada = 1 AND [Temporada] IS NULL) OR ([Temporada] = @Original_Temporada)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4009,10 +4052,12 @@ namespace Proyecto_PVA_2.masterDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Precio", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Capitulos] ([Id], [Titulo], [Sinopsis], [Duracion], [Estreno], [Director], [Puntuacion], [Precio], [Id_Serie]) VALUES (@Id, @Titulo, @Sinopsis, @Duracion, @Estreno, @Director, @Puntuacion, @Precio, @Id_Serie);
-SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie FROM Capitulos WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Capitulos] ([Id], [Titulo], [Sinopsis], [Duracion], [Estreno], [Director], [Puntuacion], [Precio], [Id_Serie], [Temporada]) VALUES (@Id, @Titulo, @Sinopsis, @Duracion, @Estreno, @Director, @Puntuacion, @Precio, @Id_Serie, @Temporada);
+SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie, Temporada FROM Capitulos WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4023,10 +4068,11 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Puntuacion", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Puntuacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Precio", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Capitulos] SET [Id] = @Id, [Titulo] = @Titulo, [Sinopsis] = @Sinopsis, [Duracion] = @Duracion, [Estreno] = @Estreno, [Director] = @Director, [Puntuacion] = @Puntuacion, [Precio] = @Precio, [Id_Serie] = @Id_Serie WHERE (([Id] = @Original_Id) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Duracion = 1 AND [Duracion] IS NULL) OR ([Duracion] = @Original_Duracion)) AND ((@IsNull_Estreno = 1 AND [Estreno] IS NULL) OR ([Estreno] = @Original_Estreno)) AND ((@IsNull_Director = 1 AND [Director] IS NULL) OR ([Director] = @Original_Director)) AND ((@IsNull_Puntuacion = 1 AND [Puntuacion] IS NULL) OR ([Puntuacion] = @Original_Puntuacion)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Id_Serie = 1 AND [Id_Serie] IS NULL) OR ([Id_Serie] = @Original_Id_Serie)));
-SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie FROM Capitulos WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Capitulos] SET [Id] = @Id, [Titulo] = @Titulo, [Sinopsis] = @Sinopsis, [Duracion] = @Duracion, [Estreno] = @Estreno, [Director] = @Director, [Puntuacion] = @Puntuacion, [Precio] = @Precio, [Id_Serie] = @Id_Serie, [Temporada] = @Temporada WHERE (([Id] = @Original_Id) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Duracion = 1 AND [Duracion] IS NULL) OR ([Duracion] = @Original_Duracion)) AND ((@IsNull_Estreno = 1 AND [Estreno] IS NULL) OR ([Estreno] = @Original_Estreno)) AND ((@IsNull_Director = 1 AND [Director] IS NULL) OR ([Director] = @Original_Director)) AND ((@IsNull_Puntuacion = 1 AND [Puntuacion] IS NULL) OR ([Puntuacion] = @Original_Puntuacion)) AND ((@IsNull_Precio = 1 AND [Precio] IS NULL) OR ([Precio] = @Original_Precio)) AND ((@IsNull_Id_Serie = 1 AND [Id_Serie] IS NULL) OR ([Id_Serie] = @Original_Id_Serie)) AND ((@IsNull_Temporada = 1 AND [Temporada] IS NULL) OR ([Temporada] = @Original_Temporada)));
+SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie, Temporada FROM Capitulos WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4037,6 +4083,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Puntuacion", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Puntuacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Precio", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4052,6 +4099,8 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Precio", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Serie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Temporada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4064,11 +4113,11 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_" +
-                "Serie FROM dbo.Capitulos";
+                "Serie, Temporada FROM dbo.Capitulos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -4077,10 +4126,38 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_serie", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_" +
-                "Serie FROM dbo.Capitulos WHERE Id_Serie = @ID_SERIE";
+            this._commandCollection[2].CommandText = "DELETE FROM [dbo].[Capitulos] WHERE ([Id] = @Original_Id) ;";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_SERIE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT Director, Duracion, Estreno, Id, Id_Serie, Precio, Puntuacion, Sinopsis, T" +
+                "emporada, Titulo FROM Capitulos WHERE (Id_Serie = @ID_SERIE)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_SERIE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_" +
+                "Serie, Temporada FROM dbo.Capitulos WHERE Id_Serie = @IdSerie AND Temporada = @T" +
+                "emporada;";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdSerie", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temporada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = @"INSERT INTO [dbo].[Capitulos] ([Id], [Titulo], [Sinopsis], [Duracion], [Estreno], [Director], [Puntuacion], [Precio], [Id_Serie], [Temporada]) VALUES (@Id, @Titulo, @Sinopsis, @Duracion, @Estreno, @Director, @Puntuacion, @Precio, @Id_Serie , @Temporada);
+";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Titulo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinopsis", global::System.Data.SqlDbType.VarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Sinopsis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Duracion", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Duracion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estreno", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Estreno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Director", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Puntuacion", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Puntuacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Precio", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Serie", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temporada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4112,7 +4189,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByIdSerie(masterDataSet.CapitulosDataTable dataTable, global::System.Nullable<int> ID_SERIE) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((ID_SERIE.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_SERIE.Value));
             }
@@ -4131,12 +4208,60 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual masterDataSet.CapitulosDataTable GetDataByIdSerie(global::System.Nullable<int> ID_SERIE) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((ID_SERIE.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_SERIE.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            masterDataSet.CapitulosDataTable dataTable = new masterDataSet.CapitulosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdyTemporada(masterDataSet.CapitulosDataTable dataTable, global::System.Nullable<int> IdSerie, global::System.Nullable<int> Temporada) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((IdSerie.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdSerie.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Temporada.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Temporada.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual masterDataSet.CapitulosDataTable GetDataByIdyTemporada(global::System.Nullable<int> IdSerie, global::System.Nullable<int> Temporada) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((IdSerie.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdSerie.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Temporada.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Temporada.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             masterDataSet.CapitulosDataTable dataTable = new masterDataSet.CapitulosDataTable();
             this.Adapter.Fill(dataTable);
@@ -4176,7 +4301,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Titulo, global::System.Nullable<global::System.TimeSpan> Original_Duracion, global::System.Nullable<global::System.DateTime> Original_Estreno, string Original_Director, global::System.Nullable<double> Original_Puntuacion, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Id_Serie) {
+        public virtual int Delete(int Original_Id, string Original_Titulo, global::System.Nullable<global::System.TimeSpan> Original_Duracion, global::System.Nullable<global::System.DateTime> Original_Estreno, string Original_Director, global::System.Nullable<double> Original_Puntuacion, global::System.Nullable<decimal> Original_Precio, global::System.Nullable<int> Original_Id_Serie, global::System.Nullable<int> Original_Temporada) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Titulo == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -4234,6 +4359,14 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            if ((Original_Temporada.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Temporada.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4254,7 +4387,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Titulo, string Sinopsis, global::System.Nullable<global::System.TimeSpan> Duracion, global::System.Nullable<global::System.DateTime> Estreno, string Director, global::System.Nullable<double> Puntuacion, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Id_Serie) {
+        public virtual int Insert(int Id, string Titulo, string Sinopsis, global::System.Nullable<global::System.TimeSpan> Duracion, global::System.Nullable<global::System.DateTime> Estreno, string Director, global::System.Nullable<double> Puntuacion, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Id_Serie, global::System.Nullable<int> Temporada) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((Titulo == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4304,6 +4437,12 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            if ((Temporada.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Temporada.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4334,6 +4473,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
                     global::System.Nullable<double> Puntuacion, 
                     global::System.Nullable<decimal> Precio, 
                     global::System.Nullable<int> Id_Serie, 
+                    global::System.Nullable<int> Temporada, 
                     int Original_Id, 
                     string Original_Titulo, 
                     global::System.Nullable<global::System.TimeSpan> Original_Duracion, 
@@ -4341,7 +4481,8 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
                     string Original_Director, 
                     global::System.Nullable<double> Original_Puntuacion, 
                     global::System.Nullable<decimal> Original_Precio, 
-                    global::System.Nullable<int> Original_Id_Serie) {
+                    global::System.Nullable<int> Original_Id_Serie, 
+                    global::System.Nullable<int> Original_Temporada) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((Titulo == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4391,62 +4532,76 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Id));
-            if ((Original_Titulo == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((Temporada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Temporada.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Titulo));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Id));
+            if ((Original_Titulo == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Titulo));
             }
             if ((Original_Duracion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.TimeSpan)(Original_Duracion.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.TimeSpan)(Original_Duracion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_Estreno.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_Estreno.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Estreno.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_Director == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Director));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Director));
             }
             if ((Original_Puntuacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_Puntuacion.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((double)(Original_Puntuacion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_Precio.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_Precio.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_Precio.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_Id_Serie.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Id_Serie.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_Id_Serie.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Temporada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_Temporada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4477,6 +4632,7 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
                     global::System.Nullable<double> Puntuacion, 
                     global::System.Nullable<decimal> Precio, 
                     global::System.Nullable<int> Id_Serie, 
+                    global::System.Nullable<int> Temporada, 
                     int Original_Id, 
                     string Original_Titulo, 
                     global::System.Nullable<global::System.TimeSpan> Original_Duracion, 
@@ -4484,8 +4640,9 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
                     string Original_Director, 
                     global::System.Nullable<double> Original_Puntuacion, 
                     global::System.Nullable<decimal> Original_Precio, 
-                    global::System.Nullable<int> Original_Id_Serie) {
-            return this.Update(Original_Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie, Original_Id, Original_Titulo, Original_Duracion, Original_Estreno, Original_Director, Original_Puntuacion, Original_Precio, Original_Id_Serie);
+                    global::System.Nullable<int> Original_Id_Serie, 
+                    global::System.Nullable<int> Original_Temporada) {
+            return this.Update(Original_Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_Serie, Temporada, Original_Id, Original_Titulo, Original_Duracion, Original_Estreno, Original_Director, Original_Puntuacion, Original_Precio, Original_Id_Serie, Original_Temporada);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4520,6 +4677,108 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_Id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(Original_Id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(int Id, string Titulo, string Sinopsis, string Duracion, string Estreno, string Director, global::System.Nullable<double> Puntuacion, global::System.Nullable<decimal> Precio, global::System.Nullable<int> Id_Serie, global::System.Nullable<int> Temporada) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            command.Parameters[0].Value = ((int)(Id));
+            if ((Titulo == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Titulo));
+            }
+            if ((Sinopsis == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Sinopsis));
+            }
+            if ((Duracion == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Duracion));
+            }
+            if ((Estreno == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Estreno));
+            }
+            if ((Director == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Director));
+            }
+            if ((Puntuacion.HasValue == true)) {
+                command.Parameters[6].Value = ((double)(Puntuacion.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Precio.HasValue == true)) {
+                command.Parameters[7].Value = ((decimal)(Precio.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Id_Serie.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(Id_Serie.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Temporada.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(Temporada.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

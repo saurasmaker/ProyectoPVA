@@ -27,6 +27,12 @@ namespace Proyecto_PVA_2
 
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Facturas' Puede moverla o quitarla según sea necesario.
+            this.facturasTableAdapter.Fill(this.masterDataSet.Facturas);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Facturas' Puede moverla o quitarla según sea necesario.
+            this.facturasTableAdapter.Fill(this.masterDataSet.Facturas);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
 
@@ -39,6 +45,20 @@ namespace Proyecto_PVA_2
 
             if (ofd.ShowDialog() == DialogResult.OK)
                 fotoPerfilPictureBox.Image = Image.FromFile(ofd.FileName);
+        }
+
+        private void usuariosBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
+        //Eventos inútiles
+        private void facturasDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

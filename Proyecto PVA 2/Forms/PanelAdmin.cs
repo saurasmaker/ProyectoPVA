@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Proyecto_PVA_2.Forms;
 using Proyecto_PVA_2;
+using Proyecto_PVA_2.Forms.Admin;
 
 namespace Prueba
 {
