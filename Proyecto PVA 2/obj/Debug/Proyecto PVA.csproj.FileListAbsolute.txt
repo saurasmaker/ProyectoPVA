@@ -60,7 +60,6 @@ C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\bin\Debug\es-ES\Pr
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA.csprojAssemblyReference.cache
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarSeries.resources
-C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.AdministrarUsuarios.resources
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdmin.resources
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
@@ -77,3 +76,4 @@ C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources

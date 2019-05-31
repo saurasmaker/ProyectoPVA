@@ -296,6 +296,7 @@
             this.buttonAdminUsuarios.ForeColor = System.Drawing.Color.White;
             this.buttonAdminUsuarios.Name = "buttonAdminUsuarios";
             this.buttonAdminUsuarios.UseVisualStyleBackColor = true;
+            this.buttonAdminUsuarios.Click += new System.EventHandler(this.buttonAdminUsuarios_Click);
             // 
             // button1
             // 

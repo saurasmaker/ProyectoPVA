@@ -629,6 +629,12 @@ namespace Proyecto_PVA_2
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
         }
+
+        private void buttonAdminUsuarios_Click(object sender, EventArgs e)
+        {
+            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
+            administrarUsuarios.Show();
+        }
     }
 
 }
