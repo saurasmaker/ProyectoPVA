@@ -34,7 +34,6 @@
             this.labelAlias = new System.Windows.Forms.Label();
             this.textBoxAlias = new System.Windows.Forms.TextBox();
             this.buttonCambiarImagenPerfil = new System.Windows.Forms.Button();
-            this.groupBoxDatosPersonales = new System.Windows.Forms.GroupBox();
             this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelDireccion = new System.Windows.Forms.Label();
@@ -52,27 +51,30 @@
             this.buttonModificarDatosPersonales = new System.Windows.Forms.Button();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonRestablecerDatos = new System.Windows.Forms.Button();
-            this.buttonSalir = new System.Windows.Forms.Button();
             this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.buttonCambiarContraseña = new System.Windows.Forms.Button();
-            this.BarraTitulo = new System.Windows.Forms.Panel();
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSalir = new System.Windows.Forms.Button();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
-            this.groupBoxDatosPersonales.SuspendLayout();
-            this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.BarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxImagenPerfil
             // 
+            this.pictureBoxImagenPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImagenPerfil.BackgroundImage")));
+            this.pictureBoxImagenPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImagenPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(12, 30);
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(39, 37);
             this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
-            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(128, 120);
+            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
             this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImagenPerfil.TabIndex = 0;
             this.pictureBoxImagenPerfil.TabStop = false;
@@ -95,7 +97,7 @@
             // 
             // buttonCambiarImagenPerfil
             // 
-            this.buttonCambiarImagenPerfil.Location = new System.Drawing.Point(12, 149);
+            this.buttonCambiarImagenPerfil.Location = new System.Drawing.Point(187, 222);
             this.buttonCambiarImagenPerfil.Name = "buttonCambiarImagenPerfil";
             this.buttonCambiarImagenPerfil.Size = new System.Drawing.Size(128, 23);
             this.buttonCambiarImagenPerfil.TabIndex = 3;
@@ -103,36 +105,16 @@
             this.buttonCambiarImagenPerfil.UseVisualStyleBackColor = true;
             this.buttonCambiarImagenPerfil.Click += new System.EventHandler(this.buttonCambiarImagenPerfil_Click);
             // 
-            // groupBoxDatosPersonales
-            // 
-            this.groupBoxDatosPersonales.Controls.Add(this.dateTimePickerFechaNacimiento);
-            this.groupBoxDatosPersonales.Controls.Add(this.textBoxDireccion);
-            this.groupBoxDatosPersonales.Controls.Add(this.labelDireccion);
-            this.groupBoxDatosPersonales.Controls.Add(this.labelFechaNac);
-            this.groupBoxDatosPersonales.Controls.Add(this.textBoxApellido2);
-            this.groupBoxDatosPersonales.Controls.Add(this.labelApellido2);
-            this.groupBoxDatosPersonales.Controls.Add(this.textBoxApellido1);
-            this.groupBoxDatosPersonales.Controls.Add(this.labelApellido1);
-            this.groupBoxDatosPersonales.Controls.Add(this.textBoxNombre);
-            this.groupBoxDatosPersonales.Controls.Add(this.label1);
-            this.groupBoxDatosPersonales.Location = new System.Drawing.Point(262, 30);
-            this.groupBoxDatosPersonales.Name = "groupBoxDatosPersonales";
-            this.groupBoxDatosPersonales.Size = new System.Drawing.Size(271, 267);
-            this.groupBoxDatosPersonales.TabIndex = 4;
-            this.groupBoxDatosPersonales.TabStop = false;
-            this.groupBoxDatosPersonales.Text = "Datos Personales";
-            this.groupBoxDatosPersonales.Enter += new System.EventHandler(this.groupBoxDatosPersonales_Enter);
-            // 
             // dateTimePickerFechaNacimiento
             // 
-            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(6, 189);
+            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(335, 209);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
             this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerFechaNacimiento.TabIndex = 13;
             // 
             // textBoxDireccion
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(6, 240);
+            this.textBoxDireccion.Location = new System.Drawing.Point(335, 260);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(125, 20);
             this.textBoxDireccion.TabIndex = 12;
@@ -140,7 +122,7 @@
             // labelDireccion
             // 
             this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Location = new System.Drawing.Point(3, 224);
+            this.labelDireccion.Location = new System.Drawing.Point(164, 263);
             this.labelDireccion.Name = "labelDireccion";
             this.labelDireccion.Size = new System.Drawing.Size(55, 13);
             this.labelDireccion.TabIndex = 11;
@@ -149,7 +131,7 @@
             // labelFechaNac
             // 
             this.labelFechaNac.AutoSize = true;
-            this.labelFechaNac.Location = new System.Drawing.Point(3, 173);
+            this.labelFechaNac.Location = new System.Drawing.Point(332, 193);
             this.labelFechaNac.Name = "labelFechaNac";
             this.labelFechaNac.Size = new System.Drawing.Size(112, 13);
             this.labelFechaNac.TabIndex = 9;
@@ -157,7 +139,7 @@
             // 
             // textBoxApellido2
             // 
-            this.textBoxApellido2.Location = new System.Drawing.Point(6, 140);
+            this.textBoxApellido2.Location = new System.Drawing.Point(335, 160);
             this.textBoxApellido2.Name = "textBoxApellido2";
             this.textBoxApellido2.Size = new System.Drawing.Size(125, 20);
             this.textBoxApellido2.TabIndex = 8;
@@ -165,7 +147,7 @@
             // labelApellido2
             // 
             this.labelApellido2.AutoSize = true;
-            this.labelApellido2.Location = new System.Drawing.Point(3, 124);
+            this.labelApellido2.Location = new System.Drawing.Point(237, 163);
             this.labelApellido2.Name = "labelApellido2";
             this.labelApellido2.Size = new System.Drawing.Size(92, 13);
             this.labelApellido2.TabIndex = 7;
@@ -173,7 +155,7 @@
             // 
             // textBoxApellido1
             // 
-            this.textBoxApellido1.Location = new System.Drawing.Point(6, 87);
+            this.textBoxApellido1.Location = new System.Drawing.Point(335, 107);
             this.textBoxApellido1.Name = "textBoxApellido1";
             this.textBoxApellido1.Size = new System.Drawing.Size(125, 20);
             this.textBoxApellido1.TabIndex = 6;
@@ -181,7 +163,7 @@
             // labelApellido1
             // 
             this.labelApellido1.AutoSize = true;
-            this.labelApellido1.Location = new System.Drawing.Point(3, 71);
+            this.labelApellido1.Location = new System.Drawing.Point(237, 110);
             this.labelApellido1.Name = "labelApellido1";
             this.labelApellido1.Size = new System.Drawing.Size(78, 13);
             this.labelApellido1.TabIndex = 5;
@@ -189,7 +171,7 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(6, 42);
+            this.textBoxNombre.Location = new System.Drawing.Point(335, 62);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(125, 20);
             this.textBoxNombre.TabIndex = 4;
@@ -197,7 +179,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 26);
+            this.label1.Location = new System.Drawing.Point(237, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
@@ -264,19 +246,6 @@
             this.buttonRestablecerDatos.Text = "Restablecer datos";
             this.buttonRestablecerDatos.UseVisualStyleBackColor = true;
             // 
-            // buttonSalir
-            // 
-            this.buttonSalir.BackColor = System.Drawing.Color.Maroon;
-            this.buttonSalir.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonSalir.ImageIndex = 0;
-            this.buttonSalir.ImageList = this.imageListIconos;
-            this.buttonSalir.Location = new System.Drawing.Point(519, -1);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(28, 26);
-            this.buttonSalir.TabIndex = 13;
-            this.buttonSalir.UseVisualStyleBackColor = false;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
-            // 
             // imageListIconos
             // 
             this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
@@ -291,18 +260,6 @@
             this.buttonCambiarContraseña.TabIndex = 14;
             this.buttonCambiarContraseña.Text = "Cambiar contraseña";
             this.buttonCambiarContraseña.UseVisualStyleBackColor = true;
-            // 
-            // BarraTitulo
-            // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.White;
-            this.BarraTitulo.Controls.Add(this.buttonSalir);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(544, 24);
-            this.BarraTitulo.TabIndex = 38;
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // masterDataSet
             // 
@@ -328,35 +285,77 @@
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = this.usuariosTableAdapter;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
+            this.panel1.Controls.Add(this.pictureBoxImagenPerfil);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 435);
+            this.panel1.TabIndex = 39;
+            // 
+            // buttonSalir
+            // 
+            this.buttonSalir.BackColor = System.Drawing.Color.Maroon;
+            this.buttonSalir.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonSalir.ImageIndex = 0;
+            this.buttonSalir.ImageList = this.imageListIconos;
+            this.buttonSalir.Location = new System.Drawing.Point(519, -1);
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.Size = new System.Drawing.Size(28, 26);
+            this.buttonSalir.TabIndex = 13;
+            this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.White;
+            this.BarraTitulo.Controls.Add(this.buttonSalir);
+            this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BarraTitulo.Location = new System.Drawing.Point(299, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(245, 24);
+            this.BarraTitulo.TabIndex = 38;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(544, 433);
-            this.Controls.Add(this.BarraTitulo);
-            this.Controls.Add(this.buttonCambiarContraseña);
-            this.Controls.Add(this.buttonRestablecerDatos);
-            this.Controls.Add(this.buttonActualizar);
-            this.Controls.Add(this.buttonModificarDatosPersonales);
-            this.Controls.Add(this.textBoxBiografia);
-            this.Controls.Add(this.labelBiografia);
-            this.Controls.Add(this.textBoxCorreoElectronico);
-            this.Controls.Add(this.labelCorreoElectronico);
-            this.Controls.Add(this.groupBoxDatosPersonales);
+            this.Controls.Add(this.dateTimePickerFechaNacimiento);
             this.Controls.Add(this.buttonCambiarImagenPerfil);
+            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.buttonCambiarContraseña);
+            this.Controls.Add(this.labelDireccion);
+            this.Controls.Add(this.buttonRestablecerDatos);
+            this.Controls.Add(this.labelFechaNac);
+            this.Controls.Add(this.buttonActualizar);
+            this.Controls.Add(this.textBoxApellido2);
+            this.Controls.Add(this.buttonModificarDatosPersonales);
+            this.Controls.Add(this.labelApellido2);
+            this.Controls.Add(this.textBoxBiografia);
+            this.Controls.Add(this.textBoxApellido1);
+            this.Controls.Add(this.labelBiografia);
+            this.Controls.Add(this.labelApellido1);
+            this.Controls.Add(this.textBoxCorreoElectronico);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCorreoElectronico);
             this.Controls.Add(this.textBoxAlias);
             this.Controls.Add(this.labelAlias);
-            this.Controls.Add(this.pictureBoxImagenPerfil);
+            this.Controls.Add(this.BarraTitulo);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PerfilUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
-            this.groupBoxDatosPersonales.ResumeLayout(false);
-            this.groupBoxDatosPersonales.PerformLayout();
-            this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.BarraTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,7 +367,6 @@
         private System.Windows.Forms.Label labelAlias;
         private System.Windows.Forms.TextBox textBoxAlias;
         private System.Windows.Forms.Button buttonCambiarImagenPerfil;
-        private System.Windows.Forms.GroupBox groupBoxDatosPersonales;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxDireccion;
@@ -386,13 +384,14 @@
         private System.Windows.Forms.Button buttonModificarDatosPersonales;
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonRestablecerDatos;
-        private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonCambiarContraseña;
-        private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.ImageList imageListIconos;
         private masterDataSet masterDataSet;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonSalir;
+        private System.Windows.Forms.Panel BarraTitulo;
     }
 }

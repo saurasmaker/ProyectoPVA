@@ -77,3 +77,11 @@ C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\es-ES\Pr
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarSeries.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdmin.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
+J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
