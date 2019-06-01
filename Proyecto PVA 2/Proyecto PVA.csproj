@@ -144,7 +144,6 @@
     <Compile Include="Forms\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PanelBorder.cs" />
     <Compile Include="Forms\PerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
