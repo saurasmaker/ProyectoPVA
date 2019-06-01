@@ -1,5 +1,7 @@
 ﻿using Proyecto_PVA_2.Clases;
 using Proyecto_PVA_2.Forms;
+using Proyecto_PVA_2.Forms.Admin;
+using Prueba;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,13 +73,14 @@ namespace Proyecto_PVA_2
         {
             if (InicioSesionAdmin)
             {
-                PanelDeControlAdmin panelAdmin = new PanelDeControlAdmin();
-                panelAdmin.Show();
+                PanelAdmin pa = new PanelAdmin();
+                pa.ShowDialog();
             }
             else if (InicioSesion)
             {
                 PerfilUsuario perfil = new PerfilUsuario();
-                perfil.Show();
+                perfil.User = User;
+                perfil.ShowDialog();
             }
             else
             {
@@ -467,15 +470,20 @@ namespace Proyecto_PVA_2
 
                 try//Añadir portada
                 {
-                    MemoryStream ms = new MemoryStream(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Portada.ToArray());
+                    MemoryStream ms = new MemoryStream(masterDataSet.Series[Carteles.IndexOf(cartel)].Portada.ToArray());
                     infoSerie.portadaPictureBox.Image = Image.FromStream(ms);
-
                 }
                 catch (Exception)
                 {
 
                 }
 
+                infoSerie.IdSerie = masterDataSet.Series[Carteles.IndexOf(cartel)].Id;
+
+                for(int j = 1; j <  masterDataSet.Series[Carteles.IndexOf(cartel)].Temopradas; j++)
+                    infoSerie.comboBoxTemporada.Items.Add("Temporada " + j);
+
+                MessageBox.Show("jola");
                 infoSerie.Show();
 
                 return;
@@ -504,12 +512,29 @@ namespace Proyecto_PVA_2
                 }
 
                 TituloCinematografico tc = new TituloCinematografico();
-                tc.Titulo = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Titulo;
-                tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
-                tc.Estreno = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Estreno;
-                tc.Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Puntuacion);
-                tc.Precio = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio);
 
+                if (Mode == modoPelicula)
+                {
+                    tc.Titulo = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Titulo;
+                    tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
+                    tc.Estreno = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Estreno;
+                    tc.Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Puntuacion);
+                    tc.Precio = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio);
+                    tc.Id = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Id;
+
+                    MessageBox.Show("Pelicula añadida a la cesta correctamente", "Añadir a la cesta",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (Mode == modoSerie)
+                {
+                    tc.Titulo = masterDataSet.Series[Carteles.IndexOf(cartel)].Titulo;
+                    tc.Sinopsis = masterDataSet.Series[Carteles.IndexOf(cartel)].Sinopsis;
+                    tc.Estreno = masterDataSet.Series[Carteles.IndexOf(cartel)].Estreno;
+                    tc.Puntuacion = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Puntuacion);
+                    tc.Precio = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Precio);
+                    tc.Id = masterDataSet.Series[Carteles.IndexOf(cartel)].Id;
+
+                    MessageBox.Show("Serie añadida a la cesta correctamente", "Añadir a la cesta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 CarroCompra.Add(tc);
 
                 return;
@@ -603,6 +628,12 @@ namespace Proyecto_PVA_2
             this.peliculasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
+        }
+
+        private void buttonAdminUsuarios_Click(object sender, EventArgs e)
+        {
+            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
+            administrarUsuarios.Show();
         }
     }
 

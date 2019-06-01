@@ -52,7 +52,6 @@
             this.buttonGeneroAccion = new System.Windows.Forms.Button();
             this.labelGeneros = new System.Windows.Forms.Label();
             this.buttonDesplegar = new System.Windows.Forms.Button();
-            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanelCentro = new System.Windows.Forms.TableLayoutPanel();
             this.panelDerecha = new System.Windows.Forms.Panel();
             this.panelAdmin = new System.Windows.Forms.Panel();
@@ -254,18 +253,9 @@
             resources.ApplyResources(this.buttonDesplegar, "buttonDesplegar");
             this.buttonDesplegar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDesplegar.FlatAppearance.BorderSize = 0;
-            this.buttonDesplegar.ImageList = this.imageListIconos;
             this.buttonDesplegar.Name = "buttonDesplegar";
             this.buttonDesplegar.UseVisualStyleBackColor = false;
             this.buttonDesplegar.Click += new System.EventHandler(this.ButtonDesplegar_Click);
-            // 
-            // imageListIconos
-            // 
-            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
-            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListIconos.Images.SetKeyName(0, "flecha izquierda.png");
-            this.imageListIconos.Images.SetKeyName(1, "home.png");
-            this.imageListIconos.Images.SetKeyName(2, "lupa.png");
             // 
             // tableLayoutPanelCentro
             // 
@@ -306,6 +296,7 @@
             this.buttonAdminUsuarios.ForeColor = System.Drawing.Color.White;
             this.buttonAdminUsuarios.Name = "buttonAdminUsuarios";
             this.buttonAdminUsuarios.UseVisualStyleBackColor = true;
+            this.buttonAdminUsuarios.Click += new System.EventHandler(this.buttonAdminUsuarios_Click);
             // 
             // button1
             // 
@@ -343,6 +334,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
             this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -394,7 +386,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonSeries;
         private System.Windows.Forms.Button buttonDesplegar;
         private System.Windows.Forms.ToolStripButton toolStripButtonIniciarSesion;
-        private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Button buttonGeneroDeporte;
         private System.Windows.Forms.Button buttonGeneroCrimen;
         private System.Windows.Forms.Button buttonGeneroComedia;

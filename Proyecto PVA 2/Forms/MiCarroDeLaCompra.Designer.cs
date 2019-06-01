@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeaderTitulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPuntuacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,6 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.FacturasTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -141,13 +149,50 @@
             this.linkLabel2.Text = "Eliminar de la cesta";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // facturasBindingSource
+            // 
+            this.facturasBindingSource.DataMember = "Facturas";
+            this.facturasBindingSource.DataSource = this.masterDataSet;
+            // 
+            // facturasTableAdapter
+            // 
+            this.facturasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = this.facturasTableAdapter;
+            this.tableAdapterManager.PeliculasTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(433, 26);
+            this.BarraTitulo.TabIndex = 38;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
             // MiCarroDeLaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(433, 450);
+            this.ClientSize = new System.Drawing.Size(433, 455);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
@@ -159,6 +204,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MiCarroDeLaCompra";
             this.Load += new System.EventHandler(this.MiCarroDeLaCompra_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +221,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private masterDataSet masterDataSet;
+        private System.Windows.Forms.BindingSource facturasBindingSource;
+        private masterDataSetTableAdapters.FacturasTableAdapter facturasTableAdapter;
+        private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Panel BarraTitulo;
     }
 }

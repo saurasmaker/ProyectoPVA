@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label portadaLabel;
             System.Windows.Forms.Label tituloLabel;
             System.Windows.Forms.Label numTempLabel;
@@ -46,14 +47,25 @@
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonAñadirAlCarro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeaderTitulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDuracion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPuntuacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderEstreno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelTemporada = new System.Windows.Forms.Label();
             this.comboBoxTemporada = new System.Windows.Forms.ComboBox();
+            this.labelTemporada = new System.Windows.Forms.Label();
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.capitulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.capitulosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.CapitulosTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
+            this.capitulosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             portadaLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             numTempLabel = new System.Windows.Forms.Label();
@@ -64,7 +76,74 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // portadaLabel
+            // 
+            portadaLabel.AutoSize = true;
+            portadaLabel.Location = new System.Drawing.Point(248, 26);
+            portadaLabel.Name = "portadaLabel";
+            portadaLabel.Size = new System.Drawing.Size(47, 13);
+            portadaLabel.TabIndex = 37;
+            portadaLabel.Text = "Portada:";
+            // 
+            // tituloLabel
+            // 
+            tituloLabel.AutoSize = true;
+            tituloLabel.Location = new System.Drawing.Point(6, 25);
+            tituloLabel.Name = "tituloLabel";
+            tituloLabel.Size = new System.Drawing.Size(36, 13);
+            tituloLabel.TabIndex = 23;
+            tituloLabel.Text = "Titulo:";
+            // 
+            // numTempLabel
+            // 
+            numTempLabel.AutoSize = true;
+            numTempLabel.Location = new System.Drawing.Point(9, 173);
+            numTempLabel.Name = "numTempLabel";
+            numTempLabel.Size = new System.Drawing.Size(69, 13);
+            numTempLabel.TabIndex = 35;
+            numTempLabel.Text = "Temporadas:";
+            // 
+            // sinopsisLabel
+            // 
+            sinopsisLabel.AutoSize = true;
+            sinopsisLabel.Location = new System.Drawing.Point(9, 231);
+            sinopsisLabel.Name = "sinopsisLabel";
+            sinopsisLabel.Size = new System.Drawing.Size(49, 13);
+            sinopsisLabel.TabIndex = 25;
+            sinopsisLabel.Text = "Sinopsis:";
+            // 
+            // estrenoLabel
+            // 
+            estrenoLabel.AutoSize = true;
+            estrenoLabel.Location = new System.Drawing.Point(9, 202);
+            estrenoLabel.Name = "estrenoLabel";
+            estrenoLabel.Size = new System.Drawing.Size(46, 13);
+            estrenoLabel.TabIndex = 31;
+            estrenoLabel.Text = "Estreno:";
+            // 
+            // puntuacionLabel
+            // 
+            puntuacionLabel.AutoSize = true;
+            puntuacionLabel.Location = new System.Drawing.Point(9, 121);
+            puntuacionLabel.Name = "puntuacionLabel";
+            puntuacionLabel.Size = new System.Drawing.Size(64, 13);
+            puntuacionLabel.TabIndex = 27;
+            puntuacionLabel.Text = "Puntuacion:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(9, 147);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 29;
+            precioLabel.Text = "Precio:";
             // 
             // groupBox1
             // 
@@ -107,15 +186,6 @@
             this.portadaPictureBox.TabIndex = 38;
             this.portadaPictureBox.TabStop = false;
             // 
-            // portadaLabel
-            // 
-            portadaLabel.AutoSize = true;
-            portadaLabel.Location = new System.Drawing.Point(248, 26);
-            portadaLabel.Name = "portadaLabel";
-            portadaLabel.Size = new System.Drawing.Size(47, 13);
-            portadaLabel.TabIndex = 37;
-            portadaLabel.Text = "Portada:";
-            // 
             // textBoxEstreno
             // 
             this.textBoxEstreno.Location = new System.Drawing.Point(76, 196);
@@ -132,33 +202,6 @@
             this.temporadasTextBox.Size = new System.Drawing.Size(40, 20);
             this.temporadasTextBox.TabIndex = 36;
             // 
-            // tituloLabel
-            // 
-            tituloLabel.AutoSize = true;
-            tituloLabel.Location = new System.Drawing.Point(6, 25);
-            tituloLabel.Name = "tituloLabel";
-            tituloLabel.Size = new System.Drawing.Size(36, 13);
-            tituloLabel.TabIndex = 23;
-            tituloLabel.Text = "Titulo:";
-            // 
-            // numTempLabel
-            // 
-            numTempLabel.AutoSize = true;
-            numTempLabel.Location = new System.Drawing.Point(9, 173);
-            numTempLabel.Name = "numTempLabel";
-            numTempLabel.Size = new System.Drawing.Size(69, 13);
-            numTempLabel.TabIndex = 35;
-            numTempLabel.Text = "Temporadas:";
-            // 
-            // sinopsisLabel
-            // 
-            sinopsisLabel.AutoSize = true;
-            sinopsisLabel.Location = new System.Drawing.Point(9, 231);
-            sinopsisLabel.Name = "sinopsisLabel";
-            sinopsisLabel.Size = new System.Drawing.Size(49, 13);
-            sinopsisLabel.TabIndex = 25;
-            sinopsisLabel.Text = "Sinopsis:";
-            // 
             // sinopsisTextBox
             // 
             this.sinopsisTextBox.Location = new System.Drawing.Point(12, 247);
@@ -167,24 +210,6 @@
             this.sinopsisTextBox.ReadOnly = true;
             this.sinopsisTextBox.Size = new System.Drawing.Size(355, 139);
             this.sinopsisTextBox.TabIndex = 26;
-            // 
-            // estrenoLabel
-            // 
-            estrenoLabel.AutoSize = true;
-            estrenoLabel.Location = new System.Drawing.Point(9, 202);
-            estrenoLabel.Name = "estrenoLabel";
-            estrenoLabel.Size = new System.Drawing.Size(46, 13);
-            estrenoLabel.TabIndex = 31;
-            estrenoLabel.Text = "Estreno:";
-            // 
-            // puntuacionLabel
-            // 
-            puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(9, 121);
-            puntuacionLabel.Name = "puntuacionLabel";
-            puntuacionLabel.Size = new System.Drawing.Size(64, 13);
-            puntuacionLabel.TabIndex = 27;
-            puntuacionLabel.Text = "Puntuacion:";
             // 
             // precioTextBox
             // 
@@ -201,15 +226,6 @@
             this.puntuacionTextBox.ReadOnly = true;
             this.puntuacionTextBox.Size = new System.Drawing.Size(40, 20);
             this.puntuacionTextBox.TabIndex = 28;
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(9, 147);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 29;
-            precioLabel.Text = "Precio:";
             // 
             // buttonSalir
             // 
@@ -233,57 +249,26 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.capitulosDataGridView);
             this.groupBox2.Controls.Add(this.comboBoxTemporada);
             this.groupBox2.Controls.Add(this.labelTemporada);
-            this.groupBox2.Controls.Add(this.listView1);
             this.groupBox2.Location = new System.Drawing.Point(398, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(515, 397);
+            this.groupBox2.Size = new System.Drawing.Size(515, 405);
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Capitulos";
             // 
-            // listView1
+            // comboBoxTemporada
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderTitulo,
-            this.columnHeaderDuracion,
-            this.columnHeaderEstreno,
-            this.columnHeaderPuntuacion,
-            this.columnHeaderPrecio});
-            this.listView1.Location = new System.Drawing.Point(15, 25);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(443, 324);
-            this.listView1.TabIndex = 46;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeaderTitulo
-            // 
-            this.columnHeaderTitulo.Text = "Titulo";
-            this.columnHeaderTitulo.Width = 162;
-            // 
-            // columnHeaderDuracion
-            // 
-            this.columnHeaderDuracion.Text = "Duracion";
-            // 
-            // columnHeaderPuntuacion
-            // 
-            this.columnHeaderPuntuacion.DisplayIndex = 2;
-            this.columnHeaderPuntuacion.Text = "Puntuacion";
-            this.columnHeaderPuntuacion.Width = 68;
-            // 
-            // columnHeaderPrecio
-            // 
-            this.columnHeaderPrecio.DisplayIndex = 3;
-            this.columnHeaderPrecio.Text = "Precio";
-            // 
-            // columnHeaderEstreno
-            // 
-            this.columnHeaderEstreno.DisplayIndex = 4;
-            this.columnHeaderEstreno.Text = "Estreno";
-            this.columnHeaderEstreno.Width = 89;
+            this.comboBoxTemporada.FormattingEnabled = true;
+            this.comboBoxTemporada.Items.AddRange(new object[] {
+            "Todas"});
+            this.comboBoxTemporada.Location = new System.Drawing.Point(85, 364);
+            this.comboBoxTemporada.Name = "comboBoxTemporada";
+            this.comboBoxTemporada.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTemporada.TabIndex = 48;
+            this.comboBoxTemporada.SelectedIndexChanged += new System.EventHandler(this.comboBoxTemporada_SelectedIndexChanged);
             // 
             // labelTemporada
             // 
@@ -294,20 +279,125 @@
             this.labelTemporada.TabIndex = 47;
             this.labelTemporada.Text = "Temporada:";
             // 
-            // comboBoxTemporada
+            // masterDataSet
             // 
-            this.comboBoxTemporada.FormattingEnabled = true;
-            this.comboBoxTemporada.Location = new System.Drawing.Point(85, 364);
-            this.comboBoxTemporada.Name = "comboBoxTemporada";
-            this.comboBoxTemporada.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTemporada.TabIndex = 48;
-            this.comboBoxTemporada.SelectedIndexChanged += new System.EventHandler(this.comboBoxTemporada_SelectedIndexChanged);
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // capitulosBindingSource
+            // 
+            this.capitulosBindingSource.DataMember = "Capitulos";
+            this.capitulosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // capitulosTableAdapter
+            // 
+            this.capitulosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = this.capitulosTableAdapter;
+            this.tableAdapterManager.FacturasTableAdapter = null;
+            this.tableAdapterManager.PeliculasTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // seriesBindingSource
+            // 
+            this.seriesBindingSource.DataMember = "Series";
+            this.seriesBindingSource.DataSource = this.masterDataSet;
+            // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // capitulosDataGridView
+            // 
+            this.capitulosDataGridView.AutoGenerateColumns = false;
+            this.capitulosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.capitulosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.capitulosDataGridView.DataSource = this.capitulosBindingSource;
+            this.capitulosDataGridView.Location = new System.Drawing.Point(18, 24);
+            this.capitulosDataGridView.Name = "capitulosDataGridView";
+            this.capitulosDataGridView.Size = new System.Drawing.Size(476, 334);
+            this.capitulosDataGridView.TabIndex = 48;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Titulo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sinopsis";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sinopsis";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Duracion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Duracion";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Estreno";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Estreno";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Director";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Director";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Puntuacion";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Puntuacion";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Id_Serie";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Id_Serie";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Temporada";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Temporada";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // InformacionSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 450);
+            this.ClientSize = new System.Drawing.Size(933, 454);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonSalir);
@@ -320,6 +410,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,13 +431,24 @@
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonAñadirAlCarro;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeaderTitulo;
-        private System.Windows.Forms.ColumnHeader columnHeaderDuracion;
-        private System.Windows.Forms.ColumnHeader columnHeaderPuntuacion;
-        private System.Windows.Forms.ColumnHeader columnHeaderPrecio;
-        private System.Windows.Forms.ColumnHeader columnHeaderEstreno;
-        private System.Windows.Forms.ComboBox comboBoxTemporada;
         private System.Windows.Forms.Label labelTemporada;
+        private masterDataSet masterDataSet;
+        private System.Windows.Forms.BindingSource capitulosBindingSource;
+        private masterDataSetTableAdapters.CapitulosTableAdapter capitulosTableAdapter;
+        private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        public System.Windows.Forms.ComboBox comboBoxTemporada;
+        private System.Windows.Forms.BindingSource seriesBindingSource;
+        private masterDataSetTableAdapters.SeriesTableAdapter seriesTableAdapter;
+        private System.Windows.Forms.DataGridView capitulosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

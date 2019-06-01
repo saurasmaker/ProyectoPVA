@@ -16,36 +16,47 @@ namespace Proyecto_PVA_2.Forms
     {
         //Atibutos
         Inicio padre;
-        List<Temporada> temporadas;
+        int idSerie;
 
         //Getters & Setters
         internal IEnumerable<TituloCinematografico> CarroCompra { get; private set; }
         public Inicio Padre { get => padre; set => padre = value; }
-        internal List<Temporada> Temporadas { get => temporadas; set => temporadas = value; }
+        public int IdSerie { get => idSerie; set => idSerie = value; }
 
         //Constructores
         public InformacionSerie()
         {
             InitializeComponent();
-            Temporadas = new List<Temporada>();
         }
 
         //Eventos
+        private void capitulosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.capitulosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
         private void comboBoxTemporada_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Capitulo c in Temporadas[comboBoxTemporada.SelectedIndex].Capitulos)
-            {
-                ListViewItem milista;
-                milista = listView1.Items.Add(c.Titulo);
-                milista.SubItems.Add(c.Duracion.ToString());
-                milista.SubItems.Add(c.Puntuacion.ToString());
-                milista.SubItems.Add(((float)(Math.Round(Convert.ToDouble(c.Precio), 2))).ToString() + "€");
-            }
+            if(comboBoxTemporada.SelectedIndex!=0)
+                capitulosTableAdapter.FillByIdyTemporada(masterDataSet.Capitulos,IdSerie, comboBoxTemporada.SelectedIndex);
+           else
+                capitulosTableAdapter.FillByIdSerie(masterDataSet.Capitulos, IdSerie);
+
+
         }
 
         private void InformacionSerie_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
+            this.seriesTableAdapter.Fill(this.masterDataSet.Series);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Capitulos' Puede moverla o quitarla según sea necesario.
+            this.capitulosTableAdapter.Fill(this.masterDataSet.Capitulos);
             Padre = Owner as Inicio;
+
+            capitulosTableAdapter.FillByIdSerie(masterDataSet.Capitulos,IdSerie);
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
@@ -70,15 +81,15 @@ namespace Proyecto_PVA_2.Forms
 
             padre.CarroCompra.Add(tc);
         }
+
         //Métodos
+
 
         //Eventos Inutiles
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        
 
         
     }

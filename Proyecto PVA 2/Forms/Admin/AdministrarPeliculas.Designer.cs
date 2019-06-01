@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_PVA_2.Forms
 {
-    partial class AdministrarSeries
+    partial class AdministrarPeliculas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarSeries));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarPeliculas));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label tituloLabel;
-            System.Windows.Forms.Label temopradasLabel;
-            System.Windows.Forms.Label estrenoLabel;
-            System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label sinopsisLabel;
             System.Windows.Forms.Label puntuacionLabel;
+            System.Windows.Forms.Label precioLabel;
+            System.Windows.Forms.Label estrenoLabel;
+            System.Windows.Forms.Label directorLabel;
+            System.Windows.Forms.Label duracionLabel;
             System.Windows.Forms.Label portadaLabel;
             System.Windows.Forms.Label fondoLabel;
-            this.groupBoxSeries = new System.Windows.Forms.GroupBox();
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
-            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
+            this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
-            this.seriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.peliculasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -56,105 +56,76 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.seriesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.peliculasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.tituloTextBox = new System.Windows.Forms.TextBox();
-            this.temopradasTextBox = new System.Windows.Forms.TextBox();
-            this.estrenoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
             this.sinopsisTextBox = new System.Windows.Forms.TextBox();
             this.puntuacionTextBox = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.estrenoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.directorTextBox = new System.Windows.Forms.TextBox();
+            this.duracionTextBox = new System.Windows.Forms.TextBox();
             this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.fondoPictureBox = new System.Windows.Forms.PictureBox();
-            this.seriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.peliculasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAñadirPortada = new System.Windows.Forms.Button();
             this.buttonAñadirFondo = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
-            temopradasLabel = new System.Windows.Forms.Label();
-            estrenoLabel = new System.Windows.Forms.Label();
-            precioLabel = new System.Windows.Forms.Label();
             sinopsisLabel = new System.Windows.Forms.Label();
             puntuacionLabel = new System.Windows.Forms.Label();
+            precioLabel = new System.Windows.Forms.Label();
+            estrenoLabel = new System.Windows.Forms.Label();
+            directorLabel = new System.Windows.Forms.Label();
+            duracionLabel = new System.Windows.Forms.Label();
             portadaLabel = new System.Windows.Forms.Label();
             fondoLabel = new System.Windows.Forms.Label();
-            this.groupBoxSeries.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingNavigator)).BeginInit();
-            this.seriesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingNavigator)).BeginInit();
+            this.peliculasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBoxSeries
-            // 
-            this.groupBoxSeries.Controls.Add(this.buttonAñadirFondo);
-            this.groupBoxSeries.Controls.Add(this.buttonAñadirPortada);
-            this.groupBoxSeries.Controls.Add(this.seriesDataGridView);
-            this.groupBoxSeries.Controls.Add(idLabel);
-            this.groupBoxSeries.Controls.Add(this.idTextBox);
-            this.groupBoxSeries.Controls.Add(tituloLabel);
-            this.groupBoxSeries.Controls.Add(this.tituloTextBox);
-            this.groupBoxSeries.Controls.Add(temopradasLabel);
-            this.groupBoxSeries.Controls.Add(this.temopradasTextBox);
-            this.groupBoxSeries.Controls.Add(estrenoLabel);
-            this.groupBoxSeries.Controls.Add(this.estrenoDateTimePicker);
-            this.groupBoxSeries.Controls.Add(precioLabel);
-            this.groupBoxSeries.Controls.Add(this.precioTextBox);
-            this.groupBoxSeries.Controls.Add(sinopsisLabel);
-            this.groupBoxSeries.Controls.Add(this.sinopsisTextBox);
-            this.groupBoxSeries.Controls.Add(puntuacionLabel);
-            this.groupBoxSeries.Controls.Add(this.puntuacionTextBox);
-            this.groupBoxSeries.Controls.Add(portadaLabel);
-            this.groupBoxSeries.Controls.Add(this.portadaPictureBox);
-            this.groupBoxSeries.Controls.Add(fondoLabel);
-            this.groupBoxSeries.Controls.Add(this.fondoPictureBox);
-            this.groupBoxSeries.Location = new System.Drawing.Point(12, 28);
-            this.groupBoxSeries.Name = "groupBoxSeries";
-            this.groupBoxSeries.Size = new System.Drawing.Size(773, 483);
-            this.groupBoxSeries.TabIndex = 0;
-            this.groupBoxSeries.TabStop = false;
-            this.groupBoxSeries.Text = "Series";
             // 
             // masterDataSet
             // 
             this.masterDataSet.DataSetName = "masterDataSet";
             this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // seriesBindingSource
+            // peliculasBindingSource
             // 
-            this.seriesBindingSource.DataMember = "Series";
-            this.seriesBindingSource.DataSource = this.masterDataSet;
+            this.peliculasBindingSource.DataMember = "Peliculas";
+            this.peliculasBindingSource.DataSource = this.masterDataSet;
             // 
-            // seriesTableAdapter
+            // peliculasTableAdapter
             // 
-            this.seriesTableAdapter.ClearBeforeFill = true;
+            this.peliculasTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
-            this.tableAdapterManager.PeliculasTableAdapter = null;
-            this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;
+            this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
+            this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // seriesBindingNavigator
+            // peliculasBindingNavigator
             // 
-            this.seriesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.seriesBindingNavigator.BindingSource = this.seriesBindingSource;
-            this.seriesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.seriesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.seriesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.peliculasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.peliculasBindingNavigator.BindingSource = this.peliculasBindingSource;
+            this.peliculasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.peliculasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.peliculasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -166,17 +137,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.seriesBindingNavigatorSaveItem});
-            this.seriesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.seriesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.seriesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.seriesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.seriesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.seriesBindingNavigator.Name = "seriesBindingNavigator";
-            this.seriesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.seriesBindingNavigator.Size = new System.Drawing.Size(1275, 25);
-            this.seriesBindingNavigator.TabIndex = 1;
-            this.seriesBindingNavigator.Text = "bindingNavigator1";
+            this.peliculasBindingNavigatorSaveItem});
+            this.peliculasBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.peliculasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.peliculasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.peliculasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.peliculasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.peliculasBindingNavigator.Name = "peliculasBindingNavigator";
+            this.peliculasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.peliculasBindingNavigator.Size = new System.Drawing.Size(766, 25);
+            this.peliculasBindingNavigator.TabIndex = 0;
+            this.peliculasBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -263,215 +234,228 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
-            // seriesBindingNavigatorSaveItem
+            // peliculasBindingNavigatorSaveItem
             // 
-            this.seriesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.seriesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("seriesBindingNavigatorSaveItem.Image")));
-            this.seriesBindingNavigatorSaveItem.Name = "seriesBindingNavigatorSaveItem";
-            this.seriesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.seriesBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.seriesBindingNavigatorSaveItem.Click += new System.EventHandler(this.seriesBindingNavigatorSaveItem_Click_1);
+            this.peliculasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.peliculasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("peliculasBindingNavigatorSaveItem.Image")));
+            this.peliculasBindingNavigatorSaveItem.Name = "peliculasBindingNavigatorSaveItem";
+            this.peliculasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.peliculasBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.peliculasBindingNavigatorSaveItem.Click += new System.EventHandler(this.peliculasBindingNavigatorSaveItem_Click_1);
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(10, 33);
+            idLabel.Location = new System.Drawing.Point(13, 40);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 0;
+            idLabel.TabIndex = 1;
             idLabel.Text = "Id:";
             // 
             // idTextBox
             // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(85, 30);
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(83, 37);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idTextBox.TabIndex = 1;
+            this.idTextBox.TabIndex = 2;
             // 
             // tituloLabel
             // 
             tituloLabel.AutoSize = true;
-            tituloLabel.Location = new System.Drawing.Point(10, 59);
+            tituloLabel.Location = new System.Drawing.Point(13, 66);
             tituloLabel.Name = "tituloLabel";
             tituloLabel.Size = new System.Drawing.Size(36, 13);
-            tituloLabel.TabIndex = 2;
+            tituloLabel.TabIndex = 3;
             tituloLabel.Text = "Titulo:";
             // 
             // tituloTextBox
             // 
-            this.tituloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Titulo", true));
-            this.tituloTextBox.Location = new System.Drawing.Point(85, 56);
+            this.tituloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Titulo", true));
+            this.tituloTextBox.Location = new System.Drawing.Point(83, 63);
             this.tituloTextBox.Name = "tituloTextBox";
             this.tituloTextBox.Size = new System.Drawing.Size(200, 20);
-            this.tituloTextBox.TabIndex = 3;
-            // 
-            // temopradasLabel
-            // 
-            temopradasLabel.AutoSize = true;
-            temopradasLabel.Location = new System.Drawing.Point(10, 85);
-            temopradasLabel.Name = "temopradasLabel";
-            temopradasLabel.Size = new System.Drawing.Size(69, 13);
-            temopradasLabel.TabIndex = 4;
-            temopradasLabel.Text = "Temopradas:";
-            // 
-            // temopradasTextBox
-            // 
-            this.temopradasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Temopradas", true));
-            this.temopradasTextBox.Location = new System.Drawing.Point(85, 82);
-            this.temopradasTextBox.Name = "temopradasTextBox";
-            this.temopradasTextBox.Size = new System.Drawing.Size(200, 20);
-            this.temopradasTextBox.TabIndex = 5;
-            // 
-            // estrenoLabel
-            // 
-            estrenoLabel.AutoSize = true;
-            estrenoLabel.Location = new System.Drawing.Point(10, 112);
-            estrenoLabel.Name = "estrenoLabel";
-            estrenoLabel.Size = new System.Drawing.Size(46, 13);
-            estrenoLabel.TabIndex = 6;
-            estrenoLabel.Text = "Estreno:";
-            // 
-            // estrenoDateTimePicker
-            // 
-            this.estrenoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.seriesBindingSource, "Estreno", true));
-            this.estrenoDateTimePicker.Location = new System.Drawing.Point(85, 108);
-            this.estrenoDateTimePicker.Name = "estrenoDateTimePicker";
-            this.estrenoDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.estrenoDateTimePicker.TabIndex = 7;
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(10, 137);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 8;
-            precioLabel.Text = "Precio:";
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(85, 134);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.precioTextBox.TabIndex = 9;
+            this.tituloTextBox.TabIndex = 4;
             // 
             // sinopsisLabel
             // 
             sinopsisLabel.AutoSize = true;
-            sinopsisLabel.Location = new System.Drawing.Point(486, 33);
+            sinopsisLabel.Location = new System.Drawing.Point(496, 43);
             sinopsisLabel.Name = "sinopsisLabel";
             sinopsisLabel.Size = new System.Drawing.Size(49, 13);
-            sinopsisLabel.TabIndex = 10;
+            sinopsisLabel.TabIndex = 5;
             sinopsisLabel.Text = "Sinopsis:";
             // 
             // sinopsisTextBox
             // 
-            this.sinopsisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Sinopsis", true));
-            this.sinopsisTextBox.Location = new System.Drawing.Point(541, 33);
+            this.sinopsisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Sinopsis", true));
+            this.sinopsisTextBox.Location = new System.Drawing.Point(551, 40);
             this.sinopsisTextBox.Multiline = true;
             this.sinopsisTextBox.Name = "sinopsisTextBox";
             this.sinopsisTextBox.Size = new System.Drawing.Size(200, 69);
-            this.sinopsisTextBox.TabIndex = 11;
+            this.sinopsisTextBox.TabIndex = 6;
             // 
             // puntuacionLabel
             // 
             puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(10, 163);
+            puntuacionLabel.Location = new System.Drawing.Point(13, 92);
             puntuacionLabel.Name = "puntuacionLabel";
             puntuacionLabel.Size = new System.Drawing.Size(64, 13);
-            puntuacionLabel.TabIndex = 12;
+            puntuacionLabel.TabIndex = 7;
             puntuacionLabel.Text = "Puntuacion:";
             // 
             // puntuacionTextBox
             // 
-            this.puntuacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.seriesBindingSource, "Puntuacion", true));
-            this.puntuacionTextBox.Location = new System.Drawing.Point(85, 160);
+            this.puntuacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Puntuacion", true));
+            this.puntuacionTextBox.Location = new System.Drawing.Point(83, 89);
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.Size = new System.Drawing.Size(200, 20);
-            this.puntuacionTextBox.TabIndex = 13;
+            this.puntuacionTextBox.TabIndex = 8;
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(13, 118);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 9;
+            precioLabel.Text = "Precio:";
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(83, 115);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(200, 20);
+            this.precioTextBox.TabIndex = 10;
+            // 
+            // estrenoLabel
+            // 
+            estrenoLabel.AutoSize = true;
+            estrenoLabel.Location = new System.Drawing.Point(13, 145);
+            estrenoLabel.Name = "estrenoLabel";
+            estrenoLabel.Size = new System.Drawing.Size(46, 13);
+            estrenoLabel.TabIndex = 11;
+            estrenoLabel.Text = "Estreno:";
+            // 
+            // estrenoDateTimePicker
+            // 
+            this.estrenoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.peliculasBindingSource, "Estreno", true));
+            this.estrenoDateTimePicker.Location = new System.Drawing.Point(83, 141);
+            this.estrenoDateTimePicker.Name = "estrenoDateTimePicker";
+            this.estrenoDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.estrenoDateTimePicker.TabIndex = 12;
+            // 
+            // directorLabel
+            // 
+            directorLabel.AutoSize = true;
+            directorLabel.Location = new System.Drawing.Point(13, 170);
+            directorLabel.Name = "directorLabel";
+            directorLabel.Size = new System.Drawing.Size(47, 13);
+            directorLabel.TabIndex = 13;
+            directorLabel.Text = "Director:";
+            // 
+            // directorTextBox
+            // 
+            this.directorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Director", true));
+            this.directorTextBox.Location = new System.Drawing.Point(83, 167);
+            this.directorTextBox.Name = "directorTextBox";
+            this.directorTextBox.Size = new System.Drawing.Size(200, 20);
+            this.directorTextBox.TabIndex = 14;
+            // 
+            // duracionLabel
+            // 
+            duracionLabel.AutoSize = true;
+            duracionLabel.Location = new System.Drawing.Point(13, 196);
+            duracionLabel.Name = "duracionLabel";
+            duracionLabel.Size = new System.Drawing.Size(53, 13);
+            duracionLabel.TabIndex = 15;
+            duracionLabel.Text = "Duracion:";
+            // 
+            // duracionTextBox
+            // 
+            this.duracionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Duracion", true));
+            this.duracionTextBox.Location = new System.Drawing.Point(83, 193);
+            this.duracionTextBox.Name = "duracionTextBox";
+            this.duracionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.duracionTextBox.TabIndex = 16;
             // 
             // portadaLabel
             // 
             portadaLabel.AutoSize = true;
-            portadaLabel.Location = new System.Drawing.Point(300, 33);
+            portadaLabel.Location = new System.Drawing.Point(303, 40);
             portadaLabel.Name = "portadaLabel";
             portadaLabel.Size = new System.Drawing.Size(47, 13);
-            portadaLabel.TabIndex = 14;
+            portadaLabel.TabIndex = 17;
             portadaLabel.Text = "Portada:";
             // 
             // portadaPictureBox
             // 
             this.portadaPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.portadaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.seriesBindingSource, "Portada", true));
-            this.portadaPictureBox.Location = new System.Drawing.Point(353, 30);
+            this.portadaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.peliculasBindingSource, "Portada", true));
+            this.portadaPictureBox.Location = new System.Drawing.Point(356, 40);
             this.portadaPictureBox.Name = "portadaPictureBox";
-            this.portadaPictureBox.Size = new System.Drawing.Size(115, 176);
+            this.portadaPictureBox.Size = new System.Drawing.Size(124, 173);
             this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.portadaPictureBox.TabIndex = 15;
+            this.portadaPictureBox.TabIndex = 18;
             this.portadaPictureBox.TabStop = false;
             // 
             // fondoLabel
             // 
             fondoLabel.AutoSize = true;
-            fondoLabel.Location = new System.Drawing.Point(495, 115);
+            fondoLabel.Location = new System.Drawing.Point(496, 122);
             fondoLabel.Name = "fondoLabel";
             fondoLabel.Size = new System.Drawing.Size(40, 13);
-            fondoLabel.TabIndex = 16;
+            fondoLabel.TabIndex = 19;
             fondoLabel.Text = "Fondo:";
             // 
             // fondoPictureBox
             // 
             this.fondoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fondoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.seriesBindingSource, "Fondo", true));
-            this.fondoPictureBox.Location = new System.Drawing.Point(541, 112);
+            this.fondoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.peliculasBindingSource, "Fondo", true));
+            this.fondoPictureBox.Location = new System.Drawing.Point(551, 122);
             this.fondoPictureBox.Name = "fondoPictureBox";
-            this.fondoPictureBox.Size = new System.Drawing.Size(200, 94);
+            this.fondoPictureBox.Size = new System.Drawing.Size(200, 91);
             this.fondoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fondoPictureBox.TabIndex = 17;
+            this.fondoPictureBox.TabIndex = 20;
             this.fondoPictureBox.TabStop = false;
             // 
-            // seriesDataGridView
+            // peliculasDataGridView
             // 
-            this.seriesDataGridView.AutoGenerateColumns = false;
-            this.seriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.seriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.peliculasDataGridView.AutoGenerateColumns = false;
+            this.peliculasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.peliculasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn7});
-            this.seriesDataGridView.DataSource = this.seriesBindingSource;
-            this.seriesDataGridView.Location = new System.Drawing.Point(13, 238);
-            this.seriesDataGridView.Name = "seriesDataGridView";
-            this.seriesDataGridView.Size = new System.Drawing.Size(728, 220);
-            this.seriesDataGridView.TabIndex = 18;
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.peliculasDataGridView.DataSource = this.peliculasBindingSource;
+            this.peliculasDataGridView.Location = new System.Drawing.Point(16, 257);
+            this.peliculasDataGridView.Name = "peliculasDataGridView";
+            this.peliculasDataGridView.Size = new System.Drawing.Size(735, 220);
+            this.peliculasDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 70;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
             this.dataGridViewTextBoxColumn2.HeaderText = "Titulo";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 185;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Temopradas";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Temopradas";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn2.Width = 120;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Estreno";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Estreno";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Puntuacion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Puntuacion";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
@@ -480,62 +464,84 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Estreno";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Estreno";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Puntuacion";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Puntuacion";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Director";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Director";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Duracion";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Duracion";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // buttonAñadirPortada
             // 
-            this.buttonAñadirPortada.Location = new System.Drawing.Point(322, 184);
+            this.buttonAñadirPortada.Location = new System.Drawing.Point(322, 191);
             this.buttonAñadirPortada.Name = "buttonAñadirPortada";
-            this.buttonAñadirPortada.Size = new System.Drawing.Size(25, 23);
-            this.buttonAñadirPortada.TabIndex = 19;
+            this.buttonAñadirPortada.Size = new System.Drawing.Size(28, 23);
+            this.buttonAñadirPortada.TabIndex = 22;
             this.buttonAñadirPortada.Text = "Añadir Portada";
             this.buttonAñadirPortada.UseVisualStyleBackColor = true;
             this.buttonAñadirPortada.Click += new System.EventHandler(this.buttonAñadirPortada_Click);
             // 
             // buttonAñadirFondo
             // 
-            this.buttonAñadirFondo.Location = new System.Drawing.Point(510, 184);
+            this.buttonAñadirFondo.Location = new System.Drawing.Point(517, 191);
             this.buttonAñadirFondo.Name = "buttonAñadirFondo";
-            this.buttonAñadirFondo.Size = new System.Drawing.Size(25, 23);
-            this.buttonAñadirFondo.TabIndex = 20;
+            this.buttonAñadirFondo.Size = new System.Drawing.Size(28, 23);
+            this.buttonAñadirFondo.TabIndex = 23;
             this.buttonAñadirFondo.Text = "Añadir Fondo";
             this.buttonAñadirFondo.UseVisualStyleBackColor = true;
             this.buttonAñadirFondo.Click += new System.EventHandler(this.buttonAñadirFondo_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(801, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 483);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // AdministrarSeries
+            // AdministrarPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 522);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.seriesBindingNavigator);
-            this.Controls.Add(this.groupBoxSeries);
-            this.Name = "AdministrarSeries";
-            this.Text = "AdministrarSeries";
-            this.Load += new System.EventHandler(this.AdministrarSeries_Load);
-            this.groupBoxSeries.ResumeLayout(false);
-            this.groupBoxSeries.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(766, 495);
+            this.Controls.Add(this.buttonAñadirFondo);
+            this.Controls.Add(this.buttonAñadirPortada);
+            this.Controls.Add(this.peliculasDataGridView);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(tituloLabel);
+            this.Controls.Add(this.tituloTextBox);
+            this.Controls.Add(sinopsisLabel);
+            this.Controls.Add(this.sinopsisTextBox);
+            this.Controls.Add(puntuacionLabel);
+            this.Controls.Add(this.puntuacionTextBox);
+            this.Controls.Add(precioLabel);
+            this.Controls.Add(this.precioTextBox);
+            this.Controls.Add(estrenoLabel);
+            this.Controls.Add(this.estrenoDateTimePicker);
+            this.Controls.Add(directorLabel);
+            this.Controls.Add(this.directorTextBox);
+            this.Controls.Add(duracionLabel);
+            this.Controls.Add(this.duracionTextBox);
+            this.Controls.Add(portadaLabel);
+            this.Controls.Add(this.portadaPictureBox);
+            this.Controls.Add(fondoLabel);
+            this.Controls.Add(this.fondoPictureBox);
+            this.Controls.Add(this.peliculasBindingNavigator);
+            this.Name = "AdministrarPeliculas";
+            this.Text = "AdminstrarPeliculas";
+            this.Load += new System.EventHandler(this.AdministrarPeliculas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesBindingNavigator)).EndInit();
-            this.seriesBindingNavigator.ResumeLayout(false);
-            this.seriesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingNavigator)).EndInit();
+            this.peliculasBindingNavigator.ResumeLayout(false);
+            this.peliculasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,12 +549,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxSeries;
         private masterDataSet masterDataSet;
-        private System.Windows.Forms.BindingSource seriesBindingSource;
-        private masterDataSetTableAdapters.SeriesTableAdapter seriesTableAdapter;
+        private System.Windows.Forms.BindingSource peliculasBindingSource;
+        private masterDataSetTableAdapters.PeliculasTableAdapter peliculasTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator seriesBindingNavigator;
+        private System.Windows.Forms.BindingNavigator peliculasBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -560,25 +565,26 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton seriesBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView seriesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.ToolStripButton peliculasBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox tituloTextBox;
-        private System.Windows.Forms.TextBox temopradasTextBox;
-        private System.Windows.Forms.DateTimePicker estrenoDateTimePicker;
-        private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.TextBox sinopsisTextBox;
         private System.Windows.Forms.TextBox puntuacionTextBox;
+        private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.DateTimePicker estrenoDateTimePicker;
+        private System.Windows.Forms.TextBox directorTextBox;
+        private System.Windows.Forms.TextBox duracionTextBox;
         private System.Windows.Forms.PictureBox portadaPictureBox;
         private System.Windows.Forms.PictureBox fondoPictureBox;
-        private System.Windows.Forms.Button buttonAñadirFondo;
+        private System.Windows.Forms.DataGridView peliculasDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button buttonAñadirPortada;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonAñadirFondo;
     }
 }
