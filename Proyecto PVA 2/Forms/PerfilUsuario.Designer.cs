@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilUsuario));
-            this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
             this.labelAlias = new System.Windows.Forms.Label();
             this.textBoxAlias = new System.Windows.Forms.TextBox();
             this.buttonCambiarImagenPerfil = new System.Windows.Forms.Button();
@@ -60,24 +59,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
+            this.round1 = new Proyecto_PVA_2.Forms.Round();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxImagenPerfil
-            // 
-            this.pictureBoxImagenPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxImagenPerfil.BackgroundImage")));
-            this.pictureBoxImagenPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxImagenPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(39, 37);
-            this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
-            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
-            this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImagenPerfil.TabIndex = 0;
-            this.pictureBoxImagenPerfil.TabStop = false;
             // 
             // labelAlias
             // 
@@ -288,7 +276,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
-            this.panel1.Controls.Add(this.pictureBoxImagenPerfil);
+            this.panel1.Controls.Add(this.round1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 435);
@@ -317,6 +305,16 @@
             this.BarraTitulo.Size = new System.Drawing.Size(245, 24);
             this.BarraTitulo.TabIndex = 38;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // round1
+            // 
+            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
+            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.round1.Location = new System.Drawing.Point(40, 35);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(120, 120);
+            this.round1.TabIndex = 1;
+            this.round1.TabStop = false;
             // 
             // PerfilUsuario
             // 
@@ -351,19 +349,17 @@
             this.Name = "PerfilUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PerfilUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBoxImagenPerfil;
         private System.Windows.Forms.Label labelAlias;
         private System.Windows.Forms.TextBox textBoxAlias;
         private System.Windows.Forms.Button buttonCambiarImagenPerfil;
@@ -393,5 +389,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Panel BarraTitulo;
+        private Round round1;
     }
 }
