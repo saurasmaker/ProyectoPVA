@@ -30,23 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilUsuario));
-            this.labelAlias = new System.Windows.Forms.Label();
             this.textBoxAlias = new System.Windows.Forms.TextBox();
             this.buttonCambiarImagenPerfil = new System.Windows.Forms.Button();
             this.dateTimePickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
-            this.labelDireccion = new System.Windows.Forms.Label();
-            this.labelFechaNac = new System.Windows.Forms.Label();
             this.textBoxApellido2 = new System.Windows.Forms.TextBox();
-            this.labelApellido2 = new System.Windows.Forms.Label();
-            this.textBoxApellido1 = new System.Windows.Forms.TextBox();
-            this.labelApellido1 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.labelCorreoElectronico = new System.Windows.Forms.Label();
             this.textBoxBiografia = new System.Windows.Forms.TextBox();
-            this.labelBiografia = new System.Windows.Forms.Label();
             this.buttonModificarDatosPersonales = new System.Windows.Forms.Button();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonRestablecerDatos = new System.Windows.Forms.Button();
@@ -60,155 +51,125 @@
             this.buttonSalir = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.round1 = new Proyecto_PVA_2.Forms.Round();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxApellido1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelAlias
-            // 
-            this.labelAlias.AutoSize = true;
-            this.labelAlias.Location = new System.Drawing.Point(12, 189);
-            this.labelAlias.Name = "labelAlias";
-            this.labelAlias.Size = new System.Drawing.Size(35, 13);
-            this.labelAlias.TabIndex = 1;
-            this.labelAlias.Text = "Alias: ";
             // 
             // textBoxAlias
             // 
-            this.textBoxAlias.Location = new System.Drawing.Point(15, 205);
+            this.textBoxAlias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
+            this.textBoxAlias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlias.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAlias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.textBoxAlias.Location = new System.Drawing.Point(3, 172);
             this.textBoxAlias.Name = "textBoxAlias";
-            this.textBoxAlias.Size = new System.Drawing.Size(125, 20);
+            this.textBoxAlias.Size = new System.Drawing.Size(197, 29);
             this.textBoxAlias.TabIndex = 2;
+            this.textBoxAlias.Text = "@ammar";
+            this.textBoxAlias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxAlias.TextChanged += new System.EventHandler(this.textBoxAlias_TextChanged);
             // 
             // buttonCambiarImagenPerfil
             // 
-            this.buttonCambiarImagenPerfil.Location = new System.Drawing.Point(187, 222);
+            this.buttonCambiarImagenPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCambiarImagenPerfil.BackgroundImage")));
+            this.buttonCambiarImagenPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonCambiarImagenPerfil.FlatAppearance.BorderSize = 0;
+            this.buttonCambiarImagenPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCambiarImagenPerfil.Location = new System.Drawing.Point(144, 132);
             this.buttonCambiarImagenPerfil.Name = "buttonCambiarImagenPerfil";
-            this.buttonCambiarImagenPerfil.Size = new System.Drawing.Size(128, 23);
+            this.buttonCambiarImagenPerfil.Size = new System.Drawing.Size(18, 23);
             this.buttonCambiarImagenPerfil.TabIndex = 3;
-            this.buttonCambiarImagenPerfil.Text = "Cambiar";
             this.buttonCambiarImagenPerfil.UseVisualStyleBackColor = true;
             this.buttonCambiarImagenPerfil.Click += new System.EventHandler(this.buttonCambiarImagenPerfil_Click);
             // 
             // dateTimePickerFechaNacimiento
             // 
-            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(335, 209);
+            this.dateTimePickerFechaNacimiento.CalendarForeColor = System.Drawing.SystemColors.Control;
+            this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(8, 20);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
-            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(304, 27);
             this.dateTimePickerFechaNacimiento.TabIndex = 13;
+            this.dateTimePickerFechaNacimiento.Value = new System.DateTime(1994, 4, 28, 17, 7, 0, 0);
             // 
             // textBoxDireccion
             // 
-            this.textBoxDireccion.Location = new System.Drawing.Point(335, 260);
+            this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDireccion.Location = new System.Drawing.Point(7, 22);
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(125, 20);
+            this.textBoxDireccion.Size = new System.Drawing.Size(305, 23);
             this.textBoxDireccion.TabIndex = 12;
-            // 
-            // labelDireccion
-            // 
-            this.labelDireccion.AutoSize = true;
-            this.labelDireccion.Location = new System.Drawing.Point(164, 263);
-            this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(55, 13);
-            this.labelDireccion.TabIndex = 11;
-            this.labelDireccion.Text = "Dirección:";
-            // 
-            // labelFechaNac
-            // 
-            this.labelFechaNac.AutoSize = true;
-            this.labelFechaNac.Location = new System.Drawing.Point(332, 193);
-            this.labelFechaNac.Name = "labelFechaNac";
-            this.labelFechaNac.Size = new System.Drawing.Size(112, 13);
-            this.labelFechaNac.TabIndex = 9;
-            this.labelFechaNac.Text = "Fecha de nacimiento: ";
+            this.textBoxDireccion.Text = "Venice Beach, LA";
             // 
             // textBoxApellido2
             // 
-            this.textBoxApellido2.Location = new System.Drawing.Point(335, 160);
+            this.textBoxApellido2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxApellido2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxApellido2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellido2.ForeColor = System.Drawing.Color.Black;
+            this.textBoxApellido2.Location = new System.Drawing.Point(8, 23);
             this.textBoxApellido2.Name = "textBoxApellido2";
-            this.textBoxApellido2.Size = new System.Drawing.Size(125, 20);
+            this.textBoxApellido2.Size = new System.Drawing.Size(149, 23);
             this.textBoxApellido2.TabIndex = 8;
-            // 
-            // labelApellido2
-            // 
-            this.labelApellido2.AutoSize = true;
-            this.labelApellido2.Location = new System.Drawing.Point(237, 163);
-            this.labelApellido2.Name = "labelApellido2";
-            this.labelApellido2.Size = new System.Drawing.Size(92, 13);
-            this.labelApellido2.TabIndex = 7;
-            this.labelApellido2.Text = "Segundo apellido:";
-            // 
-            // textBoxApellido1
-            // 
-            this.textBoxApellido1.Location = new System.Drawing.Point(335, 107);
-            this.textBoxApellido1.Name = "textBoxApellido1";
-            this.textBoxApellido1.Size = new System.Drawing.Size(125, 20);
-            this.textBoxApellido1.TabIndex = 6;
-            // 
-            // labelApellido1
-            // 
-            this.labelApellido1.AutoSize = true;
-            this.labelApellido1.Location = new System.Drawing.Point(237, 110);
-            this.labelApellido1.Name = "labelApellido1";
-            this.labelApellido1.Size = new System.Drawing.Size(78, 13);
-            this.labelApellido1.TabIndex = 5;
-            this.labelApellido1.Text = "Primer apellido:";
+            this.textBoxApellido2.Text = "Brag";
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(335, 62);
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombre.ForeColor = System.Drawing.Color.Black;
+            this.textBoxNombre.Location = new System.Drawing.Point(11, 22);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(125, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(301, 23);
             this.textBoxNombre.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(237, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre";
+            this.textBoxNombre.Text = "Ammar ";
             // 
             // textBoxCorreoElectronico
             // 
-            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(15, 251);
+            this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
+            this.textBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(3, 207);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
-            this.textBoxCorreoElectronico.Size = new System.Drawing.Size(219, 20);
+            this.textBoxCorreoElectronico.Size = new System.Drawing.Size(197, 20);
             this.textBoxCorreoElectronico.TabIndex = 6;
-            // 
-            // labelCorreoElectronico
-            // 
-            this.labelCorreoElectronico.AutoSize = true;
-            this.labelCorreoElectronico.Location = new System.Drawing.Point(12, 235);
-            this.labelCorreoElectronico.Name = "labelCorreoElectronico";
-            this.labelCorreoElectronico.Size = new System.Drawing.Size(99, 13);
-            this.labelCorreoElectronico.TabIndex = 5;
-            this.labelCorreoElectronico.Text = "Correo electrónico: ";
+            this.textBoxCorreoElectronico.Text = "example@email.com";
+            this.textBoxCorreoElectronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxBiografia
             // 
-            this.textBoxBiografia.Location = new System.Drawing.Point(15, 298);
+            this.textBoxBiografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
+            this.textBoxBiografia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBiografia.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBiografia.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxBiografia.Location = new System.Drawing.Point(14, 248);
             this.textBoxBiografia.Multiline = true;
             this.textBoxBiografia.Name = "textBoxBiografia";
-            this.textBoxBiografia.Size = new System.Drawing.Size(219, 95);
+            this.textBoxBiografia.Size = new System.Drawing.Size(173, 134);
             this.textBoxBiografia.TabIndex = 8;
-            // 
-            // labelBiografia
-            // 
-            this.labelBiografia.AutoSize = true;
-            this.labelBiografia.Location = new System.Drawing.Point(12, 282);
-            this.labelBiografia.Name = "labelBiografia";
-            this.labelBiografia.Size = new System.Drawing.Size(56, 13);
-            this.labelBiografia.TabIndex = 7;
-            this.labelBiografia.Text = "Biografía: ";
+            this.textBoxBiografia.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.";
+            this.textBoxBiografia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonModificarDatosPersonales
             // 
-            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(386, 303);
+            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(324, 359);
             this.buttonModificarDatosPersonales.Name = "buttonModificarDatosPersonales";
             this.buttonModificarDatosPersonales.Size = new System.Drawing.Size(147, 23);
             this.buttonModificarDatosPersonales.TabIndex = 9;
@@ -227,7 +188,7 @@
             // 
             // buttonRestablecerDatos
             // 
-            this.buttonRestablecerDatos.Location = new System.Drawing.Point(217, 402);
+            this.buttonRestablecerDatos.Location = new System.Drawing.Point(207, 359);
             this.buttonRestablecerDatos.Name = "buttonRestablecerDatos";
             this.buttonRestablecerDatos.Size = new System.Drawing.Size(111, 23);
             this.buttonRestablecerDatos.TabIndex = 12;
@@ -242,7 +203,7 @@
             // 
             // buttonCambiarContraseña
             // 
-            this.buttonCambiarContraseña.Location = new System.Drawing.Point(422, 402);
+            this.buttonCambiarContraseña.Location = new System.Drawing.Point(354, 398);
             this.buttonCambiarContraseña.Name = "buttonCambiarContraseña";
             this.buttonCambiarContraseña.Size = new System.Drawing.Size(111, 23);
             this.buttonCambiarContraseña.TabIndex = 14;
@@ -277,9 +238,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
             this.panel1.Controls.Add(this.round1);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Controls.Add(this.buttonCambiarImagenPerfil);
+            this.panel1.Controls.Add(this.textBoxAlias);
+            this.panel1.Controls.Add(this.textBoxCorreoElectronico);
+            this.panel1.Controls.Add(this.textBoxBiografia);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 435);
+            this.panel1.Size = new System.Drawing.Size(203, 435);
             this.panel1.TabIndex = 39;
             // 
             // buttonSalir
@@ -297,12 +262,12 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.White;
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.BarraTitulo.Controls.Add(this.buttonSalir);
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BarraTitulo.Location = new System.Drawing.Point(299, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(201, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(245, 24);
+            this.BarraTitulo.Size = new System.Drawing.Size(343, 24);
             this.BarraTitulo.TabIndex = 38;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -316,33 +281,99 @@
             this.round1.TabIndex = 1;
             this.round1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.textBoxNombre);
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.groupBox1.Location = new System.Drawing.Point(214, 44);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(318, 54);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nombre";
+            // 
+            // textBoxApellido1
+            // 
+            this.textBoxApellido1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxApellido1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxApellido1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellido1.ForeColor = System.Drawing.Color.Black;
+            this.textBoxApellido1.Location = new System.Drawing.Point(9, 22);
+            this.textBoxApellido1.Name = "textBoxApellido1";
+            this.textBoxApellido1.Size = new System.Drawing.Size(301, 23);
+            this.textBoxApellido1.TabIndex = 6;
+            this.textBoxApellido1.Text = "Kandil";
+            this.textBoxApellido1.TextChanged += new System.EventHandler(this.textBoxApellido1_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox2.Controls.Add(this.textBoxApellido1);
+            this.groupBox2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.groupBox2.Location = new System.Drawing.Point(215, 101);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(318, 54);
+            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Primer Apellido";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox3.Controls.Add(this.textBoxApellido2);
+            this.groupBox3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.groupBox3.Location = new System.Drawing.Point(214, 161);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(318, 54);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Segundo Apellido";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox4.Controls.Add(this.dateTimePickerFechaNacimiento);
+            this.groupBox4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.groupBox4.Location = new System.Drawing.Point(214, 221);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(318, 54);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Fecha de nacimiento";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox5.Controls.Add(this.textBoxDireccion);
+            this.groupBox5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.groupBox5.Location = new System.Drawing.Point(214, 281);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(318, 54);
+            this.groupBox5.TabIndex = 44;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Dirección";
+            // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(544, 433);
-            this.Controls.Add(this.dateTimePickerFechaNacimiento);
-            this.Controls.Add(this.buttonCambiarImagenPerfil);
-            this.Controls.Add(this.textBoxDireccion);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonCambiarContraseña);
-            this.Controls.Add(this.labelDireccion);
             this.Controls.Add(this.buttonRestablecerDatos);
-            this.Controls.Add(this.labelFechaNac);
             this.Controls.Add(this.buttonActualizar);
-            this.Controls.Add(this.textBoxApellido2);
             this.Controls.Add(this.buttonModificarDatosPersonales);
-            this.Controls.Add(this.labelApellido2);
-            this.Controls.Add(this.textBoxBiografia);
-            this.Controls.Add(this.textBoxApellido1);
-            this.Controls.Add(this.labelBiografia);
-            this.Controls.Add(this.labelApellido1);
-            this.Controls.Add(this.textBoxCorreoElectronico);
-            this.Controls.Add(this.textBoxNombre);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelCorreoElectronico);
-            this.Controls.Add(this.textBoxAlias);
-            this.Controls.Add(this.labelAlias);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -352,31 +383,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label labelAlias;
         private System.Windows.Forms.TextBox textBoxAlias;
         private System.Windows.Forms.Button buttonCambiarImagenPerfil;
         private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxDireccion;
-        private System.Windows.Forms.Label labelDireccion;
-        private System.Windows.Forms.Label labelFechaNac;
         private System.Windows.Forms.TextBox textBoxApellido2;
-        private System.Windows.Forms.Label labelApellido2;
-        private System.Windows.Forms.TextBox textBoxApellido1;
-        private System.Windows.Forms.Label labelApellido1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaNacimiento;
         private System.Windows.Forms.TextBox textBoxCorreoElectronico;
-        private System.Windows.Forms.Label labelCorreoElectronico;
         private System.Windows.Forms.TextBox textBoxBiografia;
-        private System.Windows.Forms.Label labelBiografia;
         private System.Windows.Forms.Button buttonModificarDatosPersonales;
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonRestablecerDatos;
@@ -390,5 +421,11 @@
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Panel BarraTitulo;
         private Round round1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxApellido1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

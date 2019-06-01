@@ -164,5 +164,15 @@ namespace Proyecto_PVA_2.Forms
 
             }
         }
+
+        private void textBoxAlias_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxApellido1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
