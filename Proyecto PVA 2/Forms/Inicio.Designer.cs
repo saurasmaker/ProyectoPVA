@@ -64,8 +64,8 @@
             this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
-            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
@@ -250,7 +250,7 @@
             // 
             // buttonDesplegar
             // 
-            this.buttonDesplegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.buttonDesplegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(33)))));
             resources.ApplyResources(this.buttonDesplegar, "buttonDesplegar");
             this.buttonDesplegar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDesplegar.FlatAppearance.BorderSize = 0;
@@ -348,14 +348,14 @@
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
+            // 
             // seriesBindingSource
             // 
             this.seriesBindingSource.DataMember = "Series";
             this.seriesBindingSource.DataSource = this.masterDataSet;
-            // 
-            // seriesTableAdapter
-            // 
-            this.seriesTableAdapter.ClearBeforeFill = true;
             // 
             // Inicio
             // 
