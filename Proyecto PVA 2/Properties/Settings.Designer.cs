@@ -59,8 +59,7 @@ namespace Proyecto_PVA_2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS02;Initial Catalog=master;Integrated Security=Tru" +
-            "e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=185.150.83.155;Initial Catalog=PVAdb;User ID=sa;Password=12345")]
         public string masterConnectionString {
             get {
                 return ((string)(this["masterConnectionString"]));
