@@ -53,7 +53,7 @@ namespace Proyecto_PVA_2.Forms
 
                 try
                 {
-                    pictureBoxImagenPerfil.Image.Save(image, pictureBoxImagenPerfil.Image.RawFormat);
+                    round1.Image.Save(image, round1.Image.RawFormat);
                     usuariosTableAdapter.UpdateQueryById(textBoxCorreoElectronico.Text, textBoxAlias.Text, User.Contraseña, textBoxNombre.Text, textBoxApellido1.Text, textBoxApellido2.Text, textBoxDireccion.Text, image.ToArray(), dateTimePickerFechaNacimiento.Text, textBoxBiografia.Text, User.Id);
                 }
                 catch (Exception)
@@ -69,7 +69,7 @@ namespace Proyecto_PVA_2.Forms
             OpenFileDialog ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() == DialogResult.OK)
-                pictureBoxImagenPerfil.Image = Image.FromFile(ofd.FileName);
+                round1.Image = Image.FromFile(ofd.FileName);
         }
 
         //Métodos
@@ -99,7 +99,7 @@ namespace Proyecto_PVA_2.Forms
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
             try{
-                pictureBoxImagenPerfil.Image = Image.FromStream(User.FotoPerfil);
+                round1.Image = Image.FromStream(User.FotoPerfil);
             }
             catch (Exception)
             {

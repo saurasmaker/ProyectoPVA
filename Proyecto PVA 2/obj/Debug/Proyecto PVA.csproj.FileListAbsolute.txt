@@ -85,3 +85,4 @@ J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources

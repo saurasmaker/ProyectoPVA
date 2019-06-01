@@ -101,7 +101,7 @@
     <Compile Include="Forms\Admin\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\border.cs" />
+    <Compile Include="Clases\border.cs" />
     <Compile Include="Forms\PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,7 +144,7 @@
     <Compile Include="Forms\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PanelBorder.cs" />
+    <Compile Include="Clases\PanelBorder.cs" />
     <Compile Include="Forms\PerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

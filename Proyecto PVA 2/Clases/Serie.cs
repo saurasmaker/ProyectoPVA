@@ -18,6 +18,7 @@ namespace Proyecto_PVA_2.Clases
             Temporadas = new List<Temporada>();
         }
 
+        public int NumTemporadas { get => numTemporadas; set => numTemporadas = value; }
         internal List<Temporada> Temporadas { get => temporadas; set => temporadas = value; }
 
         //Getters & Setters
