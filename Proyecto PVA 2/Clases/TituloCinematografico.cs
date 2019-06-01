@@ -13,7 +13,8 @@ namespace Proyecto_PVA_2.Clases
         //Atributos
         int id;
         string titulo, sinopsis;
-        float puntuacion, precio;
+        float puntuacion;
+        decimal precio;
         DateTime estreno;
         MemoryStream portada;
         List<string> generos;
@@ -31,7 +32,7 @@ namespace Proyecto_PVA_2.Clases
         public string Titulo { get => titulo; set => titulo = value; }
         public string Sinopsis { get => sinopsis; set => sinopsis = value; }
         public float Puntuacion { get => puntuacion; set => puntuacion = value; }
-        public float Precio { get => precio; set => precio = value; }
+        public decimal Precio { get => precio; set => precio = value; }
         public DateTime Estreno { get => estreno; set => estreno = value; }
         public List<string> Generos { get => generos; set => generos = value; }
         public MemoryStream Portada { get => portada; set => portada = value; }

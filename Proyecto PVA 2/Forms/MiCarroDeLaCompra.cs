@@ -53,7 +53,7 @@ namespace Proyecto_PVA_2.Forms
                 MessageBox.Show("Debe seleccionar un elemento de la lista para poder eliminarlo.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void buttonSalir_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//Cerrar
         {
             Close();
         }
@@ -66,32 +66,23 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonRealizarCompra_Click(object sender, EventArgs e)
         {
-            //Agregar funcion de compra.
-        }
-
-        //Métodos
-        void CalcularPrecioFinal()
-        {
-            float total = 0; ;
-
-            foreach (TituloCinematografico t in Padre.CarroCompra)
+            try
             {
-                total += t.Precio;
+                InsertarFactura();
+                MessageBox.Show("Factura Añadida con exito");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al añadir la factura. ");
             }
 
-            textBox1.Text = ((float)(Math.Round(Convert.ToDouble(total),2))).ToString() + "€";
-
-            return;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Close();
-        }
+        
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//Eliminar del carro de la compra.
         {
-          
+
             if (listView1.SelectedItems[0] != null)
             {
                 Padre.CarroCompra.RemoveAt(listView1.SelectedItems[0].Index);
@@ -108,6 +99,31 @@ namespace Proyecto_PVA_2.Forms
             this.facturasBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
+        }
+
+        //Métodos
+        decimal CalcularPrecioFinal()
+        {
+            decimal total = 0; ;
+
+            foreach (TituloCinematografico t in Padre.CarroCompra)
+            {
+                total += t.Precio;
+            }
+
+            textBox1.Text = ((float)(Math.Round(Convert.ToDouble(total),2))).ToString() + "€";
+
+            return total;
+        }
+
+        void InsertarFactura()
+        {
+            string objetosComprados = "";
+
+            foreach (TituloCinematografico t in Padre.CarroCompra)
+                objetosComprados += t.Id + ";";
+
+            facturasTableAdapter.InsertQuery(masterDataSet.Facturas.Count + 10000000, Padre.User.Id, DateTime.Today.ToString(), CalcularPrecioFinal(), objetosComprados);
         }
 
         //Eventos Inútiles

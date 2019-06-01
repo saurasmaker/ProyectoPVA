@@ -58,7 +58,7 @@ namespace Prueba
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            //AbrirFormPanel(new PanelAdminCompras());
+            AbrirFormPanel(new AdministrarFacturas());
         }
 
         private void Button1_Click(object sender, EventArgs e)

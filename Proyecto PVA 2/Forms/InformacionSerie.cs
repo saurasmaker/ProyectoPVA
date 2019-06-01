@@ -77,7 +77,7 @@ namespace Proyecto_PVA_2.Forms
             tc.Sinopsis = sinopsisTextBox.Text;
             tc.Estreno = Convert.ToDateTime(textBoxEstreno.Text);
             tc.Puntuacion = Convert.ToSingle(puntuacionTextBox.Text);
-            tc.Precio = Convert.ToSingle(precioTextBox.Text.Replace("€", ""));
+            tc.Precio = Convert.ToDecimal(precioTextBox.Text.Replace("€", ""));
 
             padre.CarroCompra.Add(tc);
         }

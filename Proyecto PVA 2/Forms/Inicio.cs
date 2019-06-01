@@ -519,7 +519,7 @@ namespace Proyecto_PVA_2
                     tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
                     tc.Estreno = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Estreno;
                     tc.Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Puntuacion);
-                    tc.Precio = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio);
+                    tc.Precio = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio;
                     tc.Id = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Id;
 
                     MessageBox.Show("Pelicula añadida a la cesta correctamente", "Añadir a la cesta",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -530,7 +530,7 @@ namespace Proyecto_PVA_2
                     tc.Sinopsis = masterDataSet.Series[Carteles.IndexOf(cartel)].Sinopsis;
                     tc.Estreno = masterDataSet.Series[Carteles.IndexOf(cartel)].Estreno;
                     tc.Puntuacion = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Puntuacion);
-                    tc.Precio = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Precio);
+                    tc.Precio = masterDataSet.Series[Carteles.IndexOf(cartel)].Precio;
                     tc.Id = masterDataSet.Series[Carteles.IndexOf(cartel)].Id;
 
                     MessageBox.Show("Serie añadida a la cesta correctamente", "Añadir a la cesta", MessageBoxButtons.OK, MessageBoxIcon.Information);

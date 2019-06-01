@@ -67,6 +67,12 @@
     <Compile Include="Clases\Round.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Admin\AdministrarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdministrarFacturas.Designer.cs">
+      <DependentUpon>AdministrarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\AdministrarSeries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Admin\AdministrarFacturas.resx">
+      <DependentUpon>AdministrarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </EmbeddedResource>
