@@ -18,9 +18,6 @@ namespace Proyecto_PVA_2
 {
     public partial class Inicio : Form
     {
-        //Conexion base de datos
-        SqlConnection conexionBaseDatos = new SqlConnection("Data Source = localhost\\SQLEXPRESS02; Initial Catalog = master; Integrated Security = True");
-
         //Constantes
         static int modoPelicula = 0;
         static int modoSerie = 1;
@@ -64,8 +61,6 @@ namespace Proyecto_PVA_2
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
 
-            //Quitamos Scroll Horizontal del panel central
-            tableLayoutPanelCentro.HorizontalScroll.Visible = false;
         }
 
         //--Barra Herramientas Inicio

@@ -121,7 +121,12 @@ namespace Proyecto_PVA_2.Forms
             string objetosComprados = "";
 
             foreach (TituloCinematografico t in Padre.CarroCompra)
-                objetosComprados += t.Id + ";";
+            {
+                if (t is Pelicula)
+                    objetosComprados += t.Id + ",1;";
+                else if (t is Serie)
+                    objetosComprados += t.Id + ",2;";
+            }
 
             facturasTableAdapter.InsertQuery(masterDataSet.Facturas.Count + 10000000, Padre.User.Id, DateTime.Today.ToString(), CalcularPrecioFinal(), objetosComprados);
         }

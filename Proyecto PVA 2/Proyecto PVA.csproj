@@ -108,6 +108,12 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\border.cs" />
+    <Compile Include="Forms\HistorialFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistorialFacturas.Designer.cs">
+      <DependentUpon>HistorialFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistorialFacturas.resx">
+      <DependentUpon>HistorialFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>

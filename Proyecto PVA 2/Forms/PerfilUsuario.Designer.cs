@@ -48,20 +48,21 @@
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.round1 = new Proyecto_PVA_2.Forms.Round();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.round1 = new Proyecto_PVA_2.Forms.Round();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxApellido1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.buttonHistorialFacturas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -203,7 +204,7 @@
             // 
             // buttonCambiarContraseña
             // 
-            this.buttonCambiarContraseña.Location = new System.Drawing.Point(354, 398);
+            this.buttonCambiarContraseña.Location = new System.Drawing.Point(324, 398);
             this.buttonCambiarContraseña.Name = "buttonCambiarContraseña";
             this.buttonCambiarContraseña.Size = new System.Drawing.Size(111, 23);
             this.buttonCambiarContraseña.TabIndex = 14;
@@ -242,10 +243,20 @@
             this.panel1.Controls.Add(this.textBoxAlias);
             this.panel1.Controls.Add(this.textBoxCorreoElectronico);
             this.panel1.Controls.Add(this.textBoxBiografia);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 435);
+            this.panel1.Size = new System.Drawing.Size(203, 415);
             this.panel1.TabIndex = 39;
+            // 
+            // round1
+            // 
+            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
+            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.round1.Location = new System.Drawing.Point(40, 35);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(120, 120);
+            this.round1.TabIndex = 1;
+            this.round1.TabStop = false;
             // 
             // buttonSalir
             // 
@@ -253,7 +264,7 @@
             this.buttonSalir.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSalir.ImageIndex = 0;
             this.buttonSalir.ImageList = this.imageListIconos;
-            this.buttonSalir.Location = new System.Drawing.Point(519, -1);
+            this.buttonSalir.Location = new System.Drawing.Point(519, 0);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(28, 26);
             this.buttonSalir.TabIndex = 13;
@@ -265,21 +276,12 @@
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.BarraTitulo.Controls.Add(this.buttonSalir);
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BarraTitulo.Location = new System.Drawing.Point(201, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(-2, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(343, 24);
+            this.BarraTitulo.Size = new System.Drawing.Size(546, 24);
             this.BarraTitulo.TabIndex = 38;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // round1
-            // 
-            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
-            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.round1.Location = new System.Drawing.Point(40, 35);
-            this.round1.Name = "round1";
-            this.round1.Size = new System.Drawing.Size(120, 120);
-            this.round1.TabIndex = 1;
-            this.round1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -359,12 +361,24 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dirección";
             // 
+            // buttonHistorialFacturas
+            // 
+            this.buttonHistorialFacturas.Location = new System.Drawing.Point(207, 398);
+            this.buttonHistorialFacturas.Name = "buttonHistorialFacturas";
+            this.buttonHistorialFacturas.Size = new System.Drawing.Size(111, 23);
+            this.buttonHistorialFacturas.TabIndex = 45;
+            this.buttonHistorialFacturas.Text = "Historial facturas";
+            this.buttonHistorialFacturas.UseVisualStyleBackColor = true;
+            this.buttonHistorialFacturas.Click += new System.EventHandler(this.buttonHistorialFacturas_Click);
+            // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(544, 433);
+            this.Controls.Add(this.BarraTitulo);
+            this.Controls.Add(this.buttonHistorialFacturas);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -374,7 +388,6 @@
             this.Controls.Add(this.buttonRestablecerDatos);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.buttonModificarDatosPersonales);
-            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilUsuario";
@@ -384,8 +397,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -427,5 +440,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button buttonHistorialFacturas;
     }
 }

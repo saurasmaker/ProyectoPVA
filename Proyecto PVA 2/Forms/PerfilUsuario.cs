@@ -72,18 +72,16 @@ namespace Proyecto_PVA_2.Forms
                 round1.Image = Image.FromFile(ofd.FileName);
         }
 
-        //Métodos
-
-
-        //Eventos inútiles
-        private void groupBoxDatosPersonales_Enter(object sender, EventArgs e)
+        private void buttonHistorialFacturas_Click(object sender, EventArgs e)
         {
-
+            HistorialFacturas hf = new HistorialFacturas();
+            AddOwnedForm(hf);
+            hf.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -98,7 +96,8 @@ namespace Proyecto_PVA_2.Forms
         {
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
-            try{
+            try
+            {
                 round1.Image = Image.FromStream(User.FotoPerfil);
             }
             catch (Exception)
@@ -113,28 +112,32 @@ namespace Proyecto_PVA_2.Forms
             {
 
             }
-            try { 
+            try
+            {
                 textBoxCorreoElectronico.Text = User.CorreoElectronico;
             }
             catch (Exception)
             {
 
             }
-            try { 
+            try
+            {
                 textBoxNombre.Text = User.Nombre;
             }
             catch (Exception)
             {
 
             }
-            try { 
+            try
+            {
                 textBoxApellido1.Text = User.Apellido1;
             }
             catch (Exception)
             {
 
             }
-            try { 
+            try
+            {
                 textBoxApellido2.Text = User.Apellido2;
             }
             catch (Exception)
@@ -149,20 +152,36 @@ namespace Proyecto_PVA_2.Forms
             {
 
             }
-            try { 
+            try
+            {
                 dateTimePickerFechaNacimiento.Text = User.Nacimiento.ToString();
             }
             catch (Exception)
             {
 
             }
-            try { 
+            try
+            {
                 textBoxBiografia.Text = User.Biografia;
             }
             catch (Exception)
             {
 
             }
+        }
+
+        //Métodos
+
+
+        //Eventos inútiles
+        private void groupBoxDatosPersonales_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void textBoxAlias_TextChanged(object sender, EventArgs e)
@@ -174,5 +193,11 @@ namespace Proyecto_PVA_2.Forms
         {
 
         }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

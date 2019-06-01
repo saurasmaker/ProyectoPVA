@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarFacturas));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label id_usuarioLabel;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label importeLabel;
             System.Windows.Forms.Label compraLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarFacturas));
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.FacturasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.facturasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.facturasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.facturasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +63,8 @@
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.importeTextBox = new System.Windows.Forms.TextBox();
             this.compraTextBox = new System.Windows.Forms.TextBox();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             idLabel = new System.Windows.Forms.Label();
             id_usuarioLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -73,7 +75,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.facturasBindingNavigator)).BeginInit();
             this.facturasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(19, 44);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 2;
+            idLabel.Text = "Id:";
+            // 
+            // id_usuarioLabel
+            // 
+            id_usuarioLabel.AutoSize = true;
+            id_usuarioLabel.Location = new System.Drawing.Point(19, 70);
+            id_usuarioLabel.Name = "id_usuarioLabel";
+            id_usuarioLabel.Size = new System.Drawing.Size(56, 13);
+            id_usuarioLabel.TabIndex = 4;
+            id_usuarioLabel.Text = "Id usuario:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(19, 97);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(40, 13);
+            fechaLabel.TabIndex = 6;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // importeLabel
+            // 
+            importeLabel.AutoSize = true;
+            importeLabel.Location = new System.Drawing.Point(326, 40);
+            importeLabel.Name = "importeLabel";
+            importeLabel.Size = new System.Drawing.Size(45, 13);
+            importeLabel.TabIndex = 8;
+            importeLabel.Text = "Importe:";
+            // 
+            // compraLabel
+            // 
+            compraLabel.AutoSize = true;
+            compraLabel.Location = new System.Drawing.Point(326, 66);
+            compraLabel.Name = "compraLabel";
+            compraLabel.Size = new System.Drawing.Size(46, 13);
+            compraLabel.TabIndex = 10;
+            compraLabel.Text = "Compra:";
             // 
             // masterDataSet
             // 
@@ -125,9 +173,34 @@
             this.facturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.facturasBindingNavigator.Name = "facturasBindingNavigator";
             this.facturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.facturasBindingNavigator.Size = new System.Drawing.Size(613, 25);
+            this.facturasBindingNavigator.Size = new System.Drawing.Size(612, 25);
             this.facturasBindingNavigator.TabIndex = 0;
             this.facturasBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -161,17 +234,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -179,7 +245,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -188,38 +254,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // facturasBindingNavigatorSaveItem
             // 
             this.facturasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.facturasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasBindingNavigatorSaveItem.Image")));
             this.facturasBindingNavigatorSaveItem.Name = "facturasBindingNavigatorSaveItem";
-            this.facturasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.facturasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.facturasBindingNavigatorSaveItem.Text = "Guardar datos";
             this.facturasBindingNavigatorSaveItem.Click += new System.EventHandler(this.facturasBindingNavigatorSaveItem_Click);
             // 
@@ -269,15 +317,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Compra";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(19, 44);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 2;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturasBindingSource, "Id", true));
@@ -285,15 +324,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(200, 20);
             this.idTextBox.TabIndex = 3;
-            // 
-            // id_usuarioLabel
-            // 
-            id_usuarioLabel.AutoSize = true;
-            id_usuarioLabel.Location = new System.Drawing.Point(19, 70);
-            id_usuarioLabel.Name = "id_usuarioLabel";
-            id_usuarioLabel.Size = new System.Drawing.Size(56, 13);
-            id_usuarioLabel.TabIndex = 4;
-            id_usuarioLabel.Text = "Id usuario:";
             // 
             // id_usuarioTextBox
             // 
@@ -303,15 +333,6 @@
             this.id_usuarioTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_usuarioTextBox.TabIndex = 5;
             // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(19, 97);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
-            fechaLabel.TabIndex = 6;
-            fechaLabel.Text = "Fecha:";
-            // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.facturasBindingSource, "Fecha", true));
@@ -319,15 +340,6 @@
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaDateTimePicker.TabIndex = 7;
-            // 
-            // importeLabel
-            // 
-            importeLabel.AutoSize = true;
-            importeLabel.Location = new System.Drawing.Point(326, 40);
-            importeLabel.Name = "importeLabel";
-            importeLabel.Size = new System.Drawing.Size(45, 13);
-            importeLabel.TabIndex = 8;
-            importeLabel.Text = "Importe:";
             // 
             // importeTextBox
             // 
@@ -337,15 +349,6 @@
             this.importeTextBox.Size = new System.Drawing.Size(200, 20);
             this.importeTextBox.TabIndex = 9;
             // 
-            // compraLabel
-            // 
-            compraLabel.AutoSize = true;
-            compraLabel.Location = new System.Drawing.Point(326, 66);
-            compraLabel.Name = "compraLabel";
-            compraLabel.Size = new System.Drawing.Size(46, 13);
-            compraLabel.TabIndex = 10;
-            compraLabel.Text = "Compra:";
-            // 
             // compraTextBox
             // 
             this.compraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturasBindingSource, "Compra", true));
@@ -354,11 +357,20 @@
             this.compraTextBox.Size = new System.Drawing.Size(200, 20);
             this.compraTextBox.TabIndex = 11;
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // AdministrarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 384);
+            this.ClientSize = new System.Drawing.Size(612, 385);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(id_usuarioLabel);
@@ -380,6 +392,7 @@
             this.facturasBindingNavigator.ResumeLayout(false);
             this.facturasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +428,7 @@
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
         private System.Windows.Forms.TextBox importeTextBox;
         private System.Windows.Forms.TextBox compraTextBox;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
     }
 }
