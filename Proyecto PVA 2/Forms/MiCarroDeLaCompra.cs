@@ -152,6 +152,9 @@ namespace Proyecto_PVA_2.Forms
 
         }
 
-
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

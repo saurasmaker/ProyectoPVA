@@ -49,12 +49,15 @@
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -77,7 +80,7 @@
             this.buttonMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonMostrar.FlatAppearance.BorderSize = 0;
             this.buttonMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMostrar.Location = new System.Drawing.Point(253, 262);
+            this.buttonMostrar.Location = new System.Drawing.Point(253, 272);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
             this.buttonMostrar.TabIndex = 30;
@@ -88,7 +91,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.panel1.Location = new System.Drawing.Point(23, 288);
+            this.panel1.Location = new System.Drawing.Point(23, 298);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 27;
@@ -97,7 +100,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(23, 213);
+            this.pictureBox3.Location = new System.Drawing.Point(23, 223);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 22);
             this.pictureBox3.TabIndex = 29;
@@ -106,7 +109,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.panel2.Location = new System.Drawing.Point(23, 241);
+            this.panel2.Location = new System.Drawing.Point(23, 251);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 25;
@@ -120,10 +123,10 @@
             this.textBoxCorreoElectronico.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(51, 216);
+            this.textBoxCorreoElectronico.Location = new System.Drawing.Point(51, 226);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(171, 19);
-            this.textBoxCorreoElectronico.TabIndex = 28;
+            this.textBoxCorreoElectronico.TabIndex = 1;
             this.textBoxCorreoElectronico.Text = "Correo Electrónico";
             this.textBoxCorreoElectronico.Click += new System.EventHandler(this.textBoxCorreoElectronico_Click);
             this.textBoxCorreoElectronico.TextChanged += new System.EventHandler(this.textBoxCorreoElectronico_TextChanged);
@@ -132,7 +135,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 260);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 270);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.TabIndex = 24;
@@ -143,9 +146,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(355, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(299, 184);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -172,7 +175,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(253, 310);
+            this.button1.Location = new System.Drawing.Point(253, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 35;
@@ -183,7 +186,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.panel3.Location = new System.Drawing.Point(23, 336);
+            this.panel3.Location = new System.Drawing.Point(23, 346);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 1);
             this.panel3.TabIndex = 34;
@@ -197,10 +200,10 @@
             this.textBoxRepetirContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxRepetirContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRepetirContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxRepetirContraseña.Location = new System.Drawing.Point(51, 311);
+            this.textBoxRepetirContraseña.Location = new System.Drawing.Point(51, 321);
             this.textBoxRepetirContraseña.Name = "textBoxRepetirContraseña";
             this.textBoxRepetirContraseña.Size = new System.Drawing.Size(171, 19);
-            this.textBoxRepetirContraseña.TabIndex = 33;
+            this.textBoxRepetirContraseña.TabIndex = 3;
             this.textBoxRepetirContraseña.Text = "Repetir Contraseña";
             this.textBoxRepetirContraseña.Click += new System.EventHandler(this.textBoxRepetirContraseña_Click);
             // 
@@ -208,7 +211,7 @@
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(23, 308);
+            this.pictureBox4.Location = new System.Drawing.Point(23, 318);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 22);
             this.pictureBox4.TabIndex = 32;
@@ -223,10 +226,10 @@
             this.textBoxContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxContraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxContraseña.Location = new System.Drawing.Point(51, 263);
+            this.textBoxContraseña.Location = new System.Drawing.Point(51, 273);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
-            this.textBoxContraseña.TabIndex = 26;
+            this.textBoxContraseña.TabIndex = 2;
             this.textBoxContraseña.Text = "Contraseña";
             this.textBoxContraseña.Click += new System.EventHandler(this.textBoxContraseña_Click);
             // 
@@ -248,6 +251,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = null;
             this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -256,13 +260,25 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BarraTitulo.Controls.Add(this.pbcerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(299, 24);
+            this.BarraTitulo.Size = new System.Drawing.Size(299, 25);
             this.BarraTitulo.TabIndex = 36;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // pbcerrar
+            // 
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(284, 3);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 0;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
             // 
             // Registro
             // 
@@ -296,6 +312,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +340,6 @@
         private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }

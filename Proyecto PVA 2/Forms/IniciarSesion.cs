@@ -312,5 +312,10 @@ namespace Proyecto_PVA_2.Forms
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
         }
+
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

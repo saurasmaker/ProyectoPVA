@@ -83,7 +83,10 @@
             // 
             this.facturasDataGridView.AllowUserToAddRows = false;
             this.facturasDataGridView.AllowUserToDeleteRows = false;
+            this.facturasDataGridView.AllowUserToResizeColumns = false;
+            this.facturasDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facturasDataGridView.AutoGenerateColumns = false;
+            this.facturasDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.facturasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.facturasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -92,8 +95,16 @@
             this.dataGridViewTextBoxColumn4});
             this.facturasDataGridView.DataSource = this.facturasBindingSource;
             this.facturasDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.facturasDataGridView.MultiSelect = false;
             this.facturasDataGridView.Name = "facturasDataGridView";
             this.facturasDataGridView.ReadOnly = true;
+            this.facturasDataGridView.RowHeadersVisible = false;
+            this.facturasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.facturasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.facturasDataGridView.ShowCellErrors = false;
+            this.facturasDataGridView.ShowCellToolTips = false;
+            this.facturasDataGridView.ShowEditingIcon = false;
+            this.facturasDataGridView.ShowRowErrors = false;
             this.facturasDataGridView.Size = new System.Drawing.Size(445, 220);
             this.facturasDataGridView.TabIndex = 1;
             this.facturasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturasDataGridView_CellContentClick);
