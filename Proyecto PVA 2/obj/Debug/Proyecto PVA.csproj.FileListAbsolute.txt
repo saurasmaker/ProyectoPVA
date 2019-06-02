@@ -167,3 +167,4 @@ D:\PVA\Proyecto2\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
 D:\PVA\Proyecto2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
 D:\PVA\Proyecto2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
 C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InfoPaquete.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Opciones.resources

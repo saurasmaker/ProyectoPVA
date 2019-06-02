@@ -9,6 +9,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace Proyecto_PVA_2.Forms
 {
@@ -66,19 +68,18 @@ namespace Proyecto_PVA_2.Forms
 
         private void buttonRealizarCompra_Click(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 InsertarFactura();
+                generarFactura();
                 MessageBox.Show("Factura Añadida con exito");
             }
-            catch (Exception)
+            /*catch (Exception)
             {
                 MessageBox.Show("Error al añadir la factura. ");
-            }
+            }*/
 
         }
-
-        
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//Eliminar del carro de la compra.
         {
@@ -129,6 +130,46 @@ namespace Proyecto_PVA_2.Forms
             }
 
             facturasTableAdapter.InsertQuery(masterDataSet.Facturas.Count + 10000000, Padre.User.Id, DateTime.Today.ToString(), CalcularPrecioFinal(), objetosComprados);
+        }
+
+        void generarFactura()
+        {
+            SaveFileDialog guardarFactura = new SaveFileDialog();
+            guardarFactura.Filter = "Excel (*.xlsx) | .*xlsx ";
+
+            Excel.Application objExcel = new Excel.Application();
+            Excel.Range objRango;
+            Excel.Workbook objLibro = objExcel.Workbooks.Add(Missing.Value);
+
+            string formula = "=SUMA(";
+            int ini, cont; 
+            ini = cont = 4;
+            
+            Excel.Worksheet objHoja = (Excel.Worksheet)objLibro.Worksheets.get_Item(1);
+
+            objHoja.Cells[1,1] = "Factura VideoClub";
+            objHoja.Cells[1, cont - 1] = "Titulo"; objHoja.Cells[2, cont - 1] = "Estreno"; objHoja.Cells[3, cont - 1] = "Puntuacion"; objHoja.Cells[4, cont - 1] = "Precio";
+
+            foreach (TituloCinematografico tc in Padre.CarroCompra)
+            {
+                objHoja.Cells[1, cont] = tc.Titulo; objHoja.Cells[2, cont] = tc.Estreno.ToString(); objHoja.Cells[3, cont] = tc.Puntuacion; objHoja.Cells[4, cont] = tc.Precio;
+                formula += "D" + cont + ":";
+                cont++;
+            }
+            formula.TrimEnd(','); formula += ")";
+
+            cont++;
+            objRango = objHoja.get_Range(objHoja.Cells[2, cont], Missing.Value);
+            objHoja.Cells[1, cont] = "Precio total: ";  objRango.FormulaLocal = formula; objHoja.Cells[4, cont] = "Fecha: "; objHoja.Cells[5, cont] = DateTime.Today.ToString(); cont++;
+            objHoja.Cells[4, cont] = "Para: "; objHoja.Cells[5, cont] = Padre.User.CorreoElectronico;
+            if (guardarFactura.ShowDialog() == DialogResult.OK)
+            {
+                objLibro.SaveAs(guardarFactura.FileName);
+                objLibro.Close();
+            }
+
+
+            return;
         }
 
         //Eventos Inútiles
