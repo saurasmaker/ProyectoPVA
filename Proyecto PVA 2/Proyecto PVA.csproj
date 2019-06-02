@@ -200,6 +200,9 @@
     <EmbeddedResource Include="Forms\HistorialFacturas.resx">
       <DependentUpon>HistorialFacturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoPaquete.resx">
+      <DependentUpon>InfoPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>

@@ -125,6 +125,12 @@ namespace Proyecto_PVA_2
             ReajustarPanelCentral();
         }
 
+        private void toolStripButtonRecomendaciones_Click(object sender, EventArgs e)
+        {
+            Mode = modoRecomendaciones;
+            ReajustarPanelCentral();
+        }
+
         //--Panel Izquierdo
         private void ButtonDesplegar_Click(object sender, EventArgs e)
         {
@@ -800,11 +806,7 @@ namespace Proyecto_PVA_2
 
         }
 
-        private void toolStripButtonRecomendaciones_Click(object sender, EventArgs e)
-        {
-            Mode = modoRecomendaciones;
-            ReajustarPanelCentral();
-        }
+        
     }
 
 }
