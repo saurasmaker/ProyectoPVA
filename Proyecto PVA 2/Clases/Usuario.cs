@@ -14,6 +14,7 @@ namespace Proyecto_PVA_2.Clases
         MemoryStream fotoPerfil;
         DateTime fecAlta;
         int id;
+        int admin;
 
         //Constructores
         public Usuario()
@@ -35,6 +36,7 @@ namespace Proyecto_PVA_2.Clases
         public string Alias { get => alias; set => alias = value; }
         public MemoryStream FotoPerfil { get => fotoPerfil; set => fotoPerfil = value; }
         public string Biografia { get => biografia; set => biografia = value; }
+        public int Admin { get => admin; set => admin = value; }
 
         //Métodos
     }

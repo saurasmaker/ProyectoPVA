@@ -82,7 +82,7 @@ namespace Proyecto_PVA_2.Forms
                 MessageBox.Show("Las contraseñas no coinciden", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                usuariosTableAdapter.InsertQuery(masterDataSet.Usuarios.Count + 10000001, textBoxCorreoElectronico.Text, null, textBoxContraseña.Text, null, null, null, null, null, null, DateTime.Now.ToString());
+                usuariosTableAdapter.InsertQuery(masterDataSet.Usuarios.Count + 10000001, textBoxCorreoElectronico.Text, null, textBoxContraseña.Text, null, null, null, null, null, null, DateTime.Now.ToString(), null, 0);
                 MessageBox.Show("Usuario Registrado con Exito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }

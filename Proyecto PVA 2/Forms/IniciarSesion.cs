@@ -44,15 +44,9 @@ namespace Proyecto_PVA_2.Forms
             else if (textBoxContraseña.Text == "")
                 MessageBox.Show("Rellene el campo de contraseña para continuar.", "Error de campo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-            if (EsAdmin())
+            if (ValidarEmail())
             {
-                MessageBox.Show("Inicio de sesión como administrador.", "Inicio Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Login(1);
-                Close();
-            }
-            else if (ValidarEmail())
-            {
-                Login(0);
+                Login();
                 Close();
             }
             else
@@ -148,126 +142,121 @@ namespace Proyecto_PVA_2.Forms
                 return false;
         }
 
-        public void Login(int caso)
+        public void Login()
         {
+
             Inicio papa = Owner as Inicio;
 
-            switch (caso)
+            for (int i = 0; i < masterDataSet.Usuarios.Count; i++)
             {
-                case 0:
-                    
-                    for (int i = 0; i < masterDataSet.Usuarios.Count; i++)
+                if (masterDataSet.Usuarios[i].CorreoElectronico == textBoxCorreoElectronico.Text)
+                {
+                    if (masterDataSet.Usuarios[i].Contrasenya == textBoxContraseña.Text)
                     {
-                        if (masterDataSet.Usuarios[i].CorreoElectronico == textBoxCorreoElectronico.Text)
+                        papa.User = new Usuario();
+
+                        papa.User.Id = masterDataSet.Usuarios[i].Id;
+
+                        papa.User.CorreoElectronico = masterDataSet.Usuarios[i].CorreoElectronico;
+
+                        try
                         {
-                            if (masterDataSet.Usuarios[i].Contrasenya == textBoxContraseña.Text)
-                            {
-                                papa.User = new Usuario();
+                            papa.User.Alias = masterDataSet.Usuarios[i].Alias;
+                        }
+                        catch (Exception)
+                        {
 
-                                papa.User.Id = masterDataSet.Usuarios[i].Id;
+                        }
 
-                                papa.User.CorreoElectronico = masterDataSet.Usuarios[i].CorreoElectronico;
+                        papa.User.Contraseña = masterDataSet.Usuarios[i].Contrasenya;
 
-                                try
-                                {
-                                    papa.User.Alias = masterDataSet.Usuarios[i].Alias;
-                                }
-                                catch (Exception)
-                                {
+                        try
+                        {
+                            papa.User.Nombre = masterDataSet.Usuarios[i].Nombre;
+                        }
+                        catch (Exception)
+                        {
 
-                                }
+                        }
 
-                                papa.User.Contraseña = masterDataSet.Usuarios[i].Contrasenya;
+                        try
+                        {
+                            papa.User.Apellido1 = masterDataSet.Usuarios[i].Apellido1;
+                        }
+                        catch (Exception)
+                        {
 
-                                try
-                                {
-                                    papa.User.Nombre = masterDataSet.Usuarios[i].Nombre;
-                                }
-                                catch (Exception)
-                                {
+                        }
 
-                                }
+                        try
+                        {
+                            papa.User.Apellido2 = masterDataSet.Usuarios[i].Apellido2;
+                        }
+                        catch (Exception)
+                        {
 
-                                try
-                                { 
-                                    papa.User.Apellido1 = masterDataSet.Usuarios[i].Apellido1;
-                                }
-                                catch (Exception)
-                                {
+                        }
 
-                                }
+                        try
+                        {
+                            papa.User.Direccion = masterDataSet.Usuarios[i].Direccion;
+                        }
+                        catch (Exception)
+                        {
 
-                                try { 
-                                    papa.User.Apellido2 = masterDataSet.Usuarios[i].Apellido2;
-                                }
-                                catch (Exception)
-                                {
+                        }
 
-                                }
+                        try
+                        {
+                            papa.User.FotoPerfil = new MemoryStream(masterDataSet.Usuarios[i].FotoPerfil.ToArray());
+                        }
+                        catch (Exception)
+                        {
 
-                                try { 
-                                    papa.User.Direccion = masterDataSet.Usuarios[i].Direccion;
-                                }
-                                catch (Exception)
-                                {
+                        }
 
-                                }
+                        try
+                        {
+                            papa.User.Nacimiento = masterDataSet.Usuarios[i].FechaNacimiento;
+                        }
+                        catch (Exception)
+                        {
 
-                                try
-                                {
-                                    papa.User.FotoPerfil = new MemoryStream(masterDataSet.Usuarios[i].FotoPerfil.ToArray());
-                                }
-                                catch (Exception)
-                                {
+                        }
 
-                                }
+                        try
+                        {
+                            papa.User.Biografia = masterDataSet.Usuarios[i].Biografia;
+                        }
+                        catch (Exception)
+                        {
 
-                                try { 
-                                    papa.User.Nacimiento = masterDataSet.Usuarios[i].FechaNacimiento;
-                                }
-                                catch (Exception)
-                                {
+                        }
+                        papa.User.FecAlta = masterDataSet.Usuarios[i].FechaAlta;
 
-                                }
+                        papa.User.Admin = masterDataSet.Usuarios[i].Admin;
 
-                                try {
-                                    papa.User.Biografia = masterDataSet.Usuarios[i].Biografia;
-                                }
-                                catch (Exception)
-                                {
-
-                                }
-                                papa.User.FecAlta = masterDataSet.Usuarios[i].FechaAlta;
-
-
-                                papa.OpcionesUsuario();
-                                if (papa.User.Alias != "") MessageBox.Show("Bienvenid@ " + papa.User.Alias);
-                                else MessageBox.Show("Bienvenid@ " + papa.User.CorreoElectronico);
-                                papa.InicioSesion = true;
-                                papa.InicioSesionAdmin = false;
-                            }
-                            else
-                                MessageBox.Show("La cuenta es existente. Sin embargo, la contraseña no coincide.", "Contraseña incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        papa.OpcionesUsuario();
+                        if (papa.User.Alias != null) MessageBox.Show("Bienvenid@ " + papa.User.Alias);
+                        else MessageBox.Show("Bienvenid@ " + papa.User.CorreoElectronico);
+                        papa.InicioSesion = true;
+                        if (papa.User.Admin == 1)
+                        {
+                            papa.InicioSesionAdmin = true;
+                            papa.MostrarOpcionesAdmin();
 
                         }
                         else
-                            MessageBox.Show("No existe un usuario con ese correo electrónico. Registrése para tener una cuenta y poder optar a todos los servicios.","Usuario no encontrado",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                            papa.InicioSesionAdmin = false;
                     }
-                    
+                    else
+                        MessageBox.Show("La cuenta es existente. Sin embargo, la contraseña no coincide.", "Contraseña incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    break;
-                case 1:
-                    papa.InicioSesion = true;
-                    papa.InicioSesionAdmin = true;
-                    papa.Admin = new Administrador(textBoxCorreoElectronico.Text, textBoxContraseña.Text);
-                    papa.MostrarOpcionesAdmin();
-
-                    break;
-                default:
-                    MessageBox.Show("Opción no válida. Error en el código. Si le aparece este error como usuario contecte con el servicio técnico de la web.", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-
+                }
+                else
+                    MessageBox.Show("No existe un usuario con ese correo electrónico. Registrése para tener una cuenta y poder optar a todos los servicios.", "Usuario no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
             return;
         }
 

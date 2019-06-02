@@ -219,7 +219,7 @@
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(300, 42);
+            this.BarraTitulo.Size = new System.Drawing.Size(319, 42);
             this.BarraTitulo.TabIndex = 37;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
@@ -227,10 +227,11 @@
             // pbcerrar
             // 
             this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
-            this.pbcerrar.Location = new System.Drawing.Point(283, 5);
+            this.pbcerrar.Location = new System.Drawing.Point(298, 5);
             this.pbcerrar.Name = "pbcerrar";
-            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.Size = new System.Drawing.Size(16, 17);
             this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbcerrar.TabIndex = 0;
             this.pbcerrar.TabStop = false;
@@ -266,7 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(300, 600);
+            this.ClientSize = new System.Drawing.Size(319, 515);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonMostrar);
