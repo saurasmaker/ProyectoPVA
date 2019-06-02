@@ -47,7 +47,7 @@ namespace Prueba
 
         private void PictureBox1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
