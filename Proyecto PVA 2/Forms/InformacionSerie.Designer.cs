@@ -510,6 +510,7 @@
             this.Controls.Add(this.buttonAñadirAlCarro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformacionSerie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformacionSerie";
             this.Load += new System.EventHandler(this.InformacionSerie_Load);
             this.groupBox1.ResumeLayout(false);

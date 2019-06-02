@@ -228,6 +228,7 @@
             this.Controls.Add(this.facturasDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistorialFacturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistorialFacturas";
             this.Load += new System.EventHandler(this.HistorialFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();

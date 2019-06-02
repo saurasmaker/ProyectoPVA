@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_PVA_2.Forms.Admin
 {
     public partial class AdministrarFacturas : Form
@@ -16,6 +17,7 @@ namespace Proyecto_PVA_2.Forms.Admin
         {
             InitializeComponent();
         }
+
 
         private void facturasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -31,6 +33,15 @@ namespace Proyecto_PVA_2.Forms.Admin
             this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Facturas' Puede moverla o quitarla según sea necesario.
             this.facturasTableAdapter.Fill(this.masterDataSet.Facturas);
+        }
+
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FacturasBindingNavigator_MouseDown(object sender, MouseEventArgs e)
+        {
         }
     }
 }

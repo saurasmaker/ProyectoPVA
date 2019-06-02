@@ -81,6 +81,7 @@
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             idLabel = new System.Windows.Forms.Label();
             id_usuarioLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -94,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -194,6 +196,7 @@
             this.facturasBindingNavigator.Size = new System.Drawing.Size(880, 25);
             this.facturasBindingNavigator.TabIndex = 0;
             this.facturasBindingNavigator.Text = "bindingNavigator1";
+            this.facturasBindingNavigator.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FacturasBindingNavigator_MouseDown);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -495,11 +498,24 @@
             this.dataGridViewTextBoxColumn17.HeaderText = "Admin";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
+            // pbcerrar
+            // 
+            this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(856, 12);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 50;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
+            // 
             // AdministrarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 425);
+            this.Controls.Add(this.pbcerrar);
             this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -513,7 +529,9 @@
             this.Controls.Add(this.compraTextBox);
             this.Controls.Add(this.facturasDataGridView);
             this.Controls.Add(this.facturasBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministrarFacturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministrarFacturas";
             this.Load += new System.EventHandler(this.AdministrarFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
@@ -525,6 +543,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,5 +597,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }
