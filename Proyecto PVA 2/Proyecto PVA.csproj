@@ -114,6 +114,12 @@
     <Compile Include="Forms\HistorialFacturas.Designer.cs">
       <DependentUpon>HistorialFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InfoPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoPaquete.Designer.cs">
+      <DependentUpon>InfoPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

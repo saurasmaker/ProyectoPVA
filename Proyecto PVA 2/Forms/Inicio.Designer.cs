@@ -54,9 +54,11 @@
             this.buttonDesplegar = new System.Windows.Forms.Button();
             this.tableLayoutPanelCentro = new System.Windows.Forms.TableLayoutPanel();
             this.panelDerecha = new System.Windows.Forms.Panel();
-            this.buttonAdminUsuarios = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelAdmin = new System.Windows.Forms.Panel();
             this.buttonAdministrarPeliculas = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAdminUsuarios = new System.Windows.Forms.Button();
+            this.buttonAbrirPanelAdmin = new System.Windows.Forms.Button();
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
@@ -65,16 +67,14 @@
             this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
-            this.buttonAbrirPanelAdmin = new System.Windows.Forms.Button();
-            this.panelAdmin = new System.Windows.Forms.Panel();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
+            this.panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripInicio
@@ -154,6 +154,7 @@
             resources.ApplyResources(this.toolStripButtonRecomendaciones, "toolStripButtonRecomendaciones");
             this.toolStripButtonRecomendaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.toolStripButtonRecomendaciones.Name = "toolStripButtonRecomendaciones";
+            this.toolStripButtonRecomendaciones.Click += new System.EventHandler(this.toolStripButtonRecomendaciones_Click);
             // 
             // panelIzquierda
             // 
@@ -275,14 +276,23 @@
             this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             this.panelDerecha.Name = "panelDerecha";
             // 
-            // buttonAdminUsuarios
+            // panelAdmin
             // 
-            resources.ApplyResources(this.buttonAdminUsuarios, "buttonAdminUsuarios");
-            this.buttonAdminUsuarios.FlatAppearance.BorderSize = 0;
-            this.buttonAdminUsuarios.ForeColor = System.Drawing.Color.White;
-            this.buttonAdminUsuarios.Name = "buttonAdminUsuarios";
-            this.buttonAdminUsuarios.UseVisualStyleBackColor = true;
-            this.buttonAdminUsuarios.Click += new System.EventHandler(this.buttonAdminUsuarios_Click);
+            this.panelAdmin.Controls.Add(this.buttonAdministrarPeliculas);
+            this.panelAdmin.Controls.Add(this.button1);
+            this.panelAdmin.Controls.Add(this.buttonAdminUsuarios);
+            this.panelAdmin.Controls.Add(this.buttonAbrirPanelAdmin);
+            resources.ApplyResources(this.panelAdmin, "panelAdmin");
+            this.panelAdmin.Name = "panelAdmin";
+            // 
+            // buttonAdministrarPeliculas
+            // 
+            resources.ApplyResources(this.buttonAdministrarPeliculas, "buttonAdministrarPeliculas");
+            this.buttonAdministrarPeliculas.FlatAppearance.BorderSize = 0;
+            this.buttonAdministrarPeliculas.ForeColor = System.Drawing.Color.White;
+            this.buttonAdministrarPeliculas.Name = "buttonAdministrarPeliculas";
+            this.buttonAdministrarPeliculas.UseVisualStyleBackColor = true;
+            this.buttonAdministrarPeliculas.Click += new System.EventHandler(this.buttonAdministrarPeliculas_Click_1);
             // 
             // button1
             // 
@@ -293,14 +303,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonAdministrarPeliculas
+            // buttonAdminUsuarios
             // 
-            resources.ApplyResources(this.buttonAdministrarPeliculas, "buttonAdministrarPeliculas");
-            this.buttonAdministrarPeliculas.FlatAppearance.BorderSize = 0;
-            this.buttonAdministrarPeliculas.ForeColor = System.Drawing.Color.White;
-            this.buttonAdministrarPeliculas.Name = "buttonAdministrarPeliculas";
-            this.buttonAdministrarPeliculas.UseVisualStyleBackColor = true;
-            this.buttonAdministrarPeliculas.Click += new System.EventHandler(this.buttonAdministrarPeliculas_Click_1);
+            resources.ApplyResources(this.buttonAdminUsuarios, "buttonAdminUsuarios");
+            this.buttonAdminUsuarios.FlatAppearance.BorderSize = 0;
+            this.buttonAdminUsuarios.ForeColor = System.Drawing.Color.White;
+            this.buttonAdminUsuarios.Name = "buttonAdminUsuarios";
+            this.buttonAdminUsuarios.UseVisualStyleBackColor = true;
+            this.buttonAdminUsuarios.Click += new System.EventHandler(this.buttonAdminUsuarios_Click);
+            // 
+            // buttonAbrirPanelAdmin
+            // 
+            this.buttonAbrirPanelAdmin.BackColor = System.Drawing.Color.Brown;
+            resources.ApplyResources(this.buttonAbrirPanelAdmin, "buttonAbrirPanelAdmin");
+            this.buttonAbrirPanelAdmin.FlatAppearance.BorderSize = 0;
+            this.buttonAbrirPanelAdmin.ForeColor = System.Drawing.Color.White;
+            this.buttonAbrirPanelAdmin.Name = "buttonAbrirPanelAdmin";
+            this.buttonAbrirPanelAdmin.UseVisualStyleBackColor = false;
+            this.buttonAbrirPanelAdmin.Click += new System.EventHandler(this.buttonAbrirPanelAdmin_Click);
             // 
             // masterDataSet
             // 
@@ -344,25 +364,6 @@
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonAbrirPanelAdmin
-            // 
-            this.buttonAbrirPanelAdmin.BackColor = System.Drawing.Color.Brown;
-            resources.ApplyResources(this.buttonAbrirPanelAdmin, "buttonAbrirPanelAdmin");
-            this.buttonAbrirPanelAdmin.FlatAppearance.BorderSize = 0;
-            this.buttonAbrirPanelAdmin.ForeColor = System.Drawing.Color.White;
-            this.buttonAbrirPanelAdmin.Name = "buttonAbrirPanelAdmin";
-            this.buttonAbrirPanelAdmin.UseVisualStyleBackColor = false;
-            this.buttonAbrirPanelAdmin.Click += new System.EventHandler(this.buttonAbrirPanelAdmin_Click);
-            // 
-            // panelAdmin
-            // 
-            this.panelAdmin.Controls.Add(this.buttonAdministrarPeliculas);
-            this.panelAdmin.Controls.Add(this.button1);
-            this.panelAdmin.Controls.Add(this.buttonAdminUsuarios);
-            this.panelAdmin.Controls.Add(this.buttonAbrirPanelAdmin);
-            resources.ApplyResources(this.panelAdmin, "panelAdmin");
-            this.panelAdmin.Name = "panelAdmin";
-            // 
             // Inicio
             // 
             resources.ApplyResources(this, "$this");
@@ -381,11 +382,11 @@
             this.panelIzquierda.ResumeLayout(false);
             this.panelIzquierda.PerformLayout();
             this.panelDerecha.ResumeLayout(false);
+            this.panelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
