@@ -94,7 +94,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.facturasDataGridView.DataSource = this.facturasBindingSource;
-            this.facturasDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.facturasDataGridView.Location = new System.Drawing.Point(7, 12);
             this.facturasDataGridView.MultiSelect = false;
             this.facturasDataGridView.Name = "facturasDataGridView";
             this.facturasDataGridView.ReadOnly = true;
@@ -148,6 +148,7 @@
             this.columnHeaderTitulo,
             this.columnHeaderTipo,
             this.columnHeaderPrecio});
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(494, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(285, 220);
@@ -185,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 312);
+            this.ClientSize = new System.Drawing.Size(799, 312);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.facturasDataGridView);
