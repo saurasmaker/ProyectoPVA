@@ -32,7 +32,11 @@ namespace Proyecto_PVA_2.Forms.Admin
 
         private void AdministrarSeries_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Capitulos' Puede moverla o quitarla según sea necesario.
+            this.capitulosTableAdapter.Fill(this.masterDataSet.Capitulos);
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
+            this.seriesTableAdapter.Fill(this.masterDataSet.Series);
+
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
             this.seriesTableAdapter.Fill(this.masterDataSet.Series);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Capitulos' Puede moverla o quitarla según sea necesario.
@@ -98,6 +102,59 @@ namespace Proyecto_PVA_2.Forms.Admin
 
             if (ofd.ShowDialog() == DialogResult.OK)
                 fondoPictureBox.Image = Image.FromFile(ofd.FileName);
+        }
+
+        private void seriesBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.seriesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            idTextBox.Text = (masterDataSet.Series.Count + 10000000).ToString();
+        }
+
+        private void buttonEditarId_Click(object sender, EventArgs e)
+        {
+            idTextBox.Enabled = true;
+        }
+
+        private void buttonEditarIdSerie_Click(object sender, EventArgs e)
+        {
+            id_SerieTextBox.Enabled = true;
+        }
+
+        private void buttonEditarIdCap_Click(object sender, EventArgs e)
+        {
+            idTextBox1.Enabled = true;
+        }
+
+        private void seriesDataGridView_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                capitulosTableAdapter.FillByIdSerie(masterDataSet.Capitulos, Convert.ToInt32(seriesDataGridView.SelectedRows[0].Cells[0].Value));
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            idTextBox1.Text = (masterDataSet.Capitulos.Count + 10000000).ToString();
+            try
+            {
+                id_SerieTextBox.Text = seriesDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione una serie a la que añadirle un capitulo. Si no lo hace, puede que el capitlo a añadir se pierda en la base de datos.", "Posible error",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
 

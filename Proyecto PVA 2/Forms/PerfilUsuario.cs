@@ -170,6 +170,94 @@ namespace Proyecto_PVA_2.Forms
             }
         }
 
+        private void buttonModificarDatosPersonales_Click(object sender, EventArgs e)
+        {
+            textBoxAlias.Enabled = true;
+            textBoxApellido1.Enabled = true;
+            textBoxApellido2.Enabled = true;
+            textBoxBiografia.Enabled = true;
+            textBoxDireccion.Enabled = true;
+            textBoxNombre.Enabled = true;
+            textBoxCorreoElectronico.Enabled = true;
+            dateTimePickerFechaNacimiento.Enabled = true;
+        }
+
+        private void buttonRestablecerDatos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                round1.Image = Image.FromStream(User.FotoPerfil);
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxAlias.Text = User.Alias;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxCorreoElectronico.Text = User.CorreoElectronico;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxNombre.Text = User.Nombre;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido1.Text = User.Apellido1;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido2.Text = User.Apellido2;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxDireccion.Text = User.Direccion;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                dateTimePickerFechaNacimiento.Text = User.Nacimiento.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxBiografia.Text = User.Biografia;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         //Métodos
 
 
@@ -199,5 +287,6 @@ namespace Proyecto_PVA_2.Forms
 
         }
 
+        
     }
 }

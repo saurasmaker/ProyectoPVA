@@ -31,7 +31,6 @@ namespace Proyecto_PVA_2.Forms.Admin
             this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Facturas' Puede moverla o quitarla según sea necesario.
             this.facturasTableAdapter.Fill(this.masterDataSet.Facturas);
-
         }
     }
 }

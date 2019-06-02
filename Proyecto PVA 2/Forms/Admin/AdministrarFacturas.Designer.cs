@@ -65,6 +65,22 @@
             this.compraTextBox = new System.Windows.Forms.TextBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.capitulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.capitulosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.CapitulosTableAdapter();
+            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             id_usuarioLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
@@ -76,6 +92,8 @@
             this.facturasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -108,7 +126,7 @@
             // importeLabel
             // 
             importeLabel.AutoSize = true;
-            importeLabel.Location = new System.Drawing.Point(326, 40);
+            importeLabel.Location = new System.Drawing.Point(19, 122);
             importeLabel.Name = "importeLabel";
             importeLabel.Size = new System.Drawing.Size(45, 13);
             importeLabel.TabIndex = 8;
@@ -117,7 +135,7 @@
             // compraLabel
             // 
             compraLabel.AutoSize = true;
-            compraLabel.Location = new System.Drawing.Point(326, 66);
+            compraLabel.Location = new System.Drawing.Point(19, 148);
             compraLabel.Name = "compraLabel";
             compraLabel.Size = new System.Drawing.Size(46, 13);
             compraLabel.TabIndex = 10;
@@ -173,7 +191,7 @@
             this.facturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.facturasBindingNavigator.Name = "facturasBindingNavigator";
             this.facturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.facturasBindingNavigator.Size = new System.Drawing.Size(612, 25);
+            this.facturasBindingNavigator.Size = new System.Drawing.Size(880, 25);
             this.facturasBindingNavigator.TabIndex = 0;
             this.facturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -282,9 +300,9 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.facturasDataGridView.DataSource = this.facturasBindingSource;
-            this.facturasDataGridView.Location = new System.Drawing.Point(22, 145);
+            this.facturasDataGridView.Location = new System.Drawing.Point(309, 41);
             this.facturasDataGridView.Name = "facturasDataGridView";
-            this.facturasDataGridView.Size = new System.Drawing.Size(566, 220);
+            this.facturasDataGridView.Size = new System.Drawing.Size(547, 124);
             this.facturasDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -344,7 +362,7 @@
             // importeTextBox
             // 
             this.importeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturasBindingSource, "Importe", true));
-            this.importeTextBox.Location = new System.Drawing.Point(388, 37);
+            this.importeTextBox.Location = new System.Drawing.Point(81, 119);
             this.importeTextBox.Name = "importeTextBox";
             this.importeTextBox.Size = new System.Drawing.Size(200, 20);
             this.importeTextBox.TabIndex = 9;
@@ -352,7 +370,7 @@
             // compraTextBox
             // 
             this.compraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.facturasBindingSource, "Compra", true));
-            this.compraTextBox.Location = new System.Drawing.Point(388, 63);
+            this.compraTextBox.Location = new System.Drawing.Point(81, 145);
             this.compraTextBox.Name = "compraTextBox";
             this.compraTextBox.Size = new System.Drawing.Size(200, 20);
             this.compraTextBox.TabIndex = 11;
@@ -366,11 +384,123 @@
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
+            // capitulosBindingSource
+            // 
+            this.capitulosBindingSource.DataMember = "Capitulos";
+            this.capitulosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // capitulosTableAdapter
+            // 
+            this.capitulosTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuariosDataGridView
+            // 
+            this.usuariosDataGridView.AutoGenerateColumns = false;
+            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
+            this.usuariosDataGridView.Location = new System.Drawing.Point(22, 185);
+            this.usuariosDataGridView.Name = "usuariosDataGridView";
+            this.usuariosDataGridView.Size = new System.Drawing.Size(834, 220);
+            this.usuariosDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "CorreoElectronico";
+            this.dataGridViewTextBoxColumn7.HeaderText = "CorreoElectronico";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Alias";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Alias";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Contrasenya";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Contrasenya";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Apellido1";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Apellido1";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Apellido2";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Apellido2";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "FotoPerfil";
+            this.dataGridViewImageColumn1.HeaderText = "FotoPerfil";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "FechaAlta";
+            this.dataGridViewTextBoxColumn15.HeaderText = "FechaAlta";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Biografia";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Biografia";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Admin";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Admin";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
             // AdministrarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 385);
+            this.ClientSize = new System.Drawing.Size(880, 425);
+            this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(id_usuarioLabel);
@@ -393,6 +523,8 @@
             this.facturasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,5 +562,21 @@
         private System.Windows.Forms.TextBox compraTextBox;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource capitulosBindingSource;
+        private masterDataSetTableAdapters.CapitulosTableAdapter capitulosTableAdapter;
+        private System.Windows.Forms.DataGridView usuariosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
     }
 }
