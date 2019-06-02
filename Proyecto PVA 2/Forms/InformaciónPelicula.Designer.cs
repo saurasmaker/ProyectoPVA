@@ -205,10 +205,10 @@
             // 
             // portadaPictureBox
             // 
-            this.portadaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.portadaPictureBox.Location = new System.Drawing.Point(165, 29);
+            this.portadaPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.portadaPictureBox.Location = new System.Drawing.Point(196, 58);
             this.portadaPictureBox.Name = "portadaPictureBox";
-            this.portadaPictureBox.Size = new System.Drawing.Size(509, 311);
+            this.portadaPictureBox.Size = new System.Drawing.Size(478, 282);
             this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.portadaPictureBox.TabIndex = 45;
             this.portadaPictureBox.TabStop = false;
