@@ -667,7 +667,7 @@ namespace Proyecto_PVA_2
             {
                 InfoPaquete infoPack = new InfoPaquete();
                 AddOwnedForm(infoPack);
-
+                infoPack.Tc = saga;
                 infoPack.Show();
 
                 return;

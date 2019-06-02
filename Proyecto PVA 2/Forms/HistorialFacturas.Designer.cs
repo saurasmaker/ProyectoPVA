@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialFacturas));
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -93,9 +94,17 @@
             this.facturasDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facturasDataGridView.AutoGenerateColumns = false;
             this.facturasDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.facturasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.facturasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.facturasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.facturasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.facturasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.facturasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.facturasDataGridView.ColumnHeadersHeight = 31;
             this.facturasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -104,7 +113,7 @@
             this.dataGridViewTextBoxColumn4});
             this.facturasDataGridView.DataSource = this.facturasBindingSource;
             this.facturasDataGridView.GridColor = System.Drawing.SystemColors.WindowText;
-            this.facturasDataGridView.Location = new System.Drawing.Point(8, 40);
+            this.facturasDataGridView.Location = new System.Drawing.Point(21, 40);
             this.facturasDataGridView.MultiSelect = false;
             this.facturasDataGridView.Name = "facturasDataGridView";
             this.facturasDataGridView.ReadOnly = true;
@@ -114,7 +123,7 @@
             this.facturasDataGridView.ShowCellToolTips = false;
             this.facturasDataGridView.ShowEditingIcon = false;
             this.facturasDataGridView.ShowRowErrors = false;
-            this.facturasDataGridView.Size = new System.Drawing.Size(445, 220);
+            this.facturasDataGridView.Size = new System.Drawing.Size(387, 220);
             this.facturasDataGridView.TabIndex = 1;
             this.facturasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturasDataGridView_CellContentClick);
             // 
@@ -153,12 +162,15 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderTitulo,
             this.columnHeaderTipo,
             this.columnHeaderPrecio});
-            this.listView1.Location = new System.Drawing.Point(494, 40);
+            this.listView1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(425, 40);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(285, 220);
             this.listView1.TabIndex = 2;
@@ -183,34 +195,38 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.button1.Location = new System.Drawing.Point(12, 266);
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(21, 280);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(138, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
             this.panel1.Controls.Add(this.pbcerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 20);
+            this.panel1.Size = new System.Drawing.Size(731, 20);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // pbcerrar
             // 
             this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
-            this.pbcerrar.Location = new System.Drawing.Point(785, 3);
+            this.pbcerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbcerrar.BackgroundImage")));
+            this.pbcerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbcerrar.Location = new System.Drawing.Point(708, 0);
             this.pbcerrar.Name = "pbcerrar";
-            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.Size = new System.Drawing.Size(20, 20);
             this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbcerrar.TabIndex = 49;
             this.pbcerrar.TabStop = false;
@@ -220,8 +236,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
-            this.ClientSize = new System.Drawing.Size(800, 300);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
+            this.ClientSize = new System.Drawing.Size(731, 326);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);

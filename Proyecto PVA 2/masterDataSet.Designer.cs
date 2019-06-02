@@ -4155,14 +4155,14 @@ SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_" +
-                "Serie, Temporada FROM dbo.Capitulos WHERE Id_Serie = @Id_Serie";
+            this._commandCollection[1].CommandText = "SELECT Director, Duracion, Estreno, Id, Id_Serie, Precio, Puntuacion, Sinopsis, T" +
+                "emporada, Titulo FROM Capitulos WHERE (Id_Serie = @Id_Serie)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Serie", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Serie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT Id, Titulo, Sinopsis, Duracion, Estreno, Director, Puntuacion, Precio, Id_" +
-                "Serie, Temporada FROM dbo.Capitulos WHERE Id = @Id AND Temporada = @Temporada";
+            this._commandCollection[2].CommandText = "SELECT Director, Duracion, Estreno, Id, Id_Serie, Precio, Puntuacion, Sinopsis, T" +
+                "emporada, Titulo FROM Capitulos WHERE (Id = @Id) AND (Temporada = @Temporada)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temporada", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Temporada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4924,8 +4924,8 @@ SELECT Id, Id_usuario, Fecha, Importe, Compra FROM Facturas WHERE (Id = @Id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Id, Id_usuario, Fecha, Importe, Compra FROM dbo.Facturas WHERE Id_Usuario " +
-                "= @Id_Usuario";
+            this._commandCollection[1].CommandText = "SELECT Compra, Fecha, Id, Id_usuario, Importe FROM Facturas WHERE (Id_usuario = @" +
+                "Id_Usuario)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();

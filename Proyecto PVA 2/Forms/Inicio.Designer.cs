@@ -178,22 +178,22 @@
             // 
             // buttonGeneroFamiliar
             // 
-            this.buttonGeneroFamiliar.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonGeneroFamiliar, "buttonGeneroFamiliar");
+            this.buttonGeneroFamiliar.FlatAppearance.BorderSize = 0;
             this.buttonGeneroFamiliar.Name = "buttonGeneroFamiliar";
             this.buttonGeneroFamiliar.UseVisualStyleBackColor = true;
             // 
             // buttonGeneroDrama
             // 
-            this.buttonGeneroDrama.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonGeneroDrama, "buttonGeneroDrama");
+            this.buttonGeneroDrama.FlatAppearance.BorderSize = 0;
             this.buttonGeneroDrama.Name = "buttonGeneroDrama";
             this.buttonGeneroDrama.UseVisualStyleBackColor = true;
             // 
             // buttonGeneroDocumentales
             // 
-            this.buttonGeneroDocumentales.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonGeneroDocumentales, "buttonGeneroDocumentales");
+            this.buttonGeneroDocumentales.FlatAppearance.BorderSize = 0;
             this.buttonGeneroDocumentales.Name = "buttonGeneroDocumentales";
             this.buttonGeneroDocumentales.UseVisualStyleBackColor = true;
             // 
@@ -213,15 +213,15 @@
             // 
             // buttonGeneroCrimen
             // 
-            this.buttonGeneroCrimen.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonGeneroCrimen, "buttonGeneroCrimen");
+            this.buttonGeneroCrimen.FlatAppearance.BorderSize = 0;
             this.buttonGeneroCrimen.Name = "buttonGeneroCrimen";
             this.buttonGeneroCrimen.UseVisualStyleBackColor = true;
             // 
             // buttonGeneroComedia
             // 
-            this.buttonGeneroComedia.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonGeneroComedia, "buttonGeneroComedia");
+            this.buttonGeneroComedia.FlatAppearance.BorderSize = 0;
             this.buttonGeneroComedia.Name = "buttonGeneroComedia";
             this.buttonGeneroComedia.UseVisualStyleBackColor = true;
             // 
@@ -314,7 +314,7 @@
             // 
             // buttonAbrirPanelAdmin
             // 
-            this.buttonAbrirPanelAdmin.BackColor = System.Drawing.Color.Brown;
+            this.buttonAbrirPanelAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             resources.ApplyResources(this.buttonAbrirPanelAdmin, "buttonAbrirPanelAdmin");
             this.buttonAbrirPanelAdmin.FlatAppearance.BorderSize = 0;
             this.buttonAbrirPanelAdmin.ForeColor = System.Drawing.Color.White;
