@@ -169,7 +169,7 @@
             // 
             // buttonModificarDatosPersonales
             // 
-            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(324, 359);
+            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(347, 359);
             this.buttonModificarDatosPersonales.Name = "buttonModificarDatosPersonales";
             this.buttonModificarDatosPersonales.Size = new System.Drawing.Size(147, 23);
             this.buttonModificarDatosPersonales.TabIndex = 9;
@@ -178,7 +178,7 @@
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(15, 402);
+            this.buttonActualizar.Location = new System.Drawing.Point(214, 359);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
             this.buttonActualizar.TabIndex = 10;
@@ -188,7 +188,7 @@
             // 
             // buttonRestablecerDatos
             // 
-            this.buttonRestablecerDatos.Location = new System.Drawing.Point(207, 359);
+            this.buttonRestablecerDatos.Location = new System.Drawing.Point(214, 388);
             this.buttonRestablecerDatos.Name = "buttonRestablecerDatos";
             this.buttonRestablecerDatos.Size = new System.Drawing.Size(111, 23);
             this.buttonRestablecerDatos.TabIndex = 12;
@@ -203,7 +203,7 @@
             // 
             // buttonCambiarContraseña
             // 
-            this.buttonCambiarContraseña.Location = new System.Drawing.Point(354, 398);
+            this.buttonCambiarContraseña.Location = new System.Drawing.Point(347, 388);
             this.buttonCambiarContraseña.Name = "buttonCambiarContraseña";
             this.buttonCambiarContraseña.Size = new System.Drawing.Size(111, 23);
             this.buttonCambiarContraseña.TabIndex = 14;
@@ -364,7 +364,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(544, 433);
+            this.ClientSize = new System.Drawing.Size(544, 416);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
