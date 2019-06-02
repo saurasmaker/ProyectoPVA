@@ -30,15 +30,23 @@
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeaderTitulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPuntuacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDirector = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderEstreno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeadPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderTitulo});
+            this.columnHeaderTitulo,
+            this.columnHeaderPuntuacion,
+            this.columnHeaderDirector,
+            this.columnHeaderEstreno,
+            this.columnHeadPrecio});
             this.listView1.Location = new System.Drawing.Point(24, 34);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(706, 344);
+            this.listView1.Size = new System.Drawing.Size(748, 344);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -46,15 +54,36 @@
             // columnHeaderTitulo
             // 
             this.columnHeaderTitulo.Text = "Titulo";
+            this.columnHeaderTitulo.Width = 293;
+            // 
+            // columnHeaderPuntuacion
+            // 
+            this.columnHeaderPuntuacion.Text = "Puntuacion";
+            this.columnHeaderPuntuacion.Width = 81;
+            // 
+            // columnHeaderDirector
+            // 
+            this.columnHeaderDirector.Text = "Director";
+            this.columnHeaderDirector.Width = 172;
+            // 
+            // columnHeaderEstreno
+            // 
+            this.columnHeaderEstreno.Text = "Estreno";
+            this.columnHeaderEstreno.Width = 136;
+            // 
+            // columnHeadPrecio
+            // 
+            this.columnHeadPrecio.Text = "Precio";
             // 
             // InfoPaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.listView1);
             this.Name = "InfoPaquete";
             this.Text = "InfoPaquete";
+            this.Load += new System.EventHandler(this.InfoPaquete_Load);
             this.ResumeLayout(false);
 
         }
@@ -63,5 +92,9 @@
 
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeaderTitulo;
+        private System.Windows.Forms.ColumnHeader columnHeaderPuntuacion;
+        private System.Windows.Forms.ColumnHeader columnHeaderDirector;
+        private System.Windows.Forms.ColumnHeader columnHeaderEstreno;
+        private System.Windows.Forms.ColumnHeader columnHeadPrecio;
     }
 }
