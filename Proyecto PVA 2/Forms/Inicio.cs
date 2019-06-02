@@ -18,9 +18,14 @@ namespace Proyecto_PVA_2
 {
     public partial class Inicio : Form
     {
+        //Paquetes de Peliculas
+        List<Pelicula> Piratas_del_Caribe = new List<Pelicula>();
+        List<Pelicula> StarWar = new List<Pelicula>();
+
         //Constantes
         static int modoPelicula = 0;
         static int modoSerie = 1;
+        static int modoRecomendaciones = 2;
 
         //Atributos
         int mode = 0;
@@ -48,6 +53,8 @@ namespace Proyecto_PVA_2
         public bool InicioSesionAdmin { get => inicioSesionAdmin; set => inicioSesionAdmin = value; }
         public int Mode { get => mode; set => mode = value; }
         public List<Panel> Carteles { get => carteles; set => carteles = value; }
+        internal List<Pelicula> Piratas_del_Caribe1 { get => Piratas_del_Caribe; set => Piratas_del_Caribe = value; }
+        internal List<Pelicula> StarWar1 { get => StarWar; set => StarWar = value; }
 
         //Eventos
         private void Inicio_Load(object sender, EventArgs e)
@@ -63,6 +70,7 @@ namespace Proyecto_PVA_2
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
 
+            GenerarPaquetesPeliculas();
         }
 
         //--Barra Herramientas Inicio
@@ -114,6 +122,12 @@ namespace Proyecto_PVA_2
         private void toolStripButtonSeries_Click(object sender, EventArgs e)
         {
             Mode = modoSerie;
+            ReajustarPanelCentral();
+        }
+
+        private void toolStripButtonRecomendaciones_Click(object sender, EventArgs e)
+        {
+            Mode = modoRecomendaciones;
             ReajustarPanelCentral();
         }
 
@@ -245,9 +259,14 @@ namespace Proyecto_PVA_2
                     Carteles.Add(crearCartel(i));
 
             else if (Mode == modoSerie)
-            
                 for (int i = 0; i < masterDataSet.Series.Count; i++)
-                    Carteles.Add(crearCartel(i));            
+                    Carteles.Add(crearCartel(i));
+
+            else if (Mode == modoRecomendaciones)
+            {
+                Carteles.Add(crearCartelR(Piratas_del_Caribe, "Piratas del Caribe"));
+                Carteles.Add(crearCartelR(StarWar, "Star War"));
+            }
 
             //Establecemos cantidad de columnas y filas
             tableLayoutPanelCentro.Controls.Clear();
@@ -303,6 +322,7 @@ namespace Proyecto_PVA_2
                 {
 
                 }
+
             portada.BorderStyle = BorderStyle.FixedSingle;
             portada.Visible = true;
 
@@ -585,6 +605,160 @@ namespace Proyecto_PVA_2
             return cartel;
         }
 
+        Panel crearCartelR(List<Pelicula> saga, string sSaga)
+        {
+            //Creamos Portada del Cartel
+            PictureBox portada = new PictureBox();
+            portada.Size = new Size(150, 210);
+            portada.Location = new Point(9, 7);
+            portada.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            try
+            {
+                portada.Image = Image.FromStream(saga[0].Portada);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            portada.BorderStyle = BorderStyle.FixedSingle;
+            portada.Visible = true;
+
+            Label titulo = new Label();
+            titulo.Font = new Font("Bahnschrift", 10);
+            titulo.ForeColor = Color.White;
+            titulo.Text = "Paquete " + sSaga;
+            titulo.Padding = new Padding(6, 0, 2, 0);
+            titulo.Dock = DockStyle.Bottom;
+            titulo.Visible = true;
+
+            Label precio = new Label();
+            decimal cant = 0;
+            precio.Font = new Font("Bahnschrift", 10);
+            precio.ForeColor = Color.Green;
+            foreach (TituloCinematografico t in saga)
+                cant += t.Precio;
+            precio.Text = (((float)(Math.Round(Convert.ToDouble(cant), 2))).ToString() + "€");
+            precio.Dock = DockStyle.Bottom;
+            precio.Padding = new Padding(6, 0, 2, 0);
+            precio.Visible = true;
+
+            Button añadirAlCarro = new Button();
+            añadirAlCarro.Size = new Size(20, 20);
+            añadirAlCarro.Text = "Añadir al carro de la compra";
+            añadirAlCarro.Location = new Point(140, 220);
+            añadirAlCarro.Visible = true;
+
+            Panel cartel = new Panel();
+            cartel.Size = new Size(170, 270);
+            cartel.Margin = new Padding(20, 20, 20, 20);
+            cartel.BackColor = Color.FromArgb(195, 27, 57);
+            cartel.Visible = true;
+
+            //Creamos eventos de los carteles-------------------------------
+            void CambioColorCartel(Object sender, EventArgs e)
+            {
+                cartel.BackColor = Color.FromArgb(100, 0, 200);
+                return;
+            }
+
+            void CartelPeli_Click(object sender, EventArgs e)
+            {
+                InfoPaquete infoPack = new InfoPaquete();
+                AddOwnedForm(infoPack);
+
+                infoPack.Show();
+
+                return;
+            }          
+
+            void MouseAMano(Object sender, EventArgs e)
+            {
+                cartel.BackColor = Color.FromArgb(170, 0, 0);
+
+                return;
+            }
+            void MouseAFlecha(Object sender, EventArgs el)
+            {
+                cartel.BackColor = Color.FromArgb(195, 27, 57);
+                return;
+            }
+
+            void AñadirAlCarro(Object sender, EventArgs e)
+            {
+                if (!InicioSesion)
+                {
+                    MessageBox.Show("Debe de estar logeado para acceder a esta opción.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                foreach(TituloCinematografico tc in saga)
+                    CarroCompra.Add(tc);
+
+                MessageBox.Show("Paquete añadido correctamente.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return;
+            }
+
+            //Añadimos Eventos a portada
+            portada.Click += new EventHandler(CartelPeli_Click);
+            portada.MouseDown += new MouseEventHandler(CambioColorCartel);
+            portada.Cursor = Cursors.Hand;
+            portada.MouseHover += new EventHandler(MouseAMano);
+            portada.MouseLeave += new EventHandler(MouseAFlecha);
+
+            //Añadimos Eventos a Titulo
+            titulo.Click += new EventHandler(CartelPeli_Click);
+            titulo.MouseDown += new MouseEventHandler(CambioColorCartel);
+            titulo.Cursor = Cursors.Hand;
+            titulo.MouseHover += new EventHandler(MouseAMano);
+            titulo.MouseLeave += new EventHandler(MouseAFlecha);
+
+            //Añadimo Eventos a botonAñadir
+            añadirAlCarro.Click += new EventHandler(AñadirAlCarro);
+
+            //--------------------------------------------------------------
+
+            //Añadimos elementos creados al cartel.
+            cartel.Controls.Add(añadirAlCarro);
+            cartel.Controls.Add(precio);
+            cartel.Controls.Add(portada);
+            cartel.Controls.Add(titulo);
+
+
+            return cartel;
+        }
+
+        void GenerarPaquetesPeliculas()
+        {
+            for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
+                if (masterDataSet.Peliculas[i].Titulo.Contains("Piratas del Caribe"))
+                {
+                    Piratas_del_Caribe.Add(new Pelicula());
+                    Piratas_del_Caribe.Last().Titulo = masterDataSet.Peliculas[i].Titulo;
+                    Piratas_del_Caribe.Last().Sinopsis = masterDataSet.Peliculas[i].Sinopsis;
+                    Piratas_del_Caribe.Last().Estreno = masterDataSet.Peliculas[i].Estreno;
+                    Piratas_del_Caribe.Last().Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[i].Puntuacion);
+                    Piratas_del_Caribe.Last().Precio = masterDataSet.Peliculas[i].Precio / 5 * 4;
+                    Piratas_del_Caribe.Last().Id = masterDataSet.Peliculas[i].Id;
+                    Piratas_del_Caribe.Last().Portada = new MemoryStream(masterDataSet.Peliculas[i].Portada.ToArray());
+
+                }
+
+            for (int i = 0; i < masterDataSet.Peliculas.Count; i++)
+                if (masterDataSet.Peliculas[i].Titulo.Contains("Star War"))
+                {
+                    StarWar.Add(new Pelicula());
+                    StarWar.Last().Titulo = masterDataSet.Peliculas[i].Titulo;
+                    StarWar.Last().Sinopsis = masterDataSet.Peliculas[i].Sinopsis;
+                    StarWar.Last().Estreno = masterDataSet.Peliculas[i].Estreno;
+                    StarWar.Last().Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[i].Puntuacion);
+                    StarWar.Last().Precio = masterDataSet.Peliculas[i].Precio / 5 * 4;
+                    StarWar.Last().Id = masterDataSet.Peliculas[i].Id;
+                    StarWar.Last().Portada = new MemoryStream(masterDataSet.Peliculas[i].Portada.ToArray());
+                }
+        }
 
         //Eventos inútiles
         private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

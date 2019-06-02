@@ -29,9 +29,6 @@ namespace Proyecto_PVA_2.Forms
         {
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
             this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
-            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
-            this.peliculasTableAdapter.Fill(this.masterDataSet.Peliculas);
-
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -77,6 +74,16 @@ namespace Proyecto_PVA_2.Forms
 
             if (ofd.ShowDialog() == DialogResult.OK)
                 fondoPictureBox.Image = Image.FromFile(ofd.FileName);
+        }
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
+        {
+            idTextBox.Text = (masterDataSet.Peliculas.Count + 10000000).ToString();
+        }
+
+        private void buttonEditarId_Click(object sender, EventArgs e)
+        {
+            idTextBox.Enabled = true;
         }
     }
 }

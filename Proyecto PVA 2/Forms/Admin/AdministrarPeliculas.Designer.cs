@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarPeliculas));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label tituloLabel;
             System.Windows.Forms.Label sinopsisLabel;
@@ -40,22 +39,23 @@
             System.Windows.Forms.Label duracionLabel;
             System.Windows.Forms.Label portadaLabel;
             System.Windows.Forms.Label fondoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarPeliculas));
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.peliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.peliculasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.PeliculasTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.peliculasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.peliculasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.tituloTextBox = new System.Windows.Forms.TextBox();
@@ -77,6 +77,8 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAñadirPortada = new System.Windows.Forms.Button();
             this.buttonAñadirFondo = new System.Windows.Forms.Button();
+            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
+            this.buttonEditarId = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             sinopsisLabel = new System.Windows.Forms.Label();
@@ -96,6 +98,96 @@
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(13, 40);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "Id:";
+            // 
+            // tituloLabel
+            // 
+            tituloLabel.AutoSize = true;
+            tituloLabel.Location = new System.Drawing.Point(13, 66);
+            tituloLabel.Name = "tituloLabel";
+            tituloLabel.Size = new System.Drawing.Size(36, 13);
+            tituloLabel.TabIndex = 3;
+            tituloLabel.Text = "Titulo:";
+            // 
+            // sinopsisLabel
+            // 
+            sinopsisLabel.AutoSize = true;
+            sinopsisLabel.Location = new System.Drawing.Point(496, 43);
+            sinopsisLabel.Name = "sinopsisLabel";
+            sinopsisLabel.Size = new System.Drawing.Size(49, 13);
+            sinopsisLabel.TabIndex = 5;
+            sinopsisLabel.Text = "Sinopsis:";
+            // 
+            // puntuacionLabel
+            // 
+            puntuacionLabel.AutoSize = true;
+            puntuacionLabel.Location = new System.Drawing.Point(13, 92);
+            puntuacionLabel.Name = "puntuacionLabel";
+            puntuacionLabel.Size = new System.Drawing.Size(64, 13);
+            puntuacionLabel.TabIndex = 7;
+            puntuacionLabel.Text = "Puntuacion:";
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(13, 118);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(40, 13);
+            precioLabel.TabIndex = 9;
+            precioLabel.Text = "Precio:";
+            // 
+            // estrenoLabel
+            // 
+            estrenoLabel.AutoSize = true;
+            estrenoLabel.Location = new System.Drawing.Point(13, 145);
+            estrenoLabel.Name = "estrenoLabel";
+            estrenoLabel.Size = new System.Drawing.Size(46, 13);
+            estrenoLabel.TabIndex = 11;
+            estrenoLabel.Text = "Estreno:";
+            // 
+            // directorLabel
+            // 
+            directorLabel.AutoSize = true;
+            directorLabel.Location = new System.Drawing.Point(13, 170);
+            directorLabel.Name = "directorLabel";
+            directorLabel.Size = new System.Drawing.Size(47, 13);
+            directorLabel.TabIndex = 13;
+            directorLabel.Text = "Director:";
+            // 
+            // duracionLabel
+            // 
+            duracionLabel.AutoSize = true;
+            duracionLabel.Location = new System.Drawing.Point(13, 196);
+            duracionLabel.Name = "duracionLabel";
+            duracionLabel.Size = new System.Drawing.Size(53, 13);
+            duracionLabel.TabIndex = 15;
+            duracionLabel.Text = "Duracion:";
+            // 
+            // portadaLabel
+            // 
+            portadaLabel.AutoSize = true;
+            portadaLabel.Location = new System.Drawing.Point(303, 40);
+            portadaLabel.Name = "portadaLabel";
+            portadaLabel.Size = new System.Drawing.Size(47, 13);
+            portadaLabel.TabIndex = 17;
+            portadaLabel.Text = "Portada:";
+            // 
+            // fondoLabel
+            // 
+            fondoLabel.AutoSize = true;
+            fondoLabel.Location = new System.Drawing.Point(496, 122);
+            fondoLabel.Name = "fondoLabel";
+            fondoLabel.Size = new System.Drawing.Size(40, 13);
+            fondoLabel.TabIndex = 19;
+            fondoLabel.Text = "Fondo:";
+            // 
             // masterDataSet
             // 
             this.masterDataSet.DataSetName = "masterDataSet";
@@ -114,6 +206,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
             this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -149,6 +242,32 @@
             this.peliculasBindingNavigator.TabIndex = 0;
             this.peliculasBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click_1);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -181,16 +300,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -213,26 +325,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // peliculasBindingNavigatorSaveItem
             // 
@@ -243,31 +337,14 @@
             this.peliculasBindingNavigatorSaveItem.Text = "Guardar datos";
             this.peliculasBindingNavigatorSaveItem.Click += new System.EventHandler(this.peliculasBindingNavigatorSaveItem_Click_1);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(13, 40);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Id", true));
+            this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(83, 37);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(200, 20);
+            this.idTextBox.Size = new System.Drawing.Size(168, 20);
             this.idTextBox.TabIndex = 2;
-            // 
-            // tituloLabel
-            // 
-            tituloLabel.AutoSize = true;
-            tituloLabel.Location = new System.Drawing.Point(13, 66);
-            tituloLabel.Name = "tituloLabel";
-            tituloLabel.Size = new System.Drawing.Size(36, 13);
-            tituloLabel.TabIndex = 3;
-            tituloLabel.Text = "Titulo:";
             // 
             // tituloTextBox
             // 
@@ -276,15 +353,6 @@
             this.tituloTextBox.Name = "tituloTextBox";
             this.tituloTextBox.Size = new System.Drawing.Size(200, 20);
             this.tituloTextBox.TabIndex = 4;
-            // 
-            // sinopsisLabel
-            // 
-            sinopsisLabel.AutoSize = true;
-            sinopsisLabel.Location = new System.Drawing.Point(496, 43);
-            sinopsisLabel.Name = "sinopsisLabel";
-            sinopsisLabel.Size = new System.Drawing.Size(49, 13);
-            sinopsisLabel.TabIndex = 5;
-            sinopsisLabel.Text = "Sinopsis:";
             // 
             // sinopsisTextBox
             // 
@@ -295,15 +363,6 @@
             this.sinopsisTextBox.Size = new System.Drawing.Size(200, 69);
             this.sinopsisTextBox.TabIndex = 6;
             // 
-            // puntuacionLabel
-            // 
-            puntuacionLabel.AutoSize = true;
-            puntuacionLabel.Location = new System.Drawing.Point(13, 92);
-            puntuacionLabel.Name = "puntuacionLabel";
-            puntuacionLabel.Size = new System.Drawing.Size(64, 13);
-            puntuacionLabel.TabIndex = 7;
-            puntuacionLabel.Text = "Puntuacion:";
-            // 
             // puntuacionTextBox
             // 
             this.puntuacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Puntuacion", true));
@@ -311,15 +370,6 @@
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.Size = new System.Drawing.Size(200, 20);
             this.puntuacionTextBox.TabIndex = 8;
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(13, 118);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(40, 13);
-            precioLabel.TabIndex = 9;
-            precioLabel.Text = "Precio:";
             // 
             // precioTextBox
             // 
@@ -329,15 +379,6 @@
             this.precioTextBox.Size = new System.Drawing.Size(200, 20);
             this.precioTextBox.TabIndex = 10;
             // 
-            // estrenoLabel
-            // 
-            estrenoLabel.AutoSize = true;
-            estrenoLabel.Location = new System.Drawing.Point(13, 145);
-            estrenoLabel.Name = "estrenoLabel";
-            estrenoLabel.Size = new System.Drawing.Size(46, 13);
-            estrenoLabel.TabIndex = 11;
-            estrenoLabel.Text = "Estreno:";
-            // 
             // estrenoDateTimePicker
             // 
             this.estrenoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.peliculasBindingSource, "Estreno", true));
@@ -345,15 +386,6 @@
             this.estrenoDateTimePicker.Name = "estrenoDateTimePicker";
             this.estrenoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.estrenoDateTimePicker.TabIndex = 12;
-            // 
-            // directorLabel
-            // 
-            directorLabel.AutoSize = true;
-            directorLabel.Location = new System.Drawing.Point(13, 170);
-            directorLabel.Name = "directorLabel";
-            directorLabel.Size = new System.Drawing.Size(47, 13);
-            directorLabel.TabIndex = 13;
-            directorLabel.Text = "Director:";
             // 
             // directorTextBox
             // 
@@ -363,15 +395,6 @@
             this.directorTextBox.Size = new System.Drawing.Size(200, 20);
             this.directorTextBox.TabIndex = 14;
             // 
-            // duracionLabel
-            // 
-            duracionLabel.AutoSize = true;
-            duracionLabel.Location = new System.Drawing.Point(13, 196);
-            duracionLabel.Name = "duracionLabel";
-            duracionLabel.Size = new System.Drawing.Size(53, 13);
-            duracionLabel.TabIndex = 15;
-            duracionLabel.Text = "Duracion:";
-            // 
             // duracionTextBox
             // 
             this.duracionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peliculasBindingSource, "Duracion", true));
@@ -379,15 +402,6 @@
             this.duracionTextBox.Name = "duracionTextBox";
             this.duracionTextBox.Size = new System.Drawing.Size(200, 20);
             this.duracionTextBox.TabIndex = 16;
-            // 
-            // portadaLabel
-            // 
-            portadaLabel.AutoSize = true;
-            portadaLabel.Location = new System.Drawing.Point(303, 40);
-            portadaLabel.Name = "portadaLabel";
-            portadaLabel.Size = new System.Drawing.Size(47, 13);
-            portadaLabel.TabIndex = 17;
-            portadaLabel.Text = "Portada:";
             // 
             // portadaPictureBox
             // 
@@ -399,15 +413,6 @@
             this.portadaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.portadaPictureBox.TabIndex = 18;
             this.portadaPictureBox.TabStop = false;
-            // 
-            // fondoLabel
-            // 
-            fondoLabel.AutoSize = true;
-            fondoLabel.Location = new System.Drawing.Point(496, 122);
-            fondoLabel.Name = "fondoLabel";
-            fondoLabel.Size = new System.Drawing.Size(40, 13);
-            fondoLabel.TabIndex = 19;
-            fondoLabel.Text = "Fondo:";
             // 
             // fondoPictureBox
             // 
@@ -502,11 +507,32 @@
             this.buttonAñadirFondo.UseVisualStyleBackColor = true;
             this.buttonAñadirFondo.Click += new System.EventHandler(this.buttonAñadirFondo_Click);
             // 
+            // imageListIconos
+            // 
+            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
+            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListIconos.Images.SetKeyName(0, "edit.png");
+            // 
+            // buttonEditarId
+            // 
+            this.buttonEditarId.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEditarId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEditarId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarId.ImageKey = "edit.png";
+            this.buttonEditarId.ImageList = this.imageListIconos;
+            this.buttonEditarId.Location = new System.Drawing.Point(257, 35);
+            this.buttonEditarId.Name = "buttonEditarId";
+            this.buttonEditarId.Size = new System.Drawing.Size(26, 23);
+            this.buttonEditarId.TabIndex = 44;
+            this.buttonEditarId.UseVisualStyleBackColor = false;
+            this.buttonEditarId.Click += new System.EventHandler(this.buttonEditarId_Click);
+            // 
             // AdministrarPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 495);
+            this.Controls.Add(this.buttonEditarId);
             this.Controls.Add(this.buttonAñadirFondo);
             this.Controls.Add(this.buttonAñadirPortada);
             this.Controls.Add(this.peliculasDataGridView);
@@ -586,5 +612,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Button buttonAñadirPortada;
         private System.Windows.Forms.Button buttonAñadirFondo;
+        private System.Windows.Forms.ImageList imageListIconos;
+        private System.Windows.Forms.Button buttonEditarId;
     }
 }
