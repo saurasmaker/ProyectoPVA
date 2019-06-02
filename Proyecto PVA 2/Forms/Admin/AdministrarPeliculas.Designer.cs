@@ -79,6 +79,7 @@
             this.buttonAñadirFondo = new System.Windows.Forms.Button();
             this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
             this.buttonEditarId = new System.Windows.Forms.Button();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             sinopsisLabel = new System.Windows.Forms.Label();
@@ -96,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -241,6 +243,7 @@
             this.peliculasBindingNavigator.Size = new System.Drawing.Size(766, 25);
             this.peliculasBindingNavigator.TabIndex = 0;
             this.peliculasBindingNavigator.Text = "bindingNavigator1";
+            this.peliculasBindingNavigator.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PeliculasBindingNavigator_MouseDown);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -489,9 +492,9 @@
             // 
             // buttonAñadirPortada
             // 
-            this.buttonAñadirPortada.Location = new System.Drawing.Point(322, 191);
+            this.buttonAñadirPortada.Location = new System.Drawing.Point(289, 170);
             this.buttonAñadirPortada.Name = "buttonAñadirPortada";
-            this.buttonAñadirPortada.Size = new System.Drawing.Size(28, 23);
+            this.buttonAñadirPortada.Size = new System.Drawing.Size(61, 44);
             this.buttonAñadirPortada.TabIndex = 22;
             this.buttonAñadirPortada.Text = "Añadir Portada";
             this.buttonAñadirPortada.UseVisualStyleBackColor = true;
@@ -499,9 +502,9 @@
             // 
             // buttonAñadirFondo
             // 
-            this.buttonAñadirFondo.Location = new System.Drawing.Point(517, 191);
+            this.buttonAñadirFondo.Location = new System.Drawing.Point(486, 170);
             this.buttonAñadirFondo.Name = "buttonAñadirFondo";
-            this.buttonAñadirFondo.Size = new System.Drawing.Size(28, 23);
+            this.buttonAñadirFondo.Size = new System.Drawing.Size(59, 44);
             this.buttonAñadirFondo.TabIndex = 23;
             this.buttonAñadirFondo.Text = "Añadir Fondo";
             this.buttonAñadirFondo.UseVisualStyleBackColor = true;
@@ -527,11 +530,24 @@
             this.buttonEditarId.UseVisualStyleBackColor = false;
             this.buttonEditarId.Click += new System.EventHandler(this.buttonEditarId_Click);
             // 
+            // pbcerrar
+            // 
+            this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(751, 3);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 50;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
+            // 
             // AdministrarPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 495);
+            this.Controls.Add(this.pbcerrar);
             this.Controls.Add(this.buttonEditarId);
             this.Controls.Add(this.buttonAñadirFondo);
             this.Controls.Add(this.buttonAñadirPortada);
@@ -557,7 +573,9 @@
             this.Controls.Add(fondoLabel);
             this.Controls.Add(this.fondoPictureBox);
             this.Controls.Add(this.peliculasBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministrarPeliculas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminstrarPeliculas";
             this.Load += new System.EventHandler(this.AdministrarPeliculas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
@@ -568,6 +586,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,5 +633,6 @@
         private System.Windows.Forms.Button buttonAñadirFondo;
         private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Button buttonEditarId;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_PVA_2.Forms
 {
     public partial class AdministrarPeliculas : Form
@@ -84,6 +85,15 @@ namespace Proyecto_PVA_2.Forms
         private void buttonEditarId_Click(object sender, EventArgs e)
         {
             idTextBox.Enabled = true;
+        }
+
+        private void PeliculasBindingNavigator_MouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

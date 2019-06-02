@@ -123,5 +123,10 @@ namespace Proyecto_PVA_2.Forms
         {
 
         }
+
+        private void sinopsisTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

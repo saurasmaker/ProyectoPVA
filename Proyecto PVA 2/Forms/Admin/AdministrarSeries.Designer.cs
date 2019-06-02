@@ -51,6 +51,9 @@
             System.Windows.Forms.Label temporadaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarSeries));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonEditarIdSerie = new System.Windows.Forms.Button();
+            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
+            this.buttonEditarIdCap = new System.Windows.Forms.Button();
             this.bindingNavigatorCaòtiñps = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.capitulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -123,9 +126,7 @@
             this.fondoPictureBox = new System.Windows.Forms.PictureBox();
             this.numVecesVendidaTextBox = new System.Windows.Forms.TextBox();
             this.buttonEditarId = new System.Windows.Forms.Button();
-            this.imageListIconos = new System.Windows.Forms.ImageList(this.components);
-            this.buttonEditarIdCap = new System.Windows.Forms.Button();
-            this.buttonEditarIdSerie = new System.Windows.Forms.Button();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             temopradasLabel = new System.Windows.Forms.Label();
@@ -158,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seriesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -372,6 +374,40 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Capitulos";
+            // 
+            // buttonEditarIdSerie
+            // 
+            this.buttonEditarIdSerie.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEditarIdSerie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEditarIdSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarIdSerie.ImageKey = "edit.png";
+            this.buttonEditarIdSerie.ImageList = this.imageListIconos;
+            this.buttonEditarIdSerie.Location = new System.Drawing.Point(245, 257);
+            this.buttonEditarIdSerie.Name = "buttonEditarIdSerie";
+            this.buttonEditarIdSerie.Size = new System.Drawing.Size(26, 23);
+            this.buttonEditarIdSerie.TabIndex = 45;
+            this.buttonEditarIdSerie.UseVisualStyleBackColor = false;
+            this.buttonEditarIdSerie.Click += new System.EventHandler(this.buttonEditarIdSerie_Click);
+            // 
+            // imageListIconos
+            // 
+            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
+            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListIconos.Images.SetKeyName(0, "edit.png");
+            // 
+            // buttonEditarIdCap
+            // 
+            this.buttonEditarIdCap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEditarIdCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEditarIdCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarIdCap.ImageKey = "edit.png";
+            this.buttonEditarIdCap.ImageList = this.imageListIconos;
+            this.buttonEditarIdCap.Location = new System.Drawing.Point(245, 50);
+            this.buttonEditarIdCap.Name = "buttonEditarIdCap";
+            this.buttonEditarIdCap.Size = new System.Drawing.Size(26, 23);
+            this.buttonEditarIdCap.TabIndex = 44;
+            this.buttonEditarIdCap.UseVisualStyleBackColor = false;
+            this.buttonEditarIdCap.Click += new System.EventHandler(this.buttonEditarIdCap_Click);
             // 
             // bindingNavigatorCaòtiñps
             // 
@@ -726,6 +762,7 @@
             this.seriesBindingNavigator.Size = new System.Drawing.Size(1029, 25);
             this.seriesBindingNavigator.TabIndex = 23;
             this.seriesBindingNavigator.Text = "bindingNavigator1";
+            this.seriesBindingNavigator.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SeriesBindingNavigator_MouseDown);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -985,45 +1022,24 @@
             this.buttonEditarId.UseVisualStyleBackColor = false;
             this.buttonEditarId.Click += new System.EventHandler(this.buttonEditarId_Click);
             // 
-            // imageListIconos
+            // pbcerrar
             // 
-            this.imageListIconos.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIconos.ImageStream")));
-            this.imageListIconos.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListIconos.Images.SetKeyName(0, "edit.png");
-            // 
-            // buttonEditarIdCap
-            // 
-            this.buttonEditarIdCap.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonEditarIdCap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEditarIdCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarIdCap.ImageKey = "edit.png";
-            this.buttonEditarIdCap.ImageList = this.imageListIconos;
-            this.buttonEditarIdCap.Location = new System.Drawing.Point(245, 50);
-            this.buttonEditarIdCap.Name = "buttonEditarIdCap";
-            this.buttonEditarIdCap.Size = new System.Drawing.Size(26, 23);
-            this.buttonEditarIdCap.TabIndex = 44;
-            this.buttonEditarIdCap.UseVisualStyleBackColor = false;
-            this.buttonEditarIdCap.Click += new System.EventHandler(this.buttonEditarIdCap_Click);
-            // 
-            // buttonEditarIdSerie
-            // 
-            this.buttonEditarIdSerie.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonEditarIdSerie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonEditarIdSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarIdSerie.ImageKey = "edit.png";
-            this.buttonEditarIdSerie.ImageList = this.imageListIconos;
-            this.buttonEditarIdSerie.Location = new System.Drawing.Point(245, 257);
-            this.buttonEditarIdSerie.Name = "buttonEditarIdSerie";
-            this.buttonEditarIdSerie.Size = new System.Drawing.Size(26, 23);
-            this.buttonEditarIdSerie.TabIndex = 45;
-            this.buttonEditarIdSerie.UseVisualStyleBackColor = false;
-            this.buttonEditarIdSerie.Click += new System.EventHandler(this.buttonEditarIdSerie_Click);
+            this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(1005, 11);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 50;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
             // 
             // AdministrarSeries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 623);
+            this.Controls.Add(this.pbcerrar);
             this.Controls.Add(this.buttonEditarId);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -1050,7 +1066,9 @@
             this.Controls.Add(this.buttonAñadirFondo);
             this.Controls.Add(this.buttonAñadirPortada);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministrarSeries";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministrarSeries";
             this.Load += new System.EventHandler(this.AdministrarSeries_Load);
             this.groupBox1.ResumeLayout(false);
@@ -1068,6 +1086,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seriesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1150,5 +1169,6 @@
         private System.Windows.Forms.ImageList imageListIconos;
         private System.Windows.Forms.Button buttonEditarIdSerie;
         private System.Windows.Forms.Button buttonEditarIdCap;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }

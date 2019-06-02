@@ -82,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.listView1);
             this.Name = "InfoPaquete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoPaquete";
             this.Load += new System.EventHandler(this.InfoPaquete_Load);
             this.ResumeLayout(false);

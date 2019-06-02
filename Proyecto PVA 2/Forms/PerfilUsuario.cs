@@ -287,6 +287,9 @@ namespace Proyecto_PVA_2.Forms
 
         }
 
-        
+        private void buttonCambiarContraseña_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
