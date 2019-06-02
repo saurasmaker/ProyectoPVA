@@ -141,7 +141,7 @@
             this.contusuarios.AutoSize = true;
             this.contusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contusuarios.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.contusuarios.Location = new System.Drawing.Point(28, 118);
+            this.contusuarios.Location = new System.Drawing.Point(35, 120);
             this.contusuarios.Name = "contusuarios";
             this.contusuarios.Size = new System.Drawing.Size(40, 18);
             this.contusuarios.TabIndex = 1;
@@ -192,7 +192,7 @@
             this.contpeliculas.AutoSize = true;
             this.contpeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contpeliculas.ForeColor = System.Drawing.Color.DarkViolet;
-            this.contpeliculas.Location = new System.Drawing.Point(28, 118);
+            this.contpeliculas.Location = new System.Drawing.Point(35, 120);
             this.contpeliculas.Name = "contpeliculas";
             this.contpeliculas.Size = new System.Drawing.Size(40, 18);
             this.contpeliculas.TabIndex = 2;
@@ -243,7 +243,7 @@
             this.contseries.AutoSize = true;
             this.contseries.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contseries.ForeColor = System.Drawing.Color.Crimson;
-            this.contseries.Location = new System.Drawing.Point(28, 118);
+            this.contseries.Location = new System.Drawing.Point(35, 120);
             this.contseries.Name = "contseries";
             this.contseries.Size = new System.Drawing.Size(40, 18);
             this.contseries.TabIndex = 6;
@@ -294,7 +294,7 @@
             this.contventas.AutoSize = true;
             this.contventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contventas.ForeColor = System.Drawing.Color.Chartreuse;
-            this.contventas.Location = new System.Drawing.Point(28, 118);
+            this.contventas.Location = new System.Drawing.Point(35, 120);
             this.contventas.Name = "contventas";
             this.contventas.Size = new System.Drawing.Size(40, 18);
             this.contventas.TabIndex = 6;
@@ -345,7 +345,7 @@
             this.contganancias.AutoSize = true;
             this.contganancias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contganancias.ForeColor = System.Drawing.Color.Chartreuse;
-            this.contganancias.Location = new System.Drawing.Point(28, 118);
+            this.contganancias.Location = new System.Drawing.Point(35, 120);
             this.contganancias.Name = "contganancias";
             this.contganancias.Size = new System.Drawing.Size(40, 18);
             this.contganancias.TabIndex = 6;
@@ -368,6 +368,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(110, 30);
             this.panel13.TabIndex = 4;
+            this.panel13.Visible = false;
             // 
             // panel14
             // 
@@ -377,6 +378,7 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(110, 150);
             this.panel14.TabIndex = 5;
+            this.panel14.Visible = false;
             // 
             // pictureBox6
             // 
@@ -387,6 +389,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // panel1
             // 
@@ -432,6 +435,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = null;
             this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = this.peliculasTableAdapter;
             this.tableAdapterManager.SeriesTableAdapter = this.seriesTableAdapter;

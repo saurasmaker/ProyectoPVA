@@ -69,7 +69,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(115, 430);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 16);
-            this.linkLabel1.TabIndex = 31;
+            this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Ahora no";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -83,7 +83,7 @@
             this.buttonMostrar.Location = new System.Drawing.Point(253, 272);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
-            this.buttonMostrar.TabIndex = 30;
+            this.buttonMostrar.TabIndex = 3;
             this.buttonMostrar.UseVisualStyleBackColor = true;
             this.buttonMostrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMostrar_MouseDown);
             this.buttonMostrar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMostrar_MouseUp);
@@ -164,7 +164,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(38, 383);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(218, 32);
-            this.buttonAceptar.TabIndex = 20;
+            this.buttonAceptar.TabIndex = 6;
             this.buttonAceptar.Text = "Crear cuenta";
             this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click_1);
@@ -178,7 +178,7 @@
             this.button1.Location = new System.Drawing.Point(253, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 35;
+            this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
@@ -203,7 +203,7 @@
             this.textBoxRepetirContraseña.Location = new System.Drawing.Point(51, 321);
             this.textBoxRepetirContraseña.Name = "textBoxRepetirContraseña";
             this.textBoxRepetirContraseña.Size = new System.Drawing.Size(171, 19);
-            this.textBoxRepetirContraseña.TabIndex = 3;
+            this.textBoxRepetirContraseña.TabIndex = 4;
             this.textBoxRepetirContraseña.Text = "Repetir Contraseña";
             this.textBoxRepetirContraseña.Click += new System.EventHandler(this.textBoxRepetirContraseña_Click);
             // 
