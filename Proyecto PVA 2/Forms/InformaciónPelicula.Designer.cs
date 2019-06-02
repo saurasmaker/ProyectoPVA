@@ -43,6 +43,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.portadaPictureBox = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portadaPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -226,12 +227,22 @@
             this.linkLabel2.Text = "Cerrar";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(674, 15);
+            this.panel4.TabIndex = 47;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel4_MouseDown);
+            // 
             // InformaciónPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(674, 363);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -276,5 +287,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         public System.Windows.Forms.PictureBox portadaPictureBox;
+        private System.Windows.Forms.Panel panel4;
     }
 }
