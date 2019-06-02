@@ -67,6 +67,12 @@
     <Compile Include="Clases\Round.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Admin\AdministrarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdministrarFacturas.Designer.cs">
+      <DependentUpon>AdministrarFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\AdministrarSeries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,7 +107,13 @@
     <Compile Include="Forms\Admin\Home.designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\border.cs" />
+    <Compile Include="Clases\border.cs" />
+    <Compile Include="Forms\HistorialFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistorialFacturas.Designer.cs">
+      <DependentUpon>HistorialFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,7 @@
     <Compile Include="Forms\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\PanelBorder.cs" />
     <Compile Include="Forms\PerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +169,6 @@
     <Compile Include="Forms\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="masterDataSet.cs">
-      <DependentUpon>masterDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +176,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Admin\AdministrarFacturas.resx">
+      <DependentUpon>AdministrarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\AdministrarPeliculas.resx">
       <DependentUpon>AdministrarPeliculas.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistorialFacturas.resx">
+      <DependentUpon>HistorialFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>

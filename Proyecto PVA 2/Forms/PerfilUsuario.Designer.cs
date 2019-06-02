@@ -50,29 +50,31 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.round1 = new Proyecto_PVA_2.Forms.Round();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxApellido1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.buttonHistorialFacturas = new System.Windows.Forms.Button();
+            this.round1 = new Proyecto_PVA_2.Forms.Round();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxAlias
             // 
             this.textBoxAlias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
             this.textBoxAlias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlias.Enabled = false;
             this.textBoxAlias.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAlias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.textBoxAlias.Location = new System.Drawing.Point(3, 172);
@@ -99,6 +101,7 @@
             // dateTimePickerFechaNacimiento
             // 
             this.dateTimePickerFechaNacimiento.CalendarForeColor = System.Drawing.SystemColors.Control;
+            this.dateTimePickerFechaNacimiento.Enabled = false;
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(8, 20);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
             this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(304, 27);
@@ -108,6 +111,7 @@
             // textBoxDireccion
             // 
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDireccion.Enabled = false;
             this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.Location = new System.Drawing.Point(7, 22);
             this.textBoxDireccion.Name = "textBoxDireccion";
@@ -119,6 +123,7 @@
             // 
             this.textBoxApellido2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellido2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxApellido2.Enabled = false;
             this.textBoxApellido2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellido2.ForeColor = System.Drawing.Color.Black;
             this.textBoxApellido2.Location = new System.Drawing.Point(8, 23);
@@ -131,6 +136,7 @@
             // 
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxNombre.Enabled = false;
             this.textBoxNombre.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.ForeColor = System.Drawing.Color.Black;
             this.textBoxNombre.Location = new System.Drawing.Point(11, 22);
@@ -143,6 +149,7 @@
             // 
             this.textBoxCorreoElectronico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
             this.textBoxCorreoElectronico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCorreoElectronico.Enabled = false;
             this.textBoxCorreoElectronico.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoElectronico.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(3, 207);
@@ -156,6 +163,7 @@
             // 
             this.textBoxBiografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(21)))), ((int)(((byte)(23)))));
             this.textBoxBiografia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBiografia.Enabled = false;
             this.textBoxBiografia.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBiografia.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxBiografia.Location = new System.Drawing.Point(14, 248);
@@ -169,16 +177,17 @@
             // 
             // buttonModificarDatosPersonales
             // 
-            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(347, 359);
+            this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(324, 359);
             this.buttonModificarDatosPersonales.Name = "buttonModificarDatosPersonales";
             this.buttonModificarDatosPersonales.Size = new System.Drawing.Size(147, 23);
             this.buttonModificarDatosPersonales.TabIndex = 9;
             this.buttonModificarDatosPersonales.Text = "Modificar datos personales";
             this.buttonModificarDatosPersonales.UseVisualStyleBackColor = true;
+            this.buttonModificarDatosPersonales.Click += new System.EventHandler(this.buttonModificarDatosPersonales_Click);
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(214, 359);
+            this.buttonActualizar.Location = new System.Drawing.Point(15, 402);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
             this.buttonActualizar.TabIndex = 10;
@@ -188,12 +197,13 @@
             // 
             // buttonRestablecerDatos
             // 
-            this.buttonRestablecerDatos.Location = new System.Drawing.Point(214, 388);
+            this.buttonRestablecerDatos.Location = new System.Drawing.Point(207, 359);
             this.buttonRestablecerDatos.Name = "buttonRestablecerDatos";
             this.buttonRestablecerDatos.Size = new System.Drawing.Size(111, 23);
             this.buttonRestablecerDatos.TabIndex = 12;
             this.buttonRestablecerDatos.Text = "Restablecer datos";
             this.buttonRestablecerDatos.UseVisualStyleBackColor = true;
+            this.buttonRestablecerDatos.Click += new System.EventHandler(this.buttonRestablecerDatos_Click);
             // 
             // imageListIconos
             // 
@@ -203,7 +213,7 @@
             // 
             // buttonCambiarContraseña
             // 
-            this.buttonCambiarContraseña.Location = new System.Drawing.Point(347, 388);
+            this.buttonCambiarContraseña.Location = new System.Drawing.Point(324, 398);
             this.buttonCambiarContraseña.Name = "buttonCambiarContraseña";
             this.buttonCambiarContraseña.Size = new System.Drawing.Size(111, 23);
             this.buttonCambiarContraseña.TabIndex = 14;
@@ -242,9 +252,9 @@
             this.panel1.Controls.Add(this.textBoxAlias);
             this.panel1.Controls.Add(this.textBoxCorreoElectronico);
             this.panel1.Controls.Add(this.textBoxBiografia);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 435);
+            this.panel1.Size = new System.Drawing.Size(203, 415);
             this.panel1.TabIndex = 39;
             // 
             // buttonSalir
@@ -253,7 +263,7 @@
             this.buttonSalir.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSalir.ImageIndex = 0;
             this.buttonSalir.ImageList = this.imageListIconos;
-            this.buttonSalir.Location = new System.Drawing.Point(519, -1);
+            this.buttonSalir.Location = new System.Drawing.Point(519, 0);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(28, 26);
             this.buttonSalir.TabIndex = 13;
@@ -265,21 +275,12 @@
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.BarraTitulo.Controls.Add(this.buttonSalir);
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BarraTitulo.Location = new System.Drawing.Point(201, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(-2, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(343, 24);
+            this.BarraTitulo.Size = new System.Drawing.Size(546, 24);
             this.BarraTitulo.TabIndex = 38;
+            this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // round1
-            // 
-            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
-            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.round1.Location = new System.Drawing.Point(40, 35);
-            this.round1.Name = "round1";
-            this.round1.Size = new System.Drawing.Size(120, 120);
-            this.round1.TabIndex = 1;
-            this.round1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -298,6 +299,7 @@
             // 
             this.textBoxApellido1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellido1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxApellido1.Enabled = false;
             this.textBoxApellido1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxApellido1.ForeColor = System.Drawing.Color.Black;
             this.textBoxApellido1.Location = new System.Drawing.Point(9, 22);
@@ -359,12 +361,34 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Dirección";
             // 
+            // buttonHistorialFacturas
+            // 
+            this.buttonHistorialFacturas.Location = new System.Drawing.Point(207, 398);
+            this.buttonHistorialFacturas.Name = "buttonHistorialFacturas";
+            this.buttonHistorialFacturas.Size = new System.Drawing.Size(111, 23);
+            this.buttonHistorialFacturas.TabIndex = 45;
+            this.buttonHistorialFacturas.Text = "Historial facturas";
+            this.buttonHistorialFacturas.UseVisualStyleBackColor = true;
+            this.buttonHistorialFacturas.Click += new System.EventHandler(this.buttonHistorialFacturas_Click);
+            // 
+            // round1
+            // 
+            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
+            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.round1.Location = new System.Drawing.Point(40, 35);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(120, 120);
+            this.round1.TabIndex = 1;
+            this.round1.TabStop = false;
+            // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(544, 416);
+            this.ClientSize = new System.Drawing.Size(544, 433);
+            this.Controls.Add(this.BarraTitulo);
+            this.Controls.Add(this.buttonHistorialFacturas);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -374,7 +398,6 @@
             this.Controls.Add(this.buttonRestablecerDatos);
             this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.buttonModificarDatosPersonales);
-            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilUsuario";
@@ -385,7 +408,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -395,6 +417,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,5 +450,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button buttonHistorialFacturas;
     }
 }

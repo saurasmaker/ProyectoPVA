@@ -53,7 +53,7 @@ namespace Proyecto_PVA_2.Forms
 
                 try
                 {
-                    pictureBoxImagenPerfil.Image.Save(image, pictureBoxImagenPerfil.Image.RawFormat);
+                    round1.Image.Save(image, round1.Image.RawFormat);
                     usuariosTableAdapter.UpdateQueryById(textBoxCorreoElectronico.Text, textBoxAlias.Text, User.Contraseña, textBoxNombre.Text, textBoxApellido1.Text, textBoxApellido2.Text, textBoxDireccion.Text, image.ToArray(), dateTimePickerFechaNacimiento.Text, textBoxBiografia.Text, User.Id);
                 }
                 catch (Exception)
@@ -69,7 +69,193 @@ namespace Proyecto_PVA_2.Forms
             OpenFileDialog ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() == DialogResult.OK)
-                pictureBoxImagenPerfil.Image = Image.FromFile(ofd.FileName);
+                round1.Image = Image.FromFile(ofd.FileName);
+        }
+
+        private void buttonHistorialFacturas_Click(object sender, EventArgs e)
+        {
+            HistorialFacturas hf = new HistorialFacturas();
+            AddOwnedForm(hf);
+            hf.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
+
+        }
+
+        private void PerfilUsuario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
+            try
+            {
+                round1.Image = Image.FromStream(User.FotoPerfil);
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxAlias.Text = User.Alias;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxCorreoElectronico.Text = User.CorreoElectronico;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxNombre.Text = User.Nombre;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido1.Text = User.Apellido1;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido2.Text = User.Apellido2;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxDireccion.Text = User.Direccion;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                dateTimePickerFechaNacimiento.Text = User.Nacimiento.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxBiografia.Text = User.Biografia;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void buttonModificarDatosPersonales_Click(object sender, EventArgs e)
+        {
+            textBoxAlias.Enabled = true;
+            textBoxApellido1.Enabled = true;
+            textBoxApellido2.Enabled = true;
+            textBoxBiografia.Enabled = true;
+            textBoxDireccion.Enabled = true;
+            textBoxNombre.Enabled = true;
+            textBoxCorreoElectronico.Enabled = true;
+            dateTimePickerFechaNacimiento.Enabled = true;
+        }
+
+        private void buttonRestablecerDatos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                round1.Image = Image.FromStream(User.FotoPerfil);
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxAlias.Text = User.Alias;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxCorreoElectronico.Text = User.CorreoElectronico;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxNombre.Text = User.Nombre;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido1.Text = User.Apellido1;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxApellido2.Text = User.Apellido2;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxDireccion.Text = User.Direccion;
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                dateTimePickerFechaNacimiento.Text = User.Nacimiento.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                textBoxBiografia.Text = User.Biografia;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         //Métodos
@@ -86,85 +272,6 @@ namespace Proyecto_PVA_2.Forms
 
         }
 
-        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.usuariosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
-
-        }
-
-        private void PerfilUsuario_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
-            try{
-                pictureBoxImagenPerfil.Image = Image.FromStream(User.FotoPerfil);
-            }
-            catch (Exception)
-            {
-
-            }
-            try
-            {
-                textBoxAlias.Text = User.Alias;
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                textBoxCorreoElectronico.Text = User.CorreoElectronico;
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                textBoxNombre.Text = User.Nombre;
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                textBoxApellido1.Text = User.Apellido1;
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                textBoxApellido2.Text = User.Apellido2;
-            }
-            catch (Exception)
-            {
-
-            }
-            try
-            {
-                textBoxDireccion.Text = User.Direccion;
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                dateTimePickerFechaNacimiento.Text = User.Nacimiento.ToString();
-            }
-            catch (Exception)
-            {
-
-            }
-            try { 
-                textBoxBiografia.Text = User.Biografia;
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
         private void textBoxAlias_TextChanged(object sender, EventArgs e)
         {
 
@@ -174,5 +281,12 @@ namespace Proyecto_PVA_2.Forms
         {
 
         }
+
+        private void BarraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

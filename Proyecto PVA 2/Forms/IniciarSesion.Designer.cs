@@ -43,6 +43,7 @@
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
@@ -50,6 +51,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +69,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(48, 384);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(218, 32);
-            this.buttonAceptar.TabIndex = 7;
+            this.buttonAceptar.TabIndex = 5;
             this.buttonAceptar.Text = "Entrar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click_1);
@@ -80,7 +83,7 @@
             this.linkLabelRegistrarse.Location = new System.Drawing.Point(79, 446);
             this.linkLabelRegistrarse.Name = "linkLabelRegistrarse";
             this.linkLabelRegistrarse.Size = new System.Drawing.Size(143, 19);
-            this.linkLabelRegistrarse.TabIndex = 10;
+            this.linkLabelRegistrarse.TabIndex = 6;
             this.linkLabelRegistrarse.TabStop = true;
             this.linkLabelRegistrarse.Text = "¿Sin cuenta? Únete";
             this.linkLabelRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegistrarse_LinkClicked);
@@ -95,7 +98,7 @@
             this.linkLabelContraseñaOlvidada.Location = new System.Drawing.Point(70, 337);
             this.linkLabelContraseñaOlvidada.Name = "linkLabelContraseñaOlvidada";
             this.linkLabelContraseñaOlvidada.Size = new System.Drawing.Size(187, 16);
-            this.linkLabelContraseñaOlvidada.TabIndex = 11;
+            this.linkLabelContraseñaOlvidada.TabIndex = 4;
             this.linkLabelContraseñaOlvidada.TabStop = true;
             this.linkLabelContraseñaOlvidada.Text = "¿Has olvidado la contraseña?";
             // 
@@ -131,7 +134,7 @@
             this.textBoxContraseña.Location = new System.Drawing.Point(61, 299);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(171, 19);
-            this.textBoxContraseña.TabIndex = 15;
+            this.textBoxContraseña.TabIndex = 2;
             this.textBoxContraseña.Text = "Contraseña";
             this.textBoxContraseña.Click += new System.EventHandler(this.textBoxContraseña_Click);
             this.textBoxContraseña.TextChanged += new System.EventHandler(this.textBoxContraseña_TextChanged);
@@ -148,7 +151,7 @@
             this.textBoxCorreoElectronico.Location = new System.Drawing.Point(61, 252);
             this.textBoxCorreoElectronico.Name = "textBoxCorreoElectronico";
             this.textBoxCorreoElectronico.Size = new System.Drawing.Size(171, 19);
-            this.textBoxCorreoElectronico.TabIndex = 16;
+            this.textBoxCorreoElectronico.TabIndex = 1;
             this.textBoxCorreoElectronico.Text = "Correo Electrónico";
             this.textBoxCorreoElectronico.Click += new System.EventHandler(this.textBoxCorreoElectronico_Click);
             this.textBoxCorreoElectronico.TextChanged += new System.EventHandler(this.textBoxCorreoElectronico_TextChanged);
@@ -188,7 +191,7 @@
             this.buttonMostrar.Location = new System.Drawing.Point(263, 298);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(20, 20);
-            this.buttonMostrar.TabIndex = 18;
+            this.buttonMostrar.TabIndex = 3;
             this.buttonMostrar.UseVisualStyleBackColor = true;
             this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
             this.buttonMostrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMostrar_MouseDown);
@@ -203,7 +206,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(124, 474);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 16);
-            this.linkLabel1.TabIndex = 19;
+            this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Ahora no";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -211,14 +214,28 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BarraTitulo.Controls.Add(this.pbcerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(320, 42);
+            this.BarraTitulo.Size = new System.Drawing.Size(319, 42);
             this.BarraTitulo.TabIndex = 37;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // pbcerrar
+            // 
+            this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(298, 5);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(16, 17);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 0;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
             // 
             // masterDataSet
             // 
@@ -238,6 +255,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CapitulosTableAdapter = null;
+            this.tableAdapterManager.FacturasTableAdapter = null;
             this.tableAdapterManager.PeliculasTableAdapter = null;
             this.tableAdapterManager.SeriesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -249,7 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(320, 550);
+            this.ClientSize = new System.Drawing.Size(319, 515);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonMostrar);
@@ -272,6 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -297,5 +317,6 @@
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }

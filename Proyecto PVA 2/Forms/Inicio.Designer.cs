@@ -54,8 +54,6 @@
             this.buttonDesplegar = new System.Windows.Forms.Button();
             this.tableLayoutPanelCentro = new System.Windows.Forms.TableLayoutPanel();
             this.panelDerecha = new System.Windows.Forms.Panel();
-            this.panelAdmin = new System.Windows.Forms.Panel();
-            this.buttonAdministrarAdmins = new System.Windows.Forms.Button();
             this.buttonAdminUsuarios = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonAdministrarPeliculas = new System.Windows.Forms.Button();
@@ -65,13 +63,18 @@
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
             this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
+            this.buttonAbrirPanelAdmin = new System.Windows.Forms.Button();
+            this.panelAdmin = new System.Windows.Forms.Panel();
             this.toolStripInicio.SuspendLayout();
             this.panelIzquierda.SuspendLayout();
             this.panelDerecha.SuspendLayout();
-            this.panelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripInicio
@@ -272,23 +275,6 @@
             this.panelDerecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             this.panelDerecha.Name = "panelDerecha";
             // 
-            // panelAdmin
-            // 
-            this.panelAdmin.Controls.Add(this.buttonAdministrarAdmins);
-            this.panelAdmin.Controls.Add(this.buttonAdminUsuarios);
-            this.panelAdmin.Controls.Add(this.button1);
-            this.panelAdmin.Controls.Add(this.buttonAdministrarPeliculas);
-            resources.ApplyResources(this.panelAdmin, "panelAdmin");
-            this.panelAdmin.Name = "panelAdmin";
-            // 
-            // buttonAdministrarAdmins
-            // 
-            resources.ApplyResources(this.buttonAdministrarAdmins, "buttonAdministrarAdmins");
-            this.buttonAdministrarAdmins.FlatAppearance.BorderSize = 0;
-            this.buttonAdministrarAdmins.ForeColor = System.Drawing.Color.White;
-            this.buttonAdministrarAdmins.Name = "buttonAdministrarAdmins";
-            this.buttonAdministrarAdmins.UseVisualStyleBackColor = true;
-            // 
             // buttonAdminUsuarios
             // 
             resources.ApplyResources(this.buttonAdminUsuarios, "buttonAdminUsuarios");
@@ -349,6 +335,34 @@
             this.seriesBindingSource.DataMember = "Series";
             this.seriesBindingSource.DataSource = this.masterDataSet;
             // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.usuariosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // buttonAbrirPanelAdmin
+            // 
+            this.buttonAbrirPanelAdmin.BackColor = System.Drawing.Color.Brown;
+            resources.ApplyResources(this.buttonAbrirPanelAdmin, "buttonAbrirPanelAdmin");
+            this.buttonAbrirPanelAdmin.FlatAppearance.BorderSize = 0;
+            this.buttonAbrirPanelAdmin.ForeColor = System.Drawing.Color.White;
+            this.buttonAbrirPanelAdmin.Name = "buttonAbrirPanelAdmin";
+            this.buttonAbrirPanelAdmin.UseVisualStyleBackColor = false;
+            this.buttonAbrirPanelAdmin.Click += new System.EventHandler(this.buttonAbrirPanelAdmin_Click);
+            // 
+            // panelAdmin
+            // 
+            this.panelAdmin.Controls.Add(this.buttonAdministrarPeliculas);
+            this.panelAdmin.Controls.Add(this.button1);
+            this.panelAdmin.Controls.Add(this.buttonAdminUsuarios);
+            this.panelAdmin.Controls.Add(this.buttonAbrirPanelAdmin);
+            resources.ApplyResources(this.panelAdmin, "panelAdmin");
+            this.panelAdmin.Name = "panelAdmin";
+            // 
             // Inicio
             // 
             resources.ApplyResources(this, "$this");
@@ -367,10 +381,11 @@
             this.panelIzquierda.ResumeLayout(false);
             this.panelIzquierda.PerformLayout();
             this.panelDerecha.ResumeLayout(false);
-            this.panelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,8 +416,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonOpciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCentro;
         private System.Windows.Forms.Panel panelDerecha;
-        private System.Windows.Forms.Panel panelAdmin;
-        private System.Windows.Forms.Button buttonAdministrarAdmins;
         private System.Windows.Forms.Button buttonAdminUsuarios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAdministrarPeliculas;
@@ -413,6 +426,10 @@
         private masterDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private masterDataSetTableAdapters.SeriesTableAdapter seriesTableAdapter;
         private System.Windows.Forms.BindingSource seriesBindingSource;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private masterDataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.Button buttonAbrirPanelAdmin;
+        private System.Windows.Forms.Panel panelAdmin;
     }
 }
 

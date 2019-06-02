@@ -18,9 +18,6 @@ namespace Proyecto_PVA_2
 {
     public partial class Inicio : Form
     {
-        //Conexion base de datos
-        SqlConnection conexionBaseDatos = new SqlConnection("Data Source = localhost\\SQLEXPRESS02; Initial Catalog = master; Integrated Security = True");
-
         //Constantes
         static int modoPelicula = 0;
         static int modoSerie = 1;
@@ -55,6 +52,8 @@ namespace Proyecto_PVA_2
         //Eventos
         private void Inicio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.masterDataSet.Usuarios);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Series' Puede moverla o quitarla según sea necesario.
             this.seriesTableAdapter.Fill(this.masterDataSet.Series);
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Peliculas' Puede moverla o quitarla según sea necesario.
@@ -64,19 +63,12 @@ namespace Proyecto_PVA_2
             ReajustarPanelCentral();
             ReajustarToolStripInicio();
 
-            //Quitamos Scroll Horizontal del panel central
-            tableLayoutPanelCentro.HorizontalScroll.Visible = false;
         }
 
         //--Barra Herramientas Inicio
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            if (InicioSesionAdmin)
-            {
-                PanelAdmin pa = new PanelAdmin();
-                pa.ShowDialog();
-            }
-            else if (InicioSesion)
+            if (InicioSesion)
             {
                 PerfilUsuario perfil = new PerfilUsuario();
                 perfil.User = User;
@@ -167,7 +159,25 @@ namespace Proyecto_PVA_2
             adminSeries.ShowDialog();
         }
 
+        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.peliculasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
+        }
+
+        private void buttonAdminUsuarios_Click(object sender, EventArgs e)
+        {
+            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
+            administrarUsuarios.Show();
+        }
+
+        private void buttonAbrirPanelAdmin_Click(object sender, EventArgs e)
+        {
+            PanelAdmin pa = new PanelAdmin();
+            pa.ShowDialog();
+        }
 
         //Métodos
         void OcultarGeneros()
@@ -519,7 +529,7 @@ namespace Proyecto_PVA_2
                     tc.Sinopsis = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Sinopsis;
                     tc.Estreno = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Estreno;
                     tc.Puntuacion = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Puntuacion);
-                    tc.Precio = Convert.ToSingle(masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio);
+                    tc.Precio = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Precio;
                     tc.Id = masterDataSet.Peliculas[Carteles.IndexOf(cartel)].Id;
 
                     MessageBox.Show("Pelicula añadida a la cesta correctamente", "Añadir a la cesta",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -530,7 +540,7 @@ namespace Proyecto_PVA_2
                     tc.Sinopsis = masterDataSet.Series[Carteles.IndexOf(cartel)].Sinopsis;
                     tc.Estreno = masterDataSet.Series[Carteles.IndexOf(cartel)].Estreno;
                     tc.Puntuacion = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Puntuacion);
-                    tc.Precio = Convert.ToSingle(masterDataSet.Series[Carteles.IndexOf(cartel)].Precio);
+                    tc.Precio = masterDataSet.Series[Carteles.IndexOf(cartel)].Precio;
                     tc.Id = masterDataSet.Series[Carteles.IndexOf(cartel)].Id;
 
                     MessageBox.Show("Serie añadida a la cesta correctamente", "Añadir a la cesta", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -622,19 +632,7 @@ namespace Proyecto_PVA_2
 
         }
 
-        private void peliculasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.peliculasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.masterDataSet);
-
-        }
-
-        private void buttonAdminUsuarios_Click(object sender, EventArgs e)
-        {
-            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios();
-            administrarUsuarios.Show();
-        }
+        
     }
 
 }

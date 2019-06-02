@@ -50,7 +50,6 @@ C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
 C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
 C:\Users\saura\source\repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
-C:\Users\saura\source\repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.AdministrarUsuarios.resources
 C:\Users\saura\source\repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Prueba.PanelAdmin.resources
 C:\Users\saura\source\repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarSeries.resources
 C:\Users\saura\OneDrive\Escritorio\ProyectoPVA\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
@@ -85,3 +84,58 @@ J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
 J:\(x\Documentos\Uni\Year 2\Term 2\SistGest\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarFacturas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.HistorialFacturas.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto PVA.csprojAssemblyReference.cache
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarFacturas.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarSeries.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.HistorialFacturas.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Prueba.PanelAdmin.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.GenerateResource.cache
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.CoreCompileInputs.cache
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+D:\PVA\Proyecto\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+D:\PVA\Proyecto\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+D:\PVA\Proyecto\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+D:\PVA\Proyecto\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+D:\PVA\Proyecto\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto PVA.csprojAssemblyReference.cache
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarFacturas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.AdministrarPeliculas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarSeries.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Admin.AdministrarUsuarios.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Prueba.Home.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.HistorialFacturas.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Prueba.PanelAdmin.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformacionSerie.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.InformaciónPelicula.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.IniciarSesion.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.MiCarroDeLaCompra.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.PerfilUsuario.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Forms.Registro.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Properties.Resources.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto_PVA_2.Inicio.es-ES.resources
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.GenerateResource.cache
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto PVA.csproj.CoreCompileInputs.cache
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.exe
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\Proyecto PVA 2.pdb
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe.config
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.exe
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\bin\Debug\Proyecto PVA 2.pdb
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\bin\Debug\es-ES\Proyecto PVA 2.resources.dll
+C:\Users\saura\Source\Repos\ProyectoPVA2\Proyecto PVA 2\obj\Debug\es-ES\Proyecto PVA 2.resources.dll
