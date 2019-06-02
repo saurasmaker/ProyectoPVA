@@ -63,9 +63,9 @@
             this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(40, 49);
+            this.listView1.Location = new System.Drawing.Point(17, 46);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(420, 300);
+            this.listView1.Size = new System.Drawing.Size(425, 300);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -93,7 +93,7 @@
             this.buttonRealizarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRealizarCompra.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRealizarCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.buttonRealizarCompra.Location = new System.Drawing.Point(242, 393);
+            this.buttonRealizarCompra.Location = new System.Drawing.Point(231, 390);
             this.buttonRealizarCompra.Name = "buttonRealizarCompra";
             this.buttonRealizarCompra.Size = new System.Drawing.Size(206, 37);
             this.buttonRealizarCompra.TabIndex = 3;
@@ -103,11 +103,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.textBox1.Location = new System.Drawing.Point(34, 433);
+            this.textBox1.Location = new System.Drawing.Point(17, 427);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 35);
             this.textBox1.TabIndex = 4;
@@ -120,8 +120,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 405);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.label1.Location = new System.Drawing.Point(16, 402);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 25);
             this.label1.TabIndex = 5;
@@ -133,7 +133,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.Location = new System.Drawing.Point(363, 449);
+            this.linkLabel1.Location = new System.Drawing.Point(353, 446);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(84, 16);
             this.linkLabel1.TabIndex = 4;
@@ -146,7 +146,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLabel2.Location = new System.Drawing.Point(41, 372);
+            this.linkLabel2.Location = new System.Drawing.Point(18, 369);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(137, 18);
             this.linkLabel2.TabIndex = 2;
@@ -180,13 +180,13 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BarraTitulo.Controls.Add(this.pbcerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(500, 26);
+            this.BarraTitulo.Size = new System.Drawing.Size(460, 26);
             this.BarraTitulo.TabIndex = 38;
             this.BarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraTitulo_Paint);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
@@ -194,10 +194,11 @@
             // pbcerrar
             // 
             this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
-            this.pbcerrar.Location = new System.Drawing.Point(485, 3);
+            this.pbcerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbcerrar.BackgroundImage")));
+            this.pbcerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbcerrar.Location = new System.Drawing.Point(437, 3);
             this.pbcerrar.Name = "pbcerrar";
-            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.Size = new System.Drawing.Size(20, 20);
             this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbcerrar.TabIndex = 49;
             this.pbcerrar.TabStop = false;
@@ -209,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(500, 500);
+            this.ClientSize = new System.Drawing.Size(460, 485);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
