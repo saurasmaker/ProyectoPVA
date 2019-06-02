@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_PVA_2.Forms.Admin
 {
     public partial class AdministrarSeries : Form
@@ -19,7 +20,6 @@ namespace Proyecto_PVA_2.Forms.Admin
         {
             InitializeComponent();
         }
-
         //Eventos
         private void seriesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -155,6 +155,15 @@ namespace Proyecto_PVA_2.Forms.Admin
             {
                 MessageBox.Show("Seleccione una serie a la que añadirle un capitulo. Si no lo hace, puede que el capitlo a añadir se pierda en la base de datos.", "Posible error",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void SeriesBindingNavigator_MouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

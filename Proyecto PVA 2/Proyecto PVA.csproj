@@ -203,6 +203,9 @@
     <EmbeddedResource Include="Forms\InfoPaquete.resx">
       <DependentUpon>InfoPaquete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Opciones.resx">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>

@@ -385,6 +385,7 @@
             this.Controls.Add(this.precioTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformacionSerie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformacionSerie";
             this.Load += new System.EventHandler(this.InformacionSerie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.capitulosBindingSource)).EndInit();

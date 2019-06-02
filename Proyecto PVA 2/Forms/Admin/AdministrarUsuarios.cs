@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_PVA_2.Forms.Admin
 {
     public partial class AdministrarUsuarios : Form
@@ -46,6 +47,15 @@ namespace Proyecto_PVA_2.Forms.Admin
             this.usuariosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.masterDataSet);
 
+        }
+
+        private void UsuariosBindingNavigator_MouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void Pbcerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
