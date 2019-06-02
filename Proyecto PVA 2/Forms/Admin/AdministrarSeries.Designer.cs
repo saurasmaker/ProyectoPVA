@@ -108,13 +108,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.seriesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.seriesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.tituloTextBox = new System.Windows.Forms.TextBox();
             this.temopradasTextBox = new System.Windows.Forms.TextBox();
@@ -127,6 +120,13 @@
             this.numVecesVendidaTextBox = new System.Windows.Forms.TextBox();
             this.buttonEditarId = new System.Windows.Forms.Button();
             this.pbcerrar = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idLabel = new System.Windows.Forms.Label();
             tituloLabel = new System.Windows.Forms.Label();
             temopradasLabel = new System.Windows.Forms.Label();
@@ -165,6 +165,8 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.SystemColors.Control;
+            idLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             idLabel.Location = new System.Drawing.Point(13, 32);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
@@ -174,6 +176,7 @@
             // tituloLabel
             // 
             tituloLabel.AutoSize = true;
+            tituloLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             tituloLabel.Location = new System.Drawing.Point(13, 58);
             tituloLabel.Name = "tituloLabel";
             tituloLabel.Size = new System.Drawing.Size(36, 13);
@@ -183,6 +186,7 @@
             // temopradasLabel
             // 
             temopradasLabel.AutoSize = true;
+            temopradasLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             temopradasLabel.Location = new System.Drawing.Point(13, 84);
             temopradasLabel.Name = "temopradasLabel";
             temopradasLabel.Size = new System.Drawing.Size(69, 13);
@@ -192,6 +196,7 @@
             // estrenoLabel
             // 
             estrenoLabel.AutoSize = true;
+            estrenoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             estrenoLabel.Location = new System.Drawing.Point(13, 111);
             estrenoLabel.Name = "estrenoLabel";
             estrenoLabel.Size = new System.Drawing.Size(46, 13);
@@ -201,6 +206,7 @@
             // precioLabel
             // 
             precioLabel.AutoSize = true;
+            precioLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             precioLabel.Location = new System.Drawing.Point(13, 136);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
@@ -210,6 +216,7 @@
             // sinopsisLabel
             // 
             sinopsisLabel.AutoSize = true;
+            sinopsisLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             sinopsisLabel.Location = new System.Drawing.Point(13, 214);
             sinopsisLabel.Name = "sinopsisLabel";
             sinopsisLabel.Size = new System.Drawing.Size(49, 13);
@@ -219,6 +226,7 @@
             // puntuacionLabel
             // 
             puntuacionLabel.AutoSize = true;
+            puntuacionLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             puntuacionLabel.Location = new System.Drawing.Point(13, 162);
             puntuacionLabel.Name = "puntuacionLabel";
             puntuacionLabel.Size = new System.Drawing.Size(64, 13);
@@ -228,6 +236,7 @@
             // portadaLabel
             // 
             portadaLabel.AutoSize = true;
+            portadaLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             portadaLabel.Location = new System.Drawing.Point(399, 32);
             portadaLabel.Name = "portadaLabel";
             portadaLabel.Size = new System.Drawing.Size(47, 13);
@@ -237,6 +246,7 @@
             // fondoLabel
             // 
             fondoLabel.AutoSize = true;
+            fondoLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             fondoLabel.Location = new System.Drawing.Point(520, 32);
             fondoLabel.Name = "fondoLabel";
             fondoLabel.Size = new System.Drawing.Size(40, 13);
@@ -246,6 +256,7 @@
             // numVecesVendidaLabel
             // 
             numVecesVendidaLabel.AutoSize = true;
+            numVecesVendidaLabel.ForeColor = System.Drawing.SystemColors.WindowText;
             numVecesVendidaLabel.Location = new System.Drawing.Point(13, 188);
             numVecesVendidaLabel.Name = "numVecesVendidaLabel";
             numVecesVendidaLabel.Size = new System.Drawing.Size(107, 13);
@@ -344,6 +355,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.buttonEditarIdSerie);
             this.groupBox1.Controls.Add(this.buttonEditarIdCap);
             this.groupBox1.Controls.Add(this.bindingNavigatorCaòtiñps);
@@ -368,9 +380,10 @@
             this.groupBox1.Controls.Add(this.id_SerieTextBox);
             this.groupBox1.Controls.Add(temporadaLabel);
             this.groupBox1.Controls.Add(this.temporadaTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(714, 29);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.groupBox1.Location = new System.Drawing.Point(714, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(303, 572);
+            this.groupBox1.Size = new System.Drawing.Size(303, 554);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Capitulos";
@@ -382,7 +395,7 @@
             this.buttonEditarIdSerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarIdSerie.ImageKey = "edit.png";
             this.buttonEditarIdSerie.ImageList = this.imageListIconos;
-            this.buttonEditarIdSerie.Location = new System.Drawing.Point(245, 257);
+            this.buttonEditarIdSerie.Location = new System.Drawing.Point(245, 258);
             this.buttonEditarIdSerie.Name = "buttonEditarIdSerie";
             this.buttonEditarIdSerie.Size = new System.Drawing.Size(26, 23);
             this.buttonEditarIdSerie.TabIndex = 45;
@@ -412,9 +425,15 @@
             // bindingNavigatorCaòtiñps
             // 
             this.bindingNavigatorCaòtiñps.AddNewItem = this.toolStripButton1;
+            this.bindingNavigatorCaòtiñps.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bindingNavigatorCaòtiñps.AutoSize = false;
+            this.bindingNavigatorCaòtiñps.BackColor = System.Drawing.SystemColors.Control;
+            this.bindingNavigatorCaòtiñps.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bindingNavigatorCaòtiñps.BindingSource = this.capitulosBindingSource;
             this.bindingNavigatorCaòtiñps.CountItem = this.toolStripLabel1;
             this.bindingNavigatorCaòtiñps.DeleteItem = this.toolStripButton2;
+            this.bindingNavigatorCaòtiñps.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigatorCaòtiñps.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigatorCaòtiñps.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3,
             this.toolStripButton4,
@@ -434,6 +453,7 @@
             this.bindingNavigatorCaòtiñps.MovePreviousItem = this.toolStripButton4;
             this.bindingNavigatorCaòtiñps.Name = "bindingNavigatorCaòtiñps";
             this.bindingNavigatorCaòtiñps.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigatorCaòtiñps.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.bindingNavigatorCaòtiñps.Size = new System.Drawing.Size(297, 25);
             this.bindingNavigatorCaòtiñps.TabIndex = 24;
             this.bindingNavigatorCaòtiñps.Text = "Capitulos";
@@ -536,8 +556,13 @@
             // 
             // capitulosDataGridView
             // 
+            this.capitulosDataGridView.AllowUserToAddRows = false;
+            this.capitulosDataGridView.AllowUserToDeleteRows = false;
+            this.capitulosDataGridView.AllowUserToResizeColumns = false;
+            this.capitulosDataGridView.AllowUserToResizeRows = false;
             this.capitulosDataGridView.AutoGenerateColumns = false;
-            this.capitulosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.capitulosDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.capitulosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.capitulosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn9,
@@ -549,9 +574,17 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
             this.capitulosDataGridView.DataSource = this.capitulosBindingSource;
-            this.capitulosDataGridView.Location = new System.Drawing.Point(15, 333);
+            this.capitulosDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.capitulosDataGridView.GridColor = System.Drawing.SystemColors.WindowText;
+            this.capitulosDataGridView.Location = new System.Drawing.Point(3, 331);
+            this.capitulosDataGridView.MultiSelect = false;
             this.capitulosDataGridView.Name = "capitulosDataGridView";
-            this.capitulosDataGridView.Size = new System.Drawing.Size(267, 220);
+            this.capitulosDataGridView.RowHeadersVisible = false;
+            this.capitulosDataGridView.ShowCellErrors = false;
+            this.capitulosDataGridView.ShowCellToolTips = false;
+            this.capitulosDataGridView.ShowEditingIcon = false;
+            this.capitulosDataGridView.ShowRowErrors = false;
+            this.capitulosDataGridView.Size = new System.Drawing.Size(297, 220);
             this.capitulosDataGridView.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn6
@@ -559,6 +592,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn6.HeaderText = "Id";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 41;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -736,9 +770,12 @@
             // seriesBindingNavigator
             // 
             this.seriesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.seriesBindingNavigator.BackColor = System.Drawing.SystemColors.Control;
+            this.seriesBindingNavigator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.seriesBindingNavigator.BindingSource = this.seriesBindingSource;
             this.seriesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.seriesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.seriesBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.seriesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -759,6 +796,7 @@
             this.seriesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.seriesBindingNavigator.Name = "seriesBindingNavigator";
             this.seriesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.seriesBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.seriesBindingNavigator.Size = new System.Drawing.Size(1029, 25);
             this.seriesBindingNavigator.TabIndex = 23;
             this.seriesBindingNavigator.Text = "bindingNavigator1";
@@ -776,6 +814,7 @@
             // 
             // bindingNavigatorCountItem
             // 
+            this.bindingNavigatorCountItem.ForeColor = System.Drawing.SystemColors.WindowText;
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
@@ -861,8 +900,13 @@
             // 
             // seriesDataGridView
             // 
+            this.seriesDataGridView.AllowUserToAddRows = false;
+            this.seriesDataGridView.AllowUserToDeleteRows = false;
+            this.seriesDataGridView.AllowUserToResizeColumns = false;
+            this.seriesDataGridView.AllowUserToResizeRows = false;
             this.seriesDataGridView.AutoGenerateColumns = false;
-            this.seriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.seriesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.seriesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.seriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
@@ -871,54 +915,21 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
+            this.seriesDataGridView.Cursor = System.Windows.Forms.Cursors.Default;
             this.seriesDataGridView.DataSource = this.seriesBindingSource;
-            this.seriesDataGridView.Location = new System.Drawing.Point(12, 310);
+            this.seriesDataGridView.GridColor = System.Drawing.SystemColors.WindowText;
+            this.seriesDataGridView.Location = new System.Drawing.Point(33, 287);
+            this.seriesDataGridView.MultiSelect = false;
             this.seriesDataGridView.Name = "seriesDataGridView";
-            this.seriesDataGridView.Size = new System.Drawing.Size(666, 291);
+            this.seriesDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.seriesDataGridView.RowHeadersVisible = false;
+            this.seriesDataGridView.ShowCellErrors = false;
+            this.seriesDataGridView.ShowCellToolTips = false;
+            this.seriesDataGridView.ShowEditingIcon = false;
+            this.seriesDataGridView.ShowRowErrors = false;
+            this.seriesDataGridView.Size = new System.Drawing.Size(644, 290);
             this.seriesDataGridView.TabIndex = 23;
             this.seriesDataGridView.Click += new System.EventHandler(this.seriesDataGridView_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Titulo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Temopradas";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Temopradas";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Estreno";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Estreno";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Puntuacion";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Puntuacion";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "NumVecesVendida";
-            this.dataGridViewTextBoxColumn8.HeaderText = "NumVecesVendida";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // idTextBox
             // 
@@ -967,7 +978,7 @@
             this.sinopsisTextBox.Location = new System.Drawing.Point(126, 211);
             this.sinopsisTextBox.Multiline = true;
             this.sinopsisTextBox.Name = "sinopsisTextBox";
-            this.sinopsisTextBox.Size = new System.Drawing.Size(200, 69);
+            this.sinopsisTextBox.Size = new System.Drawing.Size(200, 63);
             this.sinopsisTextBox.TabIndex = 34;
             // 
             // puntuacionTextBox
@@ -1034,10 +1045,54 @@
             this.pbcerrar.TabStop = false;
             this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Titulo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Titulo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Temopradas";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Temopradas";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Estreno";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Estreno";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Puntuacion";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Puntuacion";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "NumVecesVendida";
+            this.dataGridViewTextBoxColumn8.HeaderText = "NumVecesVendida";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // AdministrarSeries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1029, 623);
             this.Controls.Add(this.pbcerrar);
             this.Controls.Add(this.buttonEditarId);
@@ -1115,13 +1170,6 @@
         private System.Windows.Forms.ToolStripButton seriesBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView seriesDataGridView;
         private masterDataSetTableAdapters.CapitulosTableAdapter capitulosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox tituloTextBox;
         private System.Windows.Forms.TextBox temopradasTextBox;
@@ -1156,6 +1204,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Button buttonEditarId;
+        private System.Windows.Forms.ImageList imageListIconos;
+        private System.Windows.Forms.Button buttonEditarIdSerie;
+        private System.Windows.Forms.Button buttonEditarIdCap;
+        private System.Windows.Forms.PictureBox pbcerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -1165,10 +1218,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.Button buttonEditarId;
-        private System.Windows.Forms.ImageList imageListIconos;
-        private System.Windows.Forms.Button buttonEditarIdSerie;
-        private System.Windows.Forms.Button buttonEditarIdCap;
-        private System.Windows.Forms.PictureBox pbcerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

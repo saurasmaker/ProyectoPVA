@@ -220,6 +220,7 @@
             this.peliculasBindingNavigator.BindingSource = this.peliculasBindingSource;
             this.peliculasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.peliculasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.peliculasBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.peliculasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -430,7 +431,11 @@
             // 
             // peliculasDataGridView
             // 
+            this.peliculasDataGridView.AllowUserToAddRows = false;
+            this.peliculasDataGridView.AllowUserToOrderColumns = true;
             this.peliculasDataGridView.AutoGenerateColumns = false;
+            this.peliculasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.peliculasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.peliculasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.peliculasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -441,9 +446,14 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.peliculasDataGridView.DataSource = this.peliculasBindingSource;
-            this.peliculasDataGridView.Location = new System.Drawing.Point(16, 257);
+            this.peliculasDataGridView.Location = new System.Drawing.Point(43, 234);
             this.peliculasDataGridView.Name = "peliculasDataGridView";
-            this.peliculasDataGridView.Size = new System.Drawing.Size(735, 220);
+            this.peliculasDataGridView.RowHeadersVisible = false;
+            this.peliculasDataGridView.ShowCellErrors = false;
+            this.peliculasDataGridView.ShowCellToolTips = false;
+            this.peliculasDataGridView.ShowEditingIcon = false;
+            this.peliculasDataGridView.ShowRowErrors = false;
+            this.peliculasDataGridView.Size = new System.Drawing.Size(693, 220);
             this.peliculasDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1

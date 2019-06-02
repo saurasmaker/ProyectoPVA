@@ -501,7 +501,7 @@ namespace Proyecto_PVA_2
                 try//Añadir portada
                 {
                     MemoryStream ms = new MemoryStream(masterDataSet.Series[Carteles.IndexOf(cartel)].Portada.ToArray());
-                    infoSerie.portadaPictureBox.Image = Image.FromStream(ms);
+                    // hiuewHBFIJNjanfojñhnÑWOEFLÑÑELWFNÑOwef infoSerie.portadaPictureBox.Image = Image.FromStream(ms);
                 }
                 catch (Exception)
                 {
