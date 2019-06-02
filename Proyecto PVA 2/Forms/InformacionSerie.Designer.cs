@@ -51,14 +51,6 @@
             this.buttonAñadirAlCarro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.capitulosDataGridView = new System.Windows.Forms.DataGridView();
-            this.capitulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
-            this.comboBoxTemporada = new System.Windows.Forms.ComboBox();
-            this.labelTemporada = new System.Windows.Forms.Label();
-            this.capitulosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.CapitulosTableAdapter();
-            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
-            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +61,14 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capitulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
+            this.comboBoxTemporada = new System.Windows.Forms.ComboBox();
+            this.labelTemporada = new System.Windows.Forms.Label();
+            this.capitulosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.CapitulosTableAdapter();
+            this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
+            this.seriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seriesTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.SeriesTableAdapter();
             this.pbcerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             portadaLabel = new System.Windows.Forms.Label();
@@ -187,7 +187,7 @@
             this.tituloTextBox.Name = "tituloTextBox";
             this.tituloTextBox.ReadOnly = true;
             this.tituloTextBox.Size = new System.Drawing.Size(210, 13);
-            this.tituloTextBox.TabIndex = 24;
+            this.tituloTextBox.TabIndex = 1;
             this.tituloTextBox.Text = "TITULO";
             // 
             // portadaPictureBox
@@ -208,7 +208,7 @@
             this.textBoxEstreno.Name = "textBoxEstreno";
             this.textBoxEstreno.ReadOnly = true;
             this.textBoxEstreno.Size = new System.Drawing.Size(143, 13);
-            this.textBoxEstreno.TabIndex = 39;
+            this.textBoxEstreno.TabIndex = 4;
             this.textBoxEstreno.Text = "5545";
             // 
             // temporadasTextBox
@@ -234,7 +234,7 @@
             this.sinopsisTextBox.Name = "sinopsisTextBox";
             this.sinopsisTextBox.ReadOnly = true;
             this.sinopsisTextBox.Size = new System.Drawing.Size(479, 139);
-            this.sinopsisTextBox.TabIndex = 26;
+            this.sinopsisTextBox.TabIndex = 5;
             this.sinopsisTextBox.Text = "sinopsis";
             // 
             // precioTextBox
@@ -246,7 +246,7 @@
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.ReadOnly = true;
             this.precioTextBox.Size = new System.Drawing.Size(40, 13);
-            this.precioTextBox.TabIndex = 30;
+            this.precioTextBox.TabIndex = 3;
             this.precioTextBox.Text = "1.22";
             // 
             // puntuacionTextBox
@@ -258,18 +258,18 @@
             this.puntuacionTextBox.Name = "puntuacionTextBox";
             this.puntuacionTextBox.ReadOnly = true;
             this.puntuacionTextBox.Size = new System.Drawing.Size(40, 13);
-            this.puntuacionTextBox.TabIndex = 28;
+            this.puntuacionTextBox.TabIndex = 2;
             this.puntuacionTextBox.Text = "10";
             // 
             // buttonAñadirAlCarro
             // 
             this.buttonAñadirAlCarro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonAñadirAlCarro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAñadirAlCarro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAñadirAlCarro.ForeColor = System.Drawing.Color.LawnGreen;
             this.buttonAñadirAlCarro.Location = new System.Drawing.Point(1099, 447);
             this.buttonAñadirAlCarro.Name = "buttonAñadirAlCarro";
             this.buttonAñadirAlCarro.Size = new System.Drawing.Size(86, 23);
-            this.buttonAñadirAlCarro.TabIndex = 43;
+            this.buttonAñadirAlCarro.TabIndex = 8;
             this.buttonAñadirAlCarro.Text = "Añadir al carro";
             this.buttonAñadirAlCarro.UseVisualStyleBackColor = true;
             this.buttonAñadirAlCarro.Click += new System.EventHandler(this.buttonAñadirAlCarro_Click);
@@ -338,63 +338,13 @@
             this.capitulosDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.capitulosDataGridView.RowHeadersVisible = false;
             this.capitulosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.capitulosDataGridView.ShowCellErrors = false;
+            this.capitulosDataGridView.ShowCellToolTips = false;
+            this.capitulosDataGridView.ShowEditingIcon = false;
+            this.capitulosDataGridView.ShowRowErrors = false;
             this.capitulosDataGridView.Size = new System.Drawing.Size(679, 334);
-            this.capitulosDataGridView.TabIndex = 48;
+            this.capitulosDataGridView.TabIndex = 7;
             this.capitulosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CapitulosDataGridView_CellContentClick);
-            // 
-            // capitulosBindingSource
-            // 
-            this.capitulosBindingSource.DataMember = "Capitulos";
-            this.capitulosBindingSource.DataSource = this.masterDataSet;
-            // 
-            // masterDataSet
-            // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comboBoxTemporada
-            // 
-            this.comboBoxTemporada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxTemporada.FormattingEnabled = true;
-            this.comboBoxTemporada.Items.AddRange(new object[] {
-            "Todas"});
-            this.comboBoxTemporada.Location = new System.Drawing.Point(92, 30);
-            this.comboBoxTemporada.Name = "comboBoxTemporada";
-            this.comboBoxTemporada.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxTemporada.TabIndex = 48;
-            this.comboBoxTemporada.SelectedIndexChanged += new System.EventHandler(this.comboBoxTemporada_SelectedIndexChanged);
-            // 
-            // labelTemporada
-            // 
-            this.labelTemporada.AutoSize = true;
-            this.labelTemporada.Location = new System.Drawing.Point(22, 33);
-            this.labelTemporada.Name = "labelTemporada";
-            this.labelTemporada.Size = new System.Drawing.Size(64, 13);
-            this.labelTemporada.TabIndex = 47;
-            this.labelTemporada.Text = "Temporada:";
-            // 
-            // capitulosTableAdapter
-            // 
-            this.capitulosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CapitulosTableAdapter = this.capitulosTableAdapter;
-            this.tableAdapterManager.FacturasTableAdapter = null;
-            this.tableAdapterManager.PeliculasTableAdapter = null;
-            this.tableAdapterManager.SeriesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuariosTableAdapter = null;
-            // 
-            // seriesBindingSource
-            // 
-            this.seriesBindingSource.DataMember = "Series";
-            this.seriesBindingSource.DataSource = this.masterDataSet;
-            // 
-            // seriesTableAdapter
-            // 
-            this.seriesTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -469,6 +419,60 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Temporada";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // capitulosBindingSource
+            // 
+            this.capitulosBindingSource.DataMember = "Capitulos";
+            this.capitulosBindingSource.DataSource = this.masterDataSet;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBoxTemporada
+            // 
+            this.comboBoxTemporada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxTemporada.FormattingEnabled = true;
+            this.comboBoxTemporada.Items.AddRange(new object[] {
+            "Todas"});
+            this.comboBoxTemporada.Location = new System.Drawing.Point(92, 30);
+            this.comboBoxTemporada.Name = "comboBoxTemporada";
+            this.comboBoxTemporada.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTemporada.TabIndex = 6;
+            this.comboBoxTemporada.SelectedIndexChanged += new System.EventHandler(this.comboBoxTemporada_SelectedIndexChanged);
+            // 
+            // labelTemporada
+            // 
+            this.labelTemporada.AutoSize = true;
+            this.labelTemporada.Location = new System.Drawing.Point(22, 33);
+            this.labelTemporada.Name = "labelTemporada";
+            this.labelTemporada.Size = new System.Drawing.Size(64, 13);
+            this.labelTemporada.TabIndex = 47;
+            this.labelTemporada.Text = "Temporada:";
+            // 
+            // capitulosTableAdapter
+            // 
+            this.capitulosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CapitulosTableAdapter = this.capitulosTableAdapter;
+            this.tableAdapterManager.FacturasTableAdapter = null;
+            this.tableAdapterManager.PeliculasTableAdapter = null;
+            this.tableAdapterManager.SeriesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // seriesBindingSource
+            // 
+            this.seriesBindingSource.DataMember = "Series";
+            this.seriesBindingSource.DataSource = this.masterDataSet;
+            // 
+            // seriesTableAdapter
+            // 
+            this.seriesTableAdapter.ClearBeforeFill = true;
             // 
             // pbcerrar
             // 

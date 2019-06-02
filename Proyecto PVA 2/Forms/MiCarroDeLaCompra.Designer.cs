@@ -110,7 +110,7 @@
             this.textBox1.Location = new System.Drawing.Point(34, 433);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 35);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 5;
             this.textBox1.Text = "€€";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

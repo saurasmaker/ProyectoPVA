@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialFacturas));
             this.masterDataSet = new Proyecto_PVA_2.masterDataSet();
             this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturasTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.FacturasTableAdapter();
@@ -45,10 +46,14 @@
             this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbcerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // masterDataSet
@@ -84,22 +89,26 @@
             this.facturasDataGridView.AllowUserToAddRows = false;
             this.facturasDataGridView.AllowUserToDeleteRows = false;
             this.facturasDataGridView.AllowUserToResizeColumns = false;
+            this.facturasDataGridView.AllowUserToResizeRows = false;
             this.facturasDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.facturasDataGridView.AutoGenerateColumns = false;
             this.facturasDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.facturasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.facturasDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.facturasDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.facturasDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.facturasDataGridView.ColumnHeadersHeight = 31;
             this.facturasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.facturasDataGridView.DataSource = this.facturasBindingSource;
-            this.facturasDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.facturasDataGridView.GridColor = System.Drawing.SystemColors.WindowText;
+            this.facturasDataGridView.Location = new System.Drawing.Point(8, 40);
             this.facturasDataGridView.MultiSelect = false;
             this.facturasDataGridView.Name = "facturasDataGridView";
             this.facturasDataGridView.ReadOnly = true;
             this.facturasDataGridView.RowHeadersVisible = false;
-            this.facturasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.facturasDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.facturasDataGridView.ShowCellErrors = false;
             this.facturasDataGridView.ShowCellToolTips = false;
@@ -144,11 +153,12 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderTitulo,
             this.columnHeaderTipo,
             this.columnHeaderPrecio});
-            this.listView1.Location = new System.Drawing.Point(494, 12);
+            this.listView1.Location = new System.Drawing.Point(494, 40);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(285, 220);
             this.listView1.TabIndex = 2;
@@ -173,7 +183,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 260);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.LawnGreen;
+            this.button1.Location = new System.Drawing.Point(12, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -181,14 +193,39 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.pbcerrar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 20);
+            this.panel1.TabIndex = 4;
+            // 
+            // pbcerrar
+            // 
+            this.pbcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbcerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbcerrar.Image")));
+            this.pbcerrar.Location = new System.Drawing.Point(785, 3);
+            this.pbcerrar.Name = "pbcerrar";
+            this.pbcerrar.Size = new System.Drawing.Size(12, 12);
+            this.pbcerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbcerrar.TabIndex = 49;
+            this.pbcerrar.TabStop = false;
+            this.pbcerrar.Click += new System.EventHandler(this.Pbcerrar_Click);
+            // 
             // HistorialFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 312);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(27)))), ((int)(((byte)(57)))));
+            this.ClientSize = new System.Drawing.Size(800, 300);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.facturasDataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistorialFacturas";
             this.Text = "HistorialFacturas";
             this.Load += new System.EventHandler(this.HistorialFacturas_Load);
@@ -196,6 +233,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbcerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,5 +257,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderPrecio;
         private System.Windows.Forms.ColumnHeader columnHeaderTipo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pbcerrar;
     }
 }

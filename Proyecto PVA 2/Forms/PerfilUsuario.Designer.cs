@@ -48,6 +48,7 @@
             this.usuariosTableAdapter = new Proyecto_PVA_2.masterDataSetTableAdapters.UsuariosTableAdapter();
             this.tableAdapterManager = new Proyecto_PVA_2.masterDataSetTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.round1 = new Proyecto_PVA_2.Forms.Round();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -57,17 +58,16 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.buttonHistorialFacturas = new System.Windows.Forms.Button();
-            this.round1 = new Proyecto_PVA_2.Forms.Round();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.round1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxAlias
@@ -105,7 +105,7 @@
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(8, 20);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
             this.dateTimePickerFechaNacimiento.Size = new System.Drawing.Size(304, 27);
-            this.dateTimePickerFechaNacimiento.TabIndex = 13;
+            this.dateTimePickerFechaNacimiento.TabIndex = 4;
             this.dateTimePickerFechaNacimiento.Value = new System.DateTime(1994, 4, 28, 17, 7, 0, 0);
             // 
             // textBoxDireccion
@@ -116,7 +116,7 @@
             this.textBoxDireccion.Location = new System.Drawing.Point(7, 22);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(305, 23);
-            this.textBoxDireccion.TabIndex = 12;
+            this.textBoxDireccion.TabIndex = 5;
             this.textBoxDireccion.Text = "Venice Beach, LA";
             // 
             // textBoxApellido2
@@ -129,7 +129,7 @@
             this.textBoxApellido2.Location = new System.Drawing.Point(8, 23);
             this.textBoxApellido2.Name = "textBoxApellido2";
             this.textBoxApellido2.Size = new System.Drawing.Size(149, 23);
-            this.textBoxApellido2.TabIndex = 8;
+            this.textBoxApellido2.TabIndex = 3;
             this.textBoxApellido2.Text = "Brag";
             // 
             // textBoxNombre
@@ -142,7 +142,7 @@
             this.textBoxNombre.Location = new System.Drawing.Point(11, 22);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(301, 23);
-            this.textBoxNombre.TabIndex = 4;
+            this.textBoxNombre.TabIndex = 1;
             this.textBoxNombre.Text = "Ammar ";
             // 
             // textBoxCorreoElectronico
@@ -177,30 +177,34 @@
             // 
             // buttonModificarDatosPersonales
             // 
+            this.buttonModificarDatosPersonales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificarDatosPersonales.Location = new System.Drawing.Point(324, 359);
             this.buttonModificarDatosPersonales.Name = "buttonModificarDatosPersonales";
             this.buttonModificarDatosPersonales.Size = new System.Drawing.Size(147, 23);
-            this.buttonModificarDatosPersonales.TabIndex = 9;
+            this.buttonModificarDatosPersonales.TabIndex = 8;
             this.buttonModificarDatosPersonales.Text = "Modificar datos personales";
             this.buttonModificarDatosPersonales.UseVisualStyleBackColor = true;
             this.buttonModificarDatosPersonales.Click += new System.EventHandler(this.buttonModificarDatosPersonales_Click);
             // 
             // buttonActualizar
             // 
+            this.buttonActualizar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.buttonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonActualizar.Location = new System.Drawing.Point(15, 402);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
-            this.buttonActualizar.TabIndex = 10;
+            this.buttonActualizar.TabIndex = 6;
             this.buttonActualizar.Text = "Actualizar";
             this.buttonActualizar.UseVisualStyleBackColor = true;
             this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // buttonRestablecerDatos
             // 
+            this.buttonRestablecerDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestablecerDatos.Location = new System.Drawing.Point(207, 359);
             this.buttonRestablecerDatos.Name = "buttonRestablecerDatos";
             this.buttonRestablecerDatos.Size = new System.Drawing.Size(111, 23);
-            this.buttonRestablecerDatos.TabIndex = 12;
+            this.buttonRestablecerDatos.TabIndex = 7;
             this.buttonRestablecerDatos.Text = "Restablecer datos";
             this.buttonRestablecerDatos.UseVisualStyleBackColor = true;
             this.buttonRestablecerDatos.Click += new System.EventHandler(this.buttonRestablecerDatos_Click);
@@ -213,10 +217,11 @@
             // 
             // buttonCambiarContraseña
             // 
+            this.buttonCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCambiarContraseña.Location = new System.Drawing.Point(324, 398);
             this.buttonCambiarContraseña.Name = "buttonCambiarContraseña";
             this.buttonCambiarContraseña.Size = new System.Drawing.Size(111, 23);
-            this.buttonCambiarContraseña.TabIndex = 14;
+            this.buttonCambiarContraseña.TabIndex = 10;
             this.buttonCambiarContraseña.Text = "Cambiar contraseña";
             this.buttonCambiarContraseña.UseVisualStyleBackColor = true;
             // 
@@ -256,6 +261,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 415);
             this.panel1.TabIndex = 39;
+            // 
+            // round1
+            // 
+            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
+            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.round1.Location = new System.Drawing.Point(40, 35);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(120, 120);
+            this.round1.TabIndex = 1;
+            this.round1.TabStop = false;
             // 
             // buttonSalir
             // 
@@ -305,7 +320,7 @@
             this.textBoxApellido1.Location = new System.Drawing.Point(9, 22);
             this.textBoxApellido1.Name = "textBoxApellido1";
             this.textBoxApellido1.Size = new System.Drawing.Size(301, 23);
-            this.textBoxApellido1.TabIndex = 6;
+            this.textBoxApellido1.TabIndex = 2;
             this.textBoxApellido1.Text = "Kandil";
             this.textBoxApellido1.TextChanged += new System.EventHandler(this.textBoxApellido1_TextChanged);
             // 
@@ -363,23 +378,14 @@
             // 
             // buttonHistorialFacturas
             // 
+            this.buttonHistorialFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHistorialFacturas.Location = new System.Drawing.Point(207, 398);
             this.buttonHistorialFacturas.Name = "buttonHistorialFacturas";
             this.buttonHistorialFacturas.Size = new System.Drawing.Size(111, 23);
-            this.buttonHistorialFacturas.TabIndex = 45;
+            this.buttonHistorialFacturas.TabIndex = 9;
             this.buttonHistorialFacturas.Text = "Historial facturas";
             this.buttonHistorialFacturas.UseVisualStyleBackColor = true;
             this.buttonHistorialFacturas.Click += new System.EventHandler(this.buttonHistorialFacturas_Click);
-            // 
-            // round1
-            // 
-            this.round1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("round1.BackgroundImage")));
-            this.round1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.round1.Location = new System.Drawing.Point(40, 35);
-            this.round1.Name = "round1";
-            this.round1.Size = new System.Drawing.Size(120, 120);
-            this.round1.TabIndex = 1;
-            this.round1.TabStop = false;
             // 
             // PerfilUsuario
             // 
@@ -407,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -417,7 +424,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.round1)).EndInit();
             this.ResumeLayout(false);
 
         }
